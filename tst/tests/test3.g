@@ -2,4 +2,6 @@ gap> Sigma1:=PosetFromOrderMatrix([[true,false,true,true],[false,true,true,true]
 <finite poset of size 4>
 gap> PosetHomology(Sigma1);
 [ [ 0, [  ] ], [ 1, [  ] ] ]
+gap> EulerCharacteristic(Sigma1);
+0
 

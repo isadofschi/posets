@@ -20,3 +20,5 @@ DeclareOperation("OrderComplex",[IsPoset]);
 
 
 DeclareOperation("PosetHomology",[IsPoset]);
+
+DeclareOperation("EulerCharacteristic",[IsPoset]);

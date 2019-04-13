@@ -161,3 +161,10 @@ function(X)
 	return SCHomology(OrderComplex(X));
 end);
 
+
+InstallMethod(EulerCharacteristic,
+"for Poset",
+[IsPoset],
+function(X)
+	return SCEulerCharacteristic(OrderComplex(X));
+end);
