@@ -25,4 +25,9 @@ gap> Sigma3:=JoinPosets([Sigma1,Sigma1]);
 <finite poset of size 8>
 gap> PosetHomology(last);        
 [ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
+gap> T3:=ProductPosets([Sigma1,Sigma1,Sigma1]);
+<finite poset of size 64>
+gap> PosetHomology(T3);
+[ [ 0, [  ] ], [ 3, [  ] ], [ 3, [  ] ], [ 1, [  ] ] ]
+
 

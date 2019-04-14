@@ -204,14 +204,14 @@ function(X)
 	if not IsBound(X!.orderMatrix) then
 		n:=Size(X);
 		M:=List([1..n],x->List([1..n], ReturnFalse));
-		for i in [i..n] do
+		for i in [1..n] do
 			for j in [1..n] do
-				M[i][j]:=Ordering(X)(Set(X)[i],Set(X)[j]);;
+				M[i][j]:=Ordering(X)(Set(X)[i],Set(X)[j]);
 			od;
 		od;
 		X!.orderMatrix:=M;
 	fi;
-	return X!.orderMatrix
+	return X!.orderMatrix;
 end);
 
 InstallMethod(HasseDiagram,
