@@ -16,6 +16,8 @@ MakeReadWriteGlobal("PosetsIntFunc");
 ##
 
 ReadPackage( "Posets", "lib/posets.gd" );
+ReadPackage( "Posets", "lib/constructions.gd" );
+ReadPackage( "Posets", "lib/subgroups.gd" );
 
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

@@ -18,7 +18,7 @@ PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism );;
 
 ################################################################################
 
-PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec() ); end ;;
+PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec(names:=[], orderMatrix:=[] ) ); end ;;
 
 ################################################################################
 
@@ -26,7 +26,7 @@ PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec() ); end ;
 InstallMethod(ViewObj,"for Poset",
 [IsPoset],
 function(X)
-	Print("<finite poset of size ", X!.size ,">");
+	Print("<finite poset of size ", Size(X) ,">");
 end);
 
 InstallMethod(ViewObj,"for PosetHomomorphism",
@@ -34,6 +34,21 @@ InstallMethod(ViewObj,"for PosetHomomorphism",
 function(X)
 	Print("<order preserving map>");
 end);
+
+# Set of points (forgets order)
+InstallMethod(Set,"for Poset",
+[IsPoset],
+function(X)
+	return X!.names;
+end);
+
+# Size (number of points)
+InstallMethod(Size,"for Poset",
+[IsPoset],
+function(X)
+	return Size(X!.names);
+end);
+
 
 ################################################################################
 # Basic functions to build posets and morphisms
@@ -90,7 +105,6 @@ function(M,names)
 
 	poset := PosetsIntFunc.NewPoset();
 	poset!.orderMatrix:=M1;
-	poset!.size:=n;
 	poset!.names:=names;
 
 	return poset;
@@ -102,13 +116,13 @@ InstallMethod(PosetHomomorphismByImages,
 [IsPoset, IsPoset, IsList],
 function(X,Y,ims)
 	local m,n;
-	n:=X!.size;
-	m:=Y!.size;
-	if not Length(ims)=n and ForAll(ims, y->y in [1..m] ) then
+	n:=Size(X);
+	m:=Size(Y);
+	if not Length(ims)=n and ForAll(ims, y->y in Set(Y) ) then
 		Error("invalid arguments");
 	fi;
 	# the following computation could be done faster if we already know the hasse diagram of X
-	if not ForAll([1..n],i->ForAll([1..n],j-> (not X!.orderMatrix[i][j]) or Y!.orderMatrix[ims[i]][ims[j]] )) then
+	if not ForAll([1..n],i->ForAll([1..n],j-> (not X!.orderMatrix[i][j]) or Y!.orderMatrix[PositionSorted(Set(Y),ims[i])][PositionSorted(Set(Y),ims[j])] )) then
 		Error("the map is not order preserving");
 	fi;
 	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, images:=ims) );
@@ -118,7 +132,7 @@ end);
 #"for Poset",
 #[IsPoset],
 #function(X)
-#	return Objectify( PosetHomomorphismType, rec(source:=X, target:=X, images:=[1..(X!.size)]) );
+#	return Objectify( PosetHomomorphismType, rec(source:=X, target:=X, images:=[1..(Size(X))]) );
 #end);
 
 
@@ -130,8 +144,8 @@ InstallMethod(RelationByPoset,
 [IsPoset],
 function(X)
 	local n;
-	n:=X!.size;
-	return PartialOrderByOrderingFunction( Domain(X!.names), function(i,j) return X!.orderMatrix[PositionSorted(X!.names,i)][PositionSorted(X!.names,j)]; end );
+	n:=Size(X);
+	return PartialOrderByOrderingFunction( Domain(Set(X)), function(i,j) return X!.orderMatrix[PositionSorted(Set(X),i)][PositionSorted(Set(X),j)]; end );
 end);
 
 # turns a relation into a poset
@@ -149,7 +163,7 @@ function(R)
 			M[i][Position(names,y)]:=true;
 		od;
 	od;
-	return PosetFromOrderMatrix(M,names); # estamos chequeando cosas innecesariamente, por ejemplo transitividad
+	return PosetByOrderMatrix(M,names); # estamos chequeando cosas innecesariamente, por ejemplo transitividad
 		
 end);
 
@@ -163,7 +177,7 @@ function(X)
 	R:=RelationByPoset(X);
 	h:=HasseDiagramBinaryRelation(R);
 	X!.HasseDiagramNames:=List(Set(Source(h)), x->Images(h,x));
-	X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(X!.names,y)));
+	X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(Set(X),y)));
 end);
 
 
@@ -199,7 +213,7 @@ InstallMethod(OrderComplex,
 [IsPoset],
 function(X)
 	local n,i,j,chains,position,chain;
-	n:=X!.size;
+	n:=Size(X);
 	# this part could be a separate function computing the representation of the poset given by the U^_x s
 	X!.UHats:=List([1..n],x->[]);
 	for i in [1..n] do

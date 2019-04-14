@@ -12,7 +12,7 @@ DeclareCategory("IsPoset",IsSet);
 DeclareCategory("IsPosetHomomorphism",IsSet);
 
 DeclareOperation("PosetByOrderMatrix",[IsList]); # names are numbers 1..n
-DeclareOperation("PosetByOrderMatrix",[IsList,IsList]); # we give a list of names
+DeclareOperation("PosetByOrderMatrix",[IsList,IsList]); # we give a set of names
 
 DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
 DeclareOperation("RelationByPoset",[IsPoset]);
