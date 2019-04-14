@@ -102,7 +102,6 @@ function(G,p)
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	S:=Subgroups(G);
 	Bp:=RadicalpSubgroups(G,p);	
 	#Bp:=Filtered(S, H-> IsPGroup(H) and RemInt(Order(H),p)=0 and Order(H)=Order(PCore(Normalizer(G,H),p)) );
 	return PosetByFunctionNC(Bp,IsSubgroup);
