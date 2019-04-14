@@ -2,7 +2,7 @@ gap> Sigma1:=PosetByOrderMatrix([[true,false,true,true],[false,true,true,true],[
 <finite poset of size 4>
 gap> coprod:=CoproductPosets([Sigma1,Sigma1]);
 <finite poset of size 8>
-gap> coprod!.orderMatrix;
+gap> OrderMatrix(coprod);
 [ [ true, false, true, true, false, false, false, false ], 
   [ false, true, true, true, false, false, false, false ], 
   [ false, false, true, false, false, false, false, false ], 
@@ -19,4 +19,10 @@ gap> NaturalMaps(coprod);
 gap> Set(CoproductPosets([Sigma1,Sigma1,Sigma1]));
 [ [ 1, "a" ], [ 1, "b" ], [ 1, "c" ], [ 1, "d" ], [ 2, "a" ], [ 2, "b" ], 
   [ 2, "c" ], [ 2, "d" ], [ 3, "a" ], [ 3, "b" ], [ 3, "c" ], [ 3, "d" ] ]
+gap> PosetHomology(coprod);
+[ [ 1, [  ] ], [ 2, [  ] ] ]
+gap> Sigma3:=JoinPosets([Sigma1,Sigma1]);
+<finite poset of size 8>
+gap> PosetHomology(last);        
+[ [ 0, [  ] ], [ 0, [  ] ], [ 0, [  ] ], [ 1, [  ] ] ]
 

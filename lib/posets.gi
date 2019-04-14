@@ -18,11 +18,12 @@ PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism );;
 
 ################################################################################
 
-PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec(names:=[], orderMatrix:=[] ) ); end ;;
+PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec(names:=[], ordering:=(function(x,y) end) ) ); end ;;
 
 ################################################################################
 
-# Methods to print posets and morphisms
+# Basic methods
+
 InstallMethod(ViewObj,"for Poset",
 [IsPoset],
 function(X)
@@ -42,16 +43,38 @@ function(X)
 	return X!.names;
 end);
 
+# Ordering function
+InstallMethod(Ordering,"for Poset",
+[IsPoset],
+function(X)
+	return X!.ordering;
+end);
+
+
 # Size (number of points)
 InstallMethod(Size,"for Poset",
 [IsPoset],
 function(X)
-	return Size(X!.names);
+	return Size(Set(X));
+end);
+
+
+InstallMethod(\=,"for Poset and Poset",
+[IsPoset,IsPoset],
+function(X1,X2)
+	return Set(X1)=Set(X2) and ForAll(Set(X1), x-> ForAll(Set(X1), y-> Ordering(X1)(x,y)=Ordering(X2)(x,y)));
 end);
 
 
 ################################################################################
 # Basic functions to build posets and morphisms
+InstallMethod(PosetByFunctionNC,
+"for Set, Function",
+[IsList,IsFunction],
+function(X,f)
+	return Objectify( PosetType, rec(names:=Set(X), ordering:=f) );
+end);
+
 
 InstallMethod(PosetByOrderMatrix,
 "for List",
@@ -105,6 +128,7 @@ function(M,names)
 
 	poset := PosetsIntFunc.NewPoset();
 	poset!.orderMatrix:=M1;
+	poset!.ordering:=function(x,y) return M1[PositionSorted(names,x)][PositionSorted(names,y)]; end;
 	poset!.names:=names;
 
 	return poset;
@@ -122,7 +146,12 @@ function(X,Y,ims)
 		Error("invalid arguments");
 	fi;
 	# the following computation could be done faster if we already know the hasse diagram of X
-	if not ForAll([1..n],i->ForAll([1..n],j-> (not X!.orderMatrix[i][j]) or Y!.orderMatrix[PositionSorted(Set(Y),ims[i])][PositionSorted(Set(Y),ims[j])] )) then
+	if not ForAll(Set(X),
+				  x1->ForAll(Set(X),
+                             x2-> (not Ordering(X)(x1,x2)) or Ordering(Y)(ims[PositionSorted(Set(X),x1)],ims[PositionSorted(Set(X),x2)])
+							)
+				)
+	then
 		Error("the map is not order preserving");
 	fi;
 	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, images:=ims) );
@@ -136,8 +165,6 @@ end);
 #end);
 
 
-
-
 ## Turns a poset into an order relation
 InstallMethod(RelationByPoset,
 "for Poset",
@@ -145,7 +172,7 @@ InstallMethod(RelationByPoset,
 function(X)
 	local n;
 	n:=Size(X);
-	return PartialOrderByOrderingFunction( Domain(Set(X)), function(i,j) return X!.orderMatrix[PositionSorted(Set(X),i)][PositionSorted(Set(X),j)]; end );
+	return PartialOrderByOrderingFunction( Domain(Set(X)), X!.ordering );
 end);
 
 # turns a relation into a poset
@@ -168,100 +195,36 @@ function(R)
 end);
 
 
+####################
+InstallMethod(OrderMatrix,
+"for Poset",
+[IsPoset],
+function(X)
+	local n,M,i,j;
+	if not IsBound(X!.orderMatrix) then
+		n:=Size(X);
+		M:=List([1..n],x->List([1..n], ReturnFalse));
+		for i in [i..n] do
+			for j in [1..n] do
+				M[i][j]:=Ordering(X)(Set(X)[i],Set(X)[j]);;
+			od;
+		od;
+		X!.orderMatrix:=M;
+	fi;
+	return X!.orderMatrix
+end);
 
 InstallMethod(HasseDiagram,
 "for Poset",
 [IsPoset],
 function(X)
 	local R,h;
-	R:=RelationByPoset(X);
-	h:=HasseDiagramBinaryRelation(R);
-	X!.HasseDiagramNames:=List(Set(Source(h)), x->Images(h,x));
-	X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(Set(X),y)));
+	if not IsBound(X!.HasseDiagramNumbers) then
+		R:=RelationByPoset(X);
+		h:=HasseDiagramBinaryRelation(R);
+		X!.HasseDiagramNames:=List(Set(Source(h)), x->Images(h,x));
+		X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(Set(X),y)));
+	fi;
+	return X!.HasseDiagramNumbers;
 end);
-
-
-
-
-################################################################################
-# FacePoset and OrderComplex
-# (we still need to implement these on morphisms)
-
-InstallMethod(FacePoset,
-"for SimplicialComplex",
-[SCIsSimplicialComplex],
-function(K)
-	local n,simplicesK,num_simplices,M,iter,i,j,tau;
-	n:=SCDim(K);
-	simplicesK:=Set(Concatenation(List([1..n+1], i->K[i]))); # we have to decide if we want to sort this list
-	num_simplices:=Length(simplicesK);
-	M:=List([1..num_simplices], s-> List([1..num_simplices], t->false));
-	for i in [1..num_simplices] do
-		iter:=IteratorOfCombinations(simplicesK[i]);
-		for tau in iter do
-			if Size(tau)>0 then
-				j:=PositionSorted(simplicesK,tau); # Position or PositionSorted, depending on the previous decision
-				M[i][j]:=true;
-			fi;
-		od;
-	od;
-	return Objectify( PosetType, rec(orderMatrix:=M, size:=num_simplices,names:=simplicesK) );
-end);
-
-InstallMethod(OrderComplex,
-"for Poset",
-[IsPoset],
-function(X)
-	local n,i,j,chains,position,chain;
-	n:=Size(X);
-	# this part could be a separate function computing the representation of the poset given by the U^_x s
-	X!.UHats:=List([1..n],x->[]);
-	for i in [1..n] do
-		for j in [1..n] do
-			if i<>j and X!.orderMatrix[i][j] then
-				Add(X!.UHats[i],j);
-			fi;
-		od;
-	od;
-	#
-	chains:=[];
-	for i in [1..n] do
-		Add(chains,[i]);
-	od;
-	position:=1;
-	while position <= Length(chains) do
-		chain:=chains[position];
-		i:=chain[Length(chain)];
-		for j in X!.UHats[i] do
-			Add(chains, Concatenation(chain,[j]) );
-		od;
-		position:=position+1;
-	od;
-	return SC(chains);
-end);
-
-################################################################################
-# Homology of a poset or order preserving morphism
-InstallMethod(PosetHomology,
-"for Poset",
-[IsPoset],
-function(X)
-	return SCHomology(OrderComplex(X));
-end);
-
-
-InstallMethod(EulerCharacteristic,
-"for Poset",
-[IsPoset],
-function(X)
-	return SCEulerCharacteristic(OrderComplex(X));
-end);
-
-InstallMethod(FundamentalGroup,
-"for Poset",
-[IsPoset],
-function(X)
-	return SCFundamentalGroup(OrderComplex(X));
-end);
-
 

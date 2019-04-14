@@ -14,3 +14,4 @@ DeclareOperation("ImageMap",[IsPosetHomomorphism]);
 
 DeclareOperation("SubPoset",[IsPoset,IsList]);
 DeclareOperation("CoproductPosets",[IsList]);
+DeclareOperation("JoinPosets",[IsList]);
