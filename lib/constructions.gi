@@ -35,6 +35,18 @@ function(f)
 	return SubPoset(TargetMap(f),Set(f!.images));
 end);
 
+InstallMethod(ImageMap,
+"for Poset homomorphism, element",
+[IsPosetHomomorphism,IsObject],
+function(f,x)
+	local X;
+	X:=Set(SourceMap(f));
+	if not x in X then
+		Error("x is not an element of the domain of f");
+	fi;
+	return f!.images[PositionSorted(X,x)];
+end);
+
 InstallMethod(SubPoset,
 "for Poset, Set",
 [IsPoset, IsList],
@@ -123,7 +135,7 @@ InstallMethod(ConePoset,
 function(X)
 	local x;
 	x:=PosetByFunctionNC( ["x"], \= ); # poset of size 1
-	return Join(X,x);
+	return JoinPosets([X,x]);
 end);
 
 InstallMethod(SuspensionPoset,
@@ -132,5 +144,48 @@ InstallMethod(SuspensionPoset,
 function(X)
 	local Sigma0;
 	Sigma0:=PosetByFunctionNC( ["x","y"], \= );
-	return Join(X,Sigma0);
+	return JoinPosets([X,Sigma0]);
 end);
+
+
+InstallMethod(OppositePoset,
+"for Poset",
+[IsPoset],
+function(X)
+	return PosetByFunctionNC(Set(X), function(x1,x2) return Ordering(X)(x2,x1); end);
+end);
+
+
+# Returns Zf. The NaturalMaps are  i:X-->Zf, j:Y-->Zf and r:Zf-->Y
+InstallMethod(MappingCylinderPosetHomomorphism,
+"for Poset homomorphism",
+[IsPosetHomomorphism],
+function(f)
+	local X,Y,Zf,namesZf,ordering;
+	X:=SourceMap(f);
+	Y:=TargetMap(f);
+	namesZf:=Concatenation(List(Set(X), x->[1,x]), List(Set(Y), y->[2,y]));
+	ordering:=function(p,q)
+		if p[1]=1 then
+			if q[1]=1 then
+				return Ordering(X)(p[2],q[2]);
+			else
+				return false;
+			fi;
+		else
+			if q[1]=2 then
+				return Ordering(Y)(p[2],q[2]);
+			else
+				return Ordering(Y)(p[2],ImageMap(f,q[2]));
+			fi;
+		fi;
+	end;
+	Zf:=PosetByFunctionNC(namesZf,ordering);
+	Zf!.naturalMaps:= [ PosetHomomorphismByImages(X,Zf,List(Set(X), x->[1,x])), # i 
+						PosetHomomorphismByImages(Y,Zf,List(Set(Y), y->[1,y])), # j
+						PosetHomomorphismByImages(Zf,Y,Concatenation(f!.images,Set(Y))) # r
+					  ];
+	return Zf;
+end);
+
+
