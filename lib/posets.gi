@@ -37,13 +37,31 @@ end);
 
 ################################################################################
 # Basic functions to build posets and morphisms
-InstallMethod(PosetFromOrderMatrix,
+
+InstallMethod(PosetByOrderMatrix,
 "for List",
 [IsList],
 function(M)
-	local poset,n;
+	return PosetByOrderMatrix(M,[]);
+end);
+
+InstallMethod(PosetByOrderMatrix,
+"for List, List",
+[IsList,IsList],
+function(M,names)
+	local poset,n,M1,i,j,sigma;
 
 	n:=Length(M);
+	
+	sigma:=Sortex(names)^-1;
+	names:=Set(names);
+
+	if names=[] then
+		names:=[1..n];
+	fi;
+	if Length(names)<>n then
+		Error("names must have "+String(n)+" elements");
+	fi;
 	if not ForAll(M, v->Length(v)=n) then
 		Error("M is not a square matrix");
 	fi;
@@ -63,9 +81,17 @@ function(M)
 		Error("The relation is not transitive");
 	fi;
 
+	M1 := StructuralCopy(M); # we first reorder the rows and columns using sigma
+	for i in [1..n] do
+		for j in [1..n] do
+			M1[i][j]:=M[i^sigma][j^sigma];
+		od;
+	od;
+
 	poset := PosetsIntFunc.NewPoset();
-	poset!.orderMatrix:=M;
+	poset!.orderMatrix:=M1;
 	poset!.size:=n;
+	poset!.names:=names;
 
 	return poset;
 
@@ -94,6 +120,54 @@ end);
 #function(X)
 #	return Objectify( PosetHomomorphismType, rec(source:=X, target:=X, images:=[1..(X!.size)]) );
 #end);
+
+
+
+
+## Turns a poset into an order relation
+InstallMethod(RelationByPoset,
+"for Poset",
+[IsPoset],
+function(X)
+	local n;
+	n:=X!.size;
+	return PartialOrderByOrderingFunction( Domain(X!.names), function(i,j) return X!.orderMatrix[PositionSorted(X!.names,i)][PositionSorted(X!.names,j)]; end );
+end);
+
+# turns a relation into a poset
+InstallMethod(PosetByOrderRelation,
+"for PartialOrderBinaryRelation",
+[IsPartialOrderBinaryRelation],
+function(R)
+	local M,n,names,U,i,y;
+	n:=Size(Source(R));
+	names:=Set(Source(R));
+	M:=List([1..n],x->List([1..n],x->false));
+	for i in [1..n] do
+		U:=Images(R,names[i]);
+		for y in U do
+			M[i][Position(names,y)]:=true;
+		od;
+	od;
+	return PosetFromOrderMatrix(M,names); # estamos chequeando cosas innecesariamente, por ejemplo transitividad
+		
+end);
+
+
+
+InstallMethod(HasseDiagram,
+"for Poset",
+[IsPoset],
+function(X)
+	local R,h;
+	R:=RelationByPoset(X);
+	h:=HasseDiagramBinaryRelation(R);
+	X!.HasseDiagramNames:=List(Set(Source(h)), x->Images(h,x));
+	X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(X!.names,y)));
+end);
+
+
+
 
 ################################################################################
 # FacePoset and OrderComplex
@@ -168,3 +242,12 @@ InstallMethod(EulerCharacteristic,
 function(X)
 	return SCEulerCharacteristic(OrderComplex(X));
 end);
+
+InstallMethod(FundamentalGroup,
+"for Poset",
+[IsPoset],
+function(X)
+	return SCFundamentalGroup(OrderComplex(X));
+end);
+
+
