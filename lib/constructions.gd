@@ -16,3 +16,5 @@ DeclareOperation("SubPoset",[IsPoset,IsList]);
 DeclareOperation("CoproductPosets",[IsList]);
 DeclareOperation("JoinPosets",[IsList]);
 DeclareOperation("ProductPosets",[IsList]);
+DeclareOperation("ConePoset",[IsPoset]);
+DeclareOperation("SuspensionPoset",[IsPoset]);

@@ -117,4 +117,20 @@ function(Xs)
 	return prodXs;
 end);
 
+InstallMethod(ConePoset,
+"for Poset",
+[IsPoset],
+function(X)
+	local x;
+	x:=PosetByFunctionNC( ["x"], \= ); # poset of size 1
+	return Join(X,x);
+end);
 
+InstallMethod(SuspensionPoset,
+"for Poset",
+[IsPoset],
+function(X)
+	local Sigma0;
+	Sigma0:=PosetByFunctionNC( ["x","y"], \= );
+	return Join(X,Sigma0);
+end);
