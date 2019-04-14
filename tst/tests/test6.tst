@@ -12,6 +12,7 @@ gap> Set(S2A5);
   (2,3) ]), Group([ (1,4)(2,5) ]), Group([ (1,5)(3,4) ]), Group([ (1,5)
   (2,3) ]), Group([ (1,5)(2,4) ]) ]
 gap> PosetHomology(S2A5);
+[ [ 4, [  ] ], [ 0, [  ] ] ]
 gap> PosetOfpSubgroups(AlternatingGroup(5),5);
 <finite poset of size 6>
 gap> PosetOfpSubgroups(AlternatingGroup(5),3);
