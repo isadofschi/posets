@@ -1,26 +1,84 @@
   
-  [1X4 [33X[0;0YPosets of subgroups of a finite group[133X[101X
+  [1X4 [33X[0;0YPosets[133X[101X
   
   
-  [1X4.1 [33X[0;0YPosets of p-subgroups[133X[101X
+  [1X4.1 [33X[0;0YExamples of posets[133X[101X
   
-  [1X4.1-1 PosetOfSubgroups[101X
+  [1X4.1-1 EmptyPoset[101X
   
-  [29X[2XPosetOfSubgroups[102X( [3Xarg[103X ) [32X operation
+  [29X[2XEmptyPoset[102X(  ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ythe empty poset.[133X
   
-  [1X4.1-2 PosetOfpSubgroups[101X
+  [1X4.1-2 MinimalFiniteModelSphere[101X
   
-  [29X[2XPosetOfpSubgroups[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  [29X[2XMinimalFiniteModelSphere[102X( [3Xn[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ythe minimal finite model of the n-sphere [22XS^n[122X.[133X
   
-  [1X4.1-3 PosetOfElementaryAbelianpSubgroups[101X
   
-  [29X[2XPosetOfElementaryAbelianpSubgroups[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  [1X4.2 [33X[0;0YThe Poset type[133X[101X
   
-  [1X4.1-4 RadicalpSubgroups[101X
+  [1X4.2-1 Ordering[101X
   
-  [29X[2XRadicalpSubgroups[102X( [3Xarg[103X ) [32X function
+  [29X[2XOrdering[102X( [3XX[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ya function computing the order of the poset [22XX[122X.[133X
   
-  [1X4.1-5 PosetOfRadicalpSubgroups[101X
+  [33X[0;0YOrdering(X)(x,y) is the value of the expression [22Xx≥ y[122X.[133X
   
-  [29X[2XPosetOfRadicalpSubgroups[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X4.3 [33X[0;0YConstructing posets in different ways[133X[101X
+  
+  [1X4.3-1 PosetByFunctionNC[101X
+  
+  [29X[2XPosetByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X4.3-2 PosetByFunction[101X
+  
+  [29X[2XPosetByFunction[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X4.3-3 PosetByOrderMatrix[101X
+  
+  [29X[2XPosetByOrderMatrix[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.3-4 PosetByOrderMatrix[101X
+  
+  [29X[2XPosetByOrderMatrix[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X4.3-5 PosetHomomorphismByFunctionNC[101X
+  
+  [29X[2XPosetHomomorphismByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.3-6 PosetHomomorphismByFunction[101X
+  
+  [29X[2XPosetHomomorphismByFunction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.3-7 PosetHomomorphismByImages[101X
+  
+  [29X[2XPosetHomomorphismByImages[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.3-8 RelationByPoset[101X
+  
+  [29X[2XRelationByPoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.3-9 PosetByOrderRelation[101X
+  
+  [29X[2XPosetByOrderRelation[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.3-10 PosetByHasseDiagram[101X
+  
+  [29X[2XPosetByHasseDiagram[102X( [3Xarg[103X ) [32X operation
+  
+  
+  [1X4.4 [33X[0;0YClassical constructions[133X[101X
+  
+  [1X4.4-1 OrderMatrix[101X
+  
+  [29X[2XOrderMatrix[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.4-2 HasseDiagram[101X
+  
+  [29X[2XHasseDiagram[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.4-3 CoveringRelations[101X
+  
+  [29X[2XCoveringRelations[102X( [3Xarg[103X ) [32X operation
   

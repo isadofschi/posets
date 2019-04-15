@@ -4,23 +4,12 @@
 
 InstallMethod(FacePoset,
 "for SimplicialComplex",
-[SCIsSimplicialComplex],
+[IsHapSimplicialComplex],
 function(K)
-	local n,simplicesK,num_simplices,M,iter,i,j,tau;
-	n:=SCDim(K);
-	simplicesK:=Set(Concatenation(List([1..n+1], i->K[i])));
-	num_simplices:=Length(simplicesK);
-	M:=List([1..num_simplices], s-> List([1..num_simplices], t->false));
-	for i in [1..num_simplices] do
-		iter:=IteratorOfCombinations(simplicesK[i]);
-		for tau in iter do
-			if Size(tau)>0 then
-				j:=PositionSorted(simplicesK,tau);
-				M[i][j]:=true;
-			fi;
-		od;
-	od;
-	return PosetByOrderMatrix(M,simplicesK); # unnecesary checks here should use an NC version.
+	local n,simplicesK;
+	n:=Dimension(K);
+	simplicesK:=Set(Concatenation(List([0..n], d->List([1..(K!.nrSimplices(d))], j-> K!.simplices(d,j)))));
+	return PosetByFunctionNC(simplicesK, IsSubset);
 end);
 
 InstallMethod(OrderComplex,
@@ -52,7 +41,7 @@ function(X)
 		od;
 		position:=position+1;
 	od;
-	return SC(chains); # here we forget the names of the points :(
+	return SimplicialComplex(chains); # here we forget the names of the points :(
 end);
 
 ################################################################################
@@ -61,21 +50,21 @@ InstallMethod(PosetHomology,
 "for Poset",
 [IsPoset],
 function(X)
-	return SCHomology(OrderComplex(X));
+	return Homology(OrderComplex(X));
 end);
 
 
-InstallMethod(EulerCharacteristic,
+InstallOtherMethod(EulerCharacteristic,
 "for Poset",
 [IsPoset],
 function(X)
-	return SCEulerCharacteristic(OrderComplex(X));
+	return EulerCharacteristic(OrderComplex(X));
 end);
 
 InstallMethod(FundamentalGroup,
 "for Poset",
 [IsPoset],
 function(X)
-	return SCFundamentalGroup(OrderComplex(X));
+	return FundamentalGroup(OrderComplex(X));
 end);
 

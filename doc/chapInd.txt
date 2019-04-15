@@ -2,47 +2,51 @@
   
   [1XIndex[101X
   
-  [2XConePoset[102X (for IsPoset)  2.3-5
-  [2XCoproductPosets[102X (for IsList)  2.3-2
-  [2XCoveringRelations[102X (for IsPoset)  3.4-3
-  [2XEmptyPoset[102X (for )  3.1-1
-  [2XEulerCharacteristic[102X (for IsPoset)  1.2-2
-  [2XFacePoset[102X (for SCIsSimplicialComplex)  1.1-1
-  [2XFundamentalGroup[102X (for IsPoset)  1.2-3
-  [2XHasseDiagram[102X (for IsPoset)  3.4-2
-  [2XImageMap[102X (for IsPosetHomomorphism)  2.2-3
-  [2XImageMap[102X (for IsPosetHomomorphism,IsObject)  2.2-4
-  [2XJoinPosets[102X (for IsList)  2.3-3
-  [2XMappingCylinderPosetHomomorphism[102X (for IsPosetHomomorphism)  2.3-8
-  [2XMinimalFiniteModelSphere[102X (for IsInt)  3.1-2
-  [2XNaturalMaps[102X (for IsPoset)  2.1-1
-  [2XOppositePoset[102X (for IsPoset)  2.3-7
-  [2XOrderComplex[102X (for IsPoset)  1.1-2
-  [2XOrdering[102X (for IsPoset)  3.2-1
-  [2XOrderMatrix[102X (for IsPoset)  3.4-1
-  [2XPosetByFunction[102X (for IsList,IsFunction)  3.3-2
-  [2XPosetByFunctionNC[102X (for IsList,IsFunction)  3.3-1
-  [2XPosetByHasseDiagram[102X (for IsHasseDiagram)  3.3-10
-  [2XPosetByOrderMatrix[102X (for IsList)  3.3-3
-  [2XPosetByOrderMatrix[102X (for IsList,IsList)  3.3-4
-  [2XPosetByOrderRelation[102X (for IsPartialOrderBinaryRelation)  3.3-9
-  [2XPosetHomology[102X (for IsPoset)  1.2-1
-  [2XPosetHomomorphismByFunction[102X (for IsPoset,IsPoset,IsFunction)  3.3-6
-  [2XPosetHomomorphismByFunctionNC[102X (for IsPoset,IsPoset,IsFunction)  3.3-5
-  [2XPosetHomomorphismByImages[102X (for IsPoset,IsPoset,IsList)  3.3-7
-  [2XPosetOfElementaryAbelianpSubgroups[102X (for IsGroup and IsFinite,IsInt)  4.1-3
-  [2XPosetOfpSubgroups[102X (for IsGroup and IsFinite,IsInt)  4.1-2
-  [2XPosetOfRadicalpSubgroups[102X (for IsGroup and IsFinite,IsInt)  4.1-5
-  [2XPosetOfSubgroups[102X (for IsGroup and IsFinite)  4.1-1
-  [2XProductPosets[102X (for IsList)  2.3-4
-  [2XQuotientOfPosetBySubposet[102X (for IsPoset,IsList)  2.3-9
-  [2XRadicalpSubgroups[102X  4.1-4
-  [2XRelationByPoset[102X (for IsPoset)  3.3-8
-  [2XSourceMap[102X (for IsPosetHomomorphism)  2.2-1
-  [2XSubPoset[102X (for IsPoset,IsList)  2.3-1
-  [2XSuspensionPoset[102X (for IsPoset)  2.3-6
-  [2XTargetMap[102X (for IsPosetHomomorphism)  2.2-2
-  [2XWedgePosets[102X (for IsList)  2.3-10
+  [2XConePoset[102X (for IsPoset)  3.3-5
+  [2XCoproductPosets[102X (for IsList)  3.3-2
+  [2XCoveringRelations[102X (for IsPoset)  4.4-3
+  [2XElementsAbove[102X (for IsPoset,IsObject)  1.1-1
+  [2XElementsBelow[102X (for IsPoset,IsObject)  1.1-3
+  [2XElementsStrictlyAbove[102X (for IsPoset,IsObject)  1.1-2
+  [2XElementsStrictlyBelow[102X (for IsPoset,IsObject)  1.1-4
+  [2XEmptyPoset[102X (for )  4.1-1
+  [2XEulerCharacteristic[102X (for IsPoset)  2.2-2
+  [2XFacePoset[102X (for SCIsSimplicialComplex)  2.1-1
+  [2XFundamentalGroup[102X (for IsPoset)  2.2-3
+  [2XHasseDiagram[102X (for IsPoset)  4.4-2
+  [2XImageMap[102X (for IsPosetHomomorphism)  3.2-3
+  [2XImageMap[102X (for IsPosetHomomorphism,IsObject)  3.2-4
+  [2XJoinPosets[102X (for IsList)  3.3-3
+  [2XMappingCylinderPosetHomomorphism[102X (for IsPosetHomomorphism)  3.3-8
+  [2XMinimalFiniteModelSphere[102X (for IsInt)  4.1-2
+  [2XNaturalMaps[102X (for IsPoset)  3.1-1
+  [2XOppositePoset[102X (for IsPoset)  3.3-7
+  [2XOrderComplex[102X (for IsPoset)  2.1-2
+  [2XOrdering[102X (for IsPoset)  4.2-1
+  [2XOrderMatrix[102X (for IsPoset)  4.4-1
+  [2XPosetByFunction[102X (for IsList,IsFunction)  4.3-2
+  [2XPosetByFunctionNC[102X (for IsList,IsFunction)  4.3-1
+  [2XPosetByHasseDiagram[102X (for IsHasseDiagram)  4.3-10
+  [2XPosetByOrderMatrix[102X (for IsList)  4.3-3
+  [2XPosetByOrderMatrix[102X (for IsList,IsList)  4.3-4
+  [2XPosetByOrderRelation[102X (for IsPartialOrderBinaryRelation)  4.3-9
+  [2XPosetHomology[102X (for IsPoset)  2.2-1
+  [2XPosetHomomorphismByFunction[102X (for IsPoset,IsPoset,IsFunction)  4.3-6
+  [2XPosetHomomorphismByFunctionNC[102X (for IsPoset,IsPoset,IsFunction)  4.3-5
+  [2XPosetHomomorphismByImages[102X (for IsPoset,IsPoset,IsList)  4.3-7
+  [2XPosetOfElementaryAbelianpSubgroups[102X (for IsGroup and IsFinite,IsInt)  5.1-3
+  [2XPosetOfpSubgroups[102X (for IsGroup and IsFinite,IsInt)  5.1-2
+  [2XPosetOfRadicalpSubgroups[102X (for IsGroup and IsFinite,IsInt)  5.1-5
+  [2XPosetOfSubgroups[102X (for IsGroup and IsFinite)  5.1-1
+  [2XProductPosets[102X (for IsList)  3.3-4
+  [2XQuotientOfPosetBySubposet[102X (for IsPoset,IsList)  3.3-9
+  [2XRadicalpSubgroups[102X  5.1-4
+  [2XRelationByPoset[102X (for IsPoset)  4.3-8
+  [2XSourceMap[102X (for IsPosetHomomorphism)  3.2-1
+  [2XSubPoset[102X (for IsPoset,IsList)  3.3-1
+  [2XSuspensionPoset[102X (for IsPoset)  3.3-6
+  [2XTargetMap[102X (for IsPosetHomomorphism)  3.2-2
+  [2XWedgePosets[102X (for IsList)  3.3-10
   
   
   -------------------------------------------------------

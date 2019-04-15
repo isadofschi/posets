@@ -108,7 +108,7 @@ PackageDoc := rec(
 Dependencies := rec(
   GAP := "4.8.2",
 
-  NeededOtherPackages := [ ["SimpComp", ">=2.1.6"],["SONATA", ">=2.8"]],
+  NeededOtherPackages := [ ["HAP", ">=1.11.13"],["SONATA", ">=2.8"]],
 
 
   SuggestedOtherPackages := [],

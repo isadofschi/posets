@@ -3,7 +3,7 @@
 #! @Section Face poset and order complex
 
 #!
-DeclareOperation("FacePoset",[SCIsSimplicialComplex]);
+DeclareOperation("FacePoset",[IsHapSimplicialComplex]);
 #!
 DeclareOperation("OrderComplex",[IsPoset]);
 
@@ -12,7 +12,7 @@ DeclareOperation("OrderComplex",[IsPoset]);
 #!
 DeclareOperation("PosetHomology",[IsPoset]);
 #!
-DeclareOperation("EulerCharacteristic",[IsPoset]);
+DeclareAttribute("EulerCharacteristic",IsPoset);
 #!
 DeclareOperation("FundamentalGroup",[IsPoset]);
 

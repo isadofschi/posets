@@ -7,7 +7,6 @@
 ##  
 ##
 
-LoadPackage("SimpComp");
 
 PosetFamily:=NewFamily("PosetFamily",IsPoset);;
 PosetType:=NewType(PosetFamily,  IsPoset );;
@@ -87,10 +86,10 @@ function(X,f)
 	if not ForAll(namesX,x-> ForAll( namesX, y->  not (f(x,y) and f(y,x)) or x=y )) then
 		Error("The relation is not antisymmetric");
 	fi;
-	if not ForAll(namesX,x-> ForAll( namesX, y-> ForAll(namesX,z -> (not (f(x,y) and f(y,z) ) or f(x,z) ))) then
+	if not ForAll(namesX,x-> ForAll( namesX, y-> ForAll(namesX,z -> (not (f(x,y) and f(y,z) ) or f(x,z) )))) then
 		Error("The relation is not transitive");
 	fi;
-	return PosetByFunctionNC(names,f);
+	return PosetByFunctionNC(namesX,f);
 end);
 
 
@@ -158,14 +157,14 @@ end);
 
 InstallMethod(PosetHomomorphismByImagesNC,
 "for Poset, Poset and function",
-[IsPoset, IsPoset, IsFunction],
+[IsPoset, IsPoset, IsList],
 function(X,Y,f)
 	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, f:=f) );
 end);
 
 InstallMethod(PosetHomomorphismByImages,
 "for Poset, Poset and function",
-[IsPoset, IsPoset, IsFunction],
+[IsPoset, IsPoset, IsList],
 function(X,Y,f)
 	if not ForAll(Set(X),
 				  x1->ForAll(Set(X),

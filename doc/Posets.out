@@ -1,15 +1,17 @@
-\BOOKMARK [0][-]{chapter.1}{Topology}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Face poset and order complex}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Some homotopy properties}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Constructing new posets}{}% 4
-\BOOKMARK [1][-]{section.2.1}{Natural maps}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.2}{Methods for poset homomorphisms}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.3}{Categorical constructions}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Posets}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Examples of posets}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{The Poset type}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.3}{Constructing posets in different ways}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.4}{Classical constructions}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{Posets of subgroups of a finite group}{}% 13
-\BOOKMARK [1][-]{section.4.1}{Posets of p-subgroups}{chapter.4}% 14
-\BOOKMARK [0][-]{section*.2}{Index}{}% 15
+\BOOKMARK [0][-]{chapter.1}{Posets automatic generated documentation}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Posets automatic generated documentation of methods}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Topology}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Face poset and order complex}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Some homotopy properties}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Constructing new posets}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Natural maps}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{Methods for poset homomorphisms}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{Categorical constructions}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.4}{Posets}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Examples of posets}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{The Poset type}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Constructing posets in different ways}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.4}{Classical constructions}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Posets of subgroups of a finite group}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Posets of p-subgroups}{chapter.5}% 16
+\BOOKMARK [0][-]{section*.2}{Index}{}% 17

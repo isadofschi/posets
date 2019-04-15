@@ -1,19 +1,13 @@
 gap> X1:=PosetOfRadicalpSubgroups(AlternatingGroup(10),3);
 <finite poset of size 24620>
 gap> K:=OrderComplex(X1);;
-gap> Size(K[1]);
-24620
-gap> Size(K[2]);
-133000
-gap> Size(K[3]);
-151200
-gap> Size(K[4]);
-67200
-gap> pi:=SCFundamentalGroup(K);
-<fp group with 108381 generators>
-gap> Length(RelatorsOfFpGroup(pi));
-151200
-gap> Sum(List(RelatorsOfFpGroup(pi),Length));
-376350
-gap> P:=PresentationFpGroup(pi);
+gap> pi:=FundamentalGroup(K);
+#I  there are 25253 generators and 872 relators of total length 235485
+#I  there are 25248 generators and 867 relators of total length 365164
+#I  there are 25244 generators and 863 relators of total length 583288
+#I  there are 25242 generators and 861 relators of total length 1191496
+#I  there are 25242 generators and 861 relators of total length 1166472
+<fp group of size infinity with 25242 generators>
+gap> AbelianInvariants(pi)=List([1..25242],x->0); 
+true
 

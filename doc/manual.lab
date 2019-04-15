@@ -1,59 +1,65 @@
 \GAPDocLabFile{posets}
 \makelabel{posets:Title page}{}{X7D2C85EC87DD46E5}
 \makelabel{posets:Table of Contents}{}{X8537FEB07AF2BEC8}
-\makelabel{posets:Topology}{1}{X7CEC1699860AC45A}
-\makelabel{posets:Face poset and order complex}{1.1}{X8423A6D080BED55F}
-\makelabel{posets:Some homotopy properties}{1.2}{X7968851D7966AD07}
-\makelabel{posets:Constructing new posets}{2}{X784678777ABAD248}
-\makelabel{posets:Natural maps}{2.1}{X85FE51B6843B30D9}
-\makelabel{posets:Methods for poset homomorphisms}{2.2}{X7FEAF03A79A0F3D1}
-\makelabel{posets:Categorical constructions}{2.3}{X7F3D3A1C7CC6BEFC}
-\makelabel{posets:Posets}{3}{X79540DAB85902432}
-\makelabel{posets:Examples of posets}{3.1}{X84B7B0047DF9E391}
-\makelabel{posets:The Poset type}{3.2}{X87298423867F5682}
-\makelabel{posets:Constructing posets in different ways}{3.3}{X7811285285DC32D4}
-\makelabel{posets:Classical constructions}{3.4}{X7BE15FF683422985}
-\makelabel{posets:Posets of subgroups of a finite group}{4}{X83A08BA87CE758FA}
-\makelabel{posets:Posets of p-subgroups}{4.1}{X83924ACE82045755}
+\makelabel{posets:Posets automatic generated documentation}{1}{X87B9613F797D7B3F}
+\makelabel{posets:Posets automatic generated documentation of methods}{1.1}{X8779056779B017FC}
+\makelabel{posets:Topology}{2}{X7CEC1699860AC45A}
+\makelabel{posets:Face poset and order complex}{2.1}{X8423A6D080BED55F}
+\makelabel{posets:Some homotopy properties}{2.2}{X7968851D7966AD07}
+\makelabel{posets:Constructing new posets}{3}{X784678777ABAD248}
+\makelabel{posets:Natural maps}{3.1}{X85FE51B6843B30D9}
+\makelabel{posets:Methods for poset homomorphisms}{3.2}{X7FEAF03A79A0F3D1}
+\makelabel{posets:Categorical constructions}{3.3}{X7F3D3A1C7CC6BEFC}
+\makelabel{posets:Posets}{4}{X79540DAB85902432}
+\makelabel{posets:Examples of posets}{4.1}{X84B7B0047DF9E391}
+\makelabel{posets:The Poset type}{4.2}{X87298423867F5682}
+\makelabel{posets:Constructing posets in different ways}{4.3}{X7811285285DC32D4}
+\makelabel{posets:Classical constructions}{4.4}{X7BE15FF683422985}
+\makelabel{posets:Posets of subgroups of a finite group}{5}{X83A08BA87CE758FA}
+\makelabel{posets:Posets of p-subgroups}{5.1}{X83924ACE82045755}
 \makelabel{posets:Index}{Ind}{X83A0356F839C696F}
-\makelabel{posets:FacePoset (for SCIsSimplicialComplex)}{1.1.1}{X7E4954437961D8E2}
-\makelabel{posets:OrderComplex (for IsPoset)}{1.1.2}{X854811497CD2F578}
-\makelabel{posets:PosetHomology (for IsPoset)}{1.2.1}{X7E98C6F77B26A7AB}
-\makelabel{posets:EulerCharacteristic (for IsPoset)}{1.2.2}{X7B91046281DED4DA}
-\makelabel{posets:FundamentalGroup (for IsPoset)}{1.2.3}{X7CEB48BC852900E2}
-\makelabel{posets:NaturalMaps (for IsPoset)}{2.1.1}{X7E1ECC10824BE91D}
-\makelabel{posets:SourceMap (for IsPosetHomomorphism)}{2.2.1}{X7BE74C2C80DD7FCF}
-\makelabel{posets:TargetMap (for IsPosetHomomorphism)}{2.2.2}{X78AC126382872D16}
-\makelabel{posets:ImageMap (for IsPosetHomomorphism)}{2.2.3}{X7974453A840EC7EE}
-\makelabel{posets:ImageMap (for IsPosetHomomorphism,IsObject)}{2.2.4}{X85B7CA997B4891A2}
-\makelabel{posets:SubPoset (for IsPoset,IsList)}{2.3.1}{X839BC8B682C2CE94}
-\makelabel{posets:CoproductPosets (for IsList)}{2.3.2}{X7CC025878217B0A4}
-\makelabel{posets:JoinPosets (for IsList)}{2.3.3}{X7F8FD6637A1CE405}
-\makelabel{posets:ProductPosets (for IsList)}{2.3.4}{X7EA3F11A84462CE5}
-\makelabel{posets:ConePoset (for IsPoset)}{2.3.5}{X81D5F62E7D3D60C5}
-\makelabel{posets:SuspensionPoset (for IsPoset)}{2.3.6}{X83EED1627E94BEE5}
-\makelabel{posets:OppositePoset (for IsPoset)}{2.3.7}{X7D3E2BA57C736659}
-\makelabel{posets:MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}{2.3.8}{X8467A35E823D7FE9}
-\makelabel{posets:QuotientOfPosetBySubposet (for IsPoset,IsList)}{2.3.9}{X81F9CC517E170165}
-\makelabel{posets:WedgePosets (for IsList)}{2.3.10}{X80248EAB820609F9}
-\makelabel{posets:EmptyPoset (for )}{3.1.1}{X870257C57E62D10B}
-\makelabel{posets:MinimalFiniteModelSphere (for IsInt)}{3.1.2}{X7AAC4B76878D6AED}
-\makelabel{posets:Ordering (for IsPoset)}{3.2.1}{X7F1EFF6284A84223}
-\makelabel{posets:PosetByFunctionNC (for IsList,IsFunction)}{3.3.1}{X7DA113E1813BFCE2}
-\makelabel{posets:PosetByFunction (for IsList,IsFunction)}{3.3.2}{X8451037E860B35DE}
-\makelabel{posets:PosetByOrderMatrix (for IsList)}{3.3.3}{X78ED12D1784DA6A9}
-\makelabel{posets:PosetByOrderMatrix (for IsList,IsList)}{3.3.4}{X79BE0F957986CCF5}
-\makelabel{posets:PosetHomomorphismByFunctionNC (for IsPoset,IsPoset,IsFunction)}{3.3.5}{X87C878E8822573FE}
-\makelabel{posets:PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}{3.3.6}{X87BC372284762BCE}
-\makelabel{posets:PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}{3.3.7}{X7DB81BAD78C3943E}
-\makelabel{posets:RelationByPoset (for IsPoset)}{3.3.8}{X824E42957F55214C}
-\makelabel{posets:PosetByOrderRelation (for IsPartialOrderBinaryRelation)}{3.3.9}{X8116B87D82E95551}
-\makelabel{posets:PosetByHasseDiagram (for IsHasseDiagram)}{3.3.10}{X7DC0448A8515DFFE}
-\makelabel{posets:OrderMatrix (for IsPoset)}{3.4.1}{X80E1B16F8665FCC5}
-\makelabel{posets:HasseDiagram (for IsPoset)}{3.4.2}{X7B16A769870A112D}
-\makelabel{posets:CoveringRelations (for IsPoset)}{3.4.3}{X8361159B7F4B95B6}
-\makelabel{posets:PosetOfSubgroups (for IsGroup and IsFinite)}{4.1.1}{X7D52788F816D834C}
-\makelabel{posets:PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}{4.1.2}{X84B3C8DD866731CB}
-\makelabel{posets:PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}{4.1.3}{X7E04D33E81244EFB}
-\makelabel{posets:RadicalpSubgroups}{4.1.4}{X7C952BC37BE44409}
-\makelabel{posets:PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}{4.1.5}{X7B6CFD077D399862}
+\makelabel{posets:ElementsAbove (for IsPoset,IsObject)}{1.1.1}{X7CEFE7157E8E8F6D}
+\makelabel{posets:ElementsStrictlyAbove (for IsPoset,IsObject)}{1.1.2}{X81325C11785A4C14}
+\makelabel{posets:ElementsBelow (for IsPoset,IsObject)}{1.1.3}{X7B7F86557EFB1739}
+\makelabel{posets:ElementsStrictlyBelow (for IsPoset,IsObject)}{1.1.4}{X86A23D518231C434}
+\makelabel{posets:FacePoset (for SCIsSimplicialComplex)}{2.1.1}{X7E4954437961D8E2}
+\makelabel{posets:OrderComplex (for IsPoset)}{2.1.2}{X854811497CD2F578}
+\makelabel{posets:PosetHomology (for IsPoset)}{2.2.1}{X7E98C6F77B26A7AB}
+\makelabel{posets:EulerCharacteristic (for IsPoset)}{2.2.2}{X7B91046281DED4DA}
+\makelabel{posets:FundamentalGroup (for IsPoset)}{2.2.3}{X7CEB48BC852900E2}
+\makelabel{posets:NaturalMaps (for IsPoset)}{3.1.1}{X7E1ECC10824BE91D}
+\makelabel{posets:SourceMap (for IsPosetHomomorphism)}{3.2.1}{X7BE74C2C80DD7FCF}
+\makelabel{posets:TargetMap (for IsPosetHomomorphism)}{3.2.2}{X78AC126382872D16}
+\makelabel{posets:ImageMap (for IsPosetHomomorphism)}{3.2.3}{X7974453A840EC7EE}
+\makelabel{posets:ImageMap (for IsPosetHomomorphism,IsObject)}{3.2.4}{X85B7CA997B4891A2}
+\makelabel{posets:SubPoset (for IsPoset,IsList)}{3.3.1}{X839BC8B682C2CE94}
+\makelabel{posets:CoproductPosets (for IsList)}{3.3.2}{X7CC025878217B0A4}
+\makelabel{posets:JoinPosets (for IsList)}{3.3.3}{X7F8FD6637A1CE405}
+\makelabel{posets:ProductPosets (for IsList)}{3.3.4}{X7EA3F11A84462CE5}
+\makelabel{posets:ConePoset (for IsPoset)}{3.3.5}{X81D5F62E7D3D60C5}
+\makelabel{posets:SuspensionPoset (for IsPoset)}{3.3.6}{X83EED1627E94BEE5}
+\makelabel{posets:OppositePoset (for IsPoset)}{3.3.7}{X7D3E2BA57C736659}
+\makelabel{posets:MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}{3.3.8}{X8467A35E823D7FE9}
+\makelabel{posets:QuotientOfPosetBySubposet (for IsPoset,IsList)}{3.3.9}{X81F9CC517E170165}
+\makelabel{posets:WedgePosets (for IsList)}{3.3.10}{X80248EAB820609F9}
+\makelabel{posets:EmptyPoset (for )}{4.1.1}{X870257C57E62D10B}
+\makelabel{posets:MinimalFiniteModelSphere (for IsInt)}{4.1.2}{X7AAC4B76878D6AED}
+\makelabel{posets:Ordering (for IsPoset)}{4.2.1}{X7F1EFF6284A84223}
+\makelabel{posets:PosetByFunctionNC (for IsList,IsFunction)}{4.3.1}{X7DA113E1813BFCE2}
+\makelabel{posets:PosetByFunction (for IsList,IsFunction)}{4.3.2}{X8451037E860B35DE}
+\makelabel{posets:PosetByOrderMatrix (for IsList)}{4.3.3}{X78ED12D1784DA6A9}
+\makelabel{posets:PosetByOrderMatrix (for IsList,IsList)}{4.3.4}{X79BE0F957986CCF5}
+\makelabel{posets:PosetHomomorphismByFunctionNC (for IsPoset,IsPoset,IsFunction)}{4.3.5}{X87C878E8822573FE}
+\makelabel{posets:PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}{4.3.6}{X87BC372284762BCE}
+\makelabel{posets:PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}{4.3.7}{X7DB81BAD78C3943E}
+\makelabel{posets:RelationByPoset (for IsPoset)}{4.3.8}{X824E42957F55214C}
+\makelabel{posets:PosetByOrderRelation (for IsPartialOrderBinaryRelation)}{4.3.9}{X8116B87D82E95551}
+\makelabel{posets:PosetByHasseDiagram (for IsHasseDiagram)}{4.3.10}{X7DC0448A8515DFFE}
+\makelabel{posets:OrderMatrix (for IsPoset)}{4.4.1}{X80E1B16F8665FCC5}
+\makelabel{posets:HasseDiagram (for IsPoset)}{4.4.2}{X7B16A769870A112D}
+\makelabel{posets:CoveringRelations (for IsPoset)}{4.4.3}{X8361159B7F4B95B6}
+\makelabel{posets:PosetOfSubgroups (for IsGroup and IsFinite)}{5.1.1}{X7D52788F816D834C}
+\makelabel{posets:PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}{5.1.2}{X84B3C8DD866731CB}
+\makelabel{posets:PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}{5.1.3}{X7E04D33E81244EFB}
+\makelabel{posets:RadicalpSubgroups}{5.1.4}{X7C952BC37BE44409}
+\makelabel{posets:PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}{5.1.5}{X7B6CFD077D399862}

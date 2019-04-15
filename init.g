@@ -20,5 +20,6 @@ ReadPackage( "Posets", "lib/complexes.gd" );
 ReadPackage( "Posets", "lib/constructions.gd" );
 ReadPackage( "Posets", "lib/subgroups.gd" );
 ReadPackage( "Posets", "lib/namedposets.gd" );
+ReadPackage("Posets", "lib/beatweak.gd" );
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

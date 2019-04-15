@@ -1,56 +1,62 @@
-\contentsline {chapter}{\numberline {1}\leavevmode {\color {Chapter }Topology}}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}\leavevmode {\color {Chapter }Face poset and order complex}}{3}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}\leavevmode {\color {Chapter }FacePoset (for SCIsSimplicialComplex)}}{3}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}\leavevmode {\color {Chapter }OrderComplex (for IsPoset)}}{3}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}\leavevmode {\color {Chapter }Some homotopy properties}}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}\leavevmode {\color {Chapter }PosetHomology (for IsPoset)}}{3}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}\leavevmode {\color {Chapter }EulerCharacteristic (for IsPoset)}}{3}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}\leavevmode {\color {Chapter }FundamentalGroup (for IsPoset)}}{3}{subsection.1.2.3}
-\contentsline {chapter}{\numberline {2}\leavevmode {\color {Chapter }Constructing new posets}}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}\leavevmode {\color {Chapter }Natural maps}}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}\leavevmode {\color {Chapter }NaturalMaps (for IsPoset)}}{4}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter }Methods for poset homomorphisms}}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}\leavevmode {\color {Chapter }SourceMap (for IsPosetHomomorphism)}}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}\leavevmode {\color {Chapter }TargetMap (for IsPosetHomomorphism)}}{4}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism)}}{4}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism,IsObject)}}{4}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}\leavevmode {\color {Chapter }Categorical constructions}}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}\leavevmode {\color {Chapter }SubPoset (for IsPoset,IsList)}}{4}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}\leavevmode {\color {Chapter }CoproductPosets (for IsList)}}{5}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}\leavevmode {\color {Chapter }JoinPosets (for IsList)}}{5}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}\leavevmode {\color {Chapter }ProductPosets (for IsList)}}{5}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}\leavevmode {\color {Chapter }ConePoset (for IsPoset)}}{5}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}\leavevmode {\color {Chapter }SuspensionPoset (for IsPoset)}}{5}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}\leavevmode {\color {Chapter }OppositePoset (for IsPoset)}}{5}{subsection.2.3.7}
-\contentsline {subsection}{\numberline {2.3.8}\leavevmode {\color {Chapter }MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}}{5}{subsection.2.3.8}
-\contentsline {subsection}{\numberline {2.3.9}\leavevmode {\color {Chapter }QuotientOfPosetBySubposet (for IsPoset,IsList)}}{5}{subsection.2.3.9}
-\contentsline {subsection}{\numberline {2.3.10}\leavevmode {\color {Chapter }WedgePosets (for IsList)}}{5}{subsection.2.3.10}
-\contentsline {chapter}{\numberline {3}\leavevmode {\color {Chapter }Posets}}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}\leavevmode {\color {Chapter }Examples of posets}}{6}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}\leavevmode {\color {Chapter }EmptyPoset (for )}}{6}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}\leavevmode {\color {Chapter }MinimalFiniteModelSphere (for IsInt)}}{6}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}\leavevmode {\color {Chapter }The Poset type}}{6}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}\leavevmode {\color {Chapter }Ordering (for IsPoset)}}{6}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}\leavevmode {\color {Chapter }Constructing posets in different ways}}{6}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}\leavevmode {\color {Chapter }PosetByFunctionNC (for IsList,IsFunction)}}{6}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}\leavevmode {\color {Chapter }PosetByFunction (for IsList,IsFunction)}}{6}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList)}}{7}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList,IsList)}}{7}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}\leavevmode {\color {Chapter }PosetHomomorphismByFunctionNC (for IsPoset,IsPoset,IsFunction)}}{7}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}\leavevmode {\color {Chapter }PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}}{7}{subsection.3.3.6}
-\contentsline {subsection}{\numberline {3.3.7}\leavevmode {\color {Chapter }PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}}{7}{subsection.3.3.7}
-\contentsline {subsection}{\numberline {3.3.8}\leavevmode {\color {Chapter }RelationByPoset (for IsPoset)}}{7}{subsection.3.3.8}
-\contentsline {subsection}{\numberline {3.3.9}\leavevmode {\color {Chapter }PosetByOrderRelation (for IsPartialOrderBinaryRelation)}}{7}{subsection.3.3.9}
-\contentsline {subsection}{\numberline {3.3.10}\leavevmode {\color {Chapter }PosetByHasseDiagram (for IsHasseDiagram)}}{7}{subsection.3.3.10}
-\contentsline {section}{\numberline {3.4}\leavevmode {\color {Chapter }Classical constructions}}{7}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}\leavevmode {\color {Chapter }OrderMatrix (for IsPoset)}}{7}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}\leavevmode {\color {Chapter }HasseDiagram (for IsPoset)}}{8}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}\leavevmode {\color {Chapter }CoveringRelations (for IsPoset)}}{8}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}\leavevmode {\color {Chapter }Posets of subgroups of a finite group}}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}\leavevmode {\color {Chapter }Posets of p-subgroups}}{9}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}\leavevmode {\color {Chapter }PosetOfSubgroups (for IsGroup and IsFinite)}}{9}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}\leavevmode {\color {Chapter }PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}}{9}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}\leavevmode {\color {Chapter }PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}}{9}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}\leavevmode {\color {Chapter }RadicalpSubgroups}}{9}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}\leavevmode {\color {Chapter }PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}}{9}{subsection.4.1.5}
-\contentsline {chapter}{Index}{10}{section*.2}
+\contentsline {chapter}{\numberline {1}\leavevmode {\color {Chapter }Posets automatic generated documentation}}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}\leavevmode {\color {Chapter }Posets automatic generated documentation of methods}}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}\leavevmode {\color {Chapter }ElementsAbove (for IsPoset,IsObject)}}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}\leavevmode {\color {Chapter }ElementsStrictlyAbove (for IsPoset,IsObject)}}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}\leavevmode {\color {Chapter }ElementsBelow (for IsPoset,IsObject)}}{3}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}\leavevmode {\color {Chapter }ElementsStrictlyBelow (for IsPoset,IsObject)}}{3}{subsection.1.1.4}
+\contentsline {chapter}{\numberline {2}\leavevmode {\color {Chapter }Topology}}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}\leavevmode {\color {Chapter }Face poset and order complex}}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\leavevmode {\color {Chapter }FacePoset (for SCIsSimplicialComplex)}}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\leavevmode {\color {Chapter }OrderComplex (for IsPoset)}}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter }Some homotopy properties}}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\leavevmode {\color {Chapter }PosetHomology (for IsPoset)}}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\leavevmode {\color {Chapter }EulerCharacteristic (for IsPoset)}}{4}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}\leavevmode {\color {Chapter }FundamentalGroup (for IsPoset)}}{4}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}\leavevmode {\color {Chapter }Constructing new posets}}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}\leavevmode {\color {Chapter }Natural maps}}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}\leavevmode {\color {Chapter }NaturalMaps (for IsPoset)}}{5}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}\leavevmode {\color {Chapter }Methods for poset homomorphisms}}{5}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}\leavevmode {\color {Chapter }SourceMap (for IsPosetHomomorphism)}}{5}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\leavevmode {\color {Chapter }TargetMap (for IsPosetHomomorphism)}}{5}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism)}}{5}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism,IsObject)}}{5}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}\leavevmode {\color {Chapter }Categorical constructions}}{5}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}\leavevmode {\color {Chapter }SubPoset (for IsPoset,IsList)}}{5}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}\leavevmode {\color {Chapter }CoproductPosets (for IsList)}}{6}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}\leavevmode {\color {Chapter }JoinPosets (for IsList)}}{6}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}\leavevmode {\color {Chapter }ProductPosets (for IsList)}}{6}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}\leavevmode {\color {Chapter }ConePoset (for IsPoset)}}{6}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}\leavevmode {\color {Chapter }SuspensionPoset (for IsPoset)}}{6}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}\leavevmode {\color {Chapter }OppositePoset (for IsPoset)}}{6}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}\leavevmode {\color {Chapter }MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}}{6}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}\leavevmode {\color {Chapter }QuotientOfPosetBySubposet (for IsPoset,IsList)}}{6}{subsection.3.3.9}
+\contentsline {subsection}{\numberline {3.3.10}\leavevmode {\color {Chapter }WedgePosets (for IsList)}}{6}{subsection.3.3.10}
+\contentsline {chapter}{\numberline {4}\leavevmode {\color {Chapter }Posets}}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}\leavevmode {\color {Chapter }Examples of posets}}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\leavevmode {\color {Chapter }EmptyPoset (for )}}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}\leavevmode {\color {Chapter }MinimalFiniteModelSphere (for IsInt)}}{7}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}\leavevmode {\color {Chapter }The Poset type}}{7}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}\leavevmode {\color {Chapter }Ordering (for IsPoset)}}{7}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}\leavevmode {\color {Chapter }Constructing posets in different ways}}{7}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\leavevmode {\color {Chapter }PosetByFunctionNC (for IsList,IsFunction)}}{7}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }PosetByFunction (for IsList,IsFunction)}}{7}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList)}}{8}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList,IsList)}}{8}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {Chapter }PosetHomomorphismByFunctionNC (for IsPoset,IsPoset,IsFunction)}}{8}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {Chapter }PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}}{8}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {Chapter }PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}}{8}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {Chapter }RelationByPoset (for IsPoset)}}{8}{subsection.4.3.8}
+\contentsline {subsection}{\numberline {4.3.9}\leavevmode {\color {Chapter }PosetByOrderRelation (for IsPartialOrderBinaryRelation)}}{8}{subsection.4.3.9}
+\contentsline {subsection}{\numberline {4.3.10}\leavevmode {\color {Chapter }PosetByHasseDiagram (for IsHasseDiagram)}}{8}{subsection.4.3.10}
+\contentsline {section}{\numberline {4.4}\leavevmode {\color {Chapter }Classical constructions}}{8}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}\leavevmode {\color {Chapter }OrderMatrix (for IsPoset)}}{8}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}\leavevmode {\color {Chapter }HasseDiagram (for IsPoset)}}{9}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}\leavevmode {\color {Chapter }CoveringRelations (for IsPoset)}}{9}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {Chapter }Posets of subgroups of a finite group}}{10}{chapter.5}
+\contentsline {section}{\numberline {5.1}\leavevmode {\color {Chapter }Posets of p-subgroups}}{10}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\leavevmode {\color {Chapter }PosetOfSubgroups (for IsGroup and IsFinite)}}{10}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}\leavevmode {\color {Chapter }PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}}{10}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}\leavevmode {\color {Chapter }PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}}{10}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}\leavevmode {\color {Chapter }RadicalpSubgroups}}{10}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}\leavevmode {\color {Chapter }PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}}{10}{subsection.5.1.5}
+\contentsline {chapter}{Index}{11}{section*.2}

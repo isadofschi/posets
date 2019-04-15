@@ -43,7 +43,8 @@ DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
 DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
 #!
 DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
-
+#!
+DeclareOperation("PosetHomomorphismByImagesNC",[IsPoset,IsPoset,IsList]);
 #############################################################################
 
 #!

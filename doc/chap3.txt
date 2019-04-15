@@ -1,84 +1,72 @@
   
-  [1X3 [33X[0;0YPosets[133X[101X
+  [1X3 [33X[0;0YConstructing new posets[133X[101X
   
   
-  [1X3.1 [33X[0;0YExamples of posets[133X[101X
+  [1X3.1 [33X[0;0YNatural maps[133X[101X
   
-  [1X3.1-1 EmptyPoset[101X
+  [1X3.1-1 NaturalMaps[101X
   
-  [29X[2XEmptyPoset[102X(  ) [32X operation
-  [6XReturns:[106X  [33X[0;10Ythe empty poset.[133X
-  
-  [1X3.1-2 MinimalFiniteModelSphere[101X
-  
-  [29X[2XMinimalFiniteModelSphere[102X( [3Xn[103X ) [32X operation
-  [6XReturns:[106X  [33X[0;10Ythe minimal finite model of the n-sphere [22XS^n[122X.[133X
+  [29X[2XNaturalMaps[102X( [3Xarg[103X ) [32X operation
   
   
-  [1X3.2 [33X[0;0YThe Poset type[133X[101X
+  [1X3.2 [33X[0;0YMethods for poset homomorphisms[133X[101X
   
-  [1X3.2-1 Ordering[101X
+  [1X3.2-1 SourceMap[101X
   
-  [29X[2XOrdering[102X( [3XX[103X ) [32X operation
-  [6XReturns:[106X  [33X[0;10Ya function computing the order of the poset [22XX[122X.[133X
+  [29X[2XSourceMap[102X( [3Xarg[103X ) [32X operation
   
-  [33X[0;0YOrdering(X)(x,y) is the value of the expression [22Xx≥ y[122X.[133X
+  [1X3.2-2 TargetMap[101X
   
+  [29X[2XTargetMap[102X( [3Xarg[103X ) [32X operation
   
-  [1X3.3 [33X[0;0YConstructing posets in different ways[133X[101X
+  [1X3.2-3 ImageMap[101X
   
-  [1X3.3-1 PosetByFunctionNC[101X
+  [29X[2XImageMap[102X( [3Xarg[103X ) [32X operation
   
-  [29X[2XPosetByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  [1X3.2-4 ImageMap[101X
   
-  [1X3.3-2 PosetByFunction[101X
-  
-  [29X[2XPosetByFunction[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
-  
-  [1X3.3-3 PosetByOrderMatrix[101X
-  
-  [29X[2XPosetByOrderMatrix[102X( [3Xarg[103X ) [32X operation
-  
-  [1X3.3-4 PosetByOrderMatrix[101X
-  
-  [29X[2XPosetByOrderMatrix[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
-  
-  [1X3.3-5 PosetHomomorphismByFunctionNC[101X
-  
-  [29X[2XPosetHomomorphismByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X3.3-6 PosetHomomorphismByFunction[101X
-  
-  [29X[2XPosetHomomorphismByFunction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X3.3-7 PosetHomomorphismByImages[101X
-  
-  [29X[2XPosetHomomorphismByImages[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X3.3-8 RelationByPoset[101X
-  
-  [29X[2XRelationByPoset[102X( [3Xarg[103X ) [32X operation
-  
-  [1X3.3-9 PosetByOrderRelation[101X
-  
-  [29X[2XPosetByOrderRelation[102X( [3Xarg[103X ) [32X operation
-  
-  [1X3.3-10 PosetByHasseDiagram[101X
-  
-  [29X[2XPosetByHasseDiagram[102X( [3Xarg[103X ) [32X operation
+  [29X[2XImageMap[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
   
-  [1X3.4 [33X[0;0YClassical constructions[133X[101X
+  [1X3.3 [33X[0;0YCategorical constructions[133X[101X
   
-  [1X3.4-1 OrderMatrix[101X
+  [1X3.3-1 SubPoset[101X
   
-  [29X[2XOrderMatrix[102X( [3Xarg[103X ) [32X operation
+  [29X[2XSubPoset[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X3.4-2 HasseDiagram[101X
+  [1X3.3-2 CoproductPosets[101X
   
-  [29X[2XHasseDiagram[102X( [3Xarg[103X ) [32X operation
+  [29X[2XCoproductPosets[102X( [3Xarg[103X ) [32X operation
   
-  [1X3.4-3 CoveringRelations[101X
+  [1X3.3-3 JoinPosets[101X
   
-  [29X[2XCoveringRelations[102X( [3Xarg[103X ) [32X operation
+  [29X[2XJoinPosets[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-4 ProductPosets[101X
+  
+  [29X[2XProductPosets[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-5 ConePoset[101X
+  
+  [29X[2XConePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-6 SuspensionPoset[101X
+  
+  [29X[2XSuspensionPoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-7 OppositePoset[101X
+  
+  [29X[2XOppositePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-8 MappingCylinderPosetHomomorphism[101X
+  
+  [29X[2XMappingCylinderPosetHomomorphism[102X( [3Xarg[103X ) [32X operation
+  
+  [1X3.3-9 QuotientOfPosetBySubposet[101X
+  
+  [29X[2XQuotientOfPosetBySubposet[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X3.3-10 WedgePosets[101X
+  
+  [29X[2XWedgePosets[102X( [3Xarg[103X ) [32X operation
   
