@@ -45,3 +45,28 @@ function(X,x)
 	Fxhat:=Filtered(Set(X),y->Ordering(X)(y,x) and x<>y);
 	return SubPoset(X,Fxhat);
 end);
+
+
+InstallMethod(ElementsComparable,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local Fx;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	Fx:=Filtered(Set(X),y->Ordering(X)(x,y) or Ordering(X)(y,x));
+	return SubPoset(X,Fx);
+end);
+
+InstallMethod(ElementsStrictlyComparable,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local Fxhat;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	Fxhat:=Filtered(Set(X),y->(Ordering(X)(x,y) or Ordering(X)(y,x)) and x<>y);
+	return SubPoset(X,Fxhat);
+end);
