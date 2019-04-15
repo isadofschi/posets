@@ -24,9 +24,9 @@ DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]); #to do
 #!
 DeclareOperation("IsBeatPoint",[IsPoset,IsObject]);
 #!
-DeclareOperation("IsUpBeatPoint",[IsPoset,IsObject]); #to do
+DeclareOperation("IsUpBeatPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("IsDownBeatPoint",[IsPoset,IsObject]); #to do
+DeclareOperation("IsDownBeatPoint",[IsPoset,IsObject]); 
 #!
 DeclareOperation("UpBeatPoints",[IsPoset]); 
 #!
@@ -42,17 +42,17 @@ DeclareOperation("CorePoset",[IsPoset]);
 #!
 DeclareOperation("IsContractible",[IsPoset]);
 #!
-DeclareOperation("IsWeakPoint",[IsPoset,IsObject]); #to do
+DeclareOperation("IsWeakPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("IsUpWeakPoint",[IsPoset,IsObject]); #to do
+DeclareOperation("IsUpWeakPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("IsDownWeakPoint",[IsPoset,IsObject]); #to do
+DeclareOperation("IsDownWeakPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("WeakPoints",[IsPoset]); #to do
+DeclareOperation("WeakPoints",[IsPoset]);
 #!
-DeclareOperation("UpWeakPoints",[IsPoset]); #to do
+DeclareOperation("UpWeakPoints",[IsPoset]); 
 #!
-DeclareOperation("DownWeakPoints",[IsPoset]); #to do
+DeclareOperation("DownWeakPoints",[IsPoset]); 
 #!
 DeclareOperation("WeakCorePoset",[IsPoset]); #to do
 #!

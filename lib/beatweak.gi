@@ -99,7 +99,7 @@ function(X,x)
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	return fail;
+	return Size(UpperCovers(X,x))=1;
 end);
 
 InstallMethod(IsDownBeatPoint,
@@ -110,7 +110,7 @@ function(X,x)
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	return fail;
+	return Size(LowerCovers(X,x))=1;
 end);
 
 InstallMethod(IsBeatPoint,
@@ -162,8 +162,63 @@ InstallMethod(IsContractible,
 "for Poset",
 [IsPoset],
 function(X)
+	# optimization:
+	#if X.has_top() or X.has_bottom():
+	#	return True
 	return Size(CorePoset(X)) = 1;
 end);
 
+InstallMethod(IsUpWeakPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return IsContractible(ElementsStrictlyAbove(X,x));
+end);
+
+InstallMethod(IsDownWeakPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return IsContractible(ElementsStrictlyBelow(X,x));
+end);
+
+InstallMethod(IsWeakPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return IsUpWeakPoint(X,x) or IsDownWeakPoint(X,x);
+end);
+
+InstallMethod(UpWeakPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsUpWeakPoint);
+end);
+
+InstallMethod(DownWeakPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsDownWeakPoint);
+end);
+
+InstallMethod(WeakPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsWeakPoint);
+end);
 
 	

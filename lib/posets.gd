@@ -63,7 +63,10 @@ DeclareOperation("OrderMatrix",[IsPoset]); # (computes and) returns the order ma
 #!
 DeclareOperation("HasseDiagram",[IsPoset]);
 #!
-DeclareOperation("CoveringRelations",[IsPoset]);
-
+DeclareOperation("CoveringRelators",[IsPoset]);
+#!
+DeclareOperation("UpperCovers",[IsPoset,IsObject]); # TO DO (needed for beat points)
+#!
+DeclareOperation("LowerCovers",[IsPoset,IsObject]); # TO DO (needed for beat points)
 
 
