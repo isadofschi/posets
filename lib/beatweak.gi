@@ -70,3 +70,100 @@ function(X,x)
 	Fxhat:=Filtered(Set(X),y->(Ordering(X)(x,y) or Ordering(X)(y,x)) and x<>y);
 	return SubPoset(X,Fxhat);
 end);
+
+#############################################################################
+
+InstallMethod(RemovePoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return SubPoset(X,Filtered(Set(X),y->y<>x));
+end);
+
+
+InstallMethod(RemoveCoveringRelation, # TO DO!
+"for Poset, coveringrelation",
+[IsPoset, IsList],
+function(X,e)
+	return fail;
+end);
+
+InstallMethod(IsUpBeatPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return fail;
+end);
+
+InstallMethod(IsDownBeatPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	local;
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return fail;
+end);
+
+InstallMethod(IsBeatPoint,
+"for Poset, element",
+[IsPoset, IsObject],
+function(X,x)
+	if not x in Set(X) then
+		Error("x must be an element of X");
+	fi;
+	return IsUpBeatPoint(X,x) or IsDownBeatPoint(X,x);
+end);
+
+InstallMethod(UpBeatPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsUpBeatPoint);
+end);
+
+InstallMethod(DownBeatPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsDownBeatPoint);
+end);
+
+InstallMethod(BeatPoints,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), IsBeatPoint);
+end);
+
+
+InstallMethod(CorePoset,
+"for Poset",
+[IsPoset],
+function(X)
+	local coreX;
+	# this can be optimized!
+	coreX:=StructuralCopy(X);
+	while Size(BeatPoints(coreX))>0 do
+		coreX:=RemovePoint(X,BeatPoints(coreX)[1]);
+	od;
+	return SubPoset(X,Set(coreX));
+end);
+
+InstallMethod(IsContractible,
+"for Poset",
+[IsPoset],
+function(X)
+	return Size(CorePoset(X)) = 1;
+end);
+
+
+	
