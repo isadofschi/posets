@@ -96,12 +96,12 @@ AbstractHTML :=
 
 
 PackageDoc := rec(
-  BookName  := "Posets",
+  BookName  := ~.PackageName,
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "Posets/Posets and finite spaces.",
+  LongTitle := ~.Subtitle,
 ),
 
 

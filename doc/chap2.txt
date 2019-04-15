@@ -1,0 +1,72 @@
+  
+  [1X2 [33X[0;0YConstructing new posets[133X[101X
+  
+  
+  [1X2.1 [33X[0;0YNatural maps[133X[101X
+  
+  [1X2.1-1 NaturalMaps[101X
+  
+  [29X[2XNaturalMaps[102X( [3Xarg[103X ) [32X operation
+  
+  
+  [1X2.2 [33X[0;0YMethods for poset homomorphisms[133X[101X
+  
+  [1X2.2-1 SourceMap[101X
+  
+  [29X[2XSourceMap[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.2-2 TargetMap[101X
+  
+  [29X[2XTargetMap[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.2-3 ImageMap[101X
+  
+  [29X[2XImageMap[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.2-4 ImageMap[101X
+  
+  [29X[2XImageMap[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  
+  [1X2.3 [33X[0;0YCategorical constructions[133X[101X
+  
+  [1X2.3-1 SubPoset[101X
+  
+  [29X[2XSubPoset[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X2.3-2 CoproductPosets[101X
+  
+  [29X[2XCoproductPosets[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-3 JoinPosets[101X
+  
+  [29X[2XJoinPosets[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-4 ProductPosets[101X
+  
+  [29X[2XProductPosets[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-5 ConePoset[101X
+  
+  [29X[2XConePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-6 SuspensionPoset[101X
+  
+  [29X[2XSuspensionPoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-7 OppositePoset[101X
+  
+  [29X[2XOppositePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-8 MappingCylinderPosetHomomorphism[101X
+  
+  [29X[2XMappingCylinderPosetHomomorphism[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.3-9 QuotientOfPosetBySubposet[101X
+  
+  [29X[2XQuotientOfPosetBySubposet[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X2.3-10 WedgePosets[101X
+  
+  [29X[2XWedgePosets[102X( [3Xarg[103X ) [32X operation
+  

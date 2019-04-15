@@ -75,6 +75,27 @@ function(X,f)
 	return Objectify( PosetType, rec(names:=Set(X), ordering:=f) );
 end);
 
+InstallMethod(PosetByFunction,
+"for Set, Function",
+[IsList,IsFunction],
+function(X,f)
+	local namesX;
+	namesX:=Set(X);
+	if not ForAll(namesX, x->f(x,x)) then
+		Error("The relation is not reflexive");
+	fi;
+	if not ForAll(namesX,x-> ForAll( namesX, y->  not (f(x,y) and f(y,x)) or x=y )) then
+		Error("The relation is not antisymmetric");
+	fi;
+	if not ForAll(namesX,x-> ForAll( namesX, y-> ForAll(namesX,z -> (not (f(x,y) and f(y,z) ) or f(x,z) ))) then
+		Error("The relation is not transitive");
+	fi;
+	return PosetByFunctionNC(names,f);
+end);
+
+
+
+
 
 InstallMethod(PosetByOrderMatrix,
 "for List",
@@ -135,26 +156,41 @@ function(M,names)
 
 end);
 
+InstallMethod(PosetHomomorphismByImagesNC,
+"for Poset, Poset and function",
+[IsPoset, IsPoset, IsFunction],
+function(X,Y,f)
+	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, f:=f) );
+end);
+
 InstallMethod(PosetHomomorphismByImages,
-"for Poset, Poset and List",
-[IsPoset, IsPoset, IsList],
-function(X,Y,ims)
-	local m,n;
-	n:=Size(X);
-	m:=Size(Y);
-	if not Length(ims)=n and ForAll(ims, y->y in Set(Y) ) then
-		Error("invalid arguments");
-	fi;
-	# the following computation could be done faster if we already know the hasse diagram of X
+"for Poset, Poset and function",
+[IsPoset, IsPoset, IsFunction],
+function(X,Y,f)
 	if not ForAll(Set(X),
 				  x1->ForAll(Set(X),
-                             x2-> (not Ordering(X)(x1,x2)) or Ordering(Y)(ims[PositionSorted(Set(X),x1)],ims[PositionSorted(Set(X),x2)])
+                             x2-> (not Ordering(X)(x1,x2)) or Ordering(Y)(f(x1),f(x2))
 							)
 				)
 	then
 		Error("the map is not order preserving");
 	fi;
-	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, images:=ims) );
+	return PosetHomomorphismByImagesNC(X,Y,f);
+end);
+
+InstallMethod(PosetHomomorphismByImages,
+"for Poset, Poset and List",
+[IsPoset, IsPoset, IsList],
+function(X,Y,ims)
+	local f;
+	if not Length(ims)=Size(X) and ForAll(ims, y->y in Set(Y) ) then
+		Error("invalid arguments");
+	fi;
+	f:=function(x)
+		return ims[PositionSorted(Set(X),x)];
+	end;
+	# the following computation could be done faster if we already know the hasse diagram of X
+	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, f:=f, images:=ims) );
 end);
 
 #InstallMethod(IdentityMapping,
@@ -226,5 +262,16 @@ function(X)
 		X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(Set(X),y)));
 	fi;
 	return X!.HasseDiagramNumbers;
+end);
+
+
+InstallMethod(CoveringRelations,
+"for Poset",
+[IsPoset],
+function(X)
+	if not IsBound(X!.coveringRelations) then
+		X!.coveringRelations := Concatenation( List( [1..Size(X)], i-> List(HasseDiagram(X)[i], j-> [ Set(X)[i], Set(X)[j] ]) ) );
+	fi;
+	return X!.coveringRelations;
 end);
 

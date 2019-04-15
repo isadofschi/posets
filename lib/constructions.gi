@@ -7,12 +7,14 @@
 ##  
 ##
 
+
 InstallMethod(NaturalMaps,
 "for Poset",
 [IsPoset],
 function(X)
 	return X!.naturalMaps;
 end);
+
 
 InstallMethod(SourceMap,
 "for Poset homomorphism",
@@ -46,6 +48,9 @@ function(f,x)
 	fi;
 	return f!.images[PositionSorted(X,x)];
 end);
+
+
+
 
 InstallMethod(SubPoset,
 "for Poset, Set",

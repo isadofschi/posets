@@ -1,0 +1,29 @@
+  
+  [1X1 [33X[0;0YTopology[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YFace poset and order complex[133X[101X
+  
+  [1X1.1-1 FacePoset[101X
+  
+  [29X[2XFacePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-2 OrderComplex[101X
+  
+  [29X[2XOrderComplex[102X( [3Xarg[103X ) [32X operation
+  
+  
+  [1X1.2 [33X[0;0YSome homotopy properties[133X[101X
+  
+  [1X1.2-1 PosetHomology[101X
+  
+  [29X[2XPosetHomology[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.2-2 EulerCharacteristic[101X
+  
+  [29X[2XEulerCharacteristic[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.2-3 FundamentalGroup[101X
+  
+  [29X[2XFundamentalGroup[102X( [3Xarg[103X ) [32X operation
+  
