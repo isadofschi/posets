@@ -129,6 +129,7 @@
       4.4-2 PosetHomomorphismByFunction
       4.4-3 PosetHomomorphismByImages
       4.4-4 PosetHomomorphismByMapping
+      4.4-5 IsomorphismPosets
     4.5 [33X[0;0YOther useful representations of the ordering[133X
       4.5-1 RelationByPoset
       4.5-2 OrderMatrix

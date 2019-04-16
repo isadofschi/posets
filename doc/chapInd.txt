@@ -29,6 +29,7 @@
   [2XIsContractible[102X (for IsPoset)  1.1-16
   [2XIsDownBeatPoint[102X (for IsPoset,IsObject)  1.1-11
   [2XIsDownWeakPoint[102X (for IsPoset,IsObject)  1.1-19
+  [2XIsomorphismPosets[102X (for IsPoset,IsPoset)  4.4-5
   [2XIsQCopReduction[102X (for IsPoset,IsObject,IsObject)  1.1-27
   [2XIsQCReduction[102X (for IsPoset,IsObject,IsObject)  1.1-26
   [2XIsUpBeatPoint[102X (for IsPoset,IsObject)  1.1-10

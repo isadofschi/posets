@@ -86,6 +86,7 @@
 \makelabel{posets:PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}{4.4.2}{X87BC372284762BCE}
 \makelabel{posets:PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}{4.4.3}{X7DB81BAD78C3943E}
 \makelabel{posets:PosetHomomorphismByMapping (for IsPoset,IsPoset,IsMapping)}{4.4.4}{X7B1E190E8735AA6E}
+\makelabel{posets:IsomorphismPosets (for IsPoset,IsPoset)}{4.4.5}{X82388C9A82F58546}
 \makelabel{posets:RelationByPoset (for IsPoset)}{4.5.1}{X824E42957F55214C}
 \makelabel{posets:OrderMatrix (for IsPoset)}{4.5.2}{X80E1B16F8665FCC5}
 \makelabel{posets:HasseDiagram (for IsPoset)}{4.5.3}{X7B16A769870A112D}

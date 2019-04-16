@@ -254,6 +254,25 @@ function(X,Y,f)
 	return PosetHomomorphismByFunction(X,Y,fn);
 end);
 
+InstallMethod(IsomorphismPosets,
+"for Poset and Poset",
+[IsPoset, IsPoset],
+function(X,Y)
+	local n,iter,f,sigma;
+	if Size(X)<>Size(Y) then
+		return fail;
+	fi;
+	n:=Size(X);
+	iter := Iterator(SymmetricGroup(n));
+	for sigma in iter do
+		f := PosetHomomorphismByFunction(X,Y, x-> Set(Y)[PositionSorted(Set(X),x)^sigma] );
+		if PosetHomomorphismByFunction(Y,X, y-> Set(X)[PositionSorted(Set(Y),y)^(sigma^-1)] ) <> fail then
+			return f;
+		fi;
+	od;
+	return fail;
+end);
+
 ##################################################################################################
 
 

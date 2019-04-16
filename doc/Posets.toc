@@ -77,6 +77,7 @@
 \contentsline {subsection}{\numberline {4.4.2}\leavevmode {\color {Chapter }PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}}{11}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}\leavevmode {\color {Chapter }PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}}{11}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}\leavevmode {\color {Chapter }PosetHomomorphismByMapping (for IsPoset,IsPoset,IsMapping)}}{12}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}\leavevmode {\color {Chapter }IsomorphismPosets (for IsPoset,IsPoset)}}{12}{subsection.4.4.5}
 \contentsline {section}{\numberline {4.5}\leavevmode {\color {Chapter }Other useful representations of the ordering}}{12}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}\leavevmode {\color {Chapter }RelationByPoset (for IsPoset)}}{12}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}\leavevmode {\color {Chapter }OrderMatrix (for IsPoset)}}{12}{subsection.4.5.2}

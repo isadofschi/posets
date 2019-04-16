@@ -1,8 +1,8 @@
 # Cosas básicas
-Cociente y wedge
-IsomorphismPosets
-Automorphisms
-AutomorphismGroup
+
+* Cociente y wedge
+* Automorphisms
+* AutomorphismGroup
 
 # Funciones de https://github.com/ximenafernandez/Finite-Spaces
 
@@ -21,7 +21,7 @@ AutomorphismGroup
 # Funciones de posets
 [http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/posets/posets.html]
 
-#Más cosas del libro de Jonathan
+# Más cosas del libro de Jonathan
 
 # Ejemplos de artículos (posiblemente como casos de prueba)
 
