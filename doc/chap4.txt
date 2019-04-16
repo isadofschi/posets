@@ -14,6 +14,11 @@
   [29X[2XMinimalFiniteModelSphere[102X( [3Xn[103X ) [32X operation
   [6XReturns:[106X  [33X[0;10Ythe minimal finite model of the n-sphere [22XS^n[122X.[133X
   
+  [1X4.1-3 TheWallet[101X
+  
+  [29X[2XTheWallet[102X(  ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ythe Wallet (see Barmak, example 4.2.1).[133X
+  
   
   [1X4.2 [33X[0;0YThe Poset type[133X[101X
   

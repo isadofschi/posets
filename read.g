@@ -15,5 +15,6 @@ ReadPackage( "posets", "lib/constructions.gi" );
 ReadPackage( "posets", "lib/subgroups.gi" );
 ReadPackage( "posets", "lib/namedposets.gi" );
 ReadPackage( "posets", "lib/beatweak.gi" );
+ReadPackage( "posets", "lib/properties.gi" );
 #E  read.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

@@ -61,11 +61,12 @@
 \contentsline {section}{\numberline {4.1}\leavevmode {\color {Chapter }Examples of posets}}{10}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}\leavevmode {\color {Chapter }EmptyPoset (for )}}{10}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}\leavevmode {\color {Chapter }MinimalFiniteModelSphere (for IsInt)}}{10}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}\leavevmode {\color {Chapter }TheWallet (for )}}{10}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}\leavevmode {\color {Chapter }The Poset type}}{10}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}\leavevmode {\color {Chapter }Ordering (for IsPoset)}}{10}{subsection.4.2.1}
 \contentsline {section}{\numberline {4.3}\leavevmode {\color {Chapter }Constructing posets in different ways}}{10}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}\leavevmode {\color {Chapter }PosetByFunctionNC (for IsList,IsFunction)}}{10}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }PosetByFunction (for IsList,IsFunction)}}{10}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }PosetByFunction (for IsList,IsFunction)}}{11}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList)}}{11}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {Chapter }PosetByOrderMatrix (for IsList,IsList)}}{11}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {Chapter }PosetByOrderRelation (for IsPartialOrderBinaryRelation)}}{11}{subsection.4.3.5}
@@ -75,7 +76,7 @@
 \contentsline {subsection}{\numberline {4.4.1}\leavevmode {\color {Chapter }PosetHomomorphismByFunctionNC (for IsPoset,IsPoset,IsFunction)}}{11}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}\leavevmode {\color {Chapter }PosetHomomorphismByFunction (for IsPoset,IsPoset,IsFunction)}}{11}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}\leavevmode {\color {Chapter }PosetHomomorphismByImages (for IsPoset,IsPoset,IsList)}}{11}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}\leavevmode {\color {Chapter }PosetHomomorphismByMapping (for IsPoset,IsPoset,IsMapping)}}{11}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.4}\leavevmode {\color {Chapter }PosetHomomorphismByMapping (for IsPoset,IsPoset,IsMapping)}}{12}{subsection.4.4.4}
 \contentsline {section}{\numberline {4.5}\leavevmode {\color {Chapter }Other useful representations of the ordering}}{12}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}\leavevmode {\color {Chapter }RelationByPoset (for IsPoset)}}{12}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}\leavevmode {\color {Chapter }OrderMatrix (for IsPoset)}}{12}{subsection.4.5.2}
@@ -83,11 +84,14 @@
 \contentsline {subsection}{\numberline {4.5.4}\leavevmode {\color {Chapter }CoveringRelations (for IsPoset)}}{12}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}\leavevmode {\color {Chapter }UpperCovers (for IsPoset,IsObject)}}{12}{subsection.4.5.5}
 \contentsline {subsection}{\numberline {4.5.6}\leavevmode {\color {Chapter }LowerCovers (for IsPoset,IsObject)}}{12}{subsection.4.5.6}
-\contentsline {chapter}{\numberline {5}\leavevmode {\color {Chapter }Posets of subgroups of a finite group}}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}\leavevmode {\color {Chapter }Posets of p-subgroups}}{13}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}\leavevmode {\color {Chapter }PosetOfSubgroups (for IsGroup and IsFinite)}}{13}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}\leavevmode {\color {Chapter }PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}}{13}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}\leavevmode {\color {Chapter }PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}}{13}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}\leavevmode {\color {Chapter }RadicalpSubgroups}}{13}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}\leavevmode {\color {Chapter }PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}}{13}{subsection.5.1.5}
-\contentsline {chapter}{Index}{14}{section*.2}
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {Chapter }More properties}}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}\leavevmode {\color {Chapter }Fixed Point Property}}{13}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\leavevmode {\color {Chapter }HasFixedPointProperty (for IsPoset)}}{13}{subsection.5.1.1}
+\contentsline {chapter}{\numberline {6}\leavevmode {\color {Chapter }Posets of subgroups of a finite group}}{14}{chapter.6}
+\contentsline {section}{\numberline {6.1}\leavevmode {\color {Chapter }Posets of p-subgroups}}{14}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\leavevmode {\color {Chapter }PosetOfSubgroups (for IsGroup and IsFinite)}}{14}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}\leavevmode {\color {Chapter }PosetOfpSubgroups (for IsGroup and IsFinite,IsInt)}}{14}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}\leavevmode {\color {Chapter }PosetOfElementaryAbelianpSubgroups (for IsGroup and IsFinite,IsInt)}}{14}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}\leavevmode {\color {Chapter }RadicalpSubgroups}}{14}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}\leavevmode {\color {Chapter }PosetOfRadicalpSubgroups (for IsGroup and IsFinite,IsInt)}}{14}{subsection.6.1.5}
+\contentsline {chapter}{Index}{15}{section*.2}

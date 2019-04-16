@@ -34,7 +34,7 @@ InstallMethod(ImageMap,
 "for Poset homomorphism",
 [IsPosetHomomorphism],
 function(f)
-	return SubPoset(TargetMap(f),Set(f!.images));
+	return SubPoset(TargetMap(f), Set(List(Set(f!.source),f!.f)) );
 end);
 
 InstallMethod(ImageMap,
@@ -46,7 +46,7 @@ function(f,x)
 	if not x in X then
 		Error("x is not an element of the domain of f");
 	fi;
-	return f!.images[PositionSorted(X,x)];
+	return f!.f(x);
 end);
 
 
