@@ -12,26 +12,51 @@
   
   [29X[2XOrderComplex[102X( [3Xarg[103X ) [32X operation
   
-  [1X2.1-3 BarycentricSubdivision[101X
+  [1X2.1-3 FacePoset[101X
+  
+  [29X[2XFacePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.1-4 OrderComplex[101X
+  
+  [29X[2XOrderComplex[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.1-5 BarycentricSubdivision[101X
   
   [29X[2XBarycentricSubdivision[102X( [3Xarg[103X ) [32X operation
   
-  [1X2.1-4 BarycentricSubdivision[101X
+  [1X2.1-6 BarycentricSubdivision[101X
+  
+  [29X[2XBarycentricSubdivision[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.1-7 BarycentricSubdivision[101X
+  
+  [29X[2XBarycentricSubdivision[102X( [3Xarg[103X ) [32X operation
+  
+  [1X2.1-8 BarycentricSubdivision[101X
   
   [29X[2XBarycentricSubdivision[102X( [3Xarg[103X ) [32X operation
   
   
-  [1X2.2 [33X[0;0YSome homotopy properties[133X[101X
+  [1X2.2 [33X[0;0YHomology[133X[101X
   
   [1X2.2-1 PosetHomology[101X
   
-  [29X[2XPosetHomology[102X( [3Xarg[103X ) [32X operation
+  [29X[2XPosetHomology[102X( [3XX[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Y[22XH_n(X)[122X[133X
   
-  [1X2.2-2 EulerCharacteristic[101X
+  [1X2.2-2 PosetHomology[101X
+  
+  [29X[2XPosetHomology[102X( [3Xf[103X, [3Xn[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Y[22XH_n(f)[122X[133X
+  
+  
+  [1X2.3 [33X[0;0YSome homotopy properties[133X[101X
+  
+  [1X2.3-1 EulerCharacteristic[101X
   
   [29X[2XEulerCharacteristic[102X( [3Xarg[103X ) [32X attribute
   
-  [1X2.2-3 FundamentalGroup[101X
+  [1X2.3-2 FundamentalGroup[101X
   
   [29X[2XFundamentalGroup[102X( [3Xarg[103X ) [32X operation
   

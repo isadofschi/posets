@@ -5,7 +5,8 @@
 \makelabel{posets:Elements above and below}{1.1}{X7CCA954783449E97}
 \makelabel{posets:Topology}{2}{X7CEC1699860AC45A}
 \makelabel{posets:Face poset and order complex}{2.1}{X8423A6D080BED55F}
-\makelabel{posets:Some homotopy properties}{2.2}{X7968851D7966AD07}
+\makelabel{posets:Homology}{2.2}{X85A9D5CB8605329C}
+\makelabel{posets:Some homotopy properties}{2.3}{X7968851D7966AD07}
 \makelabel{posets:Constructing new posets}{3}{X784678777ABAD248}
 \makelabel{posets:Natural maps}{3.1}{X85FE51B6843B30D9}
 \makelabel{posets:Some methods for poset homomorphisms}{3.2}{X7E2F08A68796C9C4}
@@ -53,11 +54,16 @@
 \makelabel{posets:QCCoresPoset (for IsPoset)}{1.1.30}{X83FC0F7783F44940}
 \makelabel{posets:FacePoset (for IsHapSimplicialComplex)}{2.1.1}{X7D8F88A980893175}
 \makelabel{posets:OrderComplex (for IsPoset)}{2.1.2}{X854811497CD2F578}
-\makelabel{posets:BarycentricSubdivision (for IsPoset)}{2.1.3}{X852C5CE086A8448B}
-\makelabel{posets:BarycentricSubdivision (for IsHapSimplicialComplex)}{2.1.4}{X8484E2EB84D25923}
+\makelabel{posets:FacePoset (for IsHapSimplicialMap)}{2.1.3}{X872D6CD5803151E3}
+\makelabel{posets:OrderComplex (for IsPosetHomomorphism)}{2.1.4}{X7F3A2CB380BA1B46}
+\makelabel{posets:BarycentricSubdivision (for IsPoset)}{2.1.5}{X852C5CE086A8448B}
+\makelabel{posets:BarycentricSubdivision (for IsHapSimplicialComplex)}{2.1.6}{X8484E2EB84D25923}
+\makelabel{posets:BarycentricSubdivision (for IsHapSimplicialMap)}{2.1.7}{X81666F807A4E4C5C}
+\makelabel{posets:BarycentricSubdivision (for IsPosetHomomorphism)}{2.1.8}{X80D636B27A476854}
 \makelabel{posets:PosetHomology (for IsPoset)}{2.2.1}{X7E98C6F77B26A7AB}
-\makelabel{posets:EulerCharacteristic (for IsPoset)}{2.2.2}{X7B91046281DED4DA}
-\makelabel{posets:FundamentalGroup (for IsPoset)}{2.2.3}{X7CEB48BC852900E2}
+\makelabel{posets:PosetHomology (for IsPosetHomomorphism,IsInt)}{2.2.2}{X7AB7093A83B4F2B9}
+\makelabel{posets:EulerCharacteristic (for IsPoset)}{2.3.1}{X7B91046281DED4DA}
+\makelabel{posets:FundamentalGroup (for IsPoset)}{2.3.2}{X7CEB48BC852900E2}
 \makelabel{posets:NaturalMaps (for IsPoset)}{3.1.1}{X7E1ECC10824BE91D}
 \makelabel{posets:SourceMap (for IsPosetHomomorphism)}{3.2.1}{X7BE74C2C80DD7FCF}
 \makelabel{posets:TargetMap (for IsPosetHomomorphism)}{3.2.2}{X78AC126382872D16}

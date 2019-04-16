@@ -2,8 +2,10 @@
   
   [1XIndex[101X
   
-  [2XBarycentricSubdivision[102X (for IsPoset)  2.1-3
-  [2XBarycentricSubdivision[102X (for IsHapSimplicialComplex)  2.1-4
+  [2XBarycentricSubdivision[102X (for IsPoset)  2.1-5
+  [2XBarycentricSubdivision[102X (for IsHapSimplicialComplex)  2.1-6
+  [2XBarycentricSubdivision[102X (for IsHapSimplicialMap)  2.1-7
+  [2XBarycentricSubdivision[102X (for IsPosetHomomorphism)  2.1-8
   [2XBeatPoints[102X (for IsPoset)  1.1-14
   [2XCompositionPosetHomomorphisms[102X (for IsPosetHomomorphism,IsPosetHomomorphism)  4.4-6
   [2XConePoset[102X (for IsPoset)  3.3-5
@@ -19,9 +21,10 @@
   [2XElementsStrictlyBelow[102X (for IsPoset,IsObject)  1.1-4
   [2XElementsStrictlyComparable[102X (for IsPoset,IsObject)  1.1-6
   [2XEmptyPoset[102X (for )  4.1-1
-  [2XEulerCharacteristic[102X (for IsPoset)  2.2-2
+  [2XEulerCharacteristic[102X (for IsPoset)  2.3-1
   [2XFacePoset[102X (for IsHapSimplicialComplex)  2.1-1
-  [2XFundamentalGroup[102X (for IsPoset)  2.2-3
+  [2XFacePoset[102X (for IsHapSimplicialMap)  2.1-3
+  [2XFundamentalGroup[102X (for IsPoset)  2.3-2
   [2XHasFixedPointProperty[102X (for IsPoset)  5.1-1
   [2XHasseDiagram[102X (for IsPoset)  4.5-3
   [2XHomotopyEquivalence[102X (for IsPoset,IsPoset)  1.1-17
@@ -47,6 +50,7 @@
   [2XNaturalMaps[102X (for IsPoset)  3.1-1
   [2XOppositePoset[102X (for IsPoset)  3.3-7
   [2XOrderComplex[102X (for IsPoset)  2.1-2
+  [2XOrderComplex[102X (for IsPosetHomomorphism)  2.1-4
   [2XOrdering[102X (for IsPoset)  4.2-1
   [2XOrderMatrix[102X (for IsPoset)  4.5-2
   [2XPosetByCoveringRelations[102X (for IsList, IsList)  4.3-7
@@ -57,6 +61,7 @@
   [2XPosetByOrderMatrix[102X (for IsList,IsList)  4.3-4
   [2XPosetByOrderRelation[102X (for IsPartialOrderBinaryRelation)  4.3-5
   [2XPosetHomology[102X (for IsPoset)  2.2-1
+  [2XPosetHomology[102X (for IsPosetHomomorphism,IsInt)  2.2-2
   [2XPosetHomomorphismByFunction[102X (for IsPoset,IsPoset,IsFunction)  4.4-2
   [2XPosetHomomorphismByFunctionNC[102X (for IsPoset,IsPoset,IsFunction)  4.4-1
   [2XPosetHomomorphismByImages[102X (for IsPoset,IsPoset,IsList)  4.4-3

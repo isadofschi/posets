@@ -34,12 +34,18 @@
 \contentsline {section}{\numberline {2.1}\leavevmode {\color {Chapter }Face poset and order complex}}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}\leavevmode {\color {Chapter }FacePoset (for IsHapSimplicialComplex)}}{7}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}\leavevmode {\color {Chapter }OrderComplex (for IsPoset)}}{7}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsPoset)}}{7}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsHapSimplicialComplex)}}{7}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter }Some homotopy properties}}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}\leavevmode {\color {Chapter }PosetHomology (for IsPoset)}}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}\leavevmode {\color {Chapter }EulerCharacteristic (for IsPoset)}}{7}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}\leavevmode {\color {Chapter }FundamentalGroup (for IsPoset)}}{8}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.1.3}\leavevmode {\color {Chapter }FacePoset (for IsHapSimplicialMap)}}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}\leavevmode {\color {Chapter }OrderComplex (for IsPosetHomomorphism)}}{7}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsPoset)}}{7}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsHapSimplicialComplex)}}{7}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsHapSimplicialMap)}}{7}{subsection.2.1.7}
+\contentsline {subsection}{\numberline {2.1.8}\leavevmode {\color {Chapter }BarycentricSubdivision (for IsPosetHomomorphism)}}{8}{subsection.2.1.8}
+\contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter }Homology}}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\leavevmode {\color {Chapter }PosetHomology (for IsPoset)}}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\leavevmode {\color {Chapter }PosetHomology (for IsPosetHomomorphism,IsInt)}}{8}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}\leavevmode {\color {Chapter }Some homotopy properties}}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}\leavevmode {\color {Chapter }EulerCharacteristic (for IsPoset)}}{8}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}\leavevmode {\color {Chapter }FundamentalGroup (for IsPoset)}}{8}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}\leavevmode {\color {Chapter }Constructing new posets}}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}\leavevmode {\color {Chapter }Natural maps}}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}\leavevmode {\color {Chapter }NaturalMaps (for IsPoset)}}{9}{subsection.3.1.1}

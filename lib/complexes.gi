@@ -1,6 +1,5 @@
 ################################################################################
 # FacePoset and OrderComplex
-# (we still need to implement these on morphisms)
 
 InstallMethod(FacePoset,
 "for SimplicialComplex",
@@ -17,6 +16,8 @@ InstallMethod(OrderComplex,
 [IsPoset],
 function(X)
 	local n,i,j,chains,position,chain;
+	# we could use the hasse diagram to construct K(X) using only the maximal chains
+
 	n:=Size(X);
 	# this part could be a separate function computing the representation of the poset given by the U^_x s
 	X!.UHats:=List([1..n],x->[]);
@@ -27,23 +28,39 @@ function(X)
 			fi;
 		od;
 	od;
-	#
+
 	chains:=[];
 	for i in [1..n] do
-		Add(chains,[i]);
+		Add(chains,[Set(X)[i]]);
 	od;
 	position:=1;
 	while position <= Length(chains) do
 		chain:=chains[position];
-		i:=chain[Length(chain)];
+		i:=PositionSorted(Set(X),chain[Length(chain)]);
 		for j in X!.UHats[i] do
-			Add(chains, Concatenation(chain,[j]) );
+			Add(chains, Concatenation(chain,[Set(X)[j]]) );
 		od;
 		position:=position+1;
 	od;
-	return SimplicialComplex(chains); # here we forget the names of the points :(
+	return SimplicialComplex(chains);
 end);
 
+
+InstallMethod(FacePoset,
+"for SimplicialMap",
+[IsHapSimplicialMap],
+function(f)
+	return PosetHomomorphismByFunction(FacePoset(f!.source),FacePoset(f!.target),sigma -> List(sigma, f!.mapping) );
+end);
+
+InstallMethod(OrderComplex,
+"for PosetHomomorphism",
+[IsPosetHomomorphism],
+function(f)
+	return SimplicialMap(OrderComplex(f!.source),OrderComplex(f!.target), f!.f );
+end);
+
+################################################################################
 
 InstallMethod(BarycentricSubdivision,
 "for SimplicialComplex",
@@ -60,7 +77,22 @@ function(X)
 	return FacePoset(OrderComplex(X));
 end);
 
+InstallMethod(BarycentricSubdivision,
+"for SimplicialMap",
+[IsHapSimplicialMap],
+function(f)
+	return OrderComplex(FacePoset(f));
+end);
+
+InstallMethod(BarycentricSubdivision,
+"for PosetHomomorphism",
+[IsPosetHomomorphism],
+function(f)
+	return FacePoset(OrderComplex(f));
+end);
+
 ################################################################################
+
 # Homology of a poset or order preserving morphism
 InstallMethod(PosetHomology,
 "for Poset",
@@ -68,6 +100,15 @@ InstallMethod(PosetHomology,
 function(X)
 	return Homology(OrderComplex(X));
 end);
+
+InstallMethod(PosetHomology,
+"for PosetHomomorphism, integer",
+[IsPosetHomomorphism,IsInt],
+function(f,n)
+	return Homology( ChainMapOfSimplicialMap(OrderComplex(f)), n);
+end);
+
+################################################################################
 
 
 InstallOtherMethod(EulerCharacteristic,
