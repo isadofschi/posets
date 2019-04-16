@@ -166,6 +166,13 @@ function(X)
 	return Size(CorePoset(X)) = 1;
 end);
 
+InstallMethod(AreHomotopyEquivalent,
+"for Poset and Poset",
+[IsPoset,IsPoset],
+function(X,Y)
+	return IsomorphismPosets(CorePoset(X),CorePoset(Y))<>fail;
+end);
+
 InstallMethod(IsUpWeakPoint,
 "for Poset, element",
 [IsPoset, IsObject],

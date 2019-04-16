@@ -44,6 +44,22 @@ function(X)
 	return SimplicialComplex(chains); # here we forget the names of the points :(
 end);
 
+
+InstallMethod(BarycentricSubdivision,
+"for SimplicialComplex",
+[IsHapSimplicialComplex],
+function(K)
+	return OrderComplex(FacePoset(K));
+end);
+
+InstallMethod(BarycentricSubdivision,
+"for Poset",
+[IsPoset],
+function(X)
+	# to do natural map X'--->X, c -> max(c)
+	return FacePoset(OrderComplex(X));
+end);
+
 ################################################################################
 # Homology of a poset or order preserving morphism
 InstallMethod(PosetHomology,
