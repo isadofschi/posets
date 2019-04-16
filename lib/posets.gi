@@ -64,6 +64,25 @@ function(X1,X2)
 	return Set(X1)=Set(X2) and ForAll(Set(X1), x-> ForAll(Set(X1), y-> Ordering(X1)(x,y)=Ordering(X2)(x,y)));
 end);
 
+InstallMethod(\<,"for Poset and Poset",
+[IsPoset,IsPoset],
+function(X1,X2)
+	return Set(X1)<Set(X2) or (Set(X1)=Set(X2) and OrderMatrix(X1)<OrderMatrix(X2));
+end);
+
+InstallMethod(\=,"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(f,g)
+	return [f!.source, f!.target, List(Set(f!.source),f!.f) ] = [g!.source, g!.target, List(Set(g!.source), g!.f)];
+end);
+
+# the purpose of defining this is total order to consider Sets of poset homomorphisms
+# this order is not meaningful (it is not the same as the partial order f<g := (forall x) fx<gx )
+InstallMethod(\<,"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(f,g)
+	return [f!.source, f!.target, List(Set(f!.source),f!.f) ] < [g!.source, g!.target, List(Set(g!.source), g!.f)];
+end);
 
 ################################################################################
 # Basic functions to build posets and morphisms
@@ -155,16 +174,20 @@ function(M,names)
 
 end);
 
-InstallMethod(PosetHomomorphismByImagesNC,
+##################################################################################################
+
+# Methods to construct poset homomorphisms
+
+InstallMethod(PosetHomomorphismByFunctionNC,
 "for Poset, Poset and function",
-[IsPoset, IsPoset, IsList],
+[IsPoset, IsPoset, IsFunction],
 function(X,Y,f)
 	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, f:=f) );
 end);
 
-InstallMethod(PosetHomomorphismByImages,
+InstallMethod(PosetHomomorphismByFunction,
 "for Poset, Poset and function",
-[IsPoset, IsPoset, IsList],
+[IsPoset, IsPoset, IsFunction],
 function(X,Y,f)
 	if not ForAll(Set(X),
 				  x1->ForAll(Set(X),
@@ -172,9 +195,9 @@ function(X,Y,f)
 							)
 				)
 	then
-		Error("the map is not order preserving");
+		return fail;
 	fi;
-	return PosetHomomorphismByImagesNC(X,Y,f);
+	return PosetHomomorphismByFunctionNC(X,Y,f);
 end);
 
 InstallMethod(PosetHomomorphismByImages,
@@ -188,9 +211,24 @@ function(X,Y,ims)
 	f:=function(x)
 		return ims[PositionSorted(Set(X),x)];
 	end;
-	# the following computation could be done faster if we already know the hasse diagram of X
-	return Objectify( PosetHomomorphismType, rec(source:=X, target:=Y, f:=f, images:=ims) );
+	return PosetHomomorphismByFunction(X,Y,f);
 end);
+
+InstallMethod(PosetHomomorphismByMapping,
+"for Poset, Poset and List",
+[IsPoset, IsPoset, IsMapping],
+function(X,Y,f)
+	local fn;
+	if not Source(f)=Set(X) and IsSubset(Set(Y), Set(Range(f)) ) then
+		Error("invalid arguments");
+	fi;
+	fn:=function(x)
+		return Image(f,x);
+	end;
+	return PosetHomomorphismByFunction(X,Y,fn);
+end);
+
+
 
 #InstallMethod(IdentityMapping,
 #"for Poset",
@@ -254,14 +292,31 @@ InstallMethod(HasseDiagram,
 [IsPoset],
 function(X)
 	local R,h;
-	if not IsBound(X!.HasseDiagramNumbers) then
+	if not IsBound(X!.lowerCovers) then
 		R:=RelationByPoset(X);
 		h:=HasseDiagramBinaryRelation(R);
-		X!.HasseDiagramNames:=List(Set(Source(h)), x->Images(h,x));
-		X!.HasseDiagramNumbers:= List(X!.HasseDiagramNames, x-> List(x, y-> PositionSorted(Set(X),y)));
+		X!.lowerCovers:=List(Set(Source(h)), x->Set(Images(h,x)) );
+		X!.upperCovers:=List([1..Size(X)], i -> Set(Filtered(Set(X), y -> Set(X)[i] in X!.lowerCovers[PositionSorted(Set(X),y)] )));
 	fi;
-	return X!.HasseDiagramNumbers;
+	return X!.lowerCovers;
 end);
+
+InstallMethod(UpperCovers,
+"for Poset and element",
+[IsPoset,IsObject],
+function(X,x)
+	HasseDiagram(X);
+	return X!.upperCovers[PositionSorted(Set(X),x)];
+end);
+
+InstallMethod(LowerCovers,
+"for Poset and element",
+[IsPoset,IsObject],
+function(X,x)
+	HasseDiagram(X);
+	return X!.lowerCovers[PositionSorted(Set(X),x)];
+end);
+
 
 
 InstallMethod(CoveringRelations,

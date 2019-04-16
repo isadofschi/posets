@@ -95,7 +95,6 @@ InstallMethod(IsUpBeatPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
@@ -106,7 +105,6 @@ InstallMethod(IsDownBeatPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
@@ -127,21 +125,21 @@ InstallMethod(UpBeatPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsUpBeatPoint);
+	return Filtered(Set(X), x->IsUpBeatPoint(X,x));
 end);
 
 InstallMethod(DownBeatPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsDownBeatPoint);
+	return Filtered(Set(X), x-> IsDownBeatPoint(X,x) );
 end);
 
 InstallMethod(BeatPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsBeatPoint);
+	return Filtered(Set(X), x-> IsBeatPoint(X,x) );
 end);
 
 
@@ -153,7 +151,7 @@ function(X)
 	# this can be optimized!
 	coreX:=StructuralCopy(X);
 	while Size(BeatPoints(coreX))>0 do
-		coreX:=RemovePoint(X,BeatPoints(coreX)[1]);
+		coreX:=RemovePoint(coreX,BeatPoints(coreX)[1]);
 	od;
 	return SubPoset(X,Set(coreX));
 end);
@@ -172,7 +170,6 @@ InstallMethod(IsUpWeakPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
@@ -183,7 +180,6 @@ InstallMethod(IsDownWeakPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
@@ -204,21 +200,21 @@ InstallMethod(UpWeakPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsUpWeakPoint);
+	return Filtered(Set(X), x->IsUpWeakPoint(X,x));
 end);
 
 InstallMethod(DownWeakPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsDownWeakPoint);
+	return Filtered(Set(X), x->IsDownWeakPoint(X,x));
 end);
 
 InstallMethod(WeakPoints,
 "for Poset",
 [IsPoset],
 function(X)
-	return Filtered(Set(X), IsWeakPoint);
+	return Filtered(Set(X), x->IsWeakPoint(X,x));
 end);
 
 	

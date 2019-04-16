@@ -193,4 +193,24 @@ function(f)
 	return Zf;
 end);
 
+# Note that, for f,g in HomPosets(X,Y),  Ordering(HomPosets(X,Y))(f,g) is NOT the same as f<g
+InstallMethod(HomPosets,
+"for Poset and Poset",
+[IsPoset,IsPoset],
+function(X,Y)
+	local ts,homXY,t,f,ordering;
+	ts:=IteratorOfTuples(Set(Y),Size(X));
+	homXY:=[];
+	for t in ts do
+		f:=PosetHomomorphismByImages(X,Y,t);
+		if not f=fail then
+			Add(homXY,f);
+		fi;
+	od;
+	ordering:=function(f1,f2)
+		return ForAll(Set(X),x-> Ordering(Y)(f1!.f(x),f2!.f(x)));
+	end;
+	return PosetByFunctionNC(Set(homXY),ordering);
+end);
+
 

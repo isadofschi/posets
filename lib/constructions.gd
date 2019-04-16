@@ -49,3 +49,5 @@ DeclareOperation("QuotientOfPosetBySubposet",[IsPoset,IsList]); # to do [Section
 #!
 DeclareOperation("WedgePosets",[IsList]); # to do
 
+#!
+DeclareOperation("HomPosets",[IsPoset,IsPoset]);

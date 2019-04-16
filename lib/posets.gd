@@ -44,7 +44,7 @@ DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
 #!
 DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
 #!
-DeclareOperation("PosetHomomorphismByImagesNC",[IsPoset,IsPoset,IsList]);
+DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
 #############################################################################
 
 #!
@@ -63,10 +63,10 @@ DeclareOperation("OrderMatrix",[IsPoset]); # (computes and) returns the order ma
 #!
 DeclareOperation("HasseDiagram",[IsPoset]);
 #!
-DeclareOperation("CoveringRelators",[IsPoset]);
+DeclareOperation("CoveringRelations",[IsPoset]);
 #!
-DeclareOperation("UpperCovers",[IsPoset,IsObject]); # TO DO (needed for beat points)
+DeclareOperation("UpperCovers",[IsPoset,IsObject]);
 #!
-DeclareOperation("LowerCovers",[IsPoset,IsObject]); # TO DO (needed for beat points)
+DeclareOperation("LowerCovers",[IsPoset,IsObject]);
 
 
