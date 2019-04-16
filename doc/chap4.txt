@@ -43,42 +43,61 @@
   
   [29X[2XPosetByOrderMatrix[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X4.3-5 PosetHomomorphismByFunctionNC[101X
-  
-  [29X[2XPosetHomomorphismByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X4.3-6 PosetHomomorphismByFunction[101X
-  
-  [29X[2XPosetHomomorphismByFunction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X4.3-7 PosetHomomorphismByImages[101X
-  
-  [29X[2XPosetHomomorphismByImages[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
-  
-  [1X4.3-8 RelationByPoset[101X
-  
-  [29X[2XRelationByPoset[102X( [3Xarg[103X ) [32X operation
-  
-  [1X4.3-9 PosetByOrderRelation[101X
+  [1X4.3-5 PosetByOrderRelation[101X
   
   [29X[2XPosetByOrderRelation[102X( [3Xarg[103X ) [32X operation
   
-  [1X4.3-10 PosetByHasseDiagram[101X
+  [1X4.3-6 PosetByHasseDiagram[101X
   
   [29X[2XPosetByHasseDiagram[102X( [3Xarg[103X ) [32X operation
   
+  [1X4.3-7 PosetByCoveringRelations[101X
   
-  [1X4.4 [33X[0;0YClassical constructions[133X[101X
+  [29X[2XPosetByCoveringRelations[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X4.4-1 OrderMatrix[101X
+  
+  [1X4.4 [33X[0;0YConstructing poset homomorphisms[133X[101X
+  
+  [1X4.4-1 PosetHomomorphismByFunctionNC[101X
+  
+  [29X[2XPosetHomomorphismByFunctionNC[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.4-2 PosetHomomorphismByFunction[101X
+  
+  [29X[2XPosetHomomorphismByFunction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.4-3 PosetHomomorphismByImages[101X
+  
+  [29X[2XPosetHomomorphismByImages[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X4.4-4 PosetHomomorphismByMapping[101X
+  
+  [29X[2XPosetHomomorphismByMapping[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  
+  [1X4.5 [33X[0;0YOther useful representations of the ordering[133X[101X
+  
+  [1X4.5-1 RelationByPoset[101X
+  
+  [29X[2XRelationByPoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.5-2 OrderMatrix[101X
   
   [29X[2XOrderMatrix[102X( [3Xarg[103X ) [32X operation
   
-  [1X4.4-2 HasseDiagram[101X
+  [1X4.5-3 HasseDiagram[101X
   
   [29X[2XHasseDiagram[102X( [3Xarg[103X ) [32X operation
   
-  [1X4.4-3 CoveringRelations[101X
+  [1X4.5-4 CoveringRelations[101X
   
   [29X[2XCoveringRelations[102X( [3Xarg[103X ) [32X operation
+  
+  [1X4.5-5 UpperCovers[101X
+  
+  [29X[2XUpperCovers[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X4.5-6 LowerCovers[101X
+  
+  [29X[2XLowerCovers[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   

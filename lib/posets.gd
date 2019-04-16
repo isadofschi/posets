@@ -35,7 +35,17 @@ DeclareOperation("PosetByOrderMatrix",[IsList]); # names are numbers 1..n
 #!
 DeclareOperation("PosetByOrderMatrix",[IsList,IsList]); # we give a set of names
 
+#!
+DeclareOperation("PosetByOrderRelation",[IsPartialOrderBinaryRelation]);
+#!
+DeclareOperation("PosetByHasseDiagram",[IsHasseDiagram]); # to do
+#!
+DeclareOperation("PosetByCoveringRelations",[IsList, IsList]); # to do
+
+
 #############################################################################
+
+#! @Section Constructing poset homomorphisms
 
 #!
 DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
@@ -45,21 +55,15 @@ DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
 DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
 #!
 DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
+
 #############################################################################
+
+#! @Section Other useful representations of the ordering
 
 #!
 DeclareOperation("RelationByPoset",[IsPoset]);
 #!
-DeclareOperation("PosetByOrderRelation",[IsPartialOrderBinaryRelation]);
-#!
-DeclareOperation("PosetByHasseDiagram",[IsHasseDiagram]); # to do
-
-#############################################################################
-
-#! @Section Classical constructions
-
-#!
-DeclareOperation("OrderMatrix",[IsPoset]); # (computes and) returns the order matrix
+DeclareOperation("OrderMatrix",[IsPoset]);
 #!
 DeclareOperation("HasseDiagram",[IsPoset]);
 #!

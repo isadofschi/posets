@@ -85,7 +85,8 @@ function(f,g)
 end);
 
 ################################################################################
-# Basic functions to build posets and morphisms
+# Basic functions to build posets
+
 InstallMethod(PosetByFunctionNC,
 "for Set, Function",
 [IsList,IsFunction],
@@ -119,19 +120,18 @@ InstallMethod(PosetByOrderMatrix,
 "for List",
 [IsList],
 function(M)
-	return PosetByOrderMatrix(M,[]);
+	return PosetByOrderMatrix([],M);
 end);
 
 InstallMethod(PosetByOrderMatrix,
 "for List, List",
 [IsList,IsList],
-function(M,names)
-	local poset,n,M1,i,j,sigma;
+function(names,M)
+	local poset,n,sigma,ordering;
 
 	n:=Length(M);
 	
-	sigma:=Sortex(names)^-1;
-	names:=Set(names);
+	sigma:=[1..n];
 
 	if names=[] then
 		names:=[1..n];
@@ -139,40 +139,66 @@ function(M,names)
 	if Length(names)<>n then
 		Error("names must have "+String(n)+" elements");
 	fi;
+
+	SortParallel(names,sigma);
+
 	if not ForAll(M, v->Length(v)=n) then
 		Error("M is not a square matrix");
 	fi;
+
+	M:=	M{sigma}{sigma};
+
 	if ForAll(Concatenation(M), IsInt ) then
 		M:=List(M,v->List(v,x -> x<>0));
-	fi; 
+	fi;
+
 	if not ForAll(Concatenation(M), x->x in [true,false] ) then
 		Error("Every element of M must be true or false");
 	fi;
-	if not ForAll([1..n], i->M[i][i]) then
-		Error("The relation is not reflexive");
-	fi;
-	if not ForAll([1..n],i-> ForAll( [1..n], j->  not (M[i][j] and M[j][i]) or i=j )) then
-		Error("The relation is not antisymmetric");
-	fi;
-	if not ForAll([1..n],i-> ForAll( [1..n], j-> ForAll([1..n],k -> (not (M[i][j] and M[j][k])) or M[i][k] ))) then
-		Error("The relation is not transitive");
-	fi;
 
-	M1 := StructuralCopy(M); # we first reorder the rows and columns using sigma
-	for i in [1..n] do
-		for j in [1..n] do
-			M1[i][j]:=M[i^sigma][j^sigma];
-		od;
-	od;
 
-	poset := PosetsIntFunc.NewPoset();
-	poset!.orderMatrix:=M1;
-	poset!.ordering:=function(x,y) return M1[PositionSorted(names,x)][PositionSorted(names,y)]; end;
-	poset!.names:=names;
+	ordering:=function(x,y) return M[PositionSorted(names,x)][PositionSorted(names,y)]; end;
+	
+	poset:=PosetByFunction(names,ordering);
+
+	poset!.orderMatrix:=M;
 
 	return poset;
 
 end);
+
+# turns a relation into a poset
+InstallMethod(PosetByOrderRelation,
+"for PartialOrderBinaryRelation",
+[IsPartialOrderBinaryRelation],
+function(R)
+	# this should be done without calling PosetByOrderMatrix!
+	local M,n,names,U,i,y;
+	n:=Size(Source(R));
+	names:=Set(Source(R));
+	M:=List([1..n],x->List([1..n],x->false));
+	for i in [1..n] do
+		U:=Images(R,names[i]);
+		for y in U do
+			M[i][Position(names,y)]:=true;
+		od;
+	od;
+	return PosetByOrderMatrix(names,M);
+		
+end);
+
+InstallMethod(PosetByCoveringRelations,
+"for List, List",
+[IsList,IsList],
+function(names,coveringRelations)
+	local R;
+	R:=TransitiveClosureBinaryRelation(ReflexiveClosureBinaryRelation(BinaryRelationByElements(Domain(Set(names)), List(coveringRelations,Tuple))));
+	if not IsAntisymmetricBinaryRelation(R) then
+		return fail;
+	fi;
+	return PosetByOrderRelation(R);
+end);
+
 
 ##################################################################################################
 
@@ -228,6 +254,7 @@ function(X,Y,f)
 	return PosetHomomorphismByFunction(X,Y,fn);
 end);
 
+##################################################################################################
 
 
 #InstallMethod(IdentityMapping,
@@ -248,24 +275,7 @@ function(X)
 	return PartialOrderByOrderingFunction( Domain(Set(X)), X!.ordering );
 end);
 
-# turns a relation into a poset
-InstallMethod(PosetByOrderRelation,
-"for PartialOrderBinaryRelation",
-[IsPartialOrderBinaryRelation],
-function(R)
-	local M,n,names,U,i,y;
-	n:=Size(Source(R));
-	names:=Set(Source(R));
-	M:=List([1..n],x->List([1..n],x->false));
-	for i in [1..n] do
-		U:=Images(R,names[i]);
-		for y in U do
-			M[i][Position(names,y)]:=true;
-		od;
-	od;
-	return PosetByOrderMatrix(M,names); # estamos chequeando cosas innecesariamente, por ejemplo transitividad
-		
-end);
+
 
 
 ####################

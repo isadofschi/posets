@@ -1,5 +1,5 @@
-\BOOKMARK [0][-]{chapter.1}{Posets automatic generated documentation}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Posets automatic generated documentation of methods}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.1}{Classical stuff}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Elements above and below}{chapter.1}% 2
 \BOOKMARK [0][-]{chapter.2}{Topology}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Face poset and order complex}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Some homotopy properties}{chapter.2}% 5
@@ -11,7 +11,8 @@
 \BOOKMARK [1][-]{section.4.1}{Examples of posets}{chapter.4}% 11
 \BOOKMARK [1][-]{section.4.2}{The Poset type}{chapter.4}% 12
 \BOOKMARK [1][-]{section.4.3}{Constructing posets in different ways}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.4}{Classical constructions}{chapter.4}% 14
-\BOOKMARK [0][-]{chapter.5}{Posets of subgroups of a finite group}{}% 15
-\BOOKMARK [1][-]{section.5.1}{Posets of p-subgroups}{chapter.5}% 16
-\BOOKMARK [0][-]{section*.2}{Index}{}% 17
+\BOOKMARK [1][-]{section.4.4}{Constructing poset homomorphisms}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.5}{Other useful representations of the ordering}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{Posets of subgroups of a finite group}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Posets of p-subgroups}{chapter.5}% 17
+\BOOKMARK [0][-]{section*.2}{Index}{}% 18

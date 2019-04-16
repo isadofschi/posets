@@ -1,8 +1,8 @@
   
-  [1X1 [33X[0;0YPosets automatic generated documentation[133X[101X
+  [1X1 [33X[0;0YClassical stuff[133X[101X
   
   
-  [1X1.1 [33X[0;0YPosets automatic generated documentation of methods[133X[101X
+  [1X1.1 [33X[0;0YElements above and below[133X[101X
   
   [1X1.1-1 ElementsAbove[101X
   
@@ -19,4 +19,104 @@
   [1X1.1-4 ElementsStrictlyBelow[101X
   
   [29X[2XElementsStrictlyBelow[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-5 ElementsComparable[101X
+  
+  [29X[2XElementsComparable[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-6 ElementsStrictlyComparable[101X
+  
+  [29X[2XElementsStrictlyComparable[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-7 RemovePoint[101X
+  
+  [29X[2XRemovePoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-8 RemoveCoveringRelation[101X
+  
+  [29X[2XRemoveCoveringRelation[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-9 IsBeatPoint[101X
+  
+  [29X[2XIsBeatPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-10 IsUpBeatPoint[101X
+  
+  [29X[2XIsUpBeatPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-11 IsDownBeatPoint[101X
+  
+  [29X[2XIsDownBeatPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-12 UpBeatPoints[101X
+  
+  [29X[2XUpBeatPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-13 DownBeatPoints[101X
+  
+  [29X[2XDownBeatPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-14 BeatPoints[101X
+  
+  [29X[2XBeatPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-15 CorePoset[101X
+  
+  [29X[2XCorePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-16 IsContractible[101X
+  
+  [29X[2XIsContractible[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-17 IsWeakPoint[101X
+  
+  [29X[2XIsWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-18 IsUpWeakPoint[101X
+  
+  [29X[2XIsUpWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-19 IsDownWeakPoint[101X
+  
+  [29X[2XIsDownWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-20 WeakPoints[101X
+  
+  [29X[2XWeakPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-21 UpWeakPoints[101X
+  
+  [29X[2XUpWeakPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-22 DownWeakPoints[101X
+  
+  [29X[2XDownWeakPoints[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-23 WeakCorePoset[101X
+  
+  [29X[2XWeakCorePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-24 MinWeakCorePoset[101X
+  
+  [29X[2XMinWeakCorePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-25 IsCollapsible[101X
+  
+  [29X[2XIsCollapsible[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-26 IsQCReduction[101X
+  
+  [29X[2XIsQCReduction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X1.1-27 IsQCopReduction[101X
+  
+  [29X[2XIsQCopReduction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
+  
+  [1X1.1-28 QCCorePoset[101X
+  
+  [29X[2XQCCorePoset[102X( [3Xarg[103X ) [32X operation
+  
+  [1X1.1-29 QCCoresPoset[101X
+  
+  [29X[2XQCCoresPoset[102X( [3Xarg[103X ) [32X operation
   

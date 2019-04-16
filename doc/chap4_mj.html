@@ -43,19 +43,27 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8451037E860B35DE">4.3-2 PosetByFunction</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X78ED12D1784DA6A9">4.3-3 PosetByOrderMatrix</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X79BE0F957986CCF5">4.3-4 PosetByOrderMatrix</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87C878E8822573FE">4.3-5 PosetHomomorphismByFunctionNC</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87BC372284762BCE">4.3-6 PosetHomomorphismByFunction</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7DB81BAD78C3943E">4.3-7 PosetHomomorphismByImages</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X824E42957F55214C">4.3-8 RelationByPoset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8116B87D82E95551">4.3-9 PosetByOrderRelation</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7DC0448A8515DFFE">4.3-10 PosetByHasseDiagram</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8116B87D82E95551">4.3-5 PosetByOrderRelation</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7DC0448A8515DFFE">4.3-6 PosetByHasseDiagram</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7FC326A77EAB8BB7">4.3-7 PosetByCoveringRelations</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7BE15FF683422985">4.4 <span class="Heading">Classical constructions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7D3171E8831EF69B">4.4 <span class="Heading">Constructing poset homomorphisms</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X80E1B16F8665FCC5">4.4-1 OrderMatrix</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B16A769870A112D">4.4-2 HasseDiagram</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8361159B7F4B95B6">4.4-3 CoveringRelations</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87C878E8822573FE">4.4-1 PosetHomomorphismByFunctionNC</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87BC372284762BCE">4.4-2 PosetHomomorphismByFunction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7DB81BAD78C3943E">4.4-3 PosetHomomorphismByImages</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B1E190E8735AA6E">4.4-4 PosetHomomorphismByMapping</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X8799C49A876FA5DA">4.5 <span class="Heading">Other useful representations of the ordering</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X824E42957F55214C">4.5-1 RelationByPoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X80E1B16F8665FCC5">4.5-2 OrderMatrix</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B16A769870A112D">4.5-3 HasseDiagram</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8361159B7F4B95B6">4.5-4 CoveringRelations</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7A4C2C317F67E132">4.5-5 UpperCovers</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7AF8164985A00A3F">4.5-6 LowerCovers</a></span>
 </div></div>
 </div>
 
@@ -116,55 +124,79 @@
 <h5>4.3-4 PosetByOrderMatrix</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetByOrderMatrix</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p><a id="X87C878E8822573FE" name="X87C878E8822573FE"></a></p>
-
-<h5>4.3-5 PosetHomomorphismByFunctionNC</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByFunctionNC</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p><a id="X87BC372284762BCE" name="X87BC372284762BCE"></a></p>
-
-<h5>4.3-6 PosetHomomorphismByFunction</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByFunction</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p><a id="X7DB81BAD78C3943E" name="X7DB81BAD78C3943E"></a></p>
-
-<h5>4.3-7 PosetHomomorphismByImages</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByImages</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p><a id="X824E42957F55214C" name="X824E42957F55214C"></a></p>
-
-<h5>4.3-8 RelationByPoset</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RelationByPoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X8116B87D82E95551" name="X8116B87D82E95551"></a></p>
 
-<h5>4.3-9 PosetByOrderRelation</h5>
+<h5>4.3-5 PosetByOrderRelation</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetByOrderRelation</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7DC0448A8515DFFE" name="X7DC0448A8515DFFE"></a></p>
 
-<h5>4.3-10 PosetByHasseDiagram</h5>
+<h5>4.3-6 PosetByHasseDiagram</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetByHasseDiagram</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p><a id="X7BE15FF683422985" name="X7BE15FF683422985"></a></p>
+<p><a id="X7FC326A77EAB8BB7" name="X7FC326A77EAB8BB7"></a></p>
 
-<h4>4.4 <span class="Heading">Classical constructions</span></h4>
+<h5>4.3-7 PosetByCoveringRelations</h5>
 
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetByCoveringRelations</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X7D3171E8831EF69B" name="X7D3171E8831EF69B"></a></p>
+
+<h4>4.4 <span class="Heading">Constructing poset homomorphisms</span></h4>
+
+<p><a id="X87C878E8822573FE" name="X87C878E8822573FE"></a></p>
+
+<h5>4.4-1 PosetHomomorphismByFunctionNC</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByFunctionNC</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X87BC372284762BCE" name="X87BC372284762BCE"></a></p>
+
+<h5>4.4-2 PosetHomomorphismByFunction</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByFunction</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X7DB81BAD78C3943E" name="X7DB81BAD78C3943E"></a></p>
+
+<h5>4.4-3 PosetHomomorphismByImages</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByImages</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X7B1E190E8735AA6E" name="X7B1E190E8735AA6E"></a></p>
+
+<h5>4.4-4 PosetHomomorphismByMapping</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PosetHomomorphismByMapping</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X8799C49A876FA5DA" name="X8799C49A876FA5DA"></a></p>
+
+<h4>4.5 <span class="Heading">Other useful representations of the ordering</span></h4>
+
+<p><a id="X824E42957F55214C" name="X824E42957F55214C"></a></p>
+
+<h5>4.5-1 RelationByPoset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RelationByPoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X80E1B16F8665FCC5" name="X80E1B16F8665FCC5"></a></p>
 
-<h5>4.4-1 OrderMatrix</h5>
+<h5>4.5-2 OrderMatrix</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrderMatrix</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7B16A769870A112D" name="X7B16A769870A112D"></a></p>
 
-<h5>4.4-2 HasseDiagram</h5>
+<h5>4.5-3 HasseDiagram</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasseDiagram</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X8361159B7F4B95B6" name="X8361159B7F4B95B6"></a></p>
 
-<h5>4.4-3 CoveringRelations</h5>
+<h5>4.5-4 CoveringRelations</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoveringRelations</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X7A4C2C317F67E132" name="X7A4C2C317F67E132"></a></p>
+
+<h5>4.5-5 UpperCovers</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpperCovers</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X7AF8164985A00A3F" name="X7AF8164985A00A3F"></a></p>
+
+<h5>4.5-6 LowerCovers</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LowerCovers</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5_mj.html">[Next Chapter]</a>&nbsp;  </div>
 

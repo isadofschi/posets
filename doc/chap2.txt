@@ -21,7 +21,7 @@
   
   [1X2.2-2 EulerCharacteristic[101X
   
-  [29X[2XEulerCharacteristic[102X( [3Xarg[103X ) [32X operation
+  [29X[2XEulerCharacteristic[102X( [3Xarg[103X ) [32X attribute
   
   [1X2.2-3 FundamentalGroup[101X
   

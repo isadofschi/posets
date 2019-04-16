@@ -70,3 +70,7 @@
   
   [29X[2XWedgePosets[102X( [3Xarg[103X ) [32X operation
   
+  [1X3.3-11 HomPosets[101X
+  
+  [29X[2XHomPosets[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
