@@ -41,19 +41,20 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7E57284285531F66">1.1-14 BeatPoints</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7EED44987C6EA564">1.1-15 CorePoset</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X84A44E407DB45DDC">1.1-16 IsContractible</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X87F66C2D807F124C">1.1-17 IsWeakPoint</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7946ED887BD7BC61">1.1-18 IsUpWeakPoint</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7CC1154E7916BFA9">1.1-19 IsDownWeakPoint</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X857D194683096554">1.1-20 WeakPoints</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X79845DF481EC7CE2">1.1-21 UpWeakPoints</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X8538196A7BDE165F">1.1-22 DownWeakPoints</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7A40DF177A400046">1.1-23 WeakCorePoset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7BE990127E61F1E2">1.1-24 MinWeakCorePoset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X8660FF0E8070B81C">1.1-25 IsCollapsible</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7FA6909581D35912">1.1-26 IsQCReduction</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X785208D682355A44">1.1-27 IsQCopReduction</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X850D9B327AE0D7AA">1.1-28 QCCorePoset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X83FC0F7783F44940">1.1-29 QCCoresPoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X834C72DA86CE2079">1.1-17 HomotopyEquivalence</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X87F66C2D807F124C">1.1-18 IsWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7946ED887BD7BC61">1.1-19 IsUpWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7CC1154E7916BFA9">1.1-20 IsDownWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X857D194683096554">1.1-21 WeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X79845DF481EC7CE2">1.1-22 UpWeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X8538196A7BDE165F">1.1-23 DownWeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7A40DF177A400046">1.1-24 WeakCorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7BE990127E61F1E2">1.1-25 MinWeakCorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X8660FF0E8070B81C">1.1-26 IsCollapsible</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X7FA6909581D35912">1.1-27 IsQCReduction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X785208D682355A44">1.1-28 IsQCopReduction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X850D9B327AE0D7AA">1.1-29 QCCorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap1.html#X83FC0F7783F44940">1.1-30 QCCoresPoset</a></span>
 </div></div>
 </div>
 
@@ -137,75 +138,86 @@
 
 <h5>1.1-15 CorePoset</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CorePoset</code>( <var class="Arg">X</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p>Returns: a core of X</p>
+
+<p>the natural maps are the inclusion i: core(X) --&gt; X and the retraction r: X --&gt; core(X)</p>
+
 <p><a id="X84A44E407DB45DDC" name="X84A44E407DB45DDC"></a></p>
 
 <h5>1.1-16 IsContractible</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsContractible</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><a id="X834C72DA86CE2079" name="X834C72DA86CE2079"></a></p>
+
+<h5>1.1-17 HomotopyEquivalence</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HomotopyEquivalence</code>( <var class="Arg">X</var>, <var class="Arg">Y</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p>Returns: a homotopy equivalence <span class="SimpleMath">X-&gt; Y</span> or fail if X and Y are not homotopy equivalent</p>
+
 <p><a id="X87F66C2D807F124C" name="X87F66C2D807F124C"></a></p>
 
-<h5>1.1-17 IsWeakPoint</h5>
+<h5>1.1-18 IsWeakPoint</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7946ED887BD7BC61" name="X7946ED887BD7BC61"></a></p>
 
-<h5>1.1-18 IsUpWeakPoint</h5>
+<h5>1.1-19 IsUpWeakPoint</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsUpWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7CC1154E7916BFA9" name="X7CC1154E7916BFA9"></a></p>
 
-<h5>1.1-19 IsDownWeakPoint</h5>
+<h5>1.1-20 IsDownWeakPoint</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDownWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X857D194683096554" name="X857D194683096554"></a></p>
 
-<h5>1.1-20 WeakPoints</h5>
+<h5>1.1-21 WeakPoints</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X79845DF481EC7CE2" name="X79845DF481EC7CE2"></a></p>
 
-<h5>1.1-21 UpWeakPoints</h5>
+<h5>1.1-22 UpWeakPoints</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpWeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X8538196A7BDE165F" name="X8538196A7BDE165F"></a></p>
 
-<h5>1.1-22 DownWeakPoints</h5>
+<h5>1.1-23 DownWeakPoints</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DownWeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7A40DF177A400046" name="X7A40DF177A400046"></a></p>
 
-<h5>1.1-23 WeakCorePoset</h5>
+<h5>1.1-24 WeakCorePoset</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WeakCorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7BE990127E61F1E2" name="X7BE990127E61F1E2"></a></p>
 
-<h5>1.1-24 MinWeakCorePoset</h5>
+<h5>1.1-25 MinWeakCorePoset</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MinWeakCorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X8660FF0E8070B81C" name="X8660FF0E8070B81C"></a></p>
 
-<h5>1.1-25 IsCollapsible</h5>
+<h5>1.1-26 IsCollapsible</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCollapsible</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X7FA6909581D35912" name="X7FA6909581D35912"></a></p>
 
-<h5>1.1-26 IsQCReduction</h5>
+<h5>1.1-27 IsQCReduction</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsQCReduction</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X785208D682355A44" name="X785208D682355A44"></a></p>
 
-<h5>1.1-27 IsQCopReduction</h5>
+<h5>1.1-28 IsQCopReduction</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsQCopReduction</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X850D9B327AE0D7AA" name="X850D9B327AE0D7AA"></a></p>
 
-<h5>1.1-28 QCCorePoset</h5>
+<h5>1.1-29 QCCorePoset</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QCCorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><a id="X83FC0F7783F44940" name="X83FC0F7783F44940"></a></p>
 
-<h5>1.1-29 QCCoresPoset</h5>
+<h5>1.1-30 QCCoresPoset</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QCCoresPoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 

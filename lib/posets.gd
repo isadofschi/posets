@@ -58,8 +58,7 @@ DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
 #!
 DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
 #!
-DeclareOperation("CompositionMaps",[IsPosetHomomorphism,IsPosetHomomorphism]);
-
+DeclareOperation("CompositionPosetHomomorphisms",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
 #############################################################################
 

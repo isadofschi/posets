@@ -37,14 +37,17 @@ DeclareOperation("DownBeatPoints",[IsPoset]);
 #!
 DeclareOperation("BeatPoints",[IsPoset]);
 
-# returns a core of X as a subspace NaturalMaps(CorePoset(X))
-# gives an inclusion i:core(X) --> X
-#!
+#! @Arguments X
+#! @Returns a core of X
+#! @Description the natural maps are the inclusion i: core(X) --> X and the retraction r: X --> core(X)
 DeclareOperation("CorePoset",[IsPoset]);
+
 #!
 DeclareOperation("IsContractible",[IsPoset]);
-#!
-DeclareOperation("AreHomotopyEquivalent",[IsPoset,IsPoset]);
+
+#! @Arguments X,Y
+#! @Returns a homotopy equivalence <M>X\to Y</M> or fail if X and Y are not homotopy equivalent
+DeclareOperation("HomotopyEquivalence",[IsPoset,IsPoset]);
 
 ###################################################################################
 

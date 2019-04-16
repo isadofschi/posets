@@ -147,16 +147,63 @@ InstallMethod(CorePoset,
 "for Poset",
 [IsPoset],
 function(X)
-	local X1;
-	X1:=StructuralCopy(X);
-	while Size(BeatPoints(X1))>0 do
-		if Size(UpBeatPoints(X1)) > Size(DownBeatPoints(X1)) then
-			X1:=SubPoset(X1,Difference(Set(X1),UpBeatPoints(X1)));
+	local 	core, X1,
+			inclusion_X1_X, inclusion_core_X1, retraction_X_X1, retraction_X1_core,
+			x, _cl, cl, join, _r, r;
+	if Size(BeatPoints(X))=0 then
+		core:=PosetByFunctionNC(Set(X),Ordering(X));
+		core!.naturalMaps:=[IdentityMap(X),IdentityMap(X)];
+		return core;
+	else
+
+		# Union find to compute the retraction X --> X1
+		_cl:=List([1..Size(X)], x -> -1);
+		cl:=function(i)
+			if _cl[i] =-1 then
+				return i;
+			else
+				_cl[i]:=cl(_cl[i]);
+				return _cl[i];
+			fi;
+		end;;
+		join:=function(i,j)
+			if not cl(i)=cl(j) then
+				_cl[cl(i)] := cl(j);
+			fi;
+		end;;
+		# We join each up/down beat point to the only upper/lower cover:
+		if Size(UpBeatPoints(X)) > Size(DownBeatPoints(X)) then
+			X1:=SubPoset(X, Difference(Set(X),UpBeatPoints(X)) );
+			for x in UpBeatPoints(X) do
+				join( PositionSorted(Set(X),x), PositionSorted(Set(X),UpperCovers(X,x)[1]) );
+			od;
 		else
-			X1:=SubPoset(X1,Difference(Set(X1),DownBeatPoints(X1)));
+			X1:=SubPoset(X, Difference(Set(X),DownBeatPoints(X)) );
+			for x in DownBeatPoints(X) do
+				join( PositionSorted(Set(X),x), PositionSorted(Set(X),LowerCovers(X,x)[1]) );
+			od;
 		fi;
-	od;
-	return SubPoset(X,Set(X1));
+		# memoization for the retraction cl
+		_r:=List([1..Size(X)], x -> -1 );
+		r:=function(i)
+			if _r[i]=-1 then
+				_r[i]:=cl(i);
+			fi;
+			return _r[i];
+		end;
+
+		core:=CorePoset(X1);
+		inclusion_X1_X := NaturalMaps(X1)[1];
+		retraction_X_X1:= PosetHomomorphismByFunction(X,X1, x->Set(X)[r(PositionSorted(Set(X),x))] );		
+		inclusion_core_X1:=NaturalMaps(core)[1];
+		retraction_X1_core:=NaturalMaps(core)[2];
+
+		core!.naturalMaps:=[CompositionPosetHomomorphisms(inclusion_X1_X,inclusion_core_X1),
+						    CompositionPosetHomomorphisms(retraction_X1_core,retraction_X_X1)
+						  ];
+		return core;
+	fi;
+
 end);
 
 InstallMethod(IsContractible,
@@ -169,11 +216,22 @@ function(X)
 	return Size(CorePoset(X)) = 1;
 end);
 
-InstallMethod(AreHomotopyEquivalent,
+InstallMethod(HomotopyEquivalence,
 "for Poset and Poset",
 [IsPoset,IsPoset],
 function(X,Y)
-	return IsomorphismPosets(CorePoset(X),CorePoset(Y))<>fail;
+	local coreX,coreY,f,i_coreY_Y,r_X_coreX;
+	coreX:=CorePoset(X);
+	coreY:=CorePoset(Y);
+	f:=IsomorphismPosets(coreX,coreY);
+	if f=fail then
+		return fail;
+	else
+		i_coreY_Y:=NaturalMaps(coreY)[1];
+		r_X_coreX:=NaturalMaps(coreX)[2];
+		# composition of 3 maps is not implemented:
+		return CompositionPosetHomomorphisms(i_coreY_Y, CompositionPosetHomomorphisms(f,r_X_coreX));
+	fi;
 end);
 
 InstallMethod(IsUpWeakPoint,

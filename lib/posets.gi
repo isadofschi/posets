@@ -281,7 +281,7 @@ function(X)
 end);
 
 
-InstallMethod(CompositionMaps,
+InstallMethod(CompositionPosetHomomorphisms,
 "for PosetHomomorphism and PosetHomomorphism",
 [IsPosetHomomorphism,IsPosetHomomorphism],
 function(g,f)

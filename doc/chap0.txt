@@ -68,7 +68,7 @@
       1.1-14 BeatPoints
       1.1-15 CorePoset
       1.1-16 IsContractible
-      1.1-17 AreHomotopyEquivalent
+      1.1-17 HomotopyEquivalence
       1.1-18 IsWeakPoint
       1.1-19 IsUpWeakPoint
       1.1-20 IsDownWeakPoint
@@ -95,7 +95,7 @@
   3 [33X[0;0YConstructing new posets[133X
     3.1 [33X[0;0YNatural maps[133X
       3.1-1 NaturalMaps
-    3.2 [33X[0;0YMethods for poset homomorphisms[133X
+    3.2 [33X[0;0YSome methods for poset homomorphisms[133X
       3.2-1 SourceMap
       3.2-2 TargetMap
       3.2-3 ImageMap
@@ -133,7 +133,7 @@
       4.4-3 PosetHomomorphismByImages
       4.4-4 PosetHomomorphismByMapping
       4.4-5 IsomorphismPosets
-      4.4-6 CompositionMaps
+      4.4-6 CompositionPosetHomomorphisms
     4.5 [33X[0;0YOther useful representations of the ordering[133X
       4.5-1 RelationByPoset
       4.5-2 OrderMatrix

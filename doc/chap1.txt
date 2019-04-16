@@ -62,15 +62,21 @@
   
   [1X1.1-15 CorePoset[101X
   
-  [29X[2XCorePoset[102X( [3Xarg[103X ) [32X operation
+  [29X[2XCorePoset[102X( [3XX[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ya core of X[133X
+  
+  [33X[0;0Ythe  natural maps are the inclusion i: core(X) --> X and the retraction r: X
+  --> core(X)[133X
   
   [1X1.1-16 IsContractible[101X
   
   [29X[2XIsContractible[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-17 AreHomotopyEquivalent[101X
+  [1X1.1-17 HomotopyEquivalence[101X
   
-  [29X[2XAreHomotopyEquivalent[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  [29X[2XHomotopyEquivalence[102X( [3XX[103X, [3XY[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ya  homotopy  equivalence [22XX-> Y[122X or fail if X and Y are not homotopy
+            equivalent[133X
   
   [1X1.1-18 IsWeakPoint[101X
   

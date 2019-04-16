@@ -379,15 +379,16 @@
 \subsection{\textcolor{Chapter }{CorePoset (for IsPoset)}}
 \logpage{[ 1, 1, 15 ]}\nobreak
 \hyperdef{L}{X7EED44987C6EA564}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{CorePoset({\mdseries\slshape arg})\index{CorePoset@\texttt{CorePoset}!for IsPoset}
+{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{CorePoset({\mdseries\slshape X})\index{CorePoset@\texttt{CorePoset}!for IsPoset}
 \label{CorePoset:for IsPoset}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
+a core of X 
 
 
 
-
- }
+ the natural maps are the inclusion i: core(X) --{\textgreater} X and the
+retraction r: X --{\textgreater} core(X) }
 
  
 
@@ -406,14 +407,14 @@
 
  
 
-\subsection{\textcolor{Chapter }{AreHomotopyEquivalent (for IsPoset,IsPoset)}}
+\subsection{\textcolor{Chapter }{HomotopyEquivalence (for IsPoset,IsPoset)}}
 \logpage{[ 1, 1, 17 ]}\nobreak
-\hyperdef{L}{X87BB66BC8673EC32}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{AreHomotopyEquivalent({\mdseries\slshape arg1, arg2})\index{AreHomotopyEquivalent@\texttt{AreHomotopyEquivalent}!for IsPoset,IsPoset}
-\label{AreHomotopyEquivalent:for IsPoset,IsPoset}
+\hyperdef{L}{X834C72DA86CE2079}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{HomotopyEquivalence({\mdseries\slshape X, Y})\index{HomotopyEquivalence@\texttt{HomotopyEquivalence}!for IsPoset,IsPoset}
+\label{HomotopyEquivalence:for IsPoset,IsPoset}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
-
+a homotopy equivalence $X\to Y$ or fail if X and Y are not homotopy equivalent 
 
 
 
@@ -759,22 +760,22 @@
 \subsection{\textcolor{Chapter }{NaturalMaps (for IsPoset)}}
 \logpage{[ 3, 1, 1 ]}\nobreak
 \hyperdef{L}{X7E1ECC10824BE91D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{NaturalMaps({\mdseries\slshape arg})\index{NaturalMaps@\texttt{NaturalMaps}!for IsPoset}
+{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{NaturalMaps({\mdseries\slshape X})\index{NaturalMaps@\texttt{NaturalMaps}!for IsPoset}
 \label{NaturalMaps:for IsPoset}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
+the natural maps of the poset X. 
 
 
 
-
- }
+ for example NaturalMaps of a product gives the projections. }
 
  }
 
  
-\section{\textcolor{Chapter }{Methods for poset homomorphisms}}\label{Chapter_Constructing_new_posets_Section_Methods_for_poset_homomorphisms}
+\section{\textcolor{Chapter }{Some methods for poset homomorphisms}}\label{Chapter_Constructing_new_posets_Section_Some_methods_for_poset_homomorphisms}
 \logpage{[ 3, 2, 0 ]}
-\hyperdef{L}{X7FEAF03A79A0F3D1}{}
+\hyperdef{L}{X7E2F08A68796C9C4}{}
 {
   
 
@@ -1285,11 +1286,11 @@ a function computing the order of the poset $X$.
 
  
 
-\subsection{\textcolor{Chapter }{CompositionMaps (for IsPosetHomomorphism,IsPosetHomomorphism)}}
+\subsection{\textcolor{Chapter }{CompositionPosetHomomorphisms (for IsPosetHomomorphism,IsPosetHomomorphism)}}
 \logpage{[ 4, 4, 6 ]}\nobreak
-\hyperdef{L}{X815B994A7BCB6F97}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{CompositionMaps({\mdseries\slshape arg1, arg2})\index{CompositionMaps@\texttt{CompositionMaps}!for IsPosetHomomorphism,IsPosetHomomorphism}
-\label{CompositionMaps:for IsPosetHomomorphism,IsPosetHomomorphism}
+\hyperdef{L}{X7955B5E585AEB10D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\ \ \texttt{CompositionPosetHomomorphisms({\mdseries\slshape arg1, arg2})\index{CompositionPosetHomomorphisms@\texttt{CompositionPosetHomomorphisms}!for IsPosetHomomorphism,IsPosetHomomorphism}
+\label{CompositionPosetHomomorphisms:for IsPosetHomomorphism,IsPosetHomomorphism}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
 

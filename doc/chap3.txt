@@ -6,10 +6,13 @@
   
   [1X3.1-1 NaturalMaps[101X
   
-  [29X[2XNaturalMaps[102X( [3Xarg[103X ) [32X operation
+  [29X[2XNaturalMaps[102X( [3XX[103X ) [32X operation
+  [6XReturns:[106X  [33X[0;10Ythe natural maps of the poset X.[133X
+  
+  [33X[0;0Yfor example NaturalMaps of a product gives the projections.[133X
   
   
-  [1X3.2 [33X[0;0YMethods for poset homomorphisms[133X[101X
+  [1X3.2 [33X[0;0YSome methods for poset homomorphisms[133X[101X
   
   [1X3.2-1 SourceMap[101X
   

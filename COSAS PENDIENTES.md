@@ -3,8 +3,6 @@
 * Cociente y wedge
 * Automorphisms
 * AutomorphismGroup
-* natural mapping r: X---> Core(X)
-* HomotopyEquivalence
 
 # Funciones de https://github.com/ximenafernandez/Finite-Spaces
 
@@ -31,3 +29,5 @@
 # Optimizar cosas
 
 # Usar Properties en vez de Methods cuando sea recomendable
+
+# Armar bien la ayuda. Chequear que aparezcan los InstallOtherMethod que no se documentan automaticamente con #!.

@@ -1,4 +1,4 @@
-gap> Sigma1:=PosetByOrderMatrix([[true,false,true,true],[false,true,true,true],[false,false,true,false],[false,false,false,true]], ["a","b","c","d"]);
+gap> Sigma1:=PosetByOrderMatrix(["a","b","c","d"],[[true,false,true,true],[false,true,true,true],[false,false,true,false],[false,false,false,true]]);
 <finite poset of size 4>
 gap> coprod:=CoproductPosets([Sigma1,Sigma1]);
 <finite poset of size 8>
