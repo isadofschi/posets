@@ -1,7 +1,8 @@
 # Cosas básicas
 Cociente y wedge
 IsomorphismPosets
-
+Automorphisms
+AutomorphismGroup
 
 # Funciones de https://github.com/ximenafernandez/Finite-Spaces
 

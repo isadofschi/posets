@@ -194,11 +194,12 @@ function(f)
 end);
 
 # Note that, for f,g in HomPosets(X,Y),  Ordering(HomPosets(X,Y))(f,g) is NOT the same as f<g
+# Has a natural map Y-> HomPosets(X,Y) which sends y to the constant map x->y.
 InstallMethod(HomPosets,
 "for Poset and Poset",
 [IsPoset,IsPoset],
 function(X,Y)
-	local ts,homXY,t,f,ordering;
+	local ts,homXY,t,f,ordering,P;
 	ts:=IteratorOfTuples(Set(Y),Size(X));
 	homXY:=[];
 	for t in ts do
@@ -210,7 +211,9 @@ function(X,Y)
 	ordering:=function(f1,f2)
 		return ForAll(Set(X),x-> Ordering(Y)(f1!.f(x),f2!.f(x)));
 	end;
-	return PosetByFunctionNC(Set(homXY),ordering);
+	P:=PosetByFunctionNC(Set(homXY),ordering);
+	P!.naturalMaps:=[PosetHomomorphismByFunction(Y,P, y->PosetHomomorphismByFunction(X,Y, x->y ) )];
+	return P;
 end);
 
 
