@@ -3,6 +3,8 @@
 * Cociente y wedge
 * Automorphisms
 * AutomorphismGroup
+* natural mapping r: X---> Core(X)
+* HomotopyEquivalence
 
 # Funciones de https://github.com/ximenafernandez/Finite-Spaces
 

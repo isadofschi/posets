@@ -147,13 +147,16 @@ InstallMethod(CorePoset,
 "for Poset",
 [IsPoset],
 function(X)
-	local coreX;
-	# this can be optimized!
-	coreX:=StructuralCopy(X);
-	while Size(BeatPoints(coreX))>0 do
-		coreX:=RemovePoint(coreX,BeatPoints(coreX)[1]);
+	local X1;
+	X1:=StructuralCopy(X);
+	while Size(BeatPoints(X1))>0 do
+		if Size(UpBeatPoints(X1)) > Size(DownBeatPoints(X1)) then
+			X1:=SubPoset(X1,Difference(Set(X1),UpBeatPoints(X1)));
+		else
+			X1:=SubPoset(X1,Difference(Set(X1),DownBeatPoints(X1)));
+		fi;
 	od;
-	return SubPoset(X,Set(coreX));
+	return SubPoset(X,Set(X1));
 end);
 
 InstallMethod(IsContractible,

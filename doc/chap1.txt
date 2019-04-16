@@ -68,55 +68,59 @@
   
   [29X[2XIsContractible[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-17 IsWeakPoint[101X
+  [1X1.1-17 AreHomotopyEquivalent[101X
+  
+  [29X[2XAreHomotopyEquivalent[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
+  [1X1.1-18 IsWeakPoint[101X
   
   [29X[2XIsWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X1.1-18 IsUpWeakPoint[101X
+  [1X1.1-19 IsUpWeakPoint[101X
   
   [29X[2XIsUpWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X1.1-19 IsDownWeakPoint[101X
+  [1X1.1-20 IsDownWeakPoint[101X
   
   [29X[2XIsDownWeakPoint[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
-  [1X1.1-20 WeakPoints[101X
+  [1X1.1-21 WeakPoints[101X
   
   [29X[2XWeakPoints[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-21 UpWeakPoints[101X
+  [1X1.1-22 UpWeakPoints[101X
   
   [29X[2XUpWeakPoints[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-22 DownWeakPoints[101X
+  [1X1.1-23 DownWeakPoints[101X
   
   [29X[2XDownWeakPoints[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-23 WeakCorePoset[101X
+  [1X1.1-24 WeakCorePoset[101X
   
   [29X[2XWeakCorePoset[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-24 MinWeakCorePoset[101X
+  [1X1.1-25 MinWeakCorePoset[101X
   
   [29X[2XMinWeakCorePoset[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-25 IsCollapsible[101X
+  [1X1.1-26 IsCollapsible[101X
   
   [29X[2XIsCollapsible[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-26 IsQCReduction[101X
+  [1X1.1-27 IsQCReduction[101X
   
   [29X[2XIsQCReduction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
   
-  [1X1.1-27 IsQCopReduction[101X
+  [1X1.1-28 IsQCopReduction[101X
   
   [29X[2XIsQCopReduction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation
   
-  [1X1.1-28 QCCorePoset[101X
+  [1X1.1-29 QCCorePoset[101X
   
   [29X[2XQCCorePoset[102X( [3Xarg[103X ) [32X operation
   
-  [1X1.1-29 QCCoresPoset[101X
+  [1X1.1-30 QCCoresPoset[101X
   
   [29X[2XQCCoresPoset[102X( [3Xarg[103X ) [32X operation
   

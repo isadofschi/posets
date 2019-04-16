@@ -273,15 +273,25 @@ function(X,Y)
 	return fail;
 end);
 
+InstallOtherMethod(IdentityMap,
+"for Poset",
+[IsPoset],
+function(X)
+	return PosetHomomorphismByFunction(X,X, x->x);
+end);
+
+
+InstallMethod(CompositionMaps,
+"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(g,f)
+	if SourceMap(g)<>TargetMap(f) then
+		return fail;
+	fi;
+	return PosetHomomorphismByFunction(SourceMap(f),TargetMap(g), x-> g!.f(f!.f(x)) );
+end);
+
 ##################################################################################################
-
-
-#InstallMethod(IdentityMapping,
-#"for Poset",
-#[IsPoset],
-#function(X)
-#	return Objectify( PosetHomomorphismType, rec(source:=X, target:=X, images:=[1..(Size(X))]) );
-#end);
 
 
 ## Turns a poset into an order relation
@@ -291,7 +301,7 @@ InstallMethod(RelationByPoset,
 function(X)
 	local n;
 	n:=Size(X);
-	return PartialOrderByOrderingFunction( Domain(Set(X)), X!.ordering );
+	return PartialOrderByOrderingFunction( Domain(Set(X)), Ordering(X) );
 end);
 
 

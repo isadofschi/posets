@@ -83,6 +83,10 @@
   
   [29X[2XIsomorphismPosets[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
   
+  [1X4.4-6 CompositionMaps[101X
+  
+  [29X[2XCompositionMaps[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation
+  
   
   [1X4.5 [33X[0;0YOther useful representations of the ordering[133X[101X
   

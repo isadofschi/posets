@@ -2,13 +2,17 @@
   
   [1XIndex[101X
   
+  [2XAreHomotopyEquivalent[102X (for IsPoset,IsPoset)  1.1-17
+  [2XBarycentricSubdivision[102X (for IsPoset)  2.1-3
+  [2XBarycentricSubdivision[102X (for IsHapSimplicialComplex)  2.1-4
   [2XBeatPoints[102X (for IsPoset)  1.1-14
+  [2XCompositionMaps[102X (for IsPosetHomomorphism,IsPosetHomomorphism)  4.4-6
   [2XConePoset[102X (for IsPoset)  3.3-5
   [2XCoproductPosets[102X (for IsList)  3.3-2
   [2XCorePoset[102X (for IsPoset)  1.1-15
   [2XCoveringRelations[102X (for IsPoset)  4.5-4
   [2XDownBeatPoints[102X (for IsPoset)  1.1-13
-  [2XDownWeakPoints[102X (for IsPoset)  1.1-22
+  [2XDownWeakPoints[102X (for IsPoset)  1.1-23
   [2XElementsAbove[102X (for IsPoset,IsObject)  1.1-1
   [2XElementsBelow[102X (for IsPoset,IsObject)  1.1-3
   [2XElementsComparable[102X (for IsPoset,IsObject)  1.1-5
@@ -25,21 +29,21 @@
   [2XImageMap[102X (for IsPosetHomomorphism)  3.2-3
   [2XImageMap[102X (for IsPosetHomomorphism,IsObject)  3.2-4
   [2XIsBeatPoint[102X (for IsPoset,IsObject)  1.1-9
-  [2XIsCollapsible[102X (for IsPoset)  1.1-25
+  [2XIsCollapsible[102X (for IsPoset)  1.1-26
   [2XIsContractible[102X (for IsPoset)  1.1-16
   [2XIsDownBeatPoint[102X (for IsPoset,IsObject)  1.1-11
-  [2XIsDownWeakPoint[102X (for IsPoset,IsObject)  1.1-19
+  [2XIsDownWeakPoint[102X (for IsPoset,IsObject)  1.1-20
   [2XIsomorphismPosets[102X (for IsPoset,IsPoset)  4.4-5
-  [2XIsQCopReduction[102X (for IsPoset,IsObject,IsObject)  1.1-27
-  [2XIsQCReduction[102X (for IsPoset,IsObject,IsObject)  1.1-26
+  [2XIsQCopReduction[102X (for IsPoset,IsObject,IsObject)  1.1-28
+  [2XIsQCReduction[102X (for IsPoset,IsObject,IsObject)  1.1-27
   [2XIsUpBeatPoint[102X (for IsPoset,IsObject)  1.1-10
-  [2XIsUpWeakPoint[102X (for IsPoset,IsObject)  1.1-18
-  [2XIsWeakPoint[102X (for IsPoset,IsObject)  1.1-17
+  [2XIsUpWeakPoint[102X (for IsPoset,IsObject)  1.1-19
+  [2XIsWeakPoint[102X (for IsPoset,IsObject)  1.1-18
   [2XJoinPosets[102X (for IsList)  3.3-3
   [2XLowerCovers[102X (for IsPoset,IsObject)  4.5-6
   [2XMappingCylinderPosetHomomorphism[102X (for IsPosetHomomorphism)  3.3-8
   [2XMinimalFiniteModelSphere[102X (for IsInt)  4.1-2
-  [2XMinWeakCorePoset[102X (for IsPoset)  1.1-24
+  [2XMinWeakCorePoset[102X (for IsPoset)  1.1-25
   [2XNaturalMaps[102X (for IsPoset)  3.1-1
   [2XOppositePoset[102X (for IsPoset)  3.3-7
   [2XOrderComplex[102X (for IsPoset)  2.1-2
@@ -62,8 +66,8 @@
   [2XPosetOfRadicalpSubgroups[102X (for IsGroup and IsFinite,IsInt)  6.1-5
   [2XPosetOfSubgroups[102X (for IsGroup and IsFinite)  6.1-1
   [2XProductPosets[102X (for IsList)  3.3-4
-  [2XQCCorePoset[102X (for IsPoset)  1.1-28
-  [2XQCCoresPoset[102X (for IsPoset)  1.1-29
+  [2XQCCorePoset[102X (for IsPoset)  1.1-29
+  [2XQCCoresPoset[102X (for IsPoset)  1.1-30
   [2XQuotientOfPosetBySubposet[102X (for IsPoset,IsList)  3.3-9
   [2XRadicalpSubgroups[102X  6.1-4
   [2XRelationByPoset[102X (for IsPoset)  4.5-1
@@ -76,9 +80,9 @@
   [2XTheWallet[102X (for )  4.1-3
   [2XUpBeatPoints[102X (for IsPoset)  1.1-12
   [2XUpperCovers[102X (for IsPoset,IsObject)  4.5-5
-  [2XUpWeakPoints[102X (for IsPoset)  1.1-21
-  [2XWeakCorePoset[102X (for IsPoset)  1.1-23
-  [2XWeakPoints[102X (for IsPoset)  1.1-20
+  [2XUpWeakPoints[102X (for IsPoset)  1.1-22
+  [2XWeakCorePoset[102X (for IsPoset)  1.1-24
+  [2XWeakPoints[102X (for IsPoset)  1.1-21
   [2XWedgePosets[102X (for IsList)  3.3-10
   
   
