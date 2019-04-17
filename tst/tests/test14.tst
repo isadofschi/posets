@@ -1,4 +1,6 @@
 # The space k from Lemma 10 of "THE FIXED POINT PROPERTY IN EVERY WEAK HOMOTOPY TYPE" by J.A. Barmak
+# These computations show that k is weakly homotopy equivalent to S^1
+# k has the fixed point property but checking this with our current implementation would take too long
 gap> points_k := [
 > "x'", "y'", "x", "y",
 > "z'", "w'",
@@ -16,6 +18,7 @@ gap> covering_relations_k := [
 > ["p3","p5"], ["p3","w"],
 > ["p4","p6"], ["p4","w"]];;
 gap> k:=PosetByCoveringRelations(points_k,covering_relations_k);
+<finite poset of size 14>
 gap> CorePoset(k);
 <finite poset of size 14>
 gap> HomotopyEquivalence(k,MinimalFiniteModelSphere(1));
@@ -28,6 +31,4 @@ gap> k1:= SubPoset(k,Difference(Set(k),["x","y"]));
 <finite poset of size 12>
 gap> HomotopyEquivalence(k1,MinimalFiniteModelSphere(1));
 <order preserving map>
-# Thus k is weakly homotopy equivalent to S^1
-#gap> HasFixedPointProperty(k); # would take too long with the current implementation
-#true
+

@@ -91,6 +91,8 @@ function(X,e)
 	return fail;
 end);
 
+#############################################################################
+
 InstallMethod(IsUpBeatPoint,
 "for Poset, element",
 [IsPoset, IsObject],
@@ -142,6 +144,7 @@ function(X)
 	return Filtered(Set(X), x-> IsBeatPoint(X,x) );
 end);
 
+#############################################################################
 
 InstallMethod(CorePoset,
 "for Poset",
@@ -234,6 +237,8 @@ function(X,Y)
 	fi;
 end);
 
+#############################################################################
+
 InstallMethod(IsUpWeakPoint,
 "for Poset, element",
 [IsPoset, IsObject],
@@ -285,4 +290,57 @@ function(X)
 	return Filtered(Set(X), x->IsWeakPoint(X,x));
 end);
 
+#############################################################################
+
+InstallMethod(WeakCorePoset,
+"for Poset",
+[IsPoset],
+function(X)
+	local weak_core, X1, inclusion_X1_X, inclusion_weakcore_X1;
+	if Size(WeakPoints(X))=0 then
+		return SubPoset(X,Set(X));
+	else
+		if Size(UpWeakPoints(X)) > Size(DownWeakPoints(X)) then
+			X1:=SubPoset(X, Difference(Set(X),UpWeakPoints(X)) );
+		else
+			X1:=SubPoset(X, Difference(Set(X),DownWeakPoints(X)) );
+		fi;
+
+		weak_core:=WeakCorePoset(X1);
+		inclusion_X1_X := NaturalMaps(X1)[1];
+		inclusion_weakcore_X1:=NaturalMaps(weak_core)[1];
+
+		weak_core!.naturalMaps:=[CompositionPosetHomomorphisms(inclusion_X1_X,inclusion_weakcore_X1)];
+		return weak_core;
+	fi;
+
+end);
+
+#############################################################################
+
+InstallMethod(IsQCReduction,
+"for Poset, element and element",
+[IsPoset,IsObject,IsObject],
+function(X,a,b)
+	if not (a in Set(X) and b in Set(X)) then
+		return Error("a and b must be elements of X");
+	fi;
+	 
+	return UpperCovers(X,a)=[] and
+		   UpperCovers(X,b)=[] and
+		   IsContractible( SubPoset(X, Union(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,b)))));
+end);
+
+InstallMethod(IsQCopReduction,
+"for Poset, element and element",
+[IsPoset,IsObject,IsObject],
+function(X,a,b)
+	if not (a in Set(X) and b in Set(X)) then
+		return Error("a and b must be elements of X");
+	fi;
+	 
+	return LowerCovers(X,a)=[] and
+		   LowerCovers(X,b)=[] and
+		   IsContractible( SubPoset(X, Union(Set(ElementsAbove(X,a)),Set(ElementsAbove(X,b)))));
+end);
 	

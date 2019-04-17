@@ -64,18 +64,19 @@ DeclareOperation("UpWeakPoints",[IsPoset]);
 #!
 DeclareOperation("DownWeakPoints",[IsPoset]); 
 #!
-DeclareOperation("WeakCorePoset",[IsPoset]); #to do
+DeclareOperation("WeakCorePoset",[IsPoset]);
 #!
 DeclareOperation("MinWeakCorePoset",[IsPoset]); #to do, que hace?
+
+#!
+DeclareOperation("IsCollapsible",[IsPoset]); #to do
 
 ###################################################################################
 
 #!
-DeclareOperation("IsCollapsible",[IsPoset]); #to do
+DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]);
 #!
-DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]); #to do
-#!
-DeclareOperation("IsQCopReduction",[IsPoset,IsObject,IsObject]); #to do
+DeclareOperation("IsQCopReduction",[IsPoset,IsObject,IsObject]);
 #!
 DeclareOperation("QCCorePoset",[IsPoset]); #to do
 #!

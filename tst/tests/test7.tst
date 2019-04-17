@@ -1,3 +1,4 @@
+# Example taken from "The fundamental group of the p-subgroup complex" by K. Piterman and E.G. Minian
 gap> X1:=PosetOfRadicalpSubgroups(AlternatingGroup(10),3);
 <finite poset of size 24620>
 gap> K:=OrderComplex(X1);;
