@@ -152,52 +152,49 @@ InstallMethod(CorePoset,
 function(X)
 	local 	core, X1,
 			inclusion_X1_X, inclusion_core_X1, retraction_X_X1, retraction_X1_core,
-			x, _cl, cl, join, _r, r;
+			x, i, UpOrDownBeatPoints, UpperOrLowerCovers, ady_in, dfs, _r, r;
 	if Size(BeatPoints(X))=0 then
 		core:=PosetByFunctionNC(Set(X),Ordering(X));
 		core!.naturalMaps:=[IdentityMap(X),IdentityMap(X)];
 		return core;
 	else
 
-		# Union find to compute the retraction X --> X1
-		_cl:=List([1..Size(X)], x -> -1);
-		cl:=function(i)
-			if _cl[i] =-1 then
-				return i;
-			else
-				_cl[i]:=cl(_cl[i]);
-				return _cl[i];
-			fi;
-		end;;
-		join:=function(i,j)
-			if not cl(i)=cl(j) then
-				_cl[cl(i)] := cl(j);
-			fi;
-		end;;
-		# We join each up/down beat point to the only upper/lower cover:
-		if Size(UpBeatPoints(X)) > Size(DownBeatPoints(X)) then
-			X1:=SubPoset(X, Difference(Set(X),UpBeatPoints(X)) );
-			for x in UpBeatPoints(X) do
-				join( PositionSorted(Set(X),x), PositionSorted(Set(X),UpperCovers(X,x)[1]) );
-			od;
-		else
-			X1:=SubPoset(X, Difference(Set(X),DownBeatPoints(X)) );
-			for x in DownBeatPoints(X) do
-				join( PositionSorted(Set(X),x), PositionSorted(Set(X),LowerCovers(X,x)[1]) );
-			od;
-		fi;
-		# memoization for the retraction cl
+
 		_r:=List([1..Size(X)], x -> -1 );
+		ady_in:=List([1..Size(X)],x->[]);
+
+		if Size(UpBeatPoints(X)) > Size(DownBeatPoints(X)) then # we remove up or down beat points?
+			UpOrDownBeatPoints:=UpBeatPoints;
+			UpperOrLowerCovers:=UpperCovers;
+		else
+			UpOrDownBeatPoints:=DownBeatPoints;
+			UpperOrLowerCovers:=LowerCovers;
+		fi;
+		X1:=SubPoset(X, Difference(Set(X),UpOrDownBeatPoints(X)));
+
+		# now we compute the retraction r: X --> X1
+		for x in UpOrDownBeatPoints(X) do
+			Add( ady_in[PositionSorted(Set(X),UpperOrLowerCovers(X,x)[1])], PositionSorted(Set(X),x) );
+		od;
+		dfs:=function(i)
+			local j;
+			for j in ady_in[i] do
+				_r[j]:=_r[i];
+				dfs(j);
+			od; 
+		end;
+		for x in Set(X1) do
+			i:=PositionSorted(Set(X),x);
+			_r[i]:=i;
+			dfs(i);
+		od;
 		r:=function(i)
-			if _r[i]=-1 then
-				_r[i]:=cl(i);
-			fi;
-			return _r[i];
+			return Set(X)[_r[PositionSorted(Set(X),x)]];
 		end;
 
 		core:=CorePoset(X1);
 		inclusion_X1_X := NaturalMaps(X1)[1];
-		retraction_X_X1:= PosetHomomorphismByFunction(X,X1, x->Set(X)[r(PositionSorted(Set(X),x))] );		
+		retraction_X_X1:= PosetHomomorphismByFunction(X,X1,r);		
 		inclusion_core_X1:=NaturalMaps(core)[1];
 		retraction_X1_core:=NaturalMaps(core)[2];
 
