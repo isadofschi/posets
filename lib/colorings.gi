@@ -1,7 +1,7 @@
 # fundamental group by coloring (without spanning collapsible)
 
 Kruskal:=function(X)
-	# spanning tree
+	# spanning forest
 	local C,find,union,T,e;
 
 	C := [1..Size(X)];

@@ -4,6 +4,9 @@
 * Automorphisms
 * AutomorphismGroup
 
+# Graded posets
+Algunas cosas salen mucho más rapido si sabemos que el poset es graded y podemos calcular el grado (ej diagrama de hasse en n^2)
+
 
 # Colorings
 
