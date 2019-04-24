@@ -22,5 +22,6 @@ ReadPackage( "Posets", "lib/subgroups.gd" );
 ReadPackage( "Posets", "lib/namedposets.gd" );
 ReadPackage("Posets", "lib/beatweak.gd" );
 ReadPackage("Posets", "lib/properties.gd" );
+ReadPackage("Posets", "lib/colorings.gd" );
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

@@ -1,12 +1,16 @@
 # Cosas básicas
-
+* Altura de un poset!
 * Cociente y wedge
 * Automorphisms
 * AutomorphismGroup
 
-# Funciones de https://github.com/ximenafernandez/Finite-Spaces
 
-* Colorings
+# Colorings
+
+cambiar algunos nombres, entender la parte de expand y collapsibles (para altura >2)
+
+
+# Traducir funciones de https://github.com/ximenafernandez/Finite-Spaces
 
 * Deformations
 

@@ -356,15 +356,29 @@ function(X,x)
 	return X!.lowerCovers[PositionSorted(Set(X),x)];
 end);
 
-
-
 InstallMethod(CoveringRelations,
 "for Poset",
 [IsPoset],
 function(X)
 	if not IsBound(X!.coveringRelations) then
-		X!.coveringRelations := Concatenation( List( [1..Size(X)], i-> List(HasseDiagram(X)[i], j-> [ Set(X)[i], Set(X)[j] ]) ) );
+		X!.coveringRelations := Concatenation( List( [1..Size(X)], i-> List(HasseDiagram(X)[i], y-> [ Set(X)[i], y ]) ) );
 	fi;
 	return X!.coveringRelations;
+end);
+
+InstallMethod(MaximalElements,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), x-> UpperCovers(X,x)=[] ); # this is efficient if we already computed the upper covers, not in general!
+end);
+
+
+
+InstallMethod(MinimalElements,
+"for Poset",
+[IsPoset],
+function(X)
+	return Filtered(Set(X), x-> LowerCovers(X,x)=[] ); # this is efficient if we already computed the lower covers, not in general!
 end);
 

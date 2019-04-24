@@ -76,5 +76,7 @@ DeclareOperation("CoveringRelations",[IsPoset]);
 DeclareOperation("UpperCovers",[IsPoset,IsObject]);
 #!
 DeclareOperation("LowerCovers",[IsPoset,IsObject]);
-
-
+#!
+DeclareOperation("MaximalElements",[IsPoset]);
+#!
+DeclareOperation("MinimalElements",[IsPoset]);

@@ -150,16 +150,15 @@ InstallMethod(CorePoset,
 "for Poset",
 [IsPoset],
 function(X)
-	local 	core, X1,
-			inclusion_X1_X, inclusion_core_X1, retraction_X_X1, retraction_X1_core,
-			x, i, UpOrDownBeatPoints, UpperOrLowerCovers, ady_in, dfs, _r, r;
+	local
+		core, X1,
+		inclusion_X1_X, inclusion_core_X1, retraction_X_X1, retraction_X1_core,
+		x, i, UpOrDownBeatPoints, UpperOrLowerCovers, ady_in, dfs, _r, r;
 	if Size(BeatPoints(X))=0 then
 		core:=PosetByFunctionNC(Set(X),Ordering(X));
 		core!.naturalMaps:=[IdentityMap(X),IdentityMap(X)];
 		return core;
 	else
-
-
 		_r:=List([1..Size(X)], x -> -1 );
 		ady_in:=List([1..Size(X)],x->[]);
 
@@ -198,9 +197,9 @@ function(X)
 		inclusion_core_X1:=NaturalMaps(core)[1];
 		retraction_X1_core:=NaturalMaps(core)[2];
 
-		core!.naturalMaps:=[CompositionPosetHomomorphisms(inclusion_X1_X,inclusion_core_X1),
-						    CompositionPosetHomomorphisms(retraction_X1_core,retraction_X_X1)
-						  ];
+		core!.naturalMaps:=[
+			CompositionPosetHomomorphisms(inclusion_X1_X,inclusion_core_X1),
+			CompositionPosetHomomorphisms(retraction_X1_core,retraction_X_X1) ];
 		return core;
 	fi;
 
