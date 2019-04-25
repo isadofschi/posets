@@ -58,18 +58,18 @@ DeclareOperation("IsUpWeakPoint",[IsPoset,IsObject]);
 #!
 DeclareOperation("IsDownWeakPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("WeakPoints",[IsPoset]);
+DeclareAttribute("WeakPoints",IsPoset);
 #!
-DeclareOperation("UpWeakPoints",[IsPoset]); 
+DeclareAttribute("UpWeakPoints",IsPoset); 
 #!
-DeclareOperation("DownWeakPoints",[IsPoset]); 
+DeclareAttribute("DownWeakPoints",IsPoset); 
 #!
 DeclareOperation("WeakCorePoset",[IsPoset]);
 #!
 DeclareOperation("MinWeakCorePoset",[IsPoset]); #to do, que hace?
 
 #!
-DeclareOperation("IsCollapsible",[IsPoset]); #to do
+DeclareProperty("IsCollapsible",IsPoset); #to do
 
 ###################################################################################
 

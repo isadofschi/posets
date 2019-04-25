@@ -1,3 +1,8 @@
+# Hacer las cosas prolijamente!
+
+Usando properties y attributes cuando corresponda en vez de operations.
+
+
 # Cosas básicas
 * Altura de un poset!
 * Cociente y wedge
@@ -12,20 +17,23 @@ Algunas cosas salen mucho más rapido si sabemos que el poset es graded y podemo
 
 cambiar algunos nombres, entender la parte de expand y collapsibles (para altura >2)
 
+# Homotopy 
+falta la parte de WeakCore y QC
+
 
 # Traducir funciones de https://github.com/ximenafernandez/Finite-Spaces
 
 * Deformations
 
-* Homotopy (la parte de WeakCore y QC)
-
 * Morse
 
 * Presentations
 
-# Funciones hechas por Kevin (posets de p-subgrupos, etc)
+# Funciones hechas por Kevin
 
-# Homotopías y fences
+* Posets de subgrupos
+
+* Homotopías y fences
 
 # Homotopy Colimits de posets
 

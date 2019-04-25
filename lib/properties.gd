@@ -8,3 +8,7 @@ DeclareOperation("FixedPointsPosetHomomorphism",[IsPosetHomomorphism]);
 
 #!
 DeclareOperation("HasFixedPointProperty",[IsPoset]);
+
+#!
+DeclareAttribute("Grading",IsPoset);
+

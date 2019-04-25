@@ -8,12 +8,11 @@
 ##
 
 
-PosetFamily:=NewFamily("PosetFamily",IsPoset);;
-PosetType:=NewType(PosetFamily,  IsPoset );;
+PosetFamily:=NewFamily("PosetFamily",IsPoset and IsMutable and IsCopyable);;
+PosetType:=NewType(PosetFamily,  IsPoset and IsAttributeStoringRep);;
 
-PosetHomomorphismFamily:=NewFamily("PosetHomomorphismFamily",IsPosetHomomorphism);;
-PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism );;
-
+PosetHomomorphismFamily:=NewFamily("PosetHomomorphismFamily",IsPosetHomomorphism and IsMutable and IsCopyable );;
+PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism and IsAttributeStoringRep );;
 
 ################################################################################
 
@@ -330,40 +329,58 @@ InstallMethod(HasseDiagram,
 "for Poset",
 [IsPoset],
 function(X)
-	local R,h;
-	if not IsBound(X!.lowerCovers) then
-		R:=RelationByPoset(X);
-		h:=HasseDiagramBinaryRelation(R);
-		X!.lowerCovers:=List(Set(Source(h)), x->Set(Images(h,x)) );
-		X!.upperCovers:=List([1..Size(X)], i -> Set(Filtered(Set(X), y -> Set(X)[i] in X!.lowerCovers[PositionSorted(Set(X),y)] )));
-	fi;
-	return X!.lowerCovers;
+	return HasseDiagramBinaryRelation(RelationByPoset(X));
 end);
+
+InstallMethod(UpperCovers,
+"for Poset",
+[IsPoset],
+function(X)
+	local uppercovers,c;
+	uppercovers:=List([1..Size(X)], x->[]);
+	for c in CoveringRelations(X) do
+		Add(uppercovers[PositionSorted(Set(X),c[2])],c[1]);
+	od;
+	return x -> uppercovers[PositionSorted(Set(X),x)];
+end);
+
 
 InstallMethod(UpperCovers,
 "for Poset and element",
 [IsPoset,IsObject],
 function(X,x)
-	HasseDiagram(X);
-	return X!.upperCovers[PositionSorted(Set(X),x)];
+	return UpperCovers(X)(x);
+end);
+
+InstallMethod(LowerCovers,
+"for Poset",
+[IsPoset],
+function(X)
+	local lowercovers,c;
+	lowercovers:=List([1..Size(X)], x->[]);
+	for c in CoveringRelations(X) do
+		Add(lowercovers[PositionSorted(Set(X),c[1])],c[2]);
+	od;
+	return x -> lowercovers[PositionSorted(Set(X),x)];
 end);
 
 InstallMethod(LowerCovers,
 "for Poset and element",
 [IsPoset,IsObject],
 function(X,x)
-	HasseDiagram(X);
-	return X!.lowerCovers[PositionSorted(Set(X),x)];
+	return LowerCovers(X)(x);
 end);
 
 InstallMethod(CoveringRelations,
 "for Poset",
 [IsPoset],
 function(X)
-	if not IsBound(X!.coveringRelations) then
-		X!.coveringRelations := Concatenation( List( [1..Size(X)], i-> List(HasseDiagram(X)[i], y-> [ Set(X)[i], y ]) ) );
+	# if we know a grading for X we have a faster method
+	if HasGrading(X) and Grading(X)<>fail then
+		return Concatenation( List(Set(X), x-> List(Filtered(Set(X), y-> (Grading(X)(x) = 1+Grading(X)(y) ) and Ordering(X)(x,y) ), y-> [x,y] )));
 	fi;
-	return X!.coveringRelations;
+	# otherwise we compute covering relations from the HasseDiagram
+	return Set(Concatenation( List( Set(X), x-> List(Images(HasseDiagram(X),x), y-> [x,y] ))));
 end);
 
 InstallMethod(MaximalElements,

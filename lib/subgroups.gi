@@ -15,13 +15,13 @@ InstallMethod(PosetOfpSubgroups,
 [IsGroup and IsFinite,IsInt],
 function(G,p)
 	# the ordering is >=
-	local S,Sp;
+	local SpG;
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	S:=Subgroups(G);
-	Sp:=Filtered(S, H-> IsPGroup(H) and RemInt(Order(H),p)=0);
-	return PosetByFunctionNC(Sp,IsSubgroup);
+	SpG:=PosetByFunctionNC(Filtered(Subgroups(G), H-> IsPGroup(H) and RemInt(Order(H),p)=0), IsSubgroup);
+	SetGrading(SpG,H-> Log(Order(H),p)-1); # Sp(G) is a graded poset
+	return SpG;
 end);
 
 InstallMethod(PosetOfElementaryAbelianpSubgroups,
@@ -29,13 +29,13 @@ InstallMethod(PosetOfElementaryAbelianpSubgroups,
 [IsGroup and IsFinite,IsInt],
 function(G,p)
 	# the ordering is >=
-	local S,Ap;
+	local ApG;
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	S:=Subgroups(G);
-	Ap:=Filtered(S, H-> IsPGroup(H) and RemInt(Order(H),p)=0 and IsElementaryAbelian(H) );
-	return PosetByFunctionNC(Ap,IsSubgroup);
+	ApG:=PosetByFunctionNC(Filtered(Subgroups(G), H-> IsPGroup(H) and RemInt(Order(H),p)=0 and IsElementaryAbelian(H) ), IsSubgroup);
+	SetGrading(ApG,H-> Log(Order(H),p)-1); # Ap(G) is a graded poset
+	return ApG;
 end);
 
 
