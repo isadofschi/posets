@@ -31,7 +31,7 @@ function(X)
 	grading := x -> heights[PositionSorted(Set(X),x)];
 	for c in CoveringRelations(X) do
 		if grading(c[1]) <> grading(c[2])+1 then
-			return fail;
+			return fail; # the poset may be graded and this method returns fail
 		fi;
 	od;
 	return grading;
@@ -41,8 +41,8 @@ InstallMethod(Height,
 "for Poset",
 [IsPoset],
 function(X)
-	if HasGrading(X) and Grading(X)<>fail then
-		return ( l -> Maximum(l)-Minimum(l) )(List(Set(X),Grading(X)));
-	fi;
+	#if HasGrading(X) and Grading(X)<>fail then 
+	#	return ( l -> Maximum(l)-Minimum(l) )(List(Set(X),Grading(X));# No!
+	#fi;
 	return Dimension(OrderComplex(X));
 end);

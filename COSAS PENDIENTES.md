@@ -47,7 +47,6 @@ falta la parte de WeakCore y QC
 
 * PosetFromCoveringRelations: hacer Floyd-Warshall a mano
 
-# Usar Properties en vez de Methods cuando sea recomendable
 
 # Funciones que toman n argumentos (producto, coproducto, ...)
 
