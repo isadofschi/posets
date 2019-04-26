@@ -6,7 +6,7 @@ InstallMethod(PosetFpGroup,
 "for FpGroup",
 [IsFpGroup],
 function(G)
-	local F,R,gens,pointsWedge,pointsDisks,pointsX,coveringRelationsX, g,r,i,ls,l,s;
+	local F,R,gens,pointsWedge,pointsDisks,pointsX,coveringRelationsX, g,r,i,ls,l,s,XP,grading;
 	F:=FreeGroupOfFpGroup(G);
 	R:=RelatorsOfFpGroup(G);
 	gens:=GeneratorsOfGroup(F);	
@@ -42,7 +42,17 @@ function(G)
 			Add(coveringRelationsX, [ ["r",r,4*(i-1)+4], ["x",g,-s] ]);
 		od;
 	od;
-	return PosetByCoveringRelations(pointsX,coveringRelationsX);
+	XP:=PosetByCoveringRelations(pointsX,coveringRelationsX);
+	grading:=function(v)
+		if v=["x",0] then return 0; fi;
+		if v[1]="x" and v[3]=0 then return 0; fi;
+		if v[1]="x" then return 1; fi;
+		if v[3]=0 then return 0; fi;
+		if RemInt(v[3],2)=1 then return 1; fi;
+		return 2;
+	end;
+	SetGrading(XP,grading);
+	return XP;
 end);
 
 InstallMethod(PosetPresentation,

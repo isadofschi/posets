@@ -323,7 +323,9 @@ function(X)
 		od;
 		X!.orderMatrix:=M;
 	fi;
+	X!.ordering:=function(x,y) return X!.orderMatrix[PositionSorted(Set(X),x)][PositionSorted(Set(X),y)]; end;
 	return X!.orderMatrix;
+	
 end);
 
 InstallMethod(HasseDiagram,
