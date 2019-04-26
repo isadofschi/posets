@@ -12,3 +12,6 @@ DeclareOperation("HasFixedPointProperty",[IsPoset]);
 #!
 DeclareAttribute("Grading",IsPoset);
 
+#!
+DeclareAttribute("Height",IsPoset);
+

@@ -191,6 +191,7 @@ InstallMethod(PosetByCoveringRelations,
 [IsList,IsList],
 function(names,coveringRelations)
 	local R;
+	# (some checks here)
 	R:=TransitiveClosureBinaryRelation(ReflexiveClosureBinaryRelation(BinaryRelationByElements(Domain(Set(names)), List(coveringRelations,Tuple))));
 	if not IsAntisymmetricBinaryRelation(R) then
 		return fail;

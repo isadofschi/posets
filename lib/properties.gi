@@ -36,3 +36,13 @@ function(X)
 	od;
 	return grading;
 end);
+
+InstallMethod(Height,
+"for Poset",
+[IsPoset],
+function(X)
+	if HasGrading(X) and Grading(X)<>fail then
+		return ( l -> Maximum(l)-Minimum(l) )(List(Set(X),Grading(X)));
+	fi;
+	return Dimension(OrderComplex(X));
+end);

@@ -17,5 +17,6 @@ ReadPackage( "posets", "lib/namedposets.gi" );
 ReadPackage( "posets", "lib/beatweak.gi" );
 ReadPackage( "posets", "lib/properties.gi" );
 ReadPackage( "posets", "lib/colorings.gi" );
+ReadPackage( "posets", "lib/presentations.gi" );
 #E  read.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

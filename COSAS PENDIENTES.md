@@ -4,18 +4,17 @@ Usando properties y attributes cuando corresponda en vez de operations.
 
 
 # Cosas básicas
-* Altura de un poset!
-* Cociente y wedge
+* Altura de un elemento en un poset
+* Cociente y wedge!!!
 * Automorphisms
 * AutomorphismGroup
-
-# Graded posets
-Algunas cosas salen mucho más rapido si sabemos que el poset es graded y podemos calcular el grado (ej diagrama de hasse en n^2)
-
+* natural map de la subdivision baricentrica X'--->X, c -> max(c)
 
 # Colorings
 
 cambiar algunos nombres, entender la parte de expand y collapsibles (para altura >2)
+
+
 
 # Homotopy 
 falta la parte de WeakCore y QC
@@ -26,8 +25,6 @@ falta la parte de WeakCore y QC
 * Deformations
 
 * Morse
-
-* Presentations
 
 # Funciones hechas por Kevin
 
@@ -46,6 +43,8 @@ falta la parte de WeakCore y QC
 
 
 # Optimizar cosas
+
+* PosetFromCoveringRelations hacer Floyd-Warshall a mano
 
 # Usar Properties en vez de Methods cuando sea recomendable
 
