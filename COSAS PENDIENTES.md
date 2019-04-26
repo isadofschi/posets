@@ -2,6 +2,10 @@
 
 Usando properties y attributes cuando corresponda en vez de operations.
 
+# Bugs
+
+* Grading puede dar fail si el poset no es homogeneo, incluso cuando admite un grading!
+
 
 # Cosas básicas
 * Altura de un elemento en un poset
