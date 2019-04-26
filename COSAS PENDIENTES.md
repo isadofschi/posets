@@ -14,17 +14,14 @@ Usando properties y attributes cuando corresponda en vez de operations.
 
 cambiar algunos nombres, entender la parte de expand y collapsibles (para altura >2)
 
-
-
 # Homotopy 
 falta la parte de WeakCore y QC
 
+# Traducir los siguientes archivos de https://github.com/ximenafernandez/Finite-Spaces
 
-# Traducir funciones de https://github.com/ximenafernandez/Finite-Spaces
+* Deformations.sage
 
-* Deformations
-
-* Morse
+* Morse.sage
 
 # Funciones hechas por Kevin
 
@@ -34,7 +31,7 @@ falta la parte de WeakCore y QC
 
 # Homotopy Colimits de posets
 
-# Más Funciones de posets. Posets en n puntos.
+# Más Funciones de posets (por ejemplo posets en n puntos)
 [http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/posets/posets.html]
 
 # Más cosas del libro de Jonathan
@@ -44,7 +41,7 @@ falta la parte de WeakCore y QC
 
 # Optimizar cosas
 
-* PosetFromCoveringRelations hacer Floyd-Warshall a mano
+* PosetFromCoveringRelations: hacer Floyd-Warshall a mano
 
 # Usar Properties en vez de Methods cuando sea recomendable
 

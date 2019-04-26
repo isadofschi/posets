@@ -31,7 +31,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 #! @Section Homology
 
 #! @Arguments X
-#! @Returns <M>H_n(X)</M>
+#! @Returns <M>H_*(X)</M>
 DeclareOperation("PosetHomology",[IsPoset]);
 #! @Arguments f,n
 #! @Returns <M>H_n(f)</M>

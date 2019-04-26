@@ -31,11 +31,11 @@ DeclareOperation("IsUpBeatPoint",[IsPoset,IsObject]);
 #!
 DeclareOperation("IsDownBeatPoint",[IsPoset,IsObject]); 
 #!
-DeclareOperation("UpBeatPoints",[IsPoset]); 
+DeclareAttribute("UpBeatPoints",IsPoset); 
 #!
-DeclareOperation("DownBeatPoints",[IsPoset]); 
+DeclareAttribute("DownBeatPoints",IsPoset); 
 #!
-DeclareOperation("BeatPoints",[IsPoset]);
+DeclareAttribute("BeatPoints",IsPoset);
 
 #! @Arguments X
 #! @Returns a core of X
@@ -43,7 +43,7 @@ DeclareOperation("BeatPoints",[IsPoset]);
 DeclareOperation("CorePoset",[IsPoset]);
 
 #!
-DeclareOperation("IsContractible",[IsPoset]);
+DeclareAttribute("IsContractible",IsPoset);
 
 #! @Arguments X,Y
 #! @Returns a homotopy equivalence <M>X\to Y</M> or fail if X and Y are not homotopy equivalent
@@ -69,7 +69,7 @@ DeclareOperation("WeakCorePoset",[IsPoset]);
 DeclareOperation("MinWeakCorePoset",[IsPoset]); #to do, que hace?
 
 #!
-DeclareProperty("IsCollapsible",IsPoset); #to do
+DeclareAttribute("IsCollapsible",IsPoset); #to do
 
 ###################################################################################
 

@@ -4,10 +4,10 @@
 
 #!
 # SubPoset of fixed points of f. We only check names of points, Source(f) is not neccesarily equal to Target(f)
-DeclareOperation("FixedPointsPosetHomomorphism",[IsPosetHomomorphism]);
+DeclareAttribute("FixedPointsPosetHomomorphism",IsPosetHomomorphism);
 
 #!
-DeclareOperation("HasFixedPointProperty",[IsPoset]);
+DeclareAttribute("HasFixedPointProperty",IsPoset);
 
 #!
 DeclareAttribute("Grading",IsPoset);
