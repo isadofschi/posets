@@ -294,14 +294,16 @@ end);
 ##################################################################################################
 
 
-## Turns a poset into an order relation
+## Turns a poset into an order relation on [1..n]
 InstallMethod(RelationByPoset,
 "for Poset",
 [IsPoset],
 function(X)
 	local n;
 	n:=Size(X);
-	return PartialOrderByOrderingFunction( Domain(Set(X)), Ordering(X) );
+	return PartialOrderByOrderingFunction( Domain([1..Size(X)]),
+											function(i,j) return Ordering(X)(Set(X)[i],Set(X)[j]);end
+	);
 end);
 
 
@@ -326,13 +328,6 @@ function(X)
 	X!.ordering:=function(x,y) return X!.orderMatrix[PositionSorted(Set(X),x)][PositionSorted(Set(X),y)]; end;
 	return X!.orderMatrix;
 	
-end);
-
-InstallMethod(HasseDiagram,
-"for Poset",
-[IsPoset],
-function(X)
-	return HasseDiagramBinaryRelation(RelationByPoset(X));
 end);
 
 InstallMethod(UpperCovers,
@@ -378,12 +373,15 @@ InstallMethod(CoveringRelations,
 "for Poset",
 [IsPoset],
 function(X)
+	local hasse_diagram,n;
 	# if we know a grading for X we have a faster method
 	if HasGrading(X) and Grading(X)<>fail then
 		return Concatenation( List(Set(X), x-> List(Filtered(Set(X), y-> (Grading(X)(x) = 1+Grading(X)(y) ) and Ordering(X)(x,y) ), y-> [x,y] )));
 	fi;
-	# otherwise we compute covering relations from the HasseDiagram
-	return Set(Concatenation( List( Set(X), x-> List(Images(HasseDiagram(X),x), y-> [x,y] ))));
+	# otherwise we compute covering relations from the Hasse diagram
+	hasse_diagram := HasseDiagramBinaryRelation(RelationByPoset(X));
+	n:=Size(X);
+	return Set(Concatenation( List( [1..n], i-> List( Images( hasse_diagram, i ), j-> [ Set(X)[i], Set(X)[j] ] ))));
 end);
 
 InstallMethod(MaximalElements,

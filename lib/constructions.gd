@@ -49,7 +49,7 @@ DeclareOperation("OppositePoset",[IsPoset]);
 #!
 DeclareOperation("MappingCylinderPosetHomomorphism",[IsPosetHomomorphism]);
 #!
-DeclareOperation("QuotientOfPosetBySubposet",[IsPoset,IsList]); # to do [Section 2.7, Barmak]
+DeclareOperation("QuotientPoset",[IsPoset,IsList]); # [Section 2.7, Barmak]
 #!
 DeclareOperation("WedgePosets",[IsList]); # to do
 

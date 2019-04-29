@@ -216,4 +216,49 @@ function(X,Y)
 	return P;
 end);
 
+InstallMethod(QuotientPoset,
+"for Poset and List",
+[IsPoset,IsList],
+function(X,A)
+	local M,X_minus_A,names_quotient,q,n,m,M_quotient,i,j,xi,xj,index_qxi,index_qxj,XmodA,UA,FA;
+	if not IsSet(A) then
+		Print("A must be a set.");
+		return fail;
+	fi;
+	M:=OrderMatrix(X);
+	UA:=Union(List(A, x->Set(ElementsBelow(X,x))));
+	FA:=Union(List(A, x->Set(ElementsAbove(X,x))));
+	if not A = Intersection( UA,FA ) then
+		Print("A is not convex.");
+		return fail;
+	fi;
+	X_minus_A:=Difference(Set(X),A);
+	names_quotient:=Union( List(X_minus_A, x->[0,x]), [ [ 1, A ] ] );
+	q := function(x)
+		if x in A then
+			return [1,A];
+		else
+			return [0,x];
+		fi;
+	end;
+	n:=Size(X);
+	m:=Size(X)-Size(A)+1;
+	M_quotient:=List([1..m], x-> List([1..m],ReturnFalse));
+	for i in [1..n] do
+		for j in [1..n] do
+			xi:=Set(X)[i];
+			xj:=Set(X)[j];
+			index_qxi:=PositionSorted(names_quotient,q(xi));
+			index_qxj:=PositionSorted(names_quotient,q(xj));
+			M_quotient[index_qxi][index_qxj] := M_quotient[index_qxi][index_qxj] or M[i][j];
+			if (xi in FA) and (xj in UA) then
+				M_quotient[index_qxi][index_qxj]:=true;
+			fi;
+		od;
+	od;
+	XmodA:=PosetByOrderMatrix(names_quotient,M_quotient);
+	XmodA!.naturalMaps:=[ PosetHomomorphismByFunction(X,XmodA,q) ];
+	return XmodA;
+end);
+
 

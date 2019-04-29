@@ -69,8 +69,6 @@ DeclareOperation("RelationByPoset",[IsPoset]);
 #!
 DeclareAttribute("OrderMatrix",IsPoset);
 #!
-DeclareAttribute("HasseDiagram",IsPoset);
-#!
 DeclareAttribute("CoveringRelations",IsPoset);
 #!
 DeclareAttribute("UpperCovers",IsPoset);
