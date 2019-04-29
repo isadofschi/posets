@@ -57,7 +57,7 @@ DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
 DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
 #!
 DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
-#!
+#! (f.g)(x) = f(g(x))
 DeclareOperation("CompositionPosetHomomorphisms",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
 #############################################################################

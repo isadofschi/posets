@@ -233,12 +233,12 @@ function(X,A)
 		return fail;
 	fi;
 	X_minus_A:=Difference(Set(X),A);
-	names_quotient:=Union( List(X_minus_A, x->[0,x]), [ [ 1, A ] ] );
+	names_quotient:=Union( List(X_minus_A, x->[1,x]), [ [ 2, A ] ] );
 	q := function(x)
 		if x in A then
-			return [1,A];
+			return [2,A];
 		else
-			return [0,x];
+			return [1,x];
 		fi;
 	end;
 	n:=Size(X);
@@ -261,4 +261,20 @@ function(X,A)
 	return XmodA;
 end);
 
+InstallMethod(WedgePosets,
+"for List",
+[IsList],
+function(l)
+	local coprod_Xi,basepoints,wedge_Xi,q;
+	if not ForAll(l, t-> Size(t)=2 and IsPoset(t[1]) and t[2] in Set(t[1]) ) then
+		Print("invalid arguments");
+		return fail;
+	fi;
+	coprod_Xi:=CoproductPosets(List(l, t->t[1]));
+	basepoints:=List( [1..Size(l)], i-> ImageMap(NaturalMaps(coprod_Xi)[i], l[i][2]) );
+	wedge_Xi:=QuotientPoset(coprod_Xi, basepoints);
+	q:=NaturalMaps(wedge_Xi)[1];
+	wedge_Xi!.naturalMaps:=List( NaturalMaps(coprod_Xi), i-> CompositionPosetHomomorphisms(q,i));
+	return wedge_Xi;
+end);
 

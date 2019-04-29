@@ -51,7 +51,7 @@ DeclareOperation("MappingCylinderPosetHomomorphism",[IsPosetHomomorphism]);
 #!
 DeclareOperation("QuotientPoset",[IsPoset,IsList]); # [Section 2.7, Barmak]
 #!
-DeclareOperation("WedgePosets",[IsList]); # to do
+DeclareOperation("WedgePosets",[IsList]);
 
 #!
 DeclareOperation("HomPosets",[IsPoset,IsPoset]);
