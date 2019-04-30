@@ -60,6 +60,12 @@ DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
 #! (f.g)(x) = f(g(x))
 DeclareOperation("CompositionPosetHomomorphisms",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
+#!
+DeclareOperation("\*",[IsPosetHomomorphism,IsPosetHomomorphism]);
+#DeclareOperation("\*",[IsList,IsPosetHomomorphism]);
+#DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
+DeclareOperation("\^",[IsPosetHomomorphism,IsInt]);
+
 #############################################################################
 
 #! @Section Other useful representations of the ordering

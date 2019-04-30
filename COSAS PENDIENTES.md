@@ -1,7 +1,3 @@
-# Hacer las cosas prolijamente!
-
-Usando properties y attributes cuando corresponda en vez de operations.
-
 # Bugs
 
 * Grading puede dar fail si el poset no es homogeneo, incluso cuando admite un grading!
@@ -9,14 +5,13 @@ Usando properties y attributes cuando corresponda en vez de operations.
 
 # Cosas básicas
 * Altura de un elemento en un poset
-* Cociente y wedge!!!
 * Automorphisms
 * AutomorphismGroup
 * natural map de la subdivision baricentrica X'--->X, c -> max(c)
 
 # Colorings
 
-cambiar algunos nombres, entender la parte de expand y collapsibles (para altura >2)
+falta la parte de spanning collapsible subposets
 
 # Homotopy 
 falta la parte de WeakCore y QC
@@ -34,6 +29,8 @@ falta la parte de WeakCore y QC
 * Homotopías y fences
 
 # Homotopy Colimits de posets
+
+* Decidir como construir diagramas de posets.
 
 # Más Funciones de posets (por ejemplo posets en n puntos)
 [http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/posets/posets.html]

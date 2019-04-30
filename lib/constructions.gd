@@ -23,10 +23,15 @@ DeclareOperation("SourceMap",[IsPosetHomomorphism]);
 #!
 DeclareOperation("TargetMap",[IsPosetHomomorphism]);
 #!
+DeclareOperation("UnderlyingMap",[IsPosetHomomorphism]);
+#!
+DeclareAttribute("InverseImmutable",IsPosetHomomorphism);
+#!
 DeclareOperation("ImageMap",[IsPosetHomomorphism]);
 #!
 DeclareOperation("ImageMap",[IsPosetHomomorphism,IsObject]);
-
+#!
+DeclareOperation("\^",[IsObject,IsPosetHomomorphism]);
 
 
 #! @Section Categorical constructions
@@ -55,3 +60,7 @@ DeclareOperation("WedgePosets",[IsList]);
 
 #!
 DeclareOperation("HomPosets",[IsPoset,IsPoset]);
+
+#!
+DeclareAttribute("AutomorphismGroup",IsPoset);
+

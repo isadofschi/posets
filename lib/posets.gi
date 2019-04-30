@@ -72,7 +72,7 @@ end);
 InstallMethod(\=,"for PosetHomomorphism and PosetHomomorphism",
 [IsPosetHomomorphism,IsPosetHomomorphism],
 function(f,g)
-	return [f!.source, f!.target, List(Set(f!.source),f!.f) ] = [g!.source, g!.target, List(Set(g!.source), g!.f)];
+	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingMap(f)) ] =  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingMap(g)) ];
 end);
 
 # the purpose of defining this is total order to consider Sets of poset homomorphisms
@@ -80,7 +80,7 @@ end);
 InstallMethod(\<,"for PosetHomomorphism and PosetHomomorphism",
 [IsPosetHomomorphism,IsPosetHomomorphism],
 function(f,g)
-	return [f!.source, f!.target, List(Set(f!.source),f!.f) ] < [g!.source, g!.target, List(Set(g!.source), g!.f)];
+	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingMap(f)) ] <  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingMap(g)) ];
 end);
 
 ################################################################################
@@ -215,15 +215,16 @@ InstallMethod(PosetHomomorphismByFunction,
 "for Poset, Poset and function",
 [IsPoset, IsPoset, IsFunction],
 function(X,Y,f)
-	if not ForAll(Set(X),
+	if ForAll(Set(X),
 				  x1->ForAll(Set(X),
                              x2-> (not Ordering(X)(x1,x2)) or Ordering(Y)(f(x1),f(x2))
 							)
 				)
 	then
+		return PosetHomomorphismByFunctionNC(X,Y,f);
+	else
 		return fail;
 	fi;
-	return PosetHomomorphismByFunctionNC(X,Y,f);
 end);
 
 InstallMethod(PosetHomomorphismByImages,
@@ -266,7 +267,7 @@ function(X,Y)
 	iter := Iterator(SymmetricGroup(n));
 	for sigma in iter do
 		f := PosetHomomorphismByFunction(X,Y, x-> Set(Y)[PositionSorted(Set(X),x)^sigma] );
-		if PosetHomomorphismByFunction(Y,X, y-> Set(X)[PositionSorted(Set(Y),y)^(sigma^-1)] ) <> fail then
+		if f<>fail and PosetHomomorphismByFunction(Y,X, y-> Set(X)[PositionSorted(Set(Y),y)^(sigma^-1)] ) <> fail then
 			return f;
 		fi;
 	od;
@@ -288,8 +289,60 @@ function(g,f)
 	if SourceMap(g)<>TargetMap(f) then
 		return fail;
 	fi;
-	return PosetHomomorphismByFunction(SourceMap(f),TargetMap(g), x-> g!.f(f!.f(x)) );
+	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> (g!.f)(f!.f(x)) );
 end);
+
+InstallMethod(\*,
+"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(g,f)
+	return CompositionPosetHomomorphisms(f,g);
+end);
+
+
+#InstallMethod(\*,
+#"for IsList and PosetHomomorphism",
+#[IsList,IsPosetHomomorphism],
+#function(l,g)
+#	if ForAll(l, IsPosetHomomorphism) then
+#		return List(l, f->f*g);
+#	else
+#		TryNextMethod();
+#	fi;
+#end);
+#
+#InstallMethod(\*,
+#"for PosetHomomorphism and IsList",
+#[IsPosetHomomorphism,IsList],
+#function(f,l)
+#	if ForAll(l, IsPosetHomomorphism) then
+#		return List(l, g->f*g);
+#	else
+#		TryNextMethod();
+#	fi;
+#end);
+
+
+InstallMethod(\^,
+"for PosetHomomorphism and Integer",
+[IsPosetHomomorphism,IsInt],
+function(f,n)
+	if n=1 then
+		return f;
+	fi;
+	if n=-1 then
+		return Inverse(f); # inverses not implemented!!!!
+	fi;
+	if SourceMap(f)=TargetMap(f) then
+		if n=0 then return IdentityMap(SourceMap(f));fi;
+		if n>0 then return f*(f^(n-1));fi;
+		if n<0 and f^-1<> fail then
+			return f^-1 * (f^(n+1));
+		fi;
+	fi;
+	return fail;
+end);
+
 
 ##################################################################################################
 

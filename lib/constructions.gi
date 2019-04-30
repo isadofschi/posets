@@ -30,6 +30,32 @@ function(f)
 	return f!.target;
 end);
 
+InstallMethod(UnderlyingMap,
+"for Poset homomorphism",
+[IsPosetHomomorphism],
+function(f)
+	return f!.f;
+end);
+
+InstallMethod(InverseImmutable,
+"for Poset homomorphism",
+[IsPosetHomomorphism],
+function(f)
+	local l,ims;
+	if Size(SourceMap(f))<>Size(SourceMap(f)) then
+		return fail;
+	fi;
+	l:=List(Set(SourceMap(f)),UnderlyingMap(f));
+	if Size(Set(l))<>Size(SourceMap(f)) then
+		return fail;
+	fi;
+	ims:=ShallowCopy(Set(SourceMap(f)));
+	SortParallel(l,ims);
+	return PosetHomomorphismByImages(TargetMap(f),SourceMap(f),ims);
+end);
+
+
+
 InstallMethod(ImageMap,
 "for Poset homomorphism",
 [IsPosetHomomorphism],
@@ -50,6 +76,12 @@ function(f,x)
 end);
 
 
+InstallMethod(\^,
+"for element, Poset homomorphism",
+[IsObject,IsPosetHomomorphism],
+function(x,f)
+	return ImageMap(f,x);
+end);
 
 
 InstallMethod(SubPoset,
@@ -276,5 +308,39 @@ function(l)
 	q:=NaturalMaps(wedge_Xi)[1];
 	wedge_Xi!.naturalMaps:=List( NaturalMaps(coprod_Xi), i-> CompositionPosetHomomorphisms(q,i));
 	return wedge_Xi;
+end);
+
+InstallMethod(AutomorphismGroup,
+"for Poset",
+[IsPoset],
+function(X)
+	local n,iter,f,sigma,automorphisms,sigmas,G,i;
+	n:=Size(X);
+	automorphisms:=[];
+	sigmas:=[];
+	iter := Iterator(SymmetricGroup(n));
+	for sigma in iter do
+		f := PosetHomomorphismByImages(X,X, List([1..n], i-> Set(X)[i^sigma] ) );
+		#f := StructuralCopy(PosetHomomorphismByFunction(X,X, x-> Set(X)[PositionSorted(Set(X),x)^StructuralCopy(sigma)] )); # not working, why???
+		if f <> fail then
+			Add(automorphisms,f );
+			Add(sigmas,sigma);
+		fi;
+	od;
+	for i in [1..Size(automorphisms)] do
+		sigma:=sigmas[i];
+		f:=automorphisms[i];
+		SetOne(f,automorphisms[1]);
+		SetInverse(f,automorphisms[PositionSorted(sigmas,sigma^-1)]);
+	od;
+	G:=MagmaWithInverses(automorphisms);
+	IsGroup(G);
+	Order(G);
+	SetNiceMonomorphism(G,GroupHomomorphismByImages(G,SymmetricGroup(n),automorphisms,sigmas));
+	SetNiceObject(G,Group(sigmas));
+	SetIsHandledByNiceMonomorphism(G,true);
+	# SetIsAutomorphismGroup(G,true); ?
+	# SetAutomorphismDomain(G,X); ?
+	return G;
 end);
 
