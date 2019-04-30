@@ -7,11 +7,13 @@
 DeclareAttribute("FixedPointsPosetHomomorphism",IsPosetHomomorphism);
 
 #!
-DeclareAttribute("HasFixedPointProperty",IsPoset);
+DeclareProperty("HasFixedPointProperty",IsPoset);
 
 #!
 DeclareAttribute("Grading",IsPoset);
 
+#!
+DeclareOperation("Height",[IsPoset,IsObject]);
 #!
 DeclareAttribute("Height",IsPoset);
 
