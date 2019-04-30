@@ -6,7 +6,6 @@
 # Cosas básicas
 * Altura de un elemento en un poset
 * Automorphisms
-* AutomorphismGroup
 * natural map de la subdivision baricentrica X'--->X, c -> max(c)
 
 # Colorings

@@ -300,27 +300,27 @@ function(g,f)
 end);
 
 
-#InstallMethod(\*,
-#"for IsList and PosetHomomorphism",
-#[IsList,IsPosetHomomorphism],
-#function(l,g)
-#	if ForAll(l, IsPosetHomomorphism) then
-#		return List(l, f->f*g);
-#	else
-#		TryNextMethod();
-#	fi;
-#end);
-#
-#InstallMethod(\*,
-#"for PosetHomomorphism and IsList",
-#[IsPosetHomomorphism,IsList],
-#function(f,l)
-#	if ForAll(l, IsPosetHomomorphism) then
-#		return List(l, g->f*g);
-#	else
-#		TryNextMethod();
-#	fi;
-#end);
+InstallMethod(\*,
+"for IsList and PosetHomomorphism",
+[IsList,IsPosetHomomorphism],
+function(l,g)
+	if ForAll(l, IsPosetHomomorphism) then
+		return List(l, f->f*g);
+	else
+		TryNextMethod();
+	fi;
+end);
+
+InstallMethod(\*,
+"for PosetHomomorphism and IsList",
+[IsPosetHomomorphism,IsList],
+function(f,l)
+	if ForAll(l, IsPosetHomomorphism) then
+		return List(l, g->f*g);
+	else
+		TryNextMethod();
+	fi;
+end);
 
 
 InstallMethod(\^,
