@@ -42,7 +42,7 @@
   [1X3.2-1 PosetHomology[101X
   
   [33X[1;0Y[29X[2XPosetHomology[102X( [3XX[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Y[22XH_n(X)[122X[133X
+  [6XReturns:[106X  [33X[0;10Y[22XH_*(X)[122X[133X
   
   [1X3.2-2 PosetHomology[101X
   

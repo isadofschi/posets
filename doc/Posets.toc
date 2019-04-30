@@ -58,8 +58,11 @@
 \contentsline {section}{\numberline {4.2}\leavevmode {\color {Chapter }Some methods for poset homomorphisms}}{10}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}\leavevmode {\color {Chapter }SourceMap (for IsPosetHomomorphism)}}{10}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {Chapter }TargetMap (for IsPosetHomomorphism)}}{10}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism)}}{10}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism,IsObject)}}{10}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {Chapter }UnderlyingMap (for IsPosetHomomorphism)}}{10}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\leavevmode {\color {Chapter }InverseImmutable (for IsPosetHomomorphism)}}{10}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism)}}{10}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}\leavevmode {\color {Chapter }ImageMap (for IsPosetHomomorphism,IsObject)}}{11}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}\leavevmode {\color {Chapter }\texttt {\char 92\relax }\texttt {\char 94\relax } (for IsObject,IsPosetHomomorphism)}}{11}{subsection.4.2.7}
 \contentsline {section}{\numberline {4.3}\leavevmode {\color {Chapter }Categorical constructions}}{11}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}\leavevmode {\color {Chapter }SubPoset (for IsPoset,IsList)}}{11}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }CoproductPosets (for IsList)}}{11}{subsection.4.3.2}
@@ -68,10 +71,11 @@
 \contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {Chapter }ConePoset (for IsPoset)}}{11}{subsection.4.3.5}
 \contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {Chapter }SuspensionPoset (for IsPoset)}}{11}{subsection.4.3.6}
 \contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {Chapter }OppositePoset (for IsPoset)}}{11}{subsection.4.3.7}
-\contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {Chapter }MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}}{11}{subsection.4.3.8}
-\contentsline {subsection}{\numberline {4.3.9}\leavevmode {\color {Chapter }QuotientOfPosetBySubposet (for IsPoset,IsList)}}{11}{subsection.4.3.9}
+\contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {Chapter }MappingCylinderPosetHomomorphism (for IsPosetHomomorphism)}}{12}{subsection.4.3.8}
+\contentsline {subsection}{\numberline {4.3.9}\leavevmode {\color {Chapter }QuotientPoset (for IsPoset,IsList)}}{12}{subsection.4.3.9}
 \contentsline {subsection}{\numberline {4.3.10}\leavevmode {\color {Chapter }WedgePosets (for IsList)}}{12}{subsection.4.3.10}
 \contentsline {subsection}{\numberline {4.3.11}\leavevmode {\color {Chapter }HomPosets (for IsPoset,IsPoset)}}{12}{subsection.4.3.11}
+\contentsline {subsection}{\numberline {4.3.12}\leavevmode {\color {Chapter }AutomorphismGroup (for IsPoset)}}{12}{subsection.4.3.12}
 \contentsline {chapter}{\numberline {5}\leavevmode {\color {Chapter }Posets}}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}\leavevmode {\color {Chapter }Examples of posets}}{13}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}\leavevmode {\color {Chapter }EmptyPoset}}{13}{subsection.5.1.1}
@@ -94,17 +98,20 @@
 \contentsline {subsection}{\numberline {5.4.4}\leavevmode {\color {Chapter }PosetHomomorphismByMapping (for IsPoset,IsPoset,IsMapping)}}{15}{subsection.5.4.4}
 \contentsline {subsection}{\numberline {5.4.5}\leavevmode {\color {Chapter }IsomorphismPosets (for IsPoset,IsPoset)}}{15}{subsection.5.4.5}
 \contentsline {subsection}{\numberline {5.4.6}\leavevmode {\color {Chapter }CompositionPosetHomomorphisms (for IsPosetHomomorphism,IsPosetHomomorphism)}}{15}{subsection.5.4.6}
+\contentsline {subsection}{\numberline {5.4.7}\leavevmode {\color {Chapter }\texttt {\char 92\relax }* (for IsPosetHomomorphism,IsPosetHomomorphism)}}{15}{subsection.5.4.7}
+\contentsline {subsection}{\numberline {5.4.8}\leavevmode {\color {Chapter }\texttt {\char 92\relax }* (for IsList,IsPosetHomomorphism)}}{15}{subsection.5.4.8}
+\contentsline {subsection}{\numberline {5.4.9}\leavevmode {\color {Chapter }\texttt {\char 92\relax }* (for IsPosetHomomorphism,IsList)}}{15}{subsection.5.4.9}
+\contentsline {subsection}{\numberline {5.4.10}\leavevmode {\color {Chapter }\texttt {\char 92\relax }\texttt {\char 94\relax } (for IsPosetHomomorphism,IsInt)}}{15}{subsection.5.4.10}
 \contentsline {section}{\numberline {5.5}\leavevmode {\color {Chapter }Other useful representations of the ordering}}{15}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}\leavevmode {\color {Chapter }RelationByPoset (for IsPoset)}}{15}{subsection.5.5.1}
 \contentsline {subsection}{\numberline {5.5.2}\leavevmode {\color {Chapter }OrderMatrix (for IsPoset)}}{15}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}\leavevmode {\color {Chapter }HasseDiagram (for IsPoset)}}{15}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}\leavevmode {\color {Chapter }CoveringRelations (for IsPoset)}}{15}{subsection.5.5.4}
-\contentsline {subsection}{\numberline {5.5.5}\leavevmode {\color {Chapter }UpperCovers (for IsPoset)}}{15}{subsection.5.5.5}
-\contentsline {subsection}{\numberline {5.5.6}\leavevmode {\color {Chapter }UpperCovers (for IsPoset,IsObject)}}{15}{subsection.5.5.6}
-\contentsline {subsection}{\numberline {5.5.7}\leavevmode {\color {Chapter }LowerCovers (for IsPoset)}}{16}{subsection.5.5.7}
-\contentsline {subsection}{\numberline {5.5.8}\leavevmode {\color {Chapter }LowerCovers (for IsPoset,IsObject)}}{16}{subsection.5.5.8}
-\contentsline {subsection}{\numberline {5.5.9}\leavevmode {\color {Chapter }MaximalElements (for IsPoset)}}{16}{subsection.5.5.9}
-\contentsline {subsection}{\numberline {5.5.10}\leavevmode {\color {Chapter }MinimalElements (for IsPoset)}}{16}{subsection.5.5.10}
+\contentsline {subsection}{\numberline {5.5.3}\leavevmode {\color {Chapter }CoveringRelations (for IsPoset)}}{16}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}\leavevmode {\color {Chapter }UpperCovers (for IsPoset)}}{16}{subsection.5.5.4}
+\contentsline {subsection}{\numberline {5.5.5}\leavevmode {\color {Chapter }UpperCovers (for IsPoset,IsObject)}}{16}{subsection.5.5.5}
+\contentsline {subsection}{\numberline {5.5.6}\leavevmode {\color {Chapter }LowerCovers (for IsPoset)}}{16}{subsection.5.5.6}
+\contentsline {subsection}{\numberline {5.5.7}\leavevmode {\color {Chapter }LowerCovers (for IsPoset,IsObject)}}{16}{subsection.5.5.7}
+\contentsline {subsection}{\numberline {5.5.8}\leavevmode {\color {Chapter }MaximalElements (for IsPoset)}}{16}{subsection.5.5.8}
+\contentsline {subsection}{\numberline {5.5.9}\leavevmode {\color {Chapter }MinimalElements (for IsPoset)}}{16}{subsection.5.5.9}
 \contentsline {chapter}{\numberline {6}\leavevmode {\color {Chapter }More properties}}{17}{chapter.6}
 \contentsline {section}{\numberline {6.1}\leavevmode {\color {Chapter }Fixed Point Property}}{17}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}\leavevmode {\color {Chapter }HasFixedPointProperty (for IsPoset)}}{17}{subsection.6.1.1}

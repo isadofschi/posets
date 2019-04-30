@@ -110,8 +110,11 @@
     4.2 [33X[0;0YSome methods for poset homomorphisms[133X
       4.2-1 SourceMap
       4.2-2 TargetMap
-      4.2-3 ImageMap
-      4.2-4 ImageMap
+      4.2-3 UnderlyingMap
+      4.2-4 InverseImmutable
+      4.2-5 ImageMap
+      4.2-6 ImageMap
+      4.2-7 \^
     4.3 [33X[0;0YCategorical constructions[133X
       4.3-1 SubPoset
       4.3-2 CoproductPosets
@@ -121,9 +124,10 @@
       4.3-6 SuspensionPoset
       4.3-7 OppositePoset
       4.3-8 MappingCylinderPosetHomomorphism
-      4.3-9 QuotientOfPosetBySubposet
+      4.3-9 QuotientPoset
       4.3-10 WedgePosets
       4.3-11 HomPosets
+      4.3-12 AutomorphismGroup
   5 [33X[0;0YPosets[133X
     5.1 [33X[0;0YExamples of posets[133X
       5.1-1 EmptyPoset
@@ -146,17 +150,20 @@
       5.4-4 PosetHomomorphismByMapping
       5.4-5 IsomorphismPosets
       5.4-6 CompositionPosetHomomorphisms
+      5.4-7 \*
+      5.4-8 \*
+      5.4-9 \*
+      5.4-10 \^
     5.5 [33X[0;0YOther useful representations of the ordering[133X
       5.5-1 RelationByPoset
       5.5-2 OrderMatrix
-      5.5-3 HasseDiagram
-      5.5-4 CoveringRelations
+      5.5-3 CoveringRelations
+      5.5-4 UpperCovers
       5.5-5 UpperCovers
-      5.5-6 UpperCovers
+      5.5-6 LowerCovers
       5.5-7 LowerCovers
-      5.5-8 LowerCovers
-      5.5-9 MaximalElements
-      5.5-10 MinimalElements
+      5.5-8 MaximalElements
+      5.5-9 MinimalElements
   6 [33X[0;0YMore properties[133X
     6.1 [33X[0;0YFixed Point Property[133X
       6.1-1 HasFixedPointProperty

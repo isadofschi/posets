@@ -83,9 +83,27 @@
   
   [33X[1;0Y[29X[2XIsomorphismPosets[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
+  [33X[0;0Y(f.g)(x) = f(g(x))[133X
+  
   [1X5.4-6 CompositionPosetHomomorphisms[101X
   
   [33X[1;0Y[29X[2XCompositionPosetHomomorphisms[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X5.4-7 \*[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X5.4-8 \*[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X5.4-9 \*[101X
+  
+  [33X[1;0Y[29X[2X\*[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X5.4-10 \^[101X
+  
+  [33X[1;0Y[29X[2X\^[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
   
   [1X5.5 [33X[0;0YOther useful representations of the ordering[133X[101X
@@ -98,35 +116,31 @@
   
   [33X[1;0Y[29X[2XOrderMatrix[102X( [3Xarg[103X ) [32X attribute[133X
   
-  [1X5.5-3 HasseDiagram[101X
-  
-  [33X[1;0Y[29X[2XHasseDiagram[102X( [3Xarg[103X ) [32X attribute[133X
-  
-  [1X5.5-4 CoveringRelations[101X
+  [1X5.5-3 CoveringRelations[101X
   
   [33X[1;0Y[29X[2XCoveringRelations[102X( [3Xarg[103X ) [32X attribute[133X
   
-  [1X5.5-5 UpperCovers[101X
+  [1X5.5-4 UpperCovers[101X
   
   [33X[1;0Y[29X[2XUpperCovers[102X( [3Xarg[103X ) [32X attribute[133X
   
-  [1X5.5-6 UpperCovers[101X
+  [1X5.5-5 UpperCovers[101X
   
   [33X[1;0Y[29X[2XUpperCovers[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X5.5-7 LowerCovers[101X
+  [1X5.5-6 LowerCovers[101X
   
   [33X[1;0Y[29X[2XLowerCovers[102X( [3Xarg[103X ) [32X attribute[133X
   
-  [1X5.5-8 LowerCovers[101X
+  [1X5.5-7 LowerCovers[101X
   
   [33X[1;0Y[29X[2XLowerCovers[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X5.5-9 MaximalElements[101X
+  [1X5.5-8 MaximalElements[101X
   
   [33X[1;0Y[29X[2XMaximalElements[102X( [3Xarg[103X ) [32X attribute[133X
   
-  [1X5.5-10 MinimalElements[101X
+  [1X5.5-9 MinimalElements[101X
   
   [33X[1;0Y[29X[2XMinimalElements[102X( [3Xarg[103X ) [32X attribute[133X
   

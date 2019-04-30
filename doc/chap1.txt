@@ -50,15 +50,15 @@
   
   [1X1.1-12 UpBeatPoints[101X
   
-  [33X[1;0Y[29X[2XUpBeatPoints[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XUpBeatPoints[102X( [3Xarg[103X ) [32X attribute[133X
   
   [1X1.1-13 DownBeatPoints[101X
   
-  [33X[1;0Y[29X[2XDownBeatPoints[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDownBeatPoints[102X( [3Xarg[103X ) [32X attribute[133X
   
   [1X1.1-14 BeatPoints[101X
   
-  [33X[1;0Y[29X[2XBeatPoints[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XBeatPoints[102X( [3Xarg[103X ) [32X attribute[133X
   
   [1X1.1-15 CorePoset[101X
   
@@ -70,7 +70,7 @@
   
   [1X1.1-16 IsContractible[101X
   
-  [33X[1;0Y[29X[2XIsContractible[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsContractible[102X( [3Xarg[103X ) [32X attribute[133X
   
   [1X1.1-17 HomotopyEquivalence[101X
   
@@ -112,8 +112,7 @@
   
   [1X1.1-26 IsCollapsible[101X
   
-  [33X[1;0Y[29X[2XIsCollapsible[102X( [3Xarg[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Y[10Xtrue[110X or [10Xfalse[110X[133X
+  [33X[1;0Y[29X[2XIsCollapsible[102X( [3Xarg[103X ) [32X attribute[133X
   
   [1X1.1-27 IsQCReduction[101X
   

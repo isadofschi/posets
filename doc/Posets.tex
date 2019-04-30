@@ -349,7 +349,7 @@
 \hyperdef{L}{X82AE6CF07F6AA1FF}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{UpBeatPoints({\mdseries\slshape arg})\index{UpBeatPoints@\texttt{UpBeatPoints}!for IsPoset}
 \label{UpBeatPoints:for IsPoset}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -365,7 +365,7 @@
 \hyperdef{L}{X7E12286E7B07A5E8}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DownBeatPoints({\mdseries\slshape arg})\index{DownBeatPoints@\texttt{DownBeatPoints}!for IsPoset}
 \label{DownBeatPoints:for IsPoset}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -381,7 +381,7 @@
 \hyperdef{L}{X7E57284285531F66}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{BeatPoints({\mdseries\slshape arg})\index{BeatPoints@\texttt{BeatPoints}!for IsPoset}
 \label{BeatPoints:for IsPoset}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -413,7 +413,7 @@ retraction r: X --{\textgreater} core(X) }
 \hyperdef{L}{X84A44E407DB45DDC}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsContractible({\mdseries\slshape arg})\index{IsContractible@\texttt{IsContractible}!for IsPoset}
 \label{IsContractible:for IsPoset}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -574,10 +574,7 @@ a homotopy equivalence $X\to Y$ or fail if X and Y are not homotopy equivalent
 \hyperdef{L}{X8660FF0E8070B81C}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsCollapsible({\mdseries\slshape arg})\index{IsCollapsible@\texttt{IsCollapsible}!for IsPoset}
 \label{IsCollapsible:for IsPoset}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-\texttt{true} or \texttt{false} 
-
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -879,7 +876,7 @@ the finite space associated to a group presentation (see Fernandez,
 \label{PosetHomology:for IsPoset}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
-$H_n(X)$ 
+$H_*(X)$ 
 
 
 
@@ -1015,8 +1012,40 @@ the natural maps of the poset X.
 
  
 
-\subsection{\textcolor{Chapter }{ImageMap (for IsPosetHomomorphism)}}
+\subsection{\textcolor{Chapter }{UnderlyingMap (for IsPosetHomomorphism)}}
 \logpage{[ 4, 2, 3 ]}\nobreak
+\hyperdef{L}{X87910E2F827AF07E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{UnderlyingMap({\mdseries\slshape arg})\index{UnderlyingMap@\texttt{UnderlyingMap}!for IsPosetHomomorphism}
+\label{UnderlyingMap:for IsPosetHomomorphism}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+ 
+
+\subsection{\textcolor{Chapter }{InverseImmutable (for IsPosetHomomorphism)}}
+\logpage{[ 4, 2, 4 ]}\nobreak
+\hyperdef{L}{X83B505FE81E9A1F4}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{InverseImmutable({\mdseries\slshape arg})\index{InverseImmutable@\texttt{InverseImmutable}!for IsPosetHomomorphism}
+\label{InverseImmutable:for IsPosetHomomorphism}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ }
+
+ 
+
+ 
+
+\subsection{\textcolor{Chapter }{ImageMap (for IsPosetHomomorphism)}}
+\logpage{[ 4, 2, 5 ]}\nobreak
 \hyperdef{L}{X7974453A840EC7EE}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ImageMap({\mdseries\slshape arg})\index{ImageMap@\texttt{ImageMap}!for IsPosetHomomorphism}
 \label{ImageMap:for IsPosetHomomorphism}
@@ -1032,10 +1061,26 @@ the natural maps of the poset X.
  
 
 \subsection{\textcolor{Chapter }{ImageMap (for IsPosetHomomorphism,IsObject)}}
-\logpage{[ 4, 2, 4 ]}\nobreak
+\logpage{[ 4, 2, 6 ]}\nobreak
 \hyperdef{L}{X85B7CA997B4891A2}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ImageMap({\mdseries\slshape arg1, arg2})\index{ImageMap@\texttt{ImageMap}!for IsPosetHomomorphism,IsObject}
 \label{ImageMap:for IsPosetHomomorphism,IsObject}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+ 
+
+\subsection{\textcolor{Chapter }{\texttt{\symbol{92}}\texttt{\symbol{94}} (for IsObject,IsPosetHomomorphism)}}
+\logpage{[ 4, 2, 7 ]}\nobreak
+\hyperdef{L}{X815B18AC7E321946}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{\texttt{\symbol{92}}\texttt{\symbol{94}}({\mdseries\slshape arg1, arg2})\index{bSlash^@\texttt{\texttt{\symbol{92}}\texttt{\symbol{94}}}!for IsObject,IsPosetHomomorphism}
+\label{bSlash^:for IsObject,IsPosetHomomorphism}
 }\hfill{\scriptsize (operation)}}\\
 
 
@@ -1182,11 +1227,11 @@ the natural maps of the poset X.
 
  
 
-\subsection{\textcolor{Chapter }{QuotientOfPosetBySubposet (for IsPoset,IsList)}}
+\subsection{\textcolor{Chapter }{QuotientPoset (for IsPoset,IsList)}}
 \logpage{[ 4, 3, 9 ]}\nobreak
-\hyperdef{L}{X81F9CC517E170165}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{QuotientOfPosetBySubposet({\mdseries\slshape arg1, arg2})\index{QuotientOfPosetBySubposet@\texttt{QuotientOfPosetBySubposet}!for IsPoset,IsList}
-\label{QuotientOfPosetBySubposet:for IsPoset,IsList}
+\hyperdef{L}{X7F735BA57B7DEF13}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{QuotientPoset({\mdseries\slshape arg1, arg2})\index{QuotientPoset@\texttt{QuotientPoset}!for IsPoset,IsList}
+\label{QuotientPoset:for IsPoset,IsList}
 }\hfill{\scriptsize (operation)}}\\
 
 
@@ -1220,6 +1265,22 @@ the natural maps of the poset X.
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HomPosets({\mdseries\slshape arg1, arg2})\index{HomPosets@\texttt{HomPosets}!for IsPoset,IsPoset}
 \label{HomPosets:for IsPoset,IsPoset}
 }\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+ 
+
+\subsection{\textcolor{Chapter }{AutomorphismGroup (for IsPoset)}}
+\logpage{[ 4, 3, 12 ]}\nobreak
+\hyperdef{L}{X7C6813D27F0BD0F8}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AutomorphismGroup({\mdseries\slshape arg})\index{AutomorphismGroup@\texttt{AutomorphismGroup}!for IsPoset}
+\label{AutomorphismGroup:for IsPoset}
+}\hfill{\scriptsize (attribute)}}\\
 
 
  
@@ -1519,15 +1580,71 @@ a function computing the order of the poset $X$.
 
  }
 
- 
-
- 
+ (f.g)(x) = f(g(x)) 
 
 \subsection{\textcolor{Chapter }{CompositionPosetHomomorphisms (for IsPosetHomomorphism,IsPosetHomomorphism)}}
 \logpage{[ 5, 4, 6 ]}\nobreak
 \hyperdef{L}{X7955B5E585AEB10D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CompositionPosetHomomorphisms({\mdseries\slshape arg1, arg2})\index{CompositionPosetHomomorphisms@\texttt{CompositionPosetHomomorphisms}!for IsPosetHomomorphism,IsPosetHomomorphism}
 \label{CompositionPosetHomomorphisms:for IsPosetHomomorphism,IsPosetHomomorphism}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+ 
+
+\subsection{\textcolor{Chapter }{\texttt{\symbol{92}}* (for IsPosetHomomorphism,IsPosetHomomorphism)}}
+\logpage{[ 5, 4, 7 ]}\nobreak
+\hyperdef{L}{X79B2A0C87B0F2DC3}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{\texttt{\symbol{92}}*({\mdseries\slshape arg1, arg2})\index{bSlash*@\texttt{\texttt{\symbol{92}}*}!for IsPosetHomomorphism,IsPosetHomomorphism}
+\label{bSlash*:for IsPosetHomomorphism,IsPosetHomomorphism}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{\texttt{\symbol{92}}* (for IsList,IsPosetHomomorphism)}}
+\logpage{[ 5, 4, 8 ]}\nobreak
+\hyperdef{L}{X83C1E7458740F223}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{\texttt{\symbol{92}}*({\mdseries\slshape arg1, arg2})\index{bSlash*@\texttt{\texttt{\symbol{92}}*}!for IsList,IsPosetHomomorphism}
+\label{bSlash*:for IsList,IsPosetHomomorphism}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{\texttt{\symbol{92}}* (for IsPosetHomomorphism,IsList)}}
+\logpage{[ 5, 4, 9 ]}\nobreak
+\hyperdef{L}{X876069AA823A07E9}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{\texttt{\symbol{92}}*({\mdseries\slshape arg1, arg2})\index{bSlash*@\texttt{\texttt{\symbol{92}}*}!for IsPosetHomomorphism,IsList}
+\label{bSlash*:for IsPosetHomomorphism,IsList}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{\texttt{\symbol{92}}\texttt{\symbol{94}} (for IsPosetHomomorphism,IsInt)}}
+\logpage{[ 5, 4, 10 ]}\nobreak
+\hyperdef{L}{X7D040FB47C724EA5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{\texttt{\symbol{92}}\texttt{\symbol{94}}({\mdseries\slshape arg1, arg2})\index{bSlash^@\texttt{\texttt{\symbol{92}}\texttt{\symbol{94}}}!for IsPosetHomomorphism,IsInt}
+\label{bSlash^:for IsPosetHomomorphism,IsInt}
 }\hfill{\scriptsize (operation)}}\\
 
 
@@ -1578,24 +1695,8 @@ a function computing the order of the poset $X$.
 
  
 
-\subsection{\textcolor{Chapter }{HasseDiagram (for IsPoset)}}
-\logpage{[ 5, 5, 3 ]}\nobreak
-\hyperdef{L}{X7B16A769870A112D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HasseDiagram({\mdseries\slshape arg})\index{HasseDiagram@\texttt{HasseDiagram}!for IsPoset}
-\label{HasseDiagram:for IsPoset}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- 
-
- }
-
- 
-
- 
-
 \subsection{\textcolor{Chapter }{CoveringRelations (for IsPoset)}}
-\logpage{[ 5, 5, 4 ]}\nobreak
+\logpage{[ 5, 5, 3 ]}\nobreak
 \hyperdef{L}{X8361159B7F4B95B6}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CoveringRelations({\mdseries\slshape arg})\index{CoveringRelations@\texttt{CoveringRelations}!for IsPoset}
 \label{CoveringRelations:for IsPoset}
@@ -1611,7 +1712,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{UpperCovers (for IsPoset)}}
-\logpage{[ 5, 5, 5 ]}\nobreak
+\logpage{[ 5, 5, 4 ]}\nobreak
 \hyperdef{L}{X85B8238A7AEFA93B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{UpperCovers({\mdseries\slshape arg})\index{UpperCovers@\texttt{UpperCovers}!for IsPoset}
 \label{UpperCovers:for IsPoset}
@@ -1627,7 +1728,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{UpperCovers (for IsPoset,IsObject)}}
-\logpage{[ 5, 5, 6 ]}\nobreak
+\logpage{[ 5, 5, 5 ]}\nobreak
 \hyperdef{L}{X7A4C2C317F67E132}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{UpperCovers({\mdseries\slshape arg1, arg2})\index{UpperCovers@\texttt{UpperCovers}!for IsPoset,IsObject}
 \label{UpperCovers:for IsPoset,IsObject}
@@ -1643,7 +1744,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{LowerCovers (for IsPoset)}}
-\logpage{[ 5, 5, 7 ]}\nobreak
+\logpage{[ 5, 5, 6 ]}\nobreak
 \hyperdef{L}{X7DDB0C3480284236}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LowerCovers({\mdseries\slshape arg})\index{LowerCovers@\texttt{LowerCovers}!for IsPoset}
 \label{LowerCovers:for IsPoset}
@@ -1659,7 +1760,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{LowerCovers (for IsPoset,IsObject)}}
-\logpage{[ 5, 5, 8 ]}\nobreak
+\logpage{[ 5, 5, 7 ]}\nobreak
 \hyperdef{L}{X7AF8164985A00A3F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LowerCovers({\mdseries\slshape arg1, arg2})\index{LowerCovers@\texttt{LowerCovers}!for IsPoset,IsObject}
 \label{LowerCovers:for IsPoset,IsObject}
@@ -1675,7 +1776,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{MaximalElements (for IsPoset)}}
-\logpage{[ 5, 5, 9 ]}\nobreak
+\logpage{[ 5, 5, 8 ]}\nobreak
 \hyperdef{L}{X832BA4017C61E41D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MaximalElements({\mdseries\slshape arg})\index{MaximalElements@\texttt{MaximalElements}!for IsPoset}
 \label{MaximalElements:for IsPoset}
@@ -1691,7 +1792,7 @@ a function computing the order of the poset $X$.
  
 
 \subsection{\textcolor{Chapter }{MinimalElements (for IsPoset)}}
-\logpage{[ 5, 5, 10 ]}\nobreak
+\logpage{[ 5, 5, 9 ]}\nobreak
 \hyperdef{L}{X8545F2668166C141}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MinimalElements({\mdseries\slshape arg})\index{MinimalElements@\texttt{MinimalElements}!for IsPoset}
 \label{MinimalElements:for IsPoset}
@@ -1725,7 +1826,7 @@ a function computing the order of the poset $X$.
 \hyperdef{L}{X82C6E100783909E9}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HasFixedPointProperty({\mdseries\slshape arg})\index{HasFixedPointProperty@\texttt{HasFixedPointProperty}!for IsPoset}
 \label{HasFixedPointProperty:for IsPoset}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 
 
  

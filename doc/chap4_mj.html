@@ -35,8 +35,11 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7BE74C2C80DD7FCF">4.2-1 SourceMap</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X78AC126382872D16">4.2-2 TargetMap</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7974453A840EC7EE">4.2-3 ImageMap</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X85B7CA997B4891A2">4.2-4 ImageMap</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X87910E2F827AF07E">4.2-3 UnderlyingMap</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X83B505FE81E9A1F4">4.2-4 InverseImmutable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7974453A840EC7EE">4.2-5 ImageMap</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X85B7CA997B4891A2">4.2-6 ImageMap</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X815B18AC7E321946"><code>4.2-7 \^</code></a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X7F3D3A1C7CC6BEFC">4.3 <span class="Heading">Categorical constructions</span></a>
 </span>
@@ -49,9 +52,10 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X83EED1627E94BEE5">4.3-6 SuspensionPoset</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7D3E2BA57C736659">4.3-7 OppositePoset</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X8467A35E823D7FE9">4.3-8 MappingCylinderPosetHomomorphism</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X81F9CC517E170165">4.3-9 QuotientOfPosetBySubposet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7F735BA57B7DEF13">4.3-9 QuotientPoset</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X80248EAB820609F9">4.3-10 WedgePosets</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7CB6F58E7ABB2C98">4.3-11 HomPosets</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7C6813D27F0BD0F8">4.3-12 AutomorphismGroup</a></span>
 </div></div>
 </div>
 
@@ -84,16 +88,31 @@
 <h5>4.2-2 TargetMap</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TargetMap</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X87910E2F827AF07E" name="X87910E2F827AF07E"></a></p>
+
+<h5>4.2-3 UnderlyingMap</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingMap</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X83B505FE81E9A1F4" name="X83B505FE81E9A1F4"></a></p>
+
+<h5>4.2-4 InverseImmutable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InverseImmutable</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p><a id="X7974453A840EC7EE" name="X7974453A840EC7EE"></a></p>
 
-<h5>4.2-3 ImageMap</h5>
+<h5>4.2-5 ImageMap</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ImageMap</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X85B7CA997B4891A2" name="X85B7CA997B4891A2"></a></p>
 
-<h5>4.2-4 ImageMap</h5>
+<h5>4.2-6 ImageMap</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ImageMap</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X815B18AC7E321946" name="X815B18AC7E321946"></a></p>
+
+<h5><code>4.2-7 \^</code></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; \^</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X7F3D3A1C7CC6BEFC" name="X7F3D3A1C7CC6BEFC"></a></p>
 
 <h4>4.3 <span class="Heading">Categorical constructions</span></h4>
@@ -138,11 +157,11 @@
 <h5>4.3-8 MappingCylinderPosetHomomorphism</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MappingCylinderPosetHomomorphism</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p><a id="X81F9CC517E170165" name="X81F9CC517E170165"></a></p>
+<p><a id="X7F735BA57B7DEF13" name="X7F735BA57B7DEF13"></a></p>
 
-<h5>4.3-9 QuotientOfPosetBySubposet</h5>
+<h5>4.3-9 QuotientPoset</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QuotientOfPosetBySubposet</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; QuotientPoset</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X80248EAB820609F9" name="X80248EAB820609F9"></a></p>
 
 <h5>4.3-10 WedgePosets</h5>
@@ -153,6 +172,11 @@
 <h5>4.3-11 HomPosets</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HomPosets</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X7C6813D27F0BD0F8" name="X7C6813D27F0BD0F8"></a></p>
+
+<h5>4.3-12 AutomorphismGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AutomorphismGroup</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
