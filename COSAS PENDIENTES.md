@@ -4,7 +4,7 @@
 
 
 # Cosas básicas
-* Automorphisms (se puede hacer a partir de AutomorphismGroup)
+* Endomorphisms
 
 # Colorings
 
@@ -40,6 +40,12 @@ falta la parte de WeakCore y QC
 # Optimizar cosas
 
 * PosetFromCoveringRelations: hacer Floyd-Warshall a mano
+
+* FixedPointProperty
+
+* HomPosets
+
+* Optimizar todavía más AutomorphismGroup
 
 
 # Funciones que toman n argumentos (producto, coproducto, ...)

@@ -63,4 +63,6 @@ DeclareOperation("HomPosets",[IsPoset,IsPoset]);
 
 #!
 DeclareAttribute("AutomorphismGroup",IsPoset);
+#!
+DeclareAttribute("Automorphisms",IsPoset);
 

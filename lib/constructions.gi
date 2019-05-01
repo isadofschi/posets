@@ -351,3 +351,10 @@ function(X)
 	return G;
 end);
 
+InstallMethod(Automorphisms,
+"for Poset",
+[IsPoset],
+function(X)
+	return Set(AutomorphismGroup(X));
+end);
+
