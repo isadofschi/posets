@@ -314,12 +314,18 @@ InstallMethod(AutomorphismGroup,
 "for Poset",
 [IsPoset],
 function(X)
-	local n,iter,f,sigma,automorphisms,sigmas,G,i;
+	local n,f,sigma,automorphisms,sigmas,G,i,q,pi,p,Spi;
 	n:=Size(X);
 	automorphisms:=[];
 	sigmas:=[];
-	iter := Iterator(SymmetricGroup(n));
-	for sigma in iter do
+	
+	OrderMatrix(X);
+
+	q:= i -> [Height(X,Set(X)[i])];
+	pi:=PartitionByFunction([1..n],q);
+	Spi:=Group(Concatenation(List(pi, p-> GeneratorsOfGroup(SymmetricGroup(p)))));
+
+	for sigma in Spi do
 		f := PosetHomomorphismByImages(X,X, List([1..n], i-> Set(X)[i^sigma] ) );
 		#f := StructuralCopy(PosetHomomorphismByFunction(X,X, x-> Set(X)[PositionSorted(Set(X),x)^StructuralCopy(sigma)] )); # not working, why???
 		if f <> fail then
@@ -341,6 +347,7 @@ function(X)
 	SetIsHandledByNiceMonomorphism(G,true);
 	# SetIsAutomorphismGroup(G,true); ?
 	# SetAutomorphismDomain(G,X); ?
+	StructureDescription(G);
 	return G;
 end);
 

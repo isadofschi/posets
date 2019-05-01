@@ -383,8 +383,6 @@ InstallMethod(RelationByPoset,
 "for Poset",
 [IsPoset],
 function(X)
-	local n;
-	n:=Size(X);
 	return PartialOrderByOrderingFunction( Domain([1..Size(X)]),
 											function(i,j) return Ordering(X)(Set(X)[i],Set(X)[j]);end
 	);
