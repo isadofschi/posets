@@ -358,17 +358,32 @@ InstallMethod(\^,
 "for PosetHomomorphism and Integer",
 [IsPosetHomomorphism,IsInt],
 function(f,n)
+	local m,g,fn;
 	if n=1 then
 		return f;
 	fi;
 	if n=-1 then
-		return Inverse(f); # inverses not implemented!!!!
+		return Inverse(f);
 	fi;
 	if SourceMap(f)=TargetMap(f) then
-		if n=0 then return IdentityMap(SourceMap(f));fi;
-		if n>0 then return f*(f^(n-1));fi;
+		if n=0 then
+			return IdentityMap(SourceMap(f));
+		fi;
+		if n>0 then
+			m:=n;
+			g:=f;
+			fn:=f^0;
+			while m>0 do
+				if RemInt(m,2)=1 then
+					fn:=fn*g;
+				fi;
+				g:=g*g;
+				m:=QuoInt(m,2);
+			od;
+			return fn;
+		fi;
 		if n<0 and f^-1<> fail then
-			return f^-1 * (f^(n+1));
+			return (f^-1)^(-n);
 		fi;
 	fi;
 	return fail;
