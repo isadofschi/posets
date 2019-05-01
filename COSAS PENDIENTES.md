@@ -4,9 +4,7 @@
 
 
 # Cosas básicas
-* Altura de un elemento en un poset
-* Automorphisms
-* natural map de la subdivision baricentrica X'--->X, c -> max(c)
+* Automorphisms (se puede hacer a partir de AutomorphismGroup)
 
 # Colorings
 
@@ -23,9 +21,9 @@ falta la parte de WeakCore y QC
 
 # Funciones hechas por Kevin
 
-* Posets de subgrupos
+* Más cosas de posets de subgrupos
 
-* Homotopías y fences
+* Más cosas de fences
 
 # Homotopy Colimits de posets
 

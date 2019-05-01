@@ -21,10 +21,14 @@ DeclareCategory("IsPosetHomomorphism",IsObject);
 #! @Returns a function computing the order of the poset <M>X</M>.
 #! @Description Ordering(X)(x,y) is the value of the expression <M>x\geq y</M>.
 DeclareOperation("Ordering",[IsPoset]); # returns the ordering function
-
+#!
 DeclareOperation("Set",[IsPoset]); # returns the set of points
+#!
 DeclareAttribute("Size",IsPoset); # returns the set of points
-
+#!
+DeclareOperation("Iterator",[IsPoset]);
+#!
+DeclareOperation("\in",[IsObject,IsPoset]);
 #############################################################################
 
 #! @Section Constructing posets in different ways
@@ -48,7 +52,7 @@ DeclareOperation("PosetByCoveringRelations",[IsList, IsList]); # to do
 
 #############################################################################
 
-#! @Section Constructing poset homomorphisms
+#! @Section Constructing poset homomorphisms in different ways
 
 #!
 DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);

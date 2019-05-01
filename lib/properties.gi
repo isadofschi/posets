@@ -42,7 +42,7 @@ InstallMethod(Height,
 [IsPoset,IsObject],
 function(X,x)
 	local i,h,y;
-	if not x in Set(X) then
+	if not x in X then
 		Print("error, x must be a point of X");
 		return fail;
 	fi;
@@ -52,7 +52,7 @@ function(X,x)
 	i:=PositionSorted(Set(X),x);	
 	if X!.heights[i] = -1 then
 		h:=0;
-		for y in Set(X) do
+		for y in X do
 			if x<>y and Ordering(X)(x,y) then # if x > y (strictly)
 				h:=Maximum(h,1+Height(X,y));
 			fi;

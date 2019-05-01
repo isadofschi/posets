@@ -33,13 +33,14 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 #! @Arguments X
 #! @Returns <M>H_*(X)</M>
 DeclareOperation("PosetHomology",[IsPoset]);
+DeclareOperation("PosetHomology",[IsPoset,IsInt]);
 #! @Arguments f,n
 #! @Returns <M>H_n(f)</M>
 DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
 
 #######################################################
 
-#! @Section Some homotopy properties
+#! @Section More invariants
 
 #!
 DeclareAttribute("EulerCharacteristic",IsPoset);

@@ -73,8 +73,22 @@ InstallMethod(BarycentricSubdivision,
 "for Poset",
 [IsPoset],
 function(X)
-	# to do natural map X'--->X, c -> max(c)
-	return FacePoset(OrderComplex(X));
+	local X1,m,max;
+	max:=function(x,y)
+		if Ordering(X)(x,y) then
+			return x;
+		else
+			if Ordering(X)(y,x) then
+				return y;
+			else
+				return fail;
+			fi;
+		fi;
+	end;
+	X1:=FacePoset(OrderComplex(X));
+	m:=PosetHomomorphismByImages(X1,X, List(Set(X1), c->Iterated(c,max)) );
+	X1!.naturalMaps:=[m];
+	return X1;
 end);
 
 InstallMethod(BarycentricSubdivision,
@@ -100,7 +114,12 @@ InstallMethod(PosetHomology,
 function(X)
 	return Homology(OrderComplex(X));
 end);
-
+InstallMethod(PosetHomology,
+"for Poset",
+[IsPoset,IsInt],
+function(X,n)
+	return Homology(OrderComplex(X),n);
+end);
 InstallMethod(PosetHomology,
 "for PosetHomomorphism, integer",
 [IsPosetHomomorphism,IsInt],

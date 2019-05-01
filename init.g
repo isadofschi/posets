@@ -5,9 +5,9 @@
 ##
 
 
-DeclareGlobalVariable("PosetsIntFunc"); #internal functions
-InstallValue(PosetsIntFunc,rec());
-MakeReadWriteGlobal("PosetsIntFunc");
+#DeclareGlobalVariable("PosetsIntFunc"); #internal functions
+#InstallValue(PosetsIntFunc,rec());
+#MakeReadWriteGlobal("PosetsIntFunc");
 
 
 #############################################################################
@@ -24,5 +24,6 @@ ReadPackage("Posets", "lib/beatweak.gd" );
 ReadPackage("Posets", "lib/properties.gd" );
 ReadPackage("Posets", "lib/colorings.gd" );
 ReadPackage("Posets", "lib/presentations.gd" );
+ReadPackage("Posets", "lib/fences.gd" );
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

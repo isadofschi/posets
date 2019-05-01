@@ -84,11 +84,18 @@ function(X,x)
 end);
 
 
-InstallMethod(RemoveCoveringRelation, # TO DO!
+InstallMethod(RemoveCoveringRelation,
 "for Poset, coveringrelation",
 [IsPoset, IsList],
 function(X,e)
-	return fail;
+	local X_e;
+	if e in CoveringRelations(X) then
+		X_e:=PosetByCoveringRelations(Set(X),Difference(CoveringRelations(X),[e]));
+		X_e!.naturalMaps:=[ PosetHomomorphismByFunction(X_e,X,x->x) ];
+		return X_e;
+	else
+		return fail;
+	fi;
 end);
 
 #############################################################################
@@ -324,7 +331,7 @@ function(X,a,b)
 	 
 	return UpperCovers(X,a)=[] and
 		   UpperCovers(X,b)=[] and
-		   IsContractible( SubPoset(X, Union(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,b)))));
+		   IsContractible(SubPoset(X, Union(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,b)))));
 end);
 
 InstallMethod(IsQCopReduction,

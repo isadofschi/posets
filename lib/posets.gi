@@ -16,23 +16,39 @@ PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism and
 
 ################################################################################
 
-PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec(names:=[], ordering:=(function(x,y) end) ) ); end ;;
+#PosetsIntFunc.NewPoset := function() return Objectify( PosetType, rec(names:=[], ordering:=(function(x,y) end) ) ); end ;;
 
 ################################################################################
 
 # Basic methods
 
-InstallMethod(ViewObj,"for Poset",
+InstallMethod(ViewObj,
+"for Poset",
 [IsPoset],
 function(X)
 	Print("<finite poset of size ", Size(X) ,">");
 end);
 
-InstallMethod(ViewObj,"for PosetHomomorphism",
+
+InstallMethod(ViewObj,
+"for PosetHomomorphism",
 [IsPosetHomomorphism],
 function(X)
 	Print("<order preserving map>");
 end);
+
+InstallMethod(PrintObj,"for Poset",
+[IsPoset],
+function(X)
+	Print("<finite poset of size ", Size(X) ,">");
+end);
+
+InstallMethod(PrintObj,"for PosetHomomorphism",
+[IsPosetHomomorphism],
+function(X)
+	Print("<order preserving map>");
+end);
+
 
 # Set of points (forgets order)
 InstallMethod(Set,"for Poset",
@@ -42,7 +58,8 @@ function(X)
 end);
 
 # Ordering function
-InstallMethod(Ordering,"for Poset",
+InstallMethod(Ordering,
+"for Poset",
 [IsPoset],
 function(X)
 	return X!.ordering;
@@ -50,12 +67,26 @@ end);
 
 
 # Size (number of points)
-InstallMethod(Size,"for Poset",
+InstallMethod(Size,
+"for Poset",
 [IsPoset],
 function(X)
 	return Size(Set(X));
 end);
 
+InstallMethod(Iterator,
+"for Poset",
+[IsPoset],
+X-> Iterator(Set(X))
+);
+
+
+InstallOtherMethod(\in, # InstallOtherMethod, is this related to issue #1649?
+"for element and Poset",
+[IsObject,IsPoset],
+function(x,X)
+	return x in Set(X);
+end);
 
 InstallMethod(\=,"for Poset and Poset",
 [IsPoset,IsPoset],

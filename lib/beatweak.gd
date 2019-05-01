@@ -20,7 +20,7 @@ DeclareOperation("ElementsStrictlyComparable",[IsPoset,IsObject]);
 #!
 DeclareOperation("RemovePoint",[IsPoset,IsObject]);
 #!
-DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]); #to do
+DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]);
 
 ###################################################################################
 
