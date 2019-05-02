@@ -321,7 +321,7 @@ function(X)
 	
 	OrderMatrix(X);
 
-	q:= i -> [Height(X,Set(X)[i])];
+	q:= i -> [Height(X,Set(X)[i]),Size(ElementsBelow(X,Set(X)[i])),Size(ElementsAbove(X,Set(X)[i]))];
 	pi:=PartitionByFunction([1..n],q);
 	Spi:=Group(Concatenation(List(pi, p-> GeneratorsOfGroup(SymmetricGroup(p)))));
 
@@ -339,10 +339,13 @@ function(X)
 		SetOne(f,automorphisms[1]);
 		SetInverse(f,automorphisms[PositionSorted(sigmas,sigma^-1)]);
 	od;
+	SortParallel(automorphisms,sigmas);
 	G:=MagmaWithInverses(automorphisms);
+	SetEnumerator(G,AsSSortedList(automorphisms));
+	SetIsAssociative(G,true);
 	IsGroup(G);
 	Order(G);
-	SetNiceMonomorphism(G,GroupHomomorphismByImages(G,SymmetricGroup(n),automorphisms,sigmas));
+	SetNiceMonomorphism(G,GroupHomomorphismByImagesNC(G,SymmetricGroup(n),automorphisms,sigmas));
 	SetNiceObject(G,Group(sigmas));
 	SetIsHandledByNiceMonomorphism(G,true);
 	# SetIsAutomorphismGroup(G,true); ?
