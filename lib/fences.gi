@@ -54,3 +54,11 @@ function(f,g)
 end);
 
 
+InstallMethod(ConnectedComponents,
+"for Poset ",
+[IsPoset],
+function(X)
+	return List(EquivalenceClasses(TransitiveClosureBinaryRelation(SymmetricClosureBinaryRelation(RelationByPoset(X)))),c->SubPoset(X,Set(X){Set(c)}));
+end);
+
+

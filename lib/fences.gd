@@ -4,3 +4,5 @@ DeclareOperation("PathInPoset",[IsPoset,IsObject,IsObject]);
 DeclareOperation("Fence",[IsPosetHomomorphism,IsPosetHomomorphism]);
 #!
 DeclareOperation("AreHomotopic",[IsPosetHomomorphism,IsPosetHomomorphism]);
+#!
+DeclareOperation("ConnectedComponents",[IsPoset]);
