@@ -26,7 +26,7 @@ end);
 
 
 
-InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,setMxlRank, r)
+InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
 	local partialSubgroups, S, H, l, repElemAb, elemAb, g, i, normalizersElemAb, transversalsElemAb, numClasesConjugacion, CanonicalRightTransversal,reduceConjClasses;
 
 	reduceConjClasses:=function(G,l)
@@ -48,7 +48,8 @@ InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,setMxlRank, r)
 	end;;
 
 	S:=SylowSubgroup(G,p);
-	if setMxlRank then
+	if r<>[] then
+		r:=r[1];
 		partialSubgroups:=Filtered(SubgroupsSolvableGroup(S), l->IsElementaryAbelian(l) and Order(l) > 1 and Order(l) <= p^r);
 	else
 		partialSubgroups:=Filtered(SubgroupsSolvableGroup(S), l->IsElementaryAbelian(l) and Order(l) > 1);
@@ -79,12 +80,6 @@ InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,setMxlRank, r)
 end);
 
 
-
-
-
-
-
-
 InstallMethod(PosetOfElementaryAbelianpSubgroups,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
@@ -94,7 +89,7 @@ function(G,p)
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	ApG:=PosetByFunctionNC(ElementaryAbelianpSubgroups(G,p,false,-1) , IsSubgroup);
+	ApG:=PosetByFunctionNC(ElementaryAbelianpSubgroups(G,p) , IsSubgroup);
 	SetGrading(ApG,H-> Log(Order(H),p)-1); # Ap(G) is a graded poset
 	return ApG;
 end);
