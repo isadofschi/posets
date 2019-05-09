@@ -12,6 +12,8 @@ DeclareOperation("PosetOfSubgroups", [IsGroup and IsFinite]);
 #!
 DeclareOperation("PosetOfpSubgroups", [IsGroup and IsFinite,IsInt]);
 #!
+DeclareGlobalFunction("ElementaryAbelianpSubgroups");
+#!
 DeclareOperation("PosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsInt]);
 #!
 DeclareGlobalFunction("RadicalpSubgroups");

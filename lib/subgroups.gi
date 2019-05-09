@@ -24,6 +24,67 @@ function(G,p)
 	return SpG;
 end);
 
+
+
+InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,setMxlRank, r)
+	local partialSubgroups, S, H, l, repElemAb, elemAb, g, i, normalizersElemAb, transversalsElemAb, numClasesConjugacion, CanonicalRightTransversal,reduceConjClasses;
+
+	reduceConjClasses:=function(G,l)
+		local reducedList, add, a, b;
+		reducedList:=[];
+		for a in l do
+			add:=true;
+			for b in reducedList do
+				if IsConjugate(G,a,b) then
+					add:=false;
+					break;
+				fi;
+			od;
+			if add then
+				Add(reducedList,a);
+			fi;
+		od;
+		return reducedList;	
+	end;;
+
+	S:=SylowSubgroup(G,p);
+	if setMxlRank then
+		partialSubgroups:=Filtered(SubgroupsSolvableGroup(S), l->IsElementaryAbelian(l) and Order(l) > 1 and Order(l) <= p^r);
+	else
+		partialSubgroups:=Filtered(SubgroupsSolvableGroup(S), l->IsElementaryAbelian(l) and Order(l) > 1);
+	fi;
+	
+	repElemAb:=reduceConjClasses(G,partialSubgroups);
+	
+	numClasesConjugacion:=Size(repElemAb);
+	normalizersElemAb:=List(repElemAb, H-> Normalizer(G,H));
+	
+	CanonicalRightTransversal:= function(G,H)
+		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
+	end;;
+	
+	transversalsElemAb:=List(normalizersElemAb, N-> CanonicalRightTransversal(G,N));
+	
+	elemAb:=[];
+	
+	for i in  [1..numClasesConjugacion] do
+		for g in transversalsElemAb[i] do
+			H:=repElemAb[i]^g;
+			Add(elemAb, H);
+		od;
+	od;
+	
+	return elemAb;
+	
+end);
+
+
+
+
+
+
+
+
 InstallMethod(PosetOfElementaryAbelianpSubgroups,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
@@ -33,7 +94,7 @@ function(G,p)
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	ApG:=PosetByFunctionNC(Filtered(Subgroups(G), H-> IsPGroup(H) and RemInt(Order(H),p)=0 and IsElementaryAbelian(H) ), IsSubgroup);
+	ApG:=PosetByFunctionNC(ElementaryAbelianpSubgroups(G,p,false,-1) , IsSubgroup);
 	SetGrading(ApG,H-> Log(Order(H),p)-1); # Ap(G) is a graded poset
 	return ApG;
 end);

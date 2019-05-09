@@ -166,6 +166,14 @@ function(Xs)
 	return prodXs;
 end);
 
+InstallOtherMethod(DirectProductOp,
+"direct product of  posets",
+[IsList, IsPoset],
+function(L,X)
+	return  ProductPosets(L);
+end);
+
+
 InstallMethod(ConePoset,
 "for Poset",
 [IsPoset],
@@ -360,4 +368,14 @@ InstallMethod(Automorphisms,
 function(X)
 	return Set(AutomorphismGroup(X));
 end);
+
+
+
+
+
+
+
+
+
+
 
