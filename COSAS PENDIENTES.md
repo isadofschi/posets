@@ -50,7 +50,8 @@ falta la parte de WeakCore y QC
 
 # Funciones que toman n argumentos (producto, coproducto, ...)
 
-Por ahora toman una lista (de 2 o más argumentos). Es un detalle técnico pero estaría bueno que quede bien.
+El producto está hecho, falta coproducto
+Hay que implementar coproducto y producto de morfismos
 
 # Preordenes, T_0-ificación
 

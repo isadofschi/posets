@@ -33,14 +33,7 @@ InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
 		local reducedList, add, a, b;
 		reducedList:=[];
 		for a in l do
-			add:=true;
-			for b in reducedList do
-				if IsConjugate(G,a,b) then
-					add:=false;
-					break;
-				fi;
-			od;
-			if add then
+			if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
 				Add(reducedList,a);
 			fi;
 		od;
@@ -104,14 +97,7 @@ InstallGlobalFunction(RadicalpSubgroups, function(G,p)
 		local reducedList, add, a, b;
 		reducedList:=[];
 		for a in l do
-			add:=true;
-			for b in reducedList do
-				if IsConjugate(G,a,b) then
-					add:=false;
-					break;
-				fi;
-			od;
-			if add then
+			if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
 				Add(reducedList,a);
 			fi;
 		od;
