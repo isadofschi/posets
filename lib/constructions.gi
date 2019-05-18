@@ -166,12 +166,84 @@ function(Xs)
 	return prodXs;
 end);
 
+##############
+
+
 InstallOtherMethod(DirectProductOp,
 "direct product of  posets",
 [IsList, IsPoset],
 function(L,X)
 	return  ProductPosets(L);
 end);
+
+InstallOtherMethod(DirectProductOp,
+"direct product of poset homomorphisms",
+[IsList, IsPosetHomomorphism],
+function(L,f)
+	local prod;
+	if not ForAll(L, g -> SourceMap(g)=SourceMap(f)) then
+		Error("the homomorphisms must have the same source");
+	fi;
+	prod:=DirectProduct(List(L,TargetMap));
+	return  PosetHomomorphismByFunctionNC(SourceMap(f),prod, x-> List(L, g->x^g ));
+end);
+
+
+InstallOtherMethod(CoproductOp,
+"coproduct of  posets",
+[IsList, IsPoset],
+function(L,X)
+	return  CoproductPosets(L);
+end);
+
+InstallGlobalFunction(Coproduct, function ( arg... )
+    local d, prop;
+    if Length( arg ) = 0 then
+        Error( "<arg> must be nonempty" );
+    elif Length( arg ) = 1 and IsList( arg[1] ) then
+        if IsEmpty( arg[1] ) then
+            Error( "<arg>[1] must be nonempty" );
+        fi;
+        arg := arg[1];
+    fi;
+    d := CoproductOp( arg, arg[1] );
+    return d;
+end);
+
+InstallOtherMethod(CoproductOp,
+"direct product of poset homomorphisms",
+[IsList, IsPosetHomomorphism],
+function(L,f)
+	local coprod;
+	if not ForAll(L, g -> TargetMap(g)=TargetMap(f)) then
+		Error("the homomorphisms must have the same target");
+	fi;
+	coprod:=Coproduct(List(L,SourceMap));
+	return  PosetHomomorphismByFunctionNC(coprod,TargetMap(f), x-> x[2]^L[x[1]]);
+end);
+
+InstallGlobalFunction(Join, function ( arg... )
+    local d, prop;
+    if Length( arg ) = 0 then
+        Error( "<arg> must be nonempty" );
+    elif Length( arg ) = 1 and IsList( arg[1] ) then
+        if IsEmpty( arg[1] ) then
+            Error( "<arg>[1] must be nonempty" );
+        fi;
+        arg := arg[1];
+    fi;
+    d := JoinOp( arg, arg[1] );
+    return d;
+end);
+
+InstallOtherMethod(JoinOp,
+"join of  posets",
+[IsList, IsPoset],
+function(L,X)
+	return  JoinPosets(L);
+end);
+
+#######
 
 
 InstallMethod(ConePoset,

@@ -48,10 +48,8 @@ falta la parte de WeakCore y QC
 * Optimizar todavía más AutomorphismGroup
 
 
-# Funciones que toman n argumentos (producto, coproducto, ...)
-
-El producto está hecho, falta coproducto
-Hay que implementar coproducto y producto de morfismos
+# Sacar ProductPosets, CoproductPosets, JoinPosets.
+Solamente tienen que quedar las versiones de DirectProduct, Join y Coproduct
 
 # Preordenes, T_0-ificación
 
