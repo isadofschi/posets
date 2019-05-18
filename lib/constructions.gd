@@ -35,26 +35,21 @@ DeclareOperation("\^",[IsObject,IsPosetHomomorphism]);
 
 
 #! @Section Categorical constructions
+# Documentar tambien DirectProduct. Documentar DirectProduct y Coproduct para morfismos
 
 #!
 DeclareOperation("SubPoset",[IsPoset,IsList]);
 
-#!
-DeclareOperation("CoproductPosets",[IsList]);
-#!
+
 DeclareOperation("CoproductOp",[IsList,IsPoset]);
 #!
 DeclareGlobalFunction("Coproduct");
 
-#!
+
 DeclareOperation("JoinOp",[IsList,IsPoset]);
-#!
-DeclareOperation("JoinPosets",[IsList]);
 #!
 DeclareGlobalFunction("Join");
 
-#!
-DeclareOperation("ProductPosets",[IsList]);
 
 #!
 DeclareOperation("ConePoset",[IsPoset]);

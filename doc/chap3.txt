@@ -46,11 +46,15 @@
   
   [1X3.2-2 PosetHomology[101X
   
+  [33X[1;0Y[29X[2XPosetHomology[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X3.2-3 PosetHomology[101X
+  
   [33X[1;0Y[29X[2XPosetHomology[102X( [3Xf[103X, [3Xn[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Y[22XH_n(f)[122X[133X
   
   
-  [1X3.3 [33X[0;0YSome homotopy properties[133X[101X
+  [1X3.3 [33X[0;0YMore invariants[133X[101X
   
   [1X3.3-1 EulerCharacteristic[101X
   

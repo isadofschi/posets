@@ -1,8 +1,8 @@
   
-  [1X2 [33X[0;0YPosets automatic generated documentation[133X[101X
+  [1X2 [33X[0;0YHomotopy[133X[101X
   
   
-  [1X2.1 [33X[0;0YPosets automatic generated documentation of methods[133X[101X
+  [1X2.1 [33X[0;0YColorings[133X[101X
   
   [1X2.1-1 FundamentalGroupByColoring[101X
   
@@ -12,19 +12,22 @@
   
   [33X[1;0Y[29X[2XFundamentalGroupByColoring[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X2.1-3 PosetFpGroup[101X
   
-  [33X[1;0Y[29X[2XPosetFpGroup[102X( [3XG[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ythe   finite  space  associated  to  an  FpGroup  (see  Fernandez,
-            [Definition 6.1.1] )[133X
+  [1X2.2 [33X[0;0YFences[133X[101X
   
-  [33X[0;0Ythe poset obtained from the FpGroup G.[133X
+  [1X2.2-1 PathInPoset[101X
   
-  [1X2.1-4 PosetPresentation[101X
+  [33X[1;0Y[29X[2XPathInPoset[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation[133X
   
-  [33X[1;0Y[29X[2XPosetPresentation[102X( [3XP[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ythe   finite   space  associated  to  a  group  presentation  (see
-            Fernandez, [Definition 6.1.1] )[133X
+  [1X2.2-2 Fence[101X
   
-  [33X[0;0Ythe poset obtained from the FpGroup G.[133X
+  [33X[1;0Y[29X[2XFence[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X2.2-3 AreHomotopic[101X
+  
+  [33X[1;0Y[29X[2XAreHomotopic[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X2.2-4 ConnectedComponents[101X
+  
+  [33X[1;0Y[29X[2XConnectedComponents[102X( [3Xarg[103X ) [32X operation[133X
   

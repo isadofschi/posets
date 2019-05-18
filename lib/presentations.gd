@@ -1,3 +1,6 @@
+#! @Chapter Constructions
+#! @Section The poset associated to a group presentation
+
 #! @Arguments G
 #! @Returns the finite space associated to an FpGroup (see Fernandez, [Definition 6.1.1] )
 #! @Description the poset obtained from the FpGroup G.

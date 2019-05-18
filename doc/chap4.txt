@@ -49,47 +49,47 @@
   
   [33X[1;0Y[29X[2XSubPoset[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X4.3-2 CoproductPosets[101X
+  [1X4.3-2 Coproduct[101X
   
-  [33X[1;0Y[29X[2XCoproductPosets[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCoproduct[102X( [3Xarg[103X ) [32X function[133X
   
-  [1X4.3-3 JoinPosets[101X
+  [1X4.3-3 Join[101X
   
-  [33X[1;0Y[29X[2XJoinPosets[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XJoin[102X( [3Xarg[103X ) [32X function[133X
   
-  [1X4.3-4 ProductPosets[101X
-  
-  [33X[1;0Y[29X[2XProductPosets[102X( [3Xarg[103X ) [32X operation[133X
-  
-  [1X4.3-5 ConePoset[101X
+  [1X4.3-4 ConePoset[101X
   
   [33X[1;0Y[29X[2XConePoset[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X4.3-6 SuspensionPoset[101X
+  [1X4.3-5 SuspensionPoset[101X
   
   [33X[1;0Y[29X[2XSuspensionPoset[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X4.3-7 OppositePoset[101X
+  [1X4.3-6 OppositePoset[101X
   
   [33X[1;0Y[29X[2XOppositePoset[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X4.3-8 MappingCylinderPosetHomomorphism[101X
+  [1X4.3-7 MappingCylinderPosetHomomorphism[101X
   
   [33X[1;0Y[29X[2XMappingCylinderPosetHomomorphism[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X4.3-9 QuotientPoset[101X
+  [1X4.3-8 QuotientPoset[101X
   
   [33X[1;0Y[29X[2XQuotientPoset[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X4.3-10 WedgePosets[101X
+  [1X4.3-9 WedgePosets[101X
   
   [33X[1;0Y[29X[2XWedgePosets[102X( [3Xarg[103X ) [32X operation[133X
   
-  [1X4.3-11 HomPosets[101X
+  [1X4.3-10 HomPosets[101X
   
   [33X[1;0Y[29X[2XHomPosets[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X4.3-12 AutomorphismGroup[101X
+  [1X4.3-11 AutomorphismGroup[101X
   
   [33X[1;0Y[29X[2XAutomorphismGroup[102X( [3Xarg[103X ) [32X attribute[133X
+  
+  [1X4.3-12 Automorphisms[101X
+  
+  [33X[1;0Y[29X[2XAutomorphisms[102X( [3Xarg[103X ) [32X attribute[133X
   

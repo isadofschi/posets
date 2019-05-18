@@ -103,52 +103,13 @@ function(X,A)
 	return Y;
 end);
 
-InstallMethod(CoproductPosets,
-"for List",
-[IsList],
-function(Xs)
-	local sizes,m,pos,list_names_original,list_names_coprod,coprodXs,ordering;
-	if not ForAll(Xs, X->IsPoset(X) ) then
-		Error("arguments must be posets");
-	fi;
-	sizes:=List(Xs,Size);
-	m:=Length(Xs);
-	list_names_original:=List(Xs,Set);
-	list_names_coprod := List([1..m], i -> List(list_names_original[i], x-> [i,x]));
-	ordering:=function(x,y)
-		return x[1]=y[1] and Ordering(Xs[x[1]])(x[2],y[2]);
-	end;
-	coprodXs:=PosetByFunctionNC(Concatenation(list_names_coprod), ordering);
-	coprodXs!.naturalMaps:=List([1..m], i->PosetHomomorphismByImages(Xs[i],coprodXs, list_names_coprod[i]));
-	return coprodXs;
-end);
+##############
 
 
-InstallMethod(JoinPosets,
-"for List",
-[IsList],
-function(Xs)
-	local m,list_names_original,list_names_join,joinXs,ordering;
-	if not ForAll(Xs, X->IsPoset(X) ) then
-		Error("arguments must be posets");
-	fi;
-	m:=Length(Xs);
-
-	list_names_original:=List(Xs,Set);
-	list_names_join := List([1..m], i -> List(list_names_original[i], x-> [i,x]));
-	ordering:=function(x,y)
-		return x[1]>y[1] or (x[1]=y[1] and Ordering(Xs[x[1]])(x[2],y[2]));
-	end;
-	joinXs:=PosetByFunctionNC(Concatenation(list_names_join),ordering);
-	joinXs!.naturalMaps:=List([1..m], i->PosetHomomorphismByImages(Xs[i], joinXs, list_names_join[i]));
-	return joinXs;
-end);
-
-
-InstallMethod(ProductPosets,
-"for List",
-[IsList],
-function(Xs)
+InstallOtherMethod(DirectProductOp,
+"direct product of  posets",
+[IsList, IsPoset],
+function(Xs,X)
 	local m,list_names_original,names_prod,prodXs,ordering;
 	if not ForAll(Xs, X->IsPoset(X) ) then
 		Error("arguments must be posets");
@@ -166,16 +127,6 @@ function(Xs)
 	return prodXs;
 end);
 
-##############
-
-
-InstallOtherMethod(DirectProductOp,
-"direct product of  posets",
-[IsList, IsPoset],
-function(L,X)
-	return  ProductPosets(L);
-end);
-
 InstallOtherMethod(DirectProductOp,
 "direct product of poset homomorphisms",
 [IsList, IsPosetHomomorphism],
@@ -188,13 +139,6 @@ function(L,f)
 	return  PosetHomomorphismByFunctionNC(SourceMap(f),prod, x-> List(L, g->x^g ));
 end);
 
-
-InstallOtherMethod(CoproductOp,
-"coproduct of  posets",
-[IsList, IsPoset],
-function(L,X)
-	return  CoproductPosets(L);
-end);
 
 InstallGlobalFunction(Coproduct, function ( arg... )
     local d, prop;
@@ -211,10 +155,35 @@ InstallGlobalFunction(Coproduct, function ( arg... )
 end);
 
 InstallOtherMethod(CoproductOp,
+"coproduct of  posets",
+[IsList, IsPoset],
+function(Xs,X)
+	local sizes,m,pos,list_names_original,list_names_coprod,coprodXs,ordering;
+	if not ForAll(Xs, X->IsPoset(X) ) then
+		Error("arguments must be posets");
+	fi;
+	sizes:=List(Xs,Size);
+	m:=Length(Xs);
+	list_names_original:=List(Xs,Set);
+	list_names_coprod := List([1..m], i -> List(list_names_original[i], x-> [i,x]));
+	ordering:=function(x,y)
+		return x[1]=y[1] and Ordering(Xs[x[1]])(x[2],y[2]);
+	end;
+	coprodXs:=PosetByFunctionNC(Concatenation(list_names_coprod), ordering);
+	coprodXs!.naturalMaps:=List([1..m], i->PosetHomomorphismByImages(Xs[i],coprodXs, list_names_coprod[i]));
+	return coprodXs;
+end);
+
+
+
+InstallOtherMethod(CoproductOp,
 "direct product of poset homomorphisms",
 [IsList, IsPosetHomomorphism],
 function(L,f)
 	local coprod;
+	if not ForAll(L, g->IsPosetHomomorphism(g) ) then
+		Error("arguments must be poset homomorphisms");
+	fi;
 	if not ForAll(L, g -> TargetMap(g)=TargetMap(f)) then
 		Error("the homomorphisms must have the same target");
 	fi;
@@ -239,8 +208,21 @@ end);
 InstallOtherMethod(JoinOp,
 "join of  posets",
 [IsList, IsPoset],
-function(L,X)
-	return  JoinPosets(L);
+function(Xs,X)
+	local m,list_names_original,list_names_join,joinXs,ordering;
+	if not ForAll(Xs, X->IsPoset(X) ) then
+		Error("arguments must be posets");
+	fi;
+	m:=Length(Xs);
+
+	list_names_original:=List(Xs,Set);
+	list_names_join := List([1..m], i -> List(list_names_original[i], x-> [i,x]));
+	ordering:=function(x,y)
+		return x[1]>y[1] or (x[1]=y[1] and Ordering(Xs[x[1]])(x[2],y[2]));
+	end;
+	joinXs:=PosetByFunctionNC(Concatenation(list_names_join),ordering);
+	joinXs!.naturalMaps:=List([1..m], i->PosetHomomorphismByImages(Xs[i], joinXs, list_names_join[i]));
+	return joinXs;
 end);
 
 #######
@@ -252,7 +234,7 @@ InstallMethod(ConePoset,
 function(X)
 	local x;
 	x:=PosetByFunctionNC( ["x"], \= ); # poset of size 1
-	return JoinPosets([X,x]);
+	return Join([X,x]);
 end);
 
 InstallMethod(SuspensionPoset,
@@ -261,7 +243,7 @@ InstallMethod(SuspensionPoset,
 function(X)
 	local Sigma0;
 	Sigma0:=PosetByFunctionNC( ["x","y"], \= );
-	return JoinPosets([X,Sigma0]);
+	return Join([X,Sigma0]);
 end);
 
 
@@ -382,7 +364,7 @@ function(l)
 		Print("invalid arguments");
 		return fail;
 	fi;
-	coprod_Xi:=CoproductPosets(List(l, t->t[1]));
+	coprod_Xi:=Coproduct(List(l, t->t[1]));
 	basepoints:=List( [1..Size(l)], i-> ImageMap(NaturalMaps(coprod_Xi)[i], l[i][2]) );
 	wedge_Xi:=QuotientPoset(coprod_Xi, basepoints);
 	q:=NaturalMaps(wedge_Xi)[1];

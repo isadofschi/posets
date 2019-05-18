@@ -47,10 +47,6 @@ falta la parte de WeakCore y QC
 
 * Optimizar todavía más AutomorphismGroup
 
-
-# Sacar ProductPosets, CoproductPosets, JoinPosets.
-Solamente tienen que quedar las versiones de DirectProduct, Join y Coproduct
-
 # Preordenes, T_0-ificación
 
 Muchas cosas se pueden hacer directamente en preórdenes. Por ahí es conveniente hacer un tipo preorden y que poset sea subtipo de preorden. Hay que pensarlo pero parece tener sentido.

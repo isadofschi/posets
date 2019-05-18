@@ -29,6 +29,22 @@
   
   [33X[0;0YOrdering(X)(x,y) is the value of the expression [22Xx≥ y[122X.[133X
   
+  [1X5.2-2 Set[101X
+  
+  [33X[1;0Y[29X[2XSet[102X( [3Xarg[103X ) [32X operation[133X
+  
+  [1X5.2-3 Size[101X
+  
+  [33X[1;0Y[29X[2XSize[102X( [3Xarg[103X ) [32X attribute[133X
+  
+  [1X5.2-4 Iterator[101X
+  
+  [33X[1;0Y[29X[2XIterator[102X( [3Xarg[103X ) [32X operation[133X
+  
+  [1X5.2-5 \in[101X
+  
+  [33X[1;0Y[29X[2X\in[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
   
   [1X5.3 [33X[0;0YConstructing posets in different ways[133X[101X
   
@@ -61,7 +77,7 @@
   [33X[1;0Y[29X[2XPosetByCoveringRelations[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
   
-  [1X5.4 [33X[0;0YConstructing poset homomorphisms[133X[101X
+  [1X5.4 [33X[0;0YConstructing poset homomorphisms in different ways[133X[101X
   
   [1X5.4-1 PosetHomomorphismByFunctionNC[101X
   

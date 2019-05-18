@@ -1,8 +1,15 @@
-#! Shortest path in poset
+#! @Chapter Homotopy
+
+#! @Section Fences
+
+# Shortest path in poset
+#!
 DeclareOperation("PathInPoset",[IsPoset,IsObject,IsObject]);
-#! A shortest fence
+# A shortest fence
+#!
 DeclareOperation("Fence",[IsPosetHomomorphism,IsPosetHomomorphism]);
 #!
 DeclareOperation("AreHomotopic",[IsPosetHomomorphism,IsPosetHomomorphism]);
 #!
 DeclareOperation("ConnectedComponents",[IsPoset]);
+
