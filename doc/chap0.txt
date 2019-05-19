@@ -60,136 +60,151 @@
       1.1-6 ElementsStrictlyComparable
       1.1-7 RemovePoint
       1.1-8 RemoveCoveringRelation
-      1.1-9 IsBeatPoint
-      1.1-10 IsUpBeatPoint
-      1.1-11 IsDownBeatPoint
-      1.1-12 UpBeatPoints
-      1.1-13 DownBeatPoints
-      1.1-14 BeatPoints
-      1.1-15 CorePoset
-      1.1-16 IsContractible
-      1.1-17 HomotopyEquivalence
-      1.1-18 IsWeakPoint
-      1.1-19 IsUpWeakPoint
-      1.1-20 IsDownWeakPoint
-      1.1-21 WeakPoints
-      1.1-22 UpWeakPoints
-      1.1-23 DownWeakPoints
-      1.1-24 WeakCorePoset
-      1.1-25 MinWeakCorePoset
-      1.1-26 IsCollapsible
-      1.1-27 IsQCReduction
-      1.1-28 IsQCopReduction
-      1.1-29 QCCorePoset
-      1.1-30 QCCoresPoset
-  2 [33X[0;0YHomotopy[133X
-    2.1 [33X[0;0YColorings[133X
-      2.1-1 FundamentalGroupByColoring
-      2.1-2 FundamentalGroupByColoring
-    2.2 [33X[0;0YFences[133X
-      2.2-1 PathInPoset
-      2.2-2 Fence
-      2.2-3 AreHomotopic
-      2.2-4 ConnectedComponents
-  3 [33X[0;0YTopology[133X
-    3.1 [33X[0;0YFace poset and order complex[133X
-      3.1-1 FacePoset
-      3.1-2 OrderComplex
-      3.1-3 FacePoset
-      3.1-4 OrderComplex
-      3.1-5 BarycentricSubdivision
-      3.1-6 BarycentricSubdivision
-      3.1-7 BarycentricSubdivision
-      3.1-8 BarycentricSubdivision
-    3.2 [33X[0;0YHomology[133X
-      3.2-1 PosetHomology
-      3.2-2 PosetHomology
-      3.2-3 PosetHomology
-    3.3 [33X[0;0YMore invariants[133X
-      3.3-1 EulerCharacteristic
-      3.3-2 FundamentalGroup
-  4 [33X[0;0YConstructing new posets[133X
-    4.1 [33X[0;0YNatural maps[133X
-      4.1-1 NaturalMaps
-    4.2 [33X[0;0YSome methods for poset homomorphisms[133X
-      4.2-1 SourceMap
-      4.2-2 TargetMap
-      4.2-3 UnderlyingMap
-      4.2-4 InverseImmutable
-      4.2-5 ImageMap
-      4.2-6 ImageMap
-      4.2-7 \^
-    4.3 [33X[0;0YCategorical constructions[133X
-      4.3-1 SubPoset
-      4.3-2 Coproduct
-      4.3-3 Join
-      4.3-4 ConePoset
-      4.3-5 SuspensionPoset
-      4.3-6 OppositePoset
-      4.3-7 MappingCylinderPosetHomomorphism
-      4.3-8 QuotientPoset
-      4.3-9 WedgePosets
-      4.3-10 HomPosets
-      4.3-11 AutomorphismGroup
-      4.3-12 Automorphisms
-  5 [33X[0;0YPosets[133X
-    5.1 [33X[0;0YExamples of posets[133X
-      5.1-1 EmptyPoset
-      5.1-2 MinimalFiniteModelSphere
-      5.1-3 TheWallet
-    5.2 [33X[0;0YThe Poset type[133X
-      5.2-1 Ordering
-      5.2-2 Set
-      5.2-3 Size
-      5.2-4 Iterator
-      5.2-5 \in
-    5.3 [33X[0;0YConstructing posets in different ways[133X
-      5.3-1 PosetByFunctionNC
-      5.3-2 PosetByFunction
-      5.3-3 PosetByOrderMatrix
-      5.3-4 PosetByOrderMatrix
-      5.3-5 PosetByOrderRelation
-      5.3-6 PosetByHasseDiagram
-      5.3-7 PosetByCoveringRelations
-    5.4 [33X[0;0YConstructing poset homomorphisms in different ways[133X
-      5.4-1 PosetHomomorphismByFunctionNC
-      5.4-2 PosetHomomorphismByFunction
-      5.4-3 PosetHomomorphismByImages
-      5.4-4 PosetHomomorphismByMapping
-      5.4-5 IsomorphismPosets
-      5.4-6 CompositionPosetHomomorphisms
-      5.4-7 \*
-      5.4-8 \*
-      5.4-9 \*
-      5.4-10 \^
-    5.5 [33X[0;0YOther useful representations of the ordering[133X
-      5.5-1 RelationByPoset
-      5.5-2 OrderMatrix
-      5.5-3 CoveringRelations
-      5.5-4 UpperCovers
-      5.5-5 UpperCovers
-      5.5-6 LowerCovers
-      5.5-7 LowerCovers
-      5.5-8 MaximalElements
-      5.5-9 MinimalElements
-  6 [33X[0;0YConstructions[133X
-    6.1 [33X[0;0YThe poset associated to a group presentation[133X
-      6.1-1 PosetFpGroup
-      6.1-2 PosetPresentation
-  7 [33X[0;0YMore properties[133X
-    7.1 [33X[0;0YFixed Point Property[133X
-      7.1-1 HasFixedPointProperty
-      7.1-2 Grading
-      7.1-3 Height
-      7.1-4 Height
-  8 [33X[0;0YPosets of subgroups of a finite group[133X
-    8.1 [33X[0;0YPosets of p-subgroups[133X
-      8.1-1 PosetOfSubgroups
-      8.1-2 PosetOfpSubgroups
-      8.1-3 ElementaryAbelianpSubgroups
-      8.1-4 PosetOfElementaryAbelianpSubgroups
-      8.1-5 RadicalpSubgroups
-      8.1-6 PosetOfRadicalpSubgroups
+  2 [33X[0;0YHomotopy theory[133X
+    2.1 [33X[0;0YBeat points and homotopy type[133X
+      2.1-1 IsBeatPoint
+      2.1-2 IsUpBeatPoint
+      2.1-3 IsDownBeatPoint
+      2.1-4 UpBeatPoints
+      2.1-5 DownBeatPoints
+      2.1-6 BeatPoints
+      2.1-7 CorePoset
+      2.1-8 IsContractible
+      2.1-9 HomotopyEquivalence
+    2.2 [33X[0;0YWeak points and simple homotopy type[133X
+      2.2-1 IsWeakPoint
+      2.2-2 IsUpWeakPoint
+      2.2-3 IsDownWeakPoint
+      2.2-4 WeakPoints
+      2.2-5 UpWeakPoints
+      2.2-6 DownWeakPoints
+      2.2-7 WeakCorePoset
+      2.2-8 MinWeakCorePoset
+      2.2-9 IsCollapsible
+    2.3 [33X[0;0YFences[133X
+      2.3-1 PathInPoset
+      2.3-2 Fence
+      2.3-3 AreHomotopic
+      2.3-4 ConnectedComponents
+  3 [33X[0;0YMore reductions[133X
+    3.1 [33X[0;0YQC Reductions[133X
+      3.1-1 IsQCReduction
+      3.1-2 IsQCopReduction
+      3.1-3 QCCorePoset
+      3.1-4 QCCoresPoset
+    3.2 [33X[0;0YMiddle reductions[133X
+    3.3 [33X[0;0YEdge reductions[133X
+      3.3-1 IsDownEdgeReduction
+      3.3-2 IsUpEdgeReduction
+      3.3-3 IsEdgeReduction
+      3.3-4 EdgeReduction
+      3.3-5 EdgeReductionCore
+    3.4 [33X[0;0YRandom reductions[133X
+      3.4-1 RandomReductionCore
+      3.4-2 RandomReduction
+  4 [33X[0;0YHomotopy[133X
+    4.1 [33X[0;0YColorings[133X
+      4.1-1 FundamentalGroupByColoring
+      4.1-2 FundamentalGroupByColoring
+  5 [33X[0;0YTopology[133X
+    5.1 [33X[0;0YFace poset and order complex[133X
+      5.1-1 FacePoset
+      5.1-2 OrderComplex
+      5.1-3 FacePoset
+      5.1-4 OrderComplex
+      5.1-5 BarycentricSubdivision
+      5.1-6 BarycentricSubdivision
+      5.1-7 BarycentricSubdivision
+      5.1-8 BarycentricSubdivision
+    5.2 [33X[0;0YHomology[133X
+      5.2-1 PosetHomology
+      5.2-2 PosetHomology
+      5.2-3 PosetHomology
+    5.3 [33X[0;0YMore invariants[133X
+      5.3-1 EulerCharacteristic
+      5.3-2 FundamentalGroup
+  6 [33X[0;0YConstructing new posets[133X
+    6.1 [33X[0;0YNatural maps[133X
+      6.1-1 NaturalMaps
+    6.2 [33X[0;0YSome methods for poset homomorphisms[133X
+      6.2-1 SourceMap
+      6.2-2 TargetMap
+      6.2-3 UnderlyingMap
+      6.2-4 InverseImmutable
+      6.2-5 ImageMap
+      6.2-6 ImageMap
+      6.2-7 \^
+    6.3 [33X[0;0YCategorical constructions[133X
+      6.3-1 SubPoset
+      6.3-2 Coproduct
+      6.3-3 Join
+      6.3-4 ConePoset
+      6.3-5 SuspensionPoset
+      6.3-6 OppositePoset
+      6.3-7 MappingCylinderPosetHomomorphism
+      6.3-8 QuotientPoset
+      6.3-9 WedgePosets
+      6.3-10 HomPosets
+      6.3-11 AutomorphismGroup
+      6.3-12 Automorphisms
+  7 [33X[0;0YPosets[133X
+    7.1 [33X[0;0YExamples of posets[133X
+      7.1-1 EmptyPoset
+      7.1-2 MinimalFiniteModelSphere
+      7.1-3 TheWallet
+    7.2 [33X[0;0YThe Poset type[133X
+      7.2-1 Ordering
+      7.2-2 Set
+      7.2-3 Size
+      7.2-4 Iterator
+      7.2-5 \in
+    7.3 [33X[0;0YConstructing posets in different ways[133X
+      7.3-1 PosetByFunctionNC
+      7.3-2 PosetByFunction
+      7.3-3 PosetByOrderMatrix
+      7.3-4 PosetByOrderMatrix
+      7.3-5 PosetByOrderRelation
+      7.3-6 PosetByHasseDiagram
+      7.3-7 PosetByCoveringRelations
+    7.4 [33X[0;0YConstructing poset homomorphisms in different ways[133X
+      7.4-1 PosetHomomorphismByFunctionNC
+      7.4-2 PosetHomomorphismByFunction
+      7.4-3 PosetHomomorphismByImages
+      7.4-4 PosetHomomorphismByMapping
+      7.4-5 IsomorphismPosets
+      7.4-6 CompositionPosetHomomorphisms
+      7.4-7 \*
+      7.4-8 \*
+      7.4-9 \*
+      7.4-10 \^
+    7.5 [33X[0;0YOther useful representations of the ordering[133X
+      7.5-1 RelationByPoset
+      7.5-2 OrderMatrix
+      7.5-3 CoveringRelations
+      7.5-4 UpperCovers
+      7.5-5 UpperCovers
+      7.5-6 LowerCovers
+      7.5-7 LowerCovers
+      7.5-8 MaximalElements
+      7.5-9 MinimalElements
+  8 [33X[0;0YConstructions[133X
+    8.1 [33X[0;0YThe poset associated to a group presentation[133X
+      8.1-1 PosetFpGroup
+      8.1-2 PosetPresentation
+  9 [33X[0;0YMore properties[133X
+    9.1 [33X[0;0YFixed Point Property[133X
+      9.1-1 HasFixedPointProperty
+      9.1-2 Grading
+      9.1-3 Height
+      9.1-4 Height
+  10 [33X[0;0YPosets of subgroups of a finite group[133X
+    10.1 [33X[0;0YPosets of p-subgroups[133X
+      10.1-1 PosetOfSubgroups
+      10.1-2 PosetOfpSubgroups
+      10.1-3 ElementaryAbelianpSubgroups
+      10.1-4 PosetOfElementaryAbelianpSubgroups
+      10.1-5 RadicalpSubgroups
+      10.1-6 PosetOfRadicalpSubgroups
   
   
   [32X

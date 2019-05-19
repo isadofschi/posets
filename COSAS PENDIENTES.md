@@ -11,19 +11,20 @@
 falta la parte de spanning collapsible subposets
 
 # Homotopy 
+
 falta la parte de WeakCore y QC
 
-# Traducir los siguientes archivos de https://github.com/ximenafernandez/Finite-Spaces
+# Deformations
 
-* Deformations.sage
+falta la parte de random reductions
 
-* Morse.sage
+# Traducir https://github.com/ximenafernandez/Finite-Spaces/Morse.sage
 
 # Funciones hechas por Kevin
 
 * Más cosas de posets de subgrupos
 
-* Más cosas de fences
+* Más cosas de fences?
 
 # Homotopy Colimits de posets
 
@@ -36,6 +37,7 @@ falta la parte de WeakCore y QC
 
 # Ejemplos de artículos (posiblemente como casos de prueba)
 
+# Pregunta: es razonable que las QC y QCop se llamen UpQC y DownQC? Lo mismo con las Middle y MiddleOp reductions.
 
 # Optimizar cosas
 
@@ -46,6 +48,22 @@ falta la parte de WeakCore y QC
 * HomPosets
 
 * Optimizar todavía más AutomorphismGroup
+
+* Algunas construcciones (por ejemplo cociente y producto) tienen nombres que permiten recuperar los nombres originales de los puntos.
+Esto hace que al iterar muchas veces las construcciones los nombres se vuelvan muy complejos, por ejemplo
+```
+gap> Set(UpOsakiCore(TheWallet()));
+[ [ 2, 
+      [ [ 1, [ 1, [ 1, [ 1, 11 ] ] ] ], 
+          [ 2, 
+              [ [ 1, [ 1, [ 1, 9 ] ] ], 
+                  [ 2, 
+                      [ [ 1, [ 1, 3 ] ], [ 1, [ 1, 6 ] ], [ 1, [ 1, 8 ] ], 
+                          [ 1, [ 1, 10 ] ], 
+                          [ 2, [ [ 1, 4 ], [ 1, 7 ], [ 2, [ 1, 2, 5 ] ] ] ] ] 
+                     ] ] ] ] ] ]
+```
+El UpOsakiCore es un poset de un punto con un nombre muy complejo.
 
 # Preordenes, T_0-ificación
 

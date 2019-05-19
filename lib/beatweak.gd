@@ -23,6 +23,9 @@ DeclareOperation("RemovePoint",[IsPoset,IsObject]);
 DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]);
 
 ###################################################################################
+#! @Chapter Homotopy theory
+
+#! @Section Beat points and homotopy type
 
 #!
 DeclareOperation("IsBeatPoint",[IsPoset,IsObject]);
@@ -51,6 +54,8 @@ DeclareOperation("HomotopyEquivalence",[IsPoset,IsPoset]);
 
 ###################################################################################
 
+#! @Section Weak points and simple homotopy type
+
 #!
 DeclareOperation("IsWeakPoint",[IsPoset,IsObject]); 
 #!
@@ -72,6 +77,9 @@ DeclareOperation("MinWeakCorePoset",[IsPoset]); #to do, que hace?
 DeclareAttribute("IsCollapsible",IsPoset); #to do
 
 ###################################################################################
+#! @Chapter More reductions
+
+#! @Section QC Reductions
 
 #!
 DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]);

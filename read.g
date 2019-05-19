@@ -19,5 +19,6 @@ ReadPackage( "posets", "lib/properties.gi" );
 ReadPackage( "posets", "lib/colorings.gi" );
 ReadPackage( "posets", "lib/presentations.gi" );
 ReadPackage( "posets", "lib/fences.gi" );
+ReadPackage( "posets", "lib/deformations.gi" );
 #E  read.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

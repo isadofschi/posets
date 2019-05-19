@@ -3,29 +3,37 @@
 \makelabel{posets:Table of Contents}{}{X8537FEB07AF2BEC8}
 \makelabel{posets:Classical stuff}{1}{X7A36129182D838F2}
 \makelabel{posets:Elements above and below}{1.1}{X7CCA954783449E97}
-\makelabel{posets:Homotopy}{2}{X7CAB3A75792BA57C}
-\makelabel{posets:Colorings}{2.1}{X877541DD7BA36A7F}
-\makelabel{posets:Fences}{2.2}{X7FF58F3783B2CCF3}
-\makelabel{posets:Topology}{3}{X7CEC1699860AC45A}
-\makelabel{posets:Face poset and order complex}{3.1}{X8423A6D080BED55F}
-\makelabel{posets:Homology}{3.2}{X85A9D5CB8605329C}
-\makelabel{posets:More invariants}{3.3}{X7D6AACAE7D5A57F9}
-\makelabel{posets:Constructing new posets}{4}{X784678777ABAD248}
-\makelabel{posets:Natural maps}{4.1}{X85FE51B6843B30D9}
-\makelabel{posets:Some methods for poset homomorphisms}{4.2}{X7E2F08A68796C9C4}
-\makelabel{posets:Categorical constructions}{4.3}{X7F3D3A1C7CC6BEFC}
-\makelabel{posets:Posets}{5}{X79540DAB85902432}
-\makelabel{posets:Examples of posets}{5.1}{X84B7B0047DF9E391}
-\makelabel{posets:The Poset type}{5.2}{X87298423867F5682}
-\makelabel{posets:Constructing posets in different ways}{5.3}{X7811285285DC32D4}
-\makelabel{posets:Constructing poset homomorphisms in different ways}{5.4}{X7EB9FFCE84A4F500}
-\makelabel{posets:Other useful representations of the ordering}{5.5}{X8799C49A876FA5DA}
-\makelabel{posets:Constructions}{6}{X836F56D77AA04554}
-\makelabel{posets:The poset associated to a group presentation}{6.1}{X8053E9607E124245}
-\makelabel{posets:More properties}{7}{X7DD0A6A57D39D3EF}
-\makelabel{posets:Fixed Point Property}{7.1}{X7EFB64C281EC86E1}
-\makelabel{posets:Posets of subgroups of a finite group}{8}{X83A08BA87CE758FA}
-\makelabel{posets:Posets of p-subgroups}{8.1}{X83924ACE82045755}
+\makelabel{posets:Homotopy theory}{2}{X7D55CBDD86C279C8}
+\makelabel{posets:Beat points and homotopy type}{2.1}{X82E857C28681031B}
+\makelabel{posets:Weak points and simple homotopy type}{2.2}{X85CCF4A27A73F74C}
+\makelabel{posets:Fences}{2.3}{X7FF58F3783B2CCF3}
+\makelabel{posets:More reductions}{3}{X8021F9AA7B310D68}
+\makelabel{posets:QC Reductions}{3.1}{X78D370427BFBFF31}
+\makelabel{posets:Middle reductions}{3.2}{X8194115C7FF22571}
+\makelabel{posets:Edge reductions}{3.3}{X82B86780844D2E6E}
+\makelabel{posets:Random reductions}{3.4}{X8674847081C97AD8}
+\makelabel{posets:Homotopy}{4}{X7CAB3A75792BA57C}
+\makelabel{posets:Colorings}{4.1}{X877541DD7BA36A7F}
+\makelabel{posets:Topology}{5}{X7CEC1699860AC45A}
+\makelabel{posets:Face poset and order complex}{5.1}{X8423A6D080BED55F}
+\makelabel{posets:Homology}{5.2}{X85A9D5CB8605329C}
+\makelabel{posets:More invariants}{5.3}{X7D6AACAE7D5A57F9}
+\makelabel{posets:Constructing new posets}{6}{X784678777ABAD248}
+\makelabel{posets:Natural maps}{6.1}{X85FE51B6843B30D9}
+\makelabel{posets:Some methods for poset homomorphisms}{6.2}{X7E2F08A68796C9C4}
+\makelabel{posets:Categorical constructions}{6.3}{X7F3D3A1C7CC6BEFC}
+\makelabel{posets:Posets}{7}{X79540DAB85902432}
+\makelabel{posets:Examples of posets}{7.1}{X84B7B0047DF9E391}
+\makelabel{posets:The Poset type}{7.2}{X87298423867F5682}
+\makelabel{posets:Constructing posets in different ways}{7.3}{X7811285285DC32D4}
+\makelabel{posets:Constructing poset homomorphisms in different ways}{7.4}{X7EB9FFCE84A4F500}
+\makelabel{posets:Other useful representations of the ordering}{7.5}{X8799C49A876FA5DA}
+\makelabel{posets:Constructions}{8}{X836F56D77AA04554}
+\makelabel{posets:The poset associated to a group presentation}{8.1}{X8053E9607E124245}
+\makelabel{posets:More properties}{9}{X7DD0A6A57D39D3EF}
+\makelabel{posets:Fixed Point Property}{9.1}{X7EFB64C281EC86E1}
+\makelabel{posets:Posets of subgroups of a finite group}{10}{X83A08BA87CE758FA}
+\makelabel{posets:Posets of p-subgroups}{10.1}{X83924ACE82045755}
 \makelabel{posets:Index}{Ind}{X83A0356F839C696F}
 \makelabel{posets:ElementsAbove for isposet,isobject}{1.1.1}{X7CEFE7157E8E8F6D}
 \makelabel{posets:ElementsStrictlyAbove for isposet,isobject}{1.1.2}{X81325C11785A4C14}
@@ -35,104 +43,111 @@
 \makelabel{posets:ElementsStrictlyComparable for isposet,isobject}{1.1.6}{X846F477778914AF5}
 \makelabel{posets:RemovePoint for isposet,isobject}{1.1.7}{X7B91F551807CAB4D}
 \makelabel{posets:RemoveCoveringRelation for isposet,islist}{1.1.8}{X79626359875871C2}
-\makelabel{posets:IsBeatPoint for isposet,isobject}{1.1.9}{X78C4AAAA7EF9CF51}
-\makelabel{posets:IsUpBeatPoint for isposet,isobject}{1.1.10}{X86742B0F7B0E0FD6}
-\makelabel{posets:IsDownBeatPoint for isposet,isobject}{1.1.11}{X83F3D3C987228939}
-\makelabel{posets:UpBeatPoints for isposet}{1.1.12}{X82AE6CF07F6AA1FF}
-\makelabel{posets:DownBeatPoints for isposet}{1.1.13}{X7E12286E7B07A5E8}
-\makelabel{posets:BeatPoints for isposet}{1.1.14}{X7E57284285531F66}
-\makelabel{posets:CorePoset for isposet}{1.1.15}{X7EED44987C6EA564}
-\makelabel{posets:IsContractible for isposet}{1.1.16}{X84A44E407DB45DDC}
-\makelabel{posets:HomotopyEquivalence for isposet,isposet}{1.1.17}{X834C72DA86CE2079}
-\makelabel{posets:IsWeakPoint for isposet,isobject}{1.1.18}{X87F66C2D807F124C}
-\makelabel{posets:IsUpWeakPoint for isposet,isobject}{1.1.19}{X7946ED887BD7BC61}
-\makelabel{posets:IsDownWeakPoint for isposet,isobject}{1.1.20}{X7CC1154E7916BFA9}
-\makelabel{posets:WeakPoints for isposet}{1.1.21}{X857D194683096554}
-\makelabel{posets:UpWeakPoints for isposet}{1.1.22}{X79845DF481EC7CE2}
-\makelabel{posets:DownWeakPoints for isposet}{1.1.23}{X8538196A7BDE165F}
-\makelabel{posets:WeakCorePoset for isposet}{1.1.24}{X7A40DF177A400046}
-\makelabel{posets:MinWeakCorePoset for isposet}{1.1.25}{X7BE990127E61F1E2}
-\makelabel{posets:IsCollapsible for isposet}{1.1.26}{X8660FF0E8070B81C}
-\makelabel{posets:IsQCReduction for isposet,isobject,isobject}{1.1.27}{X7FA6909581D35912}
-\makelabel{posets:IsQCopReduction for isposet,isobject,isobject}{1.1.28}{X785208D682355A44}
-\makelabel{posets:QCCorePoset for isposet}{1.1.29}{X850D9B327AE0D7AA}
-\makelabel{posets:QCCoresPoset for isposet}{1.1.30}{X83FC0F7783F44940}
-\makelabel{posets:FundamentalGroupByColoring for isposet,islist}{2.1.1}{X79179ABF827D5E54}
-\makelabel{posets:FundamentalGroupByColoring for isposet}{2.1.2}{X87F22F127BB4150C}
-\makelabel{posets:PathInPoset for isposet,isobject,isobject}{2.2.1}{X7C48AC577BE9417F}
-\makelabel{posets:Fence for isposethomomorphism,isposethomomorphism}{2.2.2}{X83502BF4874AE59A}
-\makelabel{posets:AreHomotopic for isposethomomorphism,isposethomomorphism}{2.2.3}{X79E597CF7CFD91FB}
-\makelabel{posets:ConnectedComponents for isposet}{2.2.4}{X7C23C70979BB6B3D}
-\makelabel{posets:FacePoset for ishapsimplicialcomplex}{3.1.1}{X7D8F88A980893175}
-\makelabel{posets:OrderComplex for isposet}{3.1.2}{X854811497CD2F578}
-\makelabel{posets:FacePoset for ishapsimplicialmap}{3.1.3}{X872D6CD5803151E3}
-\makelabel{posets:OrderComplex for isposethomomorphism}{3.1.4}{X7F3A2CB380BA1B46}
-\makelabel{posets:BarycentricSubdivision for isposet}{3.1.5}{X852C5CE086A8448B}
-\makelabel{posets:BarycentricSubdivision for ishapsimplicialcomplex}{3.1.6}{X8484E2EB84D25923}
-\makelabel{posets:BarycentricSubdivision for ishapsimplicialmap}{3.1.7}{X81666F807A4E4C5C}
-\makelabel{posets:BarycentricSubdivision for isposethomomorphism}{3.1.8}{X80D636B27A476854}
-\makelabel{posets:PosetHomology for isposet}{3.2.1}{X7E98C6F77B26A7AB}
-\makelabel{posets:PosetHomology for isposet,isint}{3.2.2}{X7967C618848598F6}
-\makelabel{posets:PosetHomology for isposethomomorphism,isint}{3.2.3}{X7AB7093A83B4F2B9}
-\makelabel{posets:EulerCharacteristic for isposet}{3.3.1}{X7B91046281DED4DA}
-\makelabel{posets:FundamentalGroup for isposet}{3.3.2}{X7CEB48BC852900E2}
-\makelabel{posets:NaturalMaps for isposet}{4.1.1}{X7E1ECC10824BE91D}
-\makelabel{posets:SourceMap for isposethomomorphism}{4.2.1}{X7BE74C2C80DD7FCF}
-\makelabel{posets:TargetMap for isposethomomorphism}{4.2.2}{X78AC126382872D16}
-\makelabel{posets:UnderlyingMap for isposethomomorphism}{4.2.3}{X87910E2F827AF07E}
-\makelabel{posets:InverseImmutable for isposethomomorphism}{4.2.4}{X83B505FE81E9A1F4}
-\makelabel{posets:ImageMap for isposethomomorphism}{4.2.5}{X7974453A840EC7EE}
-\makelabel{posets:ImageMap for isposethomomorphism,isobject}{4.2.6}{X85B7CA997B4891A2}
-\makelabel{posets:SubPoset for isposet,islist}{4.3.1}{X839BC8B682C2CE94}
-\makelabel{posets:Coproduct}{4.3.2}{X7E8036DF7AC65994}
-\makelabel{posets:Join}{4.3.3}{X7870C5F085DD4D77}
-\makelabel{posets:ConePoset for isposet}{4.3.4}{X81D5F62E7D3D60C5}
-\makelabel{posets:SuspensionPoset for isposet}{4.3.5}{X83EED1627E94BEE5}
-\makelabel{posets:OppositePoset for isposet}{4.3.6}{X7D3E2BA57C736659}
-\makelabel{posets:MappingCylinderPosetHomomorphism for isposethomomorphism}{4.3.7}{X8467A35E823D7FE9}
-\makelabel{posets:QuotientPoset for isposet,islist}{4.3.8}{X7F735BA57B7DEF13}
-\makelabel{posets:WedgePosets for islist}{4.3.9}{X80248EAB820609F9}
-\makelabel{posets:HomPosets for isposet,isposet}{4.3.10}{X7CB6F58E7ABB2C98}
-\makelabel{posets:AutomorphismGroup for isposet}{4.3.11}{X7C6813D27F0BD0F8}
-\makelabel{posets:Automorphisms for isposet}{4.3.12}{X7DB3A0DA8658B340}
-\makelabel{posets:EmptyPoset}{5.1.1}{X7946A46C801A0365}
-\makelabel{posets:MinimalFiniteModelSphere for isint}{5.1.2}{X7AAC4B76878D6AED}
-\makelabel{posets:TheWallet}{5.1.3}{X87065C0782A8EF77}
-\makelabel{posets:Ordering for isposet}{5.2.1}{X7F1EFF6284A84223}
-\makelabel{posets:Set for isposet}{5.2.2}{X7E328F927B4D8C81}
-\makelabel{posets:Size for isposet}{5.2.3}{X838944D27EB9732C}
-\makelabel{posets:Iterator for isposet}{5.2.4}{X87325A0A83395ED7}
-\makelabel{posets:PosetByFunctionNC for islist,isfunction}{5.3.1}{X7DA113E1813BFCE2}
-\makelabel{posets:PosetByFunction for islist,isfunction}{5.3.2}{X8451037E860B35DE}
-\makelabel{posets:PosetByOrderMatrix for islist}{5.3.3}{X78ED12D1784DA6A9}
-\makelabel{posets:PosetByOrderMatrix for islist,islist}{5.3.4}{X79BE0F957986CCF5}
-\makelabel{posets:PosetByOrderRelation for ispartialorderbinaryrelation}{5.3.5}{X8116B87D82E95551}
-\makelabel{posets:PosetByHasseDiagram for ishassediagram}{5.3.6}{X7DC0448A8515DFFE}
-\makelabel{posets:PosetByCoveringRelations for islist, islist}{5.3.7}{X7FC326A77EAB8BB7}
-\makelabel{posets:PosetHomomorphismByFunctionNC for isposet,isposet,isfunction}{5.4.1}{X87C878E8822573FE}
-\makelabel{posets:PosetHomomorphismByFunction for isposet,isposet,isfunction}{5.4.2}{X87BC372284762BCE}
-\makelabel{posets:PosetHomomorphismByImages for isposet,isposet,islist}{5.4.3}{X7DB81BAD78C3943E}
-\makelabel{posets:PosetHomomorphismByMapping for isposet,isposet,ismapping}{5.4.4}{X7B1E190E8735AA6E}
-\makelabel{posets:IsomorphismPosets for isposet,isposet}{5.4.5}{X82388C9A82F58546}
-\makelabel{posets:CompositionPosetHomomorphisms for isposethomomorphism,isposethomomorphism}{5.4.6}{X7955B5E585AEB10D}
-\makelabel{posets:RelationByPoset for isposet}{5.5.1}{X824E42957F55214C}
-\makelabel{posets:OrderMatrix for isposet}{5.5.2}{X80E1B16F8665FCC5}
-\makelabel{posets:CoveringRelations for isposet}{5.5.3}{X8361159B7F4B95B6}
-\makelabel{posets:UpperCovers for isposet}{5.5.4}{X85B8238A7AEFA93B}
-\makelabel{posets:UpperCovers for isposet,isobject}{5.5.5}{X7A4C2C317F67E132}
-\makelabel{posets:LowerCovers for isposet}{5.5.6}{X7DDB0C3480284236}
-\makelabel{posets:LowerCovers for isposet,isobject}{5.5.7}{X7AF8164985A00A3F}
-\makelabel{posets:MaximalElements for isposet}{5.5.8}{X832BA4017C61E41D}
-\makelabel{posets:MinimalElements for isposet}{5.5.9}{X8545F2668166C141}
-\makelabel{posets:PosetFpGroup for isfpgroup}{6.1.1}{X80FF5E1E79A71DD3}
-\makelabel{posets:PosetPresentation for ispresentation}{6.1.2}{X7936DE287DAD0098}
-\makelabel{posets:HasFixedPointProperty for isposet}{7.1.1}{X82C6E100783909E9}
-\makelabel{posets:Grading for isposet}{7.1.2}{X78332805858B98FA}
-\makelabel{posets:Height for isposet,isobject}{7.1.3}{X825AB55D7FE1243E}
-\makelabel{posets:Height for isposet}{7.1.4}{X7C20F1977AAC8E4D}
-\makelabel{posets:PosetOfSubgroups for isgroup and isfinite}{8.1.1}{X7D52788F816D834C}
-\makelabel{posets:PosetOfpSubgroups for isgroup and isfinite,isint}{8.1.2}{X84B3C8DD866731CB}
-\makelabel{posets:ElementaryAbelianpSubgroups}{8.1.3}{X78F6E6D084E82822}
-\makelabel{posets:PosetOfElementaryAbelianpSubgroups for isgroup and isfinite,isint}{8.1.4}{X7E04D33E81244EFB}
-\makelabel{posets:RadicalpSubgroups}{8.1.5}{X7C952BC37BE44409}
-\makelabel{posets:PosetOfRadicalpSubgroups for isgroup and isfinite,isint}{8.1.6}{X7B6CFD077D399862}
+\makelabel{posets:IsBeatPoint for isposet,isobject}{2.1.1}{X78C4AAAA7EF9CF51}
+\makelabel{posets:IsUpBeatPoint for isposet,isobject}{2.1.2}{X86742B0F7B0E0FD6}
+\makelabel{posets:IsDownBeatPoint for isposet,isobject}{2.1.3}{X83F3D3C987228939}
+\makelabel{posets:UpBeatPoints for isposet}{2.1.4}{X82AE6CF07F6AA1FF}
+\makelabel{posets:DownBeatPoints for isposet}{2.1.5}{X7E12286E7B07A5E8}
+\makelabel{posets:BeatPoints for isposet}{2.1.6}{X7E57284285531F66}
+\makelabel{posets:CorePoset for isposet}{2.1.7}{X7EED44987C6EA564}
+\makelabel{posets:IsContractible for isposet}{2.1.8}{X84A44E407DB45DDC}
+\makelabel{posets:HomotopyEquivalence for isposet,isposet}{2.1.9}{X834C72DA86CE2079}
+\makelabel{posets:IsWeakPoint for isposet,isobject}{2.2.1}{X87F66C2D807F124C}
+\makelabel{posets:IsUpWeakPoint for isposet,isobject}{2.2.2}{X7946ED887BD7BC61}
+\makelabel{posets:IsDownWeakPoint for isposet,isobject}{2.2.3}{X7CC1154E7916BFA9}
+\makelabel{posets:WeakPoints for isposet}{2.2.4}{X857D194683096554}
+\makelabel{posets:UpWeakPoints for isposet}{2.2.5}{X79845DF481EC7CE2}
+\makelabel{posets:DownWeakPoints for isposet}{2.2.6}{X8538196A7BDE165F}
+\makelabel{posets:WeakCorePoset for isposet}{2.2.7}{X7A40DF177A400046}
+\makelabel{posets:MinWeakCorePoset for isposet}{2.2.8}{X7BE990127E61F1E2}
+\makelabel{posets:IsCollapsible for isposet}{2.2.9}{X8660FF0E8070B81C}
+\makelabel{posets:PathInPoset for isposet,isobject,isobject}{2.3.1}{X7C48AC577BE9417F}
+\makelabel{posets:Fence for isposethomomorphism,isposethomomorphism}{2.3.2}{X83502BF4874AE59A}
+\makelabel{posets:AreHomotopic for isposethomomorphism,isposethomomorphism}{2.3.3}{X79E597CF7CFD91FB}
+\makelabel{posets:ConnectedComponents for isposet}{2.3.4}{X7C23C70979BB6B3D}
+\makelabel{posets:IsQCReduction for isposet,isobject,isobject}{3.1.1}{X7FA6909581D35912}
+\makelabel{posets:IsQCopReduction for isposet,isobject,isobject}{3.1.2}{X785208D682355A44}
+\makelabel{posets:QCCorePoset for isposet}{3.1.3}{X850D9B327AE0D7AA}
+\makelabel{posets:QCCoresPoset for isposet}{3.1.4}{X83FC0F7783F44940}
+\makelabel{posets:IsDownEdgeReduction for isposet,islist}{3.3.1}{X804789DE7AF62FB2}
+\makelabel{posets:IsUpEdgeReduction for isposet,islist}{3.3.2}{X7D3D1C6B81653ED8}
+\makelabel{posets:IsEdgeReduction for isposet,islist}{3.3.3}{X838BDC697A8EC645}
+\makelabel{posets:EdgeReduction for isposet,islist}{3.3.4}{X84F5AA52805B42E2}
+\makelabel{posets:EdgeReductionCore for isposet}{3.3.5}{X7B629D17848585D4}
+\makelabel{posets:RandomReductionCore for isposet}{3.4.1}{X7BCDF52A7C50E242}
+\makelabel{posets:RandomReduction for isposet,isint}{3.4.2}{X7BE2B9468069F86F}
+\makelabel{posets:FundamentalGroupByColoring for isposet,islist}{4.1.1}{X79179ABF827D5E54}
+\makelabel{posets:FundamentalGroupByColoring for isposet}{4.1.2}{X87F22F127BB4150C}
+\makelabel{posets:FacePoset for ishapsimplicialcomplex}{5.1.1}{X7D8F88A980893175}
+\makelabel{posets:OrderComplex for isposet}{5.1.2}{X854811497CD2F578}
+\makelabel{posets:FacePoset for ishapsimplicialmap}{5.1.3}{X872D6CD5803151E3}
+\makelabel{posets:OrderComplex for isposethomomorphism}{5.1.4}{X7F3A2CB380BA1B46}
+\makelabel{posets:BarycentricSubdivision for isposet}{5.1.5}{X852C5CE086A8448B}
+\makelabel{posets:BarycentricSubdivision for ishapsimplicialcomplex}{5.1.6}{X8484E2EB84D25923}
+\makelabel{posets:BarycentricSubdivision for ishapsimplicialmap}{5.1.7}{X81666F807A4E4C5C}
+\makelabel{posets:BarycentricSubdivision for isposethomomorphism}{5.1.8}{X80D636B27A476854}
+\makelabel{posets:PosetHomology for isposet}{5.2.1}{X7E98C6F77B26A7AB}
+\makelabel{posets:PosetHomology for isposet,isint}{5.2.2}{X7967C618848598F6}
+\makelabel{posets:PosetHomology for isposethomomorphism,isint}{5.2.3}{X7AB7093A83B4F2B9}
+\makelabel{posets:EulerCharacteristic for isposet}{5.3.1}{X7B91046281DED4DA}
+\makelabel{posets:FundamentalGroup for isposet}{5.3.2}{X7CEB48BC852900E2}
+\makelabel{posets:NaturalMaps for isposet}{6.1.1}{X7E1ECC10824BE91D}
+\makelabel{posets:SourceMap for isposethomomorphism}{6.2.1}{X7BE74C2C80DD7FCF}
+\makelabel{posets:TargetMap for isposethomomorphism}{6.2.2}{X78AC126382872D16}
+\makelabel{posets:UnderlyingMap for isposethomomorphism}{6.2.3}{X87910E2F827AF07E}
+\makelabel{posets:InverseImmutable for isposethomomorphism}{6.2.4}{X83B505FE81E9A1F4}
+\makelabel{posets:ImageMap for isposethomomorphism}{6.2.5}{X7974453A840EC7EE}
+\makelabel{posets:ImageMap for isposethomomorphism,isobject}{6.2.6}{X85B7CA997B4891A2}
+\makelabel{posets:SubPoset for isposet,islist}{6.3.1}{X839BC8B682C2CE94}
+\makelabel{posets:Coproduct}{6.3.2}{X7E8036DF7AC65994}
+\makelabel{posets:Join}{6.3.3}{X7870C5F085DD4D77}
+\makelabel{posets:ConePoset for isposet}{6.3.4}{X81D5F62E7D3D60C5}
+\makelabel{posets:SuspensionPoset for isposet}{6.3.5}{X83EED1627E94BEE5}
+\makelabel{posets:OppositePoset for isposet}{6.3.6}{X7D3E2BA57C736659}
+\makelabel{posets:MappingCylinderPosetHomomorphism for isposethomomorphism}{6.3.7}{X8467A35E823D7FE9}
+\makelabel{posets:QuotientPoset for isposet,islist}{6.3.8}{X7F735BA57B7DEF13}
+\makelabel{posets:WedgePosets for islist}{6.3.9}{X80248EAB820609F9}
+\makelabel{posets:HomPosets for isposet,isposet}{6.3.10}{X7CB6F58E7ABB2C98}
+\makelabel{posets:AutomorphismGroup for isposet}{6.3.11}{X7C6813D27F0BD0F8}
+\makelabel{posets:Automorphisms for isposet}{6.3.12}{X7DB3A0DA8658B340}
+\makelabel{posets:EmptyPoset}{7.1.1}{X7946A46C801A0365}
+\makelabel{posets:MinimalFiniteModelSphere for isint}{7.1.2}{X7AAC4B76878D6AED}
+\makelabel{posets:TheWallet}{7.1.3}{X87065C0782A8EF77}
+\makelabel{posets:Ordering for isposet}{7.2.1}{X7F1EFF6284A84223}
+\makelabel{posets:Set for isposet}{7.2.2}{X7E328F927B4D8C81}
+\makelabel{posets:Size for isposet}{7.2.3}{X838944D27EB9732C}
+\makelabel{posets:Iterator for isposet}{7.2.4}{X87325A0A83395ED7}
+\makelabel{posets:PosetByFunctionNC for islist,isfunction}{7.3.1}{X7DA113E1813BFCE2}
+\makelabel{posets:PosetByFunction for islist,isfunction}{7.3.2}{X8451037E860B35DE}
+\makelabel{posets:PosetByOrderMatrix for islist}{7.3.3}{X78ED12D1784DA6A9}
+\makelabel{posets:PosetByOrderMatrix for islist,islist}{7.3.4}{X79BE0F957986CCF5}
+\makelabel{posets:PosetByOrderRelation for ispartialorderbinaryrelation}{7.3.5}{X8116B87D82E95551}
+\makelabel{posets:PosetByHasseDiagram for ishassediagram}{7.3.6}{X7DC0448A8515DFFE}
+\makelabel{posets:PosetByCoveringRelations for islist, islist}{7.3.7}{X7FC326A77EAB8BB7}
+\makelabel{posets:PosetHomomorphismByFunctionNC for isposet,isposet,isfunction}{7.4.1}{X87C878E8822573FE}
+\makelabel{posets:PosetHomomorphismByFunction for isposet,isposet,isfunction}{7.4.2}{X87BC372284762BCE}
+\makelabel{posets:PosetHomomorphismByImages for isposet,isposet,islist}{7.4.3}{X7DB81BAD78C3943E}
+\makelabel{posets:PosetHomomorphismByMapping for isposet,isposet,ismapping}{7.4.4}{X7B1E190E8735AA6E}
+\makelabel{posets:IsomorphismPosets for isposet,isposet}{7.4.5}{X82388C9A82F58546}
+\makelabel{posets:CompositionPosetHomomorphisms for isposethomomorphism,isposethomomorphism}{7.4.6}{X7955B5E585AEB10D}
+\makelabel{posets:RelationByPoset for isposet}{7.5.1}{X824E42957F55214C}
+\makelabel{posets:OrderMatrix for isposet}{7.5.2}{X80E1B16F8665FCC5}
+\makelabel{posets:CoveringRelations for isposet}{7.5.3}{X8361159B7F4B95B6}
+\makelabel{posets:UpperCovers for isposet}{7.5.4}{X85B8238A7AEFA93B}
+\makelabel{posets:UpperCovers for isposet,isobject}{7.5.5}{X7A4C2C317F67E132}
+\makelabel{posets:LowerCovers for isposet}{7.5.6}{X7DDB0C3480284236}
+\makelabel{posets:LowerCovers for isposet,isobject}{7.5.7}{X7AF8164985A00A3F}
+\makelabel{posets:MaximalElements for isposet}{7.5.8}{X832BA4017C61E41D}
+\makelabel{posets:MinimalElements for isposet}{7.5.9}{X8545F2668166C141}
+\makelabel{posets:PosetFpGroup for isfpgroup}{8.1.1}{X80FF5E1E79A71DD3}
+\makelabel{posets:PosetPresentation for ispresentation}{8.1.2}{X7936DE287DAD0098}
+\makelabel{posets:HasFixedPointProperty for isposet}{9.1.1}{X82C6E100783909E9}
+\makelabel{posets:Grading for isposet}{9.1.2}{X78332805858B98FA}
+\makelabel{posets:Height for isposet,isobject}{9.1.3}{X825AB55D7FE1243E}
+\makelabel{posets:Height for isposet}{9.1.4}{X7C20F1977AAC8E4D}
+\makelabel{posets:PosetOfSubgroups for isgroup and isfinite}{10.1.1}{X7D52788F816D834C}
+\makelabel{posets:PosetOfpSubgroups for isgroup and isfinite,isint}{10.1.2}{X84B3C8DD866731CB}
+\makelabel{posets:ElementaryAbelianpSubgroups}{10.1.3}{X78F6E6D084E82822}
+\makelabel{posets:PosetOfElementaryAbelianpSubgroups for isgroup and isfinite,isint}{10.1.4}{X7E04D33E81244EFB}
+\makelabel{posets:RadicalpSubgroups}{10.1.5}{X7C952BC37BE44409}
+\makelabel{posets:PosetOfRadicalpSubgroups for isgroup and isfinite,isint}{10.1.6}{X7B6CFD077D399862}

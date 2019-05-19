@@ -8,7 +8,7 @@
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<title>GAP (Posets) - Chapter 2: Homotopy</title>
+<title>GAP (Posets) - Chapter 2: Homotopy theory</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -18,74 +18,184 @@
 <body class="chap2"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap2.html">[MathJax off]</a></p>
-<p><a id="X7CAB3A75792BA57C" name="X7CAB3A75792BA57C"></a></p>
-<div class="ChapSects"><a href="chap2_mj.html#X7CAB3A75792BA57C">2 <span class="Heading">Homotopy</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X877541DD7BA36A7F">2.1 <span class="Heading">Colorings</span></a>
+<p><a id="X7D55CBDD86C279C8" name="X7D55CBDD86C279C8"></a></p>
+<div class="ChapSects"><a href="chap2_mj.html#X7D55CBDD86C279C8">2 <span class="Heading">Homotopy theory</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X82E857C28681031B">2.1 <span class="Heading">Beat points and homotopy type</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X79179ABF827D5E54">2.1-1 FundamentalGroupByColoring</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X87F22F127BB4150C">2.1-2 FundamentalGroupByColoring</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X78C4AAAA7EF9CF51">2.1-1 IsBeatPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X86742B0F7B0E0FD6">2.1-2 IsUpBeatPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83F3D3C987228939">2.1-3 IsDownBeatPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X82AE6CF07F6AA1FF">2.1-4 UpBeatPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E12286E7B07A5E8">2.1-5 DownBeatPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E57284285531F66">2.1-6 BeatPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7EED44987C6EA564">2.1-7 CorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X84A44E407DB45DDC">2.1-8 IsContractible</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X834C72DA86CE2079">2.1-9 HomotopyEquivalence</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7FF58F3783B2CCF3">2.2 <span class="Heading">Fences</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X85CCF4A27A73F74C">2.2 <span class="Heading">Weak points and simple homotopy type</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C48AC577BE9417F">2.2-1 PathInPoset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83502BF4874AE59A">2.2-2 Fence</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X79E597CF7CFD91FB">2.2-3 AreHomotopic</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C23C70979BB6B3D">2.2-4 ConnectedComponents</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X87F66C2D807F124C">2.2-1 IsWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7946ED887BD7BC61">2.2-2 IsUpWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CC1154E7916BFA9">2.2-3 IsDownWeakPoint</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X857D194683096554">2.2-4 WeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X79845DF481EC7CE2">2.2-5 UpWeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8538196A7BDE165F">2.2-6 DownWeakPoints</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7A40DF177A400046">2.2-7 WeakCorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7BE990127E61F1E2">2.2-8 MinWeakCorePoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8660FF0E8070B81C">2.2-9 IsCollapsible</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7FF58F3783B2CCF3">2.3 <span class="Heading">Fences</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C48AC577BE9417F">2.3-1 PathInPoset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83502BF4874AE59A">2.3-2 Fence</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X79E597CF7CFD91FB">2.3-3 AreHomotopic</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C23C70979BB6B3D">2.3-4 ConnectedComponents</a></span>
 </div></div>
 </div>
 
-<h3>2 <span class="Heading">Homotopy</span></h3>
+<h3>2 <span class="Heading">Homotopy theory</span></h3>
 
-<p><a id="X877541DD7BA36A7F" name="X877541DD7BA36A7F"></a></p>
+<p><a id="X82E857C28681031B" name="X82E857C28681031B"></a></p>
 
-<h4>2.1 <span class="Heading">Colorings</span></h4>
+<h4>2.1 <span class="Heading">Beat points and homotopy type</span></h4>
 
-<p><a id="X79179ABF827D5E54" name="X79179ABF827D5E54"></a></p>
+<p><a id="X78C4AAAA7EF9CF51" name="X78C4AAAA7EF9CF51"></a></p>
 
-<h5>2.1-1 FundamentalGroupByColoring</h5>
+<h5>2.1-1 IsBeatPoint</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FundamentalGroupByColoring</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p><a id="X87F22F127BB4150C" name="X87F22F127BB4150C"></a></p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsBeatPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X86742B0F7B0E0FD6" name="X86742B0F7B0E0FD6"></a></p>
 
-<h5>2.1-2 FundamentalGroupByColoring</h5>
+<h5>2.1-2 IsUpBeatPoint</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FundamentalGroupByColoring</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsUpBeatPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X83F3D3C987228939" name="X83F3D3C987228939"></a></p>
+
+<h5>2.1-3 IsDownBeatPoint</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDownBeatPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X82AE6CF07F6AA1FF" name="X82AE6CF07F6AA1FF"></a></p>
+
+<h5>2.1-4 UpBeatPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpBeatPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X7E12286E7B07A5E8" name="X7E12286E7B07A5E8"></a></p>
+
+<h5>2.1-5 DownBeatPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DownBeatPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X7E57284285531F66" name="X7E57284285531F66"></a></p>
+
+<h5>2.1-6 BeatPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; BeatPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X7EED44987C6EA564" name="X7EED44987C6EA564"></a></p>
+
+<h5>2.1-7 CorePoset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CorePoset</code>( <var class="Arg">X</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a core of X</p>
+
+<p>the natural maps are the inclusion i: core(X) --&gt; X and the retraction r: X --&gt; core(X)</p>
+
+<p><a id="X84A44E407DB45DDC" name="X84A44E407DB45DDC"></a></p>
+
+<h5>2.1-8 IsContractible</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsContractible</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X834C72DA86CE2079" name="X834C72DA86CE2079"></a></p>
+
+<h5>2.1-9 HomotopyEquivalence</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HomotopyEquivalence</code>( <var class="Arg">X</var>, <var class="Arg">Y</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: a homotopy equivalence <span class="SimpleMath">\(X\to Y\)</span> or fail if X and Y are not homotopy equivalent</p>
+
+<p><a id="X85CCF4A27A73F74C" name="X85CCF4A27A73F74C"></a></p>
+
+<h4>2.2 <span class="Heading">Weak points and simple homotopy type</span></h4>
+
+<p><a id="X87F66C2D807F124C" name="X87F66C2D807F124C"></a></p>
+
+<h5>2.2-1 IsWeakPoint</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X7946ED887BD7BC61" name="X7946ED887BD7BC61"></a></p>
+
+<h5>2.2-2 IsUpWeakPoint</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsUpWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X7CC1154E7916BFA9" name="X7CC1154E7916BFA9"></a></p>
+
+<h5>2.2-3 IsDownWeakPoint</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDownWeakPoint</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X857D194683096554" name="X857D194683096554"></a></p>
+
+<h5>2.2-4 WeakPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X79845DF481EC7CE2" name="X79845DF481EC7CE2"></a></p>
+
+<h5>2.2-5 UpWeakPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UpWeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X8538196A7BDE165F" name="X8538196A7BDE165F"></a></p>
+
+<h5>2.2-6 DownWeakPoints</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DownWeakPoints</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p><a id="X7A40DF177A400046" name="X7A40DF177A400046"></a></p>
+
+<h5>2.2-7 WeakCorePoset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WeakCorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X7BE990127E61F1E2" name="X7BE990127E61F1E2"></a></p>
+
+<h5>2.2-8 MinWeakCorePoset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MinWeakCorePoset</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X8660FF0E8070B81C" name="X8660FF0E8070B81C"></a></p>
+
+<h5>2.2-9 IsCollapsible</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCollapsible</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p><a id="X7FF58F3783B2CCF3" name="X7FF58F3783B2CCF3"></a></p>
 
-<h4>2.2 <span class="Heading">Fences</span></h4>
+<h4>2.3 <span class="Heading">Fences</span></h4>
 
 <p><a id="X7C48AC577BE9417F" name="X7C48AC577BE9417F"></a></p>
 
-<h5>2.2-1 PathInPoset</h5>
+<h5>2.3-1 PathInPoset</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PathInPoset</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var>, <var class="Arg">arg3</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X83502BF4874AE59A" name="X83502BF4874AE59A"></a></p>
 
-<h5>2.2-2 Fence</h5>
+<h5>2.3-2 Fence</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Fence</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X79E597CF7CFD91FB" name="X79E597CF7CFD91FB"></a></p>
 
-<h5>2.2-3 AreHomotopic</h5>
+<h5>2.3-3 AreHomotopic</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AreHomotopic</code>( <var class="Arg">arg1</var>, <var class="Arg">arg2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X7C23C70979BB6B3D" name="X7C23C70979BB6B3D"></a></p>
 
-<h5>2.2-4 ConnectedComponents</h5>
+<h5>2.3-4 ConnectedComponents</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConnectedComponents</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
