@@ -1,6 +1,6 @@
 gap> P:=PosetOfElementaryAbelianpSubgroups(SymmetricGroup(6),2);
 <finite poset of size 270>
-gap> coreP:=CorePoset(P);
+gap> coreP:=Core(P);
 <finite poset of size 105>
 gap> r:=NaturalMaps(coreP)[2];
 <order preserving map>

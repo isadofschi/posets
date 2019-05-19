@@ -49,7 +49,7 @@
 \makelabel{posets:UpBeatPoints for isposet}{2.1.4}{X82AE6CF07F6AA1FF}
 \makelabel{posets:DownBeatPoints for isposet}{2.1.5}{X7E12286E7B07A5E8}
 \makelabel{posets:BeatPoints for isposet}{2.1.6}{X7E57284285531F66}
-\makelabel{posets:CorePoset for isposet}{2.1.7}{X7EED44987C6EA564}
+\makelabel{posets:Core for isposet}{2.1.7}{X7CF10B977AE69D49}
 \makelabel{posets:IsContractible for isposet}{2.1.8}{X84A44E407DB45DDC}
 \makelabel{posets:HomotopyEquivalence for isposet,isposet}{2.1.9}{X834C72DA86CE2079}
 \makelabel{posets:IsWeakPoint for isposet,isobject}{2.2.1}{X87F66C2D807F124C}
@@ -58,8 +58,8 @@
 \makelabel{posets:WeakPoints for isposet}{2.2.4}{X857D194683096554}
 \makelabel{posets:UpWeakPoints for isposet}{2.2.5}{X79845DF481EC7CE2}
 \makelabel{posets:DownWeakPoints for isposet}{2.2.6}{X8538196A7BDE165F}
-\makelabel{posets:WeakCorePoset for isposet}{2.2.7}{X7A40DF177A400046}
-\makelabel{posets:MinWeakCorePoset for isposet}{2.2.8}{X7BE990127E61F1E2}
+\makelabel{posets:WeakCore for isposet}{2.2.7}{X836FEC177D3FD27C}
+\makelabel{posets:MinWeakCore for isposet}{2.2.8}{X82FC52D28464FC64}
 \makelabel{posets:IsCollapsible for isposet}{2.2.9}{X8660FF0E8070B81C}
 \makelabel{posets:PathInPoset for isposet,isobject,isobject}{2.3.1}{X7C48AC577BE9417F}
 \makelabel{posets:Fence for isposethomomorphism,isposethomomorphism}{2.3.2}{X83502BF4874AE59A}
@@ -67,8 +67,7 @@
 \makelabel{posets:ConnectedComponents for isposet}{2.3.4}{X7C23C70979BB6B3D}
 \makelabel{posets:IsQCReduction for isposet,isobject,isobject}{3.1.1}{X7FA6909581D35912}
 \makelabel{posets:IsQCopReduction for isposet,isobject,isobject}{3.1.2}{X785208D682355A44}
-\makelabel{posets:QCCorePoset for isposet}{3.1.3}{X850D9B327AE0D7AA}
-\makelabel{posets:QCCoresPoset for isposet}{3.1.4}{X83FC0F7783F44940}
+\makelabel{posets:QCCore for isposet}{3.1.3}{X855B50587B20018B}
 \makelabel{posets:IsDownEdgeReduction for isposet,islist}{3.3.1}{X804789DE7AF62FB2}
 \makelabel{posets:IsUpEdgeReduction for isposet,islist}{3.3.2}{X7D3D1C6B81653ED8}
 \makelabel{posets:IsEdgeReduction for isposet,islist}{3.3.3}{X838BDC697A8EC645}

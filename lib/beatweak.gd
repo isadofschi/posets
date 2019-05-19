@@ -43,7 +43,7 @@ DeclareAttribute("BeatPoints",IsPoset);
 #! @Arguments X
 #! @Returns a core of X
 #! @Description the natural maps are the inclusion i: core(X) --> X and the retraction r: X --> core(X)
-DeclareOperation("CorePoset",[IsPoset]);
+DeclareOperation("Core",[IsPoset]);
 
 #!
 DeclareAttribute("IsContractible",IsPoset);
@@ -69,9 +69,9 @@ DeclareAttribute("UpWeakPoints",IsPoset);
 #!
 DeclareAttribute("DownWeakPoints",IsPoset); 
 #!
-DeclareOperation("WeakCorePoset",[IsPoset]);
+DeclareOperation("WeakCore",[IsPoset]);
 #!
-DeclareOperation("MinWeakCorePoset",[IsPoset]); #to do, que hace?
+DeclareOperation("MinWeakCore",[IsPoset]); #to do, que hace?
 
 #!
 DeclareAttribute("IsCollapsible",IsPoset); #to do
@@ -86,8 +86,8 @@ DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]);
 #!
 DeclareOperation("IsQCopReduction",[IsPoset,IsObject,IsObject]);
 #!
-DeclareOperation("QCCorePoset",[IsPoset]); #to do
-#!
-DeclareOperation("QCCoresPoset",[IsPoset]); #to do
+DeclareOperation("QCCore",[IsPoset]);
+
+DeclareOperation("QCCores",[IsPoset]); #to do
 
 

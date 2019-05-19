@@ -153,7 +153,7 @@ end);
 
 #############################################################################
 
-InstallMethod(CorePoset,
+InstallMethod(Core,
 "for Poset",
 [IsPoset],
 function(X)
@@ -198,7 +198,7 @@ function(X)
 			return Set(X)[_r[PositionSorted(Set(X),x)]];
 		end;
 
-		core:=CorePoset(X1);
+		core:=Core(X1);
 		inclusion_X1_X := NaturalMaps(X1)[1];
 		retraction_X_X1:= PosetHomomorphismByFunction(X,X1,r);		
 		inclusion_core_X1:=NaturalMaps(core)[1];
@@ -219,7 +219,7 @@ function(X)
 	# optimization:
 	#if X.has_top() or X.has_bottom():
 	#	return True
-	return Size(CorePoset(X)) = 1;
+	return Size(Core(X)) = 1;
 end);
 
 InstallMethod(HomotopyEquivalence,
@@ -227,8 +227,8 @@ InstallMethod(HomotopyEquivalence,
 [IsPoset,IsPoset],
 function(X,Y)
 	local coreX,coreY,f,i_coreY_Y,r_X_coreX;
-	coreX:=CorePoset(X);
-	coreY:=CorePoset(Y);
+	coreX:=Core(X);
+	coreY:=Core(Y);
 	f:=IsomorphismPosets(coreX,coreY);
 	if f=fail then
 		return fail;
@@ -295,7 +295,7 @@ end);
 
 #############################################################################
 
-InstallMethod(WeakCorePoset,
+InstallMethod(WeakCore,
 "for Poset",
 [IsPoset],
 function(X)
@@ -309,7 +309,7 @@ function(X)
 			X1:=SubPoset(X, Difference(Set(X),DownWeakPoints(X)) );
 		fi;
 
-		weak_core:=WeakCorePoset(X1);
+		weak_core:=WeakCore(X1);
 		inclusion_X1_X := NaturalMaps(X1)[1];
 		inclusion_weakcore_X1:=NaturalMaps(weak_core)[1];
 
@@ -345,5 +345,23 @@ function(X,a,b)
 	return LowerCovers(X,a)=[] and
 		   LowerCovers(X,b)=[] and
 		   IsContractible( SubPoset(X, Union(Set(ElementsAbove(X,a)),Set(ElementsAbove(X,b)))));
+end);
+
+InstallMethod(QCCore,
+"for Poset",
+[IsPoset],
+function(X)
+	local a,b;
+	if Size(MaximalElements(X))=1 then
+		return X;
+	fi;
+	for a in MaximalElements(X) do
+		for b in MaximalElements(X) do
+			if a <> b and IsQCReduction(X, a, b) then
+				return QCCore(QuotientPoset(X,[a,b]));
+			fi;
+		od;
+	od;
+	return X;
 end);
 	

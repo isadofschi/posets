@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.16)  18 MAY 2019 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.16)  19 MAY 2019 00:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -937,7 +937,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 ...Chapter }More properties}}{23}{chapter.9}
+l.141 ...Chapter }More properties}}{23}{chapter.9}
                                                    [2
 
 ])
@@ -1114,56 +1114,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 729--732
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--748
+Underfull \hbox (badness 10000) in paragraph at lines 757--760
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--776
+Underfull \hbox (badness 10000) in paragraph at lines 771--774
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--790
+Underfull \hbox (badness 10000) in paragraph at lines 785--788
 
  []
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 801--804
+Underfull \hbox (badness 10000) in paragraph at lines 799--802
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 815--818
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--832
+Underfull \hbox (badness 10000) in paragraph at lines 834--837
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 850--853
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 864--867
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
 
  []
 
 [10]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--897
+Underfull \hbox (badness 10000) in paragraph at lines 878--881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--913
+Underfull \hbox (badness 10000) in paragraph at lines 894--897
 
  []
 
@@ -1171,6 +1166,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 910--913
 
 ]
 Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 924--927
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 940--943
 
@@ -1201,20 +1201,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1020--1023
 
  []
 
+[12
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 1036--1039
 
  []
 
-[12
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1055
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1077
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1090--1093
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1117
 
  []
 
@@ -1223,13 +1223,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1130--1133
 
  []
 
+[13]
+Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1185
 
  []
 
-[13]
-Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1198--1201
 
@@ -1255,18 +1255,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
 
  []
 
+[14
+
+]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1275.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1278--1281
 
  []
 
-[14
 
-]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1291.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1294--1297
+Underfull \hbox (badness 10000) in paragraph at lines 1301--1304
 
  []
 
@@ -1305,12 +1305,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1413--1416
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 1429--1432
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1445--1448
 
  []
@@ -1325,13 +1325,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1477--1480
 
  []
 
+[16]
+Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1496
+Underfull \hbox (badness 10000) in paragraph at lines 1580--1583
 
  []
 
-[16]
-Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1596--1599
 
@@ -1342,15 +1342,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1612--1615
 
  []
 
+[17
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 1628--1631
 
  []
 
-[17
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1644--1647
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1654
 
  []
 
@@ -1385,16 +1385,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1747--1750
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1763--1766
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1786--1789
+Underfull \hbox (badness 10000) in paragraph at lines 1770--1773
 
  []
 
 [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1786--1789
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1802--1805
 
  []
@@ -1410,13 +1410,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1834--1837
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1850--1853
-
+Underfull \hbox (badness 10000) in paragraph at lines 1845--1845
+[][]\T1/ptm/b/n/12 CompositionPosetHomomorphisms (for Is-PosetHo-mo-mor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1861--1861
-[][]\T1/ptm/b/n/12 CompositionPosetHomomorphisms (for Is-PosetHo-mo-mor-
+Underfull \hbox (badness 10000) in paragraph at lines 1848--1851
+
  []
 
 
@@ -1425,26 +1425,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1864--1867
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1880--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1878--1881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1894--1897
+Underfull \hbox (badness 10000) in paragraph at lines 1892--1895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1908--1911
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1922--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1906--1909
 
  []
 
 [19]
+Underfull \hbox (badness 10000) in paragraph at lines 1929--1932
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1945--1948
 
  []
@@ -1484,17 +1484,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 2057--2060
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2073--2076
-
- []
-
 [20] [21]
 Chapter 8.
 [22
 
 ]
 Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2151--2154
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 2167--2170
 
@@ -1505,15 +1505,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 2183--2186
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2199--2202
-
- []
-
 [23
 
 ]
 Chapter 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2216
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 2229--2232
 
@@ -1536,11 +1536,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2277--2280
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2293--2296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2309--2312
 
  []
 
@@ -1570,21 +1565,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
 
 ] [26] [27])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2337.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2337.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2321.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2321.
  (./Posets.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2337.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2337.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2321.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2321.
 
 Package rerunfilecheck Info: File `Posets.out' has not changed.
 (rerunfilecheck)             Checksum: FF64705C4BBBB36D00E749E0AA3BEE11;2170.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2337.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2321.
  ) 
 Here is how much of TeX's memory you used:
- 8119 strings out of 493029
- 121245 string characters out of 6136233
- 211626 words of memory out of 5000000
- 11190 multiletter control sequences out of 15000+600000
+ 8116 strings out of 493029
+ 121164 string characters out of 6136233
+ 211532 words of memory out of 5000000
+ 11189 multiletter control sequences out of 15000+600000
  62097 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,7n,28p,319b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1599,10 +1594,10 @@ m-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Posets.pdf (28 pages, 200567 bytes).
+Output written on Posets.pdf (28 pages, 200457 bytes).
 PDF statistics:
- 825 PDF objects out of 1000 (max. 8388607)
- 776 compressed objects within 8 object streams
- 341 named destinations out of 1000 (max. 500000)
+ 822 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 339 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

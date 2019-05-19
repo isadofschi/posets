@@ -1,5 +1,5 @@
 gap> P:=PosetOfSubgroups(AlternatingGroup(5));                 
 <finite poset of size 59>
-gap> CorePoset(P);                            
+gap> Core(P);                            
 <finite poset of size 1>
 

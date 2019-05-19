@@ -32,6 +32,7 @@ DeclareOperation("EdgeReduction",[IsPoset,IsList]);
 DeclareOperation("EdgeReductionCore",[IsPoset]);
 
 #! @Section Random reductions
+#! Not implemented yet:
 DeclareOperation("RandomReductionCore",[IsPoset]);
 DeclareOperation("RandomReduction",[IsPoset,IsInt]);
 

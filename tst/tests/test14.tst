@@ -19,7 +19,7 @@ gap> covering_relations_k := [
 > ["p4","p6"], ["p4","w"]];;
 gap> k:=PosetByCoveringRelations(points_k,covering_relations_k);
 <finite poset of size 14>
-gap> CorePoset(k);
+gap> Core(k);
 <finite poset of size 14>
 gap> HomotopyEquivalence(k,MinimalFiniteModelSphere(1));
 fail

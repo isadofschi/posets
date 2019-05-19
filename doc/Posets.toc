@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.1.4}\leavevmode {\color {Chapter }UpBeatPoints (for IsPoset)}}{6}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}\leavevmode {\color {Chapter }DownBeatPoints (for IsPoset)}}{6}{subsection.2.1.5}
 \contentsline {subsection}{\numberline {2.1.6}\leavevmode {\color {Chapter }BeatPoints (for IsPoset)}}{6}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}\leavevmode {\color {Chapter }CorePoset (for IsPoset)}}{7}{subsection.2.1.7}
+\contentsline {subsection}{\numberline {2.1.7}\leavevmode {\color {Chapter }Core (for IsPoset)}}{7}{subsection.2.1.7}
 \contentsline {subsection}{\numberline {2.1.8}\leavevmode {\color {Chapter }IsContractible (for IsPoset)}}{7}{subsection.2.1.8}
 \contentsline {subsection}{\numberline {2.1.9}\leavevmode {\color {Chapter }HomotopyEquivalence (for IsPoset,IsPoset)}}{7}{subsection.2.1.9}
 \contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter }Weak points and simple homotopy type}}{7}{section.2.2}
@@ -26,8 +26,8 @@
 \contentsline {subsection}{\numberline {2.2.4}\leavevmode {\color {Chapter }WeakPoints (for IsPoset)}}{7}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}\leavevmode {\color {Chapter }UpWeakPoints (for IsPoset)}}{7}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6}\leavevmode {\color {Chapter }DownWeakPoints (for IsPoset)}}{7}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}\leavevmode {\color {Chapter }WeakCorePoset (for IsPoset)}}{8}{subsection.2.2.7}
-\contentsline {subsection}{\numberline {2.2.8}\leavevmode {\color {Chapter }MinWeakCorePoset (for IsPoset)}}{8}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.7}\leavevmode {\color {Chapter }WeakCore (for IsPoset)}}{8}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}\leavevmode {\color {Chapter }MinWeakCore (for IsPoset)}}{8}{subsection.2.2.8}
 \contentsline {subsection}{\numberline {2.2.9}\leavevmode {\color {Chapter }IsCollapsible (for IsPoset)}}{8}{subsection.2.2.9}
 \contentsline {section}{\numberline {2.3}\leavevmode {\color {Chapter }Fences}}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}\leavevmode {\color {Chapter }PathInPoset (for IsPoset,IsObject,IsObject)}}{8}{subsection.2.3.1}
@@ -38,12 +38,11 @@
 \contentsline {section}{\numberline {3.1}\leavevmode {\color {Chapter }QC Reductions}}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}\leavevmode {\color {Chapter }IsQCReduction (for IsPoset,IsObject,IsObject)}}{9}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}\leavevmode {\color {Chapter }IsQCopReduction (for IsPoset,IsObject,IsObject)}}{9}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}\leavevmode {\color {Chapter }QCCorePoset (for IsPoset)}}{9}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}\leavevmode {\color {Chapter }QCCoresPoset (for IsPoset)}}{9}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.3}\leavevmode {\color {Chapter }QCCore (for IsPoset)}}{9}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}\leavevmode {\color {Chapter }Middle reductions}}{9}{section.3.2}
 \contentsline {section}{\numberline {3.3}\leavevmode {\color {Chapter }Edge reductions}}{9}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}\leavevmode {\color {Chapter }IsDownEdgeReduction (for IsPoset,IsList)}}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}\leavevmode {\color {Chapter }IsUpEdgeReduction (for IsPoset,IsList)}}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}\leavevmode {\color {Chapter }IsUpEdgeReduction (for IsPoset,IsList)}}{9}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}\leavevmode {\color {Chapter }IsEdgeReduction (for IsPoset,IsList)}}{10}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}\leavevmode {\color {Chapter }EdgeReduction (for IsPoset,IsList)}}{10}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}\leavevmode {\color {Chapter }EdgeReductionCore (for IsPoset)}}{10}{subsection.3.3.5}

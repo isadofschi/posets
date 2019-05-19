@@ -68,7 +68,7 @@
       2.1-4 UpBeatPoints
       2.1-5 DownBeatPoints
       2.1-6 BeatPoints
-      2.1-7 CorePoset
+      2.1-7 Core
       2.1-8 IsContractible
       2.1-9 HomotopyEquivalence
     2.2 [33X[0;0YWeak points and simple homotopy type[133X
@@ -78,8 +78,8 @@
       2.2-4 WeakPoints
       2.2-5 UpWeakPoints
       2.2-6 DownWeakPoints
-      2.2-7 WeakCorePoset
-      2.2-8 MinWeakCorePoset
+      2.2-7 WeakCore
+      2.2-8 MinWeakCore
       2.2-9 IsCollapsible
     2.3 [33X[0;0YFences[133X
       2.3-1 PathInPoset
@@ -90,8 +90,7 @@
     3.1 [33X[0;0YQC Reductions[133X
       3.1-1 IsQCReduction
       3.1-2 IsQCopReduction
-      3.1-3 QCCorePoset
-      3.1-4 QCCoresPoset
+      3.1-3 QCCore
     3.2 [33X[0;0YMiddle reductions[133X
     3.3 [33X[0;0YEdge reductions[133X
       3.3-1 IsDownEdgeReduction

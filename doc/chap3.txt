@@ -12,13 +12,9 @@
   
   [33X[1;0Y[29X[2XIsQCopReduction[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation[133X
   
-  [1X3.1-3 QCCorePoset[101X
+  [1X3.1-3 QCCore[101X
   
-  [33X[1;0Y[29X[2XQCCorePoset[102X( [3Xarg[103X ) [32X operation[133X
-  
-  [1X3.1-4 QCCoresPoset[101X
-  
-  [33X[1;0Y[29X[2XQCCoresPoset[102X( [3Xarg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XQCCore[102X( [3Xarg[103X ) [32X operation[133X
   
   
   [1X3.2 [33X[0;0YMiddle reductions[133X[101X
@@ -50,6 +46,8 @@
   
   
   [1X3.4 [33X[0;0YRandom reductions[133X[101X
+  
+  [33X[0;0YNot implemented yet:[133X
   
   [1X3.4-1 RandomReductionCore[101X
   

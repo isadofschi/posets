@@ -4,7 +4,7 @@ gap> PosetHomology(wallet);
 [ [ 0 ], [  ], [  ] ]
 gap> FundamentalGroup(wallet);
 <fp group on the generators [  ]>
-gap> CorePoset(wallet);
+gap> Core(wallet);
 <finite poset of size 11>
 gap> UpWeakPoints(wallet);
 [ 9, 11 ]
