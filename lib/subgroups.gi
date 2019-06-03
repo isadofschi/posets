@@ -314,20 +314,17 @@ InstallMethod(OrbitSubdivisionPosetOfElementaryAbelianpSubgroups,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
 function(G,p)
-local representantes_subgrupos_G,representantes_subgrupos_S,pRank,S,representantes_F,rangos_F,elementsG,normalizers_F,cosets_F,
-		CanonicalRightTransversal,transversals_F,num_clases_conjugacion,
-		subgrupos_S,codigos_subgrupos,puntos_F,subgrupos_propios,
-		i,j,g,H,k,x,y,M,I,par,G,
-		N,T,a,b,add,
-		orden_F,cadenas,F_prima,
-		orbitas_F_prima,grupo_par,accion_par,accion_cadena,numero_orbita,c,cc,c1,orbita_c, elements_S, orderPElements, calculados,U_x,
+	local representantes_subgrupos_G,representantes_subgrupos_S,pRank,S,representantes_F,rangos_F,elementsG,normalizers_F,cosets_F,
+			CanonicalRightTransversal,transversals_F,num_clases_conjugacion,
+			subgrupos_S,codigos_subgrupos,puntos_F,subgrupos_propios,
+			i,j,g,H,k,x,y,M,I,par,
+			N,T,a,b,add,
+			orden_F,cadenas,F_prima,
+			orbitas_F_prima,grupo_par,accion_par,accion_cadena,numero_orbita,c,cc,c1,orbita_c, elements_S, orderPElements, calculados,U_x;
 	
 	
-	#### Calculo de nuevo el Sylow y los elementos de orden p en el Sylow
 	S:=SylowSubgroup(G,p);
 	elements_S:=Set(S);
-
-	#### Calculo elementales abelianos no triviales del Sylow
 	subgrupos_S:=Filtered(Subgroups(S), x->IsElementaryAbelian(x) and not (Order(x) = 1));
 	Sort(subgrupos_S); # tarda
 	
