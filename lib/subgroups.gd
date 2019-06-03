@@ -19,3 +19,10 @@ DeclareOperation("PosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsI
 DeclareGlobalFunction("RadicalpSubgroups");
 #!
 DeclareOperation("PosetOfRadicalpSubgroups", [IsGroup and IsFinite,IsInt]);
+
+#!
+DeclareOperation("OrbitSubdivisionPosetOfRadicalpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("OrbitSubdivisionPosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("OrbitSubdivisionPosetOfpSubgroups", [IsGroup and IsFinite,IsInt]);
