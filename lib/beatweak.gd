@@ -71,7 +71,7 @@ DeclareAttribute("DownWeakPoints",IsPoset);
 #!
 DeclareOperation("WeakCore",[IsPoset]);
 #!
-DeclareOperation("MinWeakCore",[IsPoset]); #to do, que hace?
+DeclareOperation("MinWeakCore",[IsPoset]); #to do
 
 #!
 DeclareAttribute("IsCollapsible",IsPoset); #to do
@@ -80,11 +80,12 @@ DeclareAttribute("IsCollapsible",IsPoset); #to do
 #! @Chapter More reductions
 
 #! @Section QC Reductions
+#! What we call "down QC reduction" is usually called "QC Reduction". What we call "up QC reduction" is usually called "QC op reduction"
 
 #!
-DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]);
+DeclareOperation("IsDownQCReduction",[IsPoset,IsObject,IsObject]);
 #!
-DeclareOperation("IsQCopReduction",[IsPoset,IsObject,IsObject]);
+DeclareOperation("IsUpQCReduction",[IsPoset,IsObject,IsObject]);
 #!
 DeclareOperation("QCCore",[IsPoset]);
 

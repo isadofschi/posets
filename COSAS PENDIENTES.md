@@ -3,16 +3,13 @@
 * Grading puede dar fail si el poset no es homogeneo, incluso cuando admite un grading!
 
 
-# Cosas básicas
-* Endomorphisms
-
 # Colorings
 
 falta la parte de spanning collapsible subposets
 
 # Homotopy 
 
-falta la parte de WeakCore y QC
+falta traducir MinWeakCore, IsCollapsible y QCCores
 
 # Deformations
 
@@ -47,7 +44,7 @@ falta la parte de random reductions
 
 * HomPosets
 
-* Optimizar todavía más AutomorphismGroup
+* Optimizar todavía más AutomorphismGroup, IsomorphismPosets. Es conveniente usar el paquete GRAPE para esto? Calculando el diagrama de hasse y pensandolo como grafo dirigido.
 
 * Algunas construcciones (por ejemplo cociente y producto) tienen nombres que permiten recuperar los nombres originales de los puntos.
 Esto hace que al iterar muchas veces las construcciones los nombres se vuelvan muy complejos, por ejemplo

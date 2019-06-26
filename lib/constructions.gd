@@ -69,6 +69,9 @@ DeclareOperation("WedgePosets",[IsList]);
 DeclareOperation("HomPosets",[IsPoset,IsPoset]);
 
 #!
+DeclareAttribute("Endomorphisms",IsPoset);
+
+#!
 DeclareAttribute("AutomorphismGroup",IsPoset);
 #!
 DeclareAttribute("Automorphisms",IsPoset);

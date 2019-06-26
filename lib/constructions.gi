@@ -310,6 +310,14 @@ function(X,Y)
 	return P;
 end);
 
+InstallMethod(Endomorphisms,
+"for Poset",
+[IsPoset],
+function(X)
+	return HomPosets(X,X);
+end);
+
+
 InstallMethod(QuotientPoset,
 "for Poset and List",
 [IsPoset,IsList],

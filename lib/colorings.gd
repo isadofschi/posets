@@ -1,4 +1,4 @@
-#! @Chapter Homotopy
+#! @Chapter Homotopy theory
 
 #! @Section Colorings
 

@@ -86,21 +86,32 @@
   [33X[1;0Y[29X[2XIsCollapsible[102X( [3Xarg[103X ) [32X attribute[133X
   
   
-  [1X2.3 [33X[0;0YFences[133X[101X
+  [1X2.3 [33X[0;0YColorings[133X[101X
   
-  [1X2.3-1 PathInPoset[101X
+  [1X2.3-1 FundamentalGroupByColoring[101X
+  
+  [33X[1;0Y[29X[2XFundamentalGroupByColoring[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
+  
+  [1X2.3-2 FundamentalGroupByColoring[101X
+  
+  [33X[1;0Y[29X[2XFundamentalGroupByColoring[102X( [3Xarg[103X ) [32X operation[133X
+  
+  
+  [1X2.4 [33X[0;0YFences[133X[101X
+  
+  [1X2.4-1 PathInPoset[101X
   
   [33X[1;0Y[29X[2XPathInPoset[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation[133X
   
-  [1X2.3-2 Fence[101X
+  [1X2.4-2 Fence[101X
   
   [33X[1;0Y[29X[2XFence[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X2.3-3 AreHomotopic[101X
+  [1X2.4-3 AreHomotopic[101X
   
   [33X[1;0Y[29X[2XAreHomotopic[102X( [3Xarg1[103X, [3Xarg2[103X ) [32X operation[133X
   
-  [1X2.3-4 ConnectedComponents[101X
+  [1X2.4-4 ConnectedComponents[101X
   
   [33X[1;0Y[29X[2XConnectedComponents[102X( [3Xarg[103X ) [32X operation[133X
   

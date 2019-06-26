@@ -4,7 +4,7 @@
 
 
 
-#! @Section Posets of p-subgroups
+#! @Section Posets of subgroups
 
 #!
 DeclareOperation("PosetOfSubgroups", [IsGroup and IsFinite]);
@@ -26,3 +26,11 @@ DeclareOperation("OrbitSubdivisionPosetOfRadicalpSubgroups", [IsGroup and IsFini
 DeclareOperation("OrbitSubdivisionPosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsInt]);
 #!
 DeclareOperation("OrbitSubdivisionPosetOfpSubgroups", [IsGroup and IsFinite,IsInt]);
+
+
+#! @Section Poset of subspaces of a vector space
+
+#!
+DeclareOperation("PosetOfSubspaces", [IsVectorSpace and IsFinite]);
+#!
+DeclareOperation("PosetOfProperSubspaces", [IsVectorSpace and IsFinite]);

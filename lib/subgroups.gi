@@ -632,3 +632,27 @@ function(G,p)
 	od;
 	return PosetByOrderMatrix(M);
 end);
+
+
+
+InstallMethod(PosetOfSubspaces,
+"for finite vector space",
+[IsVectorSpace and IsFinite],
+function(V)
+	# the ordering is >=
+	local X;
+	X:=PosetByFunctionNC(Set(Subspaces(V)),IsSubset);
+	SetGrading(X, Dimension );
+	return X;
+end);
+
+InstallMethod(PosetOfProperSubspaces,
+"for finite vector space",
+[IsVectorSpace and IsFinite],
+function(V)
+	# the ordering is >=
+	local X;
+	X:=PosetByFunctionNC(Difference(Set(Subspaces(V)),[Set(Subspaces(V,0))[1],V]),IsSubset);
+	SetGrading(X, Dimension );
+	return X;
+end);

@@ -321,7 +321,7 @@ end);
 
 #############################################################################
 
-InstallMethod(IsQCReduction,
+InstallMethod(IsDownQCReduction,
 "for Poset, element and element",
 [IsPoset,IsObject,IsObject],
 function(X,a,b)
@@ -334,7 +334,7 @@ function(X,a,b)
 		   IsContractible(SubPoset(X, Union(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,b)))));
 end);
 
-InstallMethod(IsQCopReduction,
+InstallMethod(IsUpQCReduction,
 "for Poset, element and element",
 [IsPoset,IsObject,IsObject],
 function(X,a,b)
@@ -357,7 +357,7 @@ function(X)
 	fi;
 	for a in MaximalElements(X) do
 		for b in MaximalElements(X) do
-			if a <> b and IsQCReduction(X, a, b) then
+			if a <> b and IsDownQCReduction(X, a, b) then
 				return QCCore(QuotientPoset(X,[a,b]));
 			fi;
 		od;

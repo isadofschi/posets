@@ -1,4 +1,4 @@
-#! @Chapter Constructions
+#! @Chapter Constructing new posets
 #! @Section The poset associated to a group presentation
 
 #! @Arguments G
