@@ -1,7 +1,7 @@
 
 # The Posets package
 
-# (package under development)
+## (package under development)
 
 * Website: https://github.com/isadofschi/posets
 * Repository: https://github.com/isadofschi/posets
