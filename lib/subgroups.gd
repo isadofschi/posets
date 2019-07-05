@@ -19,6 +19,15 @@ DeclareOperation("PosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsI
 DeclareGlobalFunction("RadicalpSubgroups");
 #!
 DeclareOperation("PosetOfRadicalpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("RobinsonFacePosetOfpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("SubdivisionPosetOfElementaryAbelianpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("SubdivisionPosetOfpSubgroups", [IsGroup and IsFinite,IsInt]);
+#!
+DeclareOperation("SubdivisionPosetOfRadicalpSubgroups", [IsGroup and IsFinite,IsInt]);
+
 
 #!
 DeclareOperation("OrbitSubdivisionPosetOfRadicalpSubgroups", [IsGroup and IsFinite,IsInt]);
