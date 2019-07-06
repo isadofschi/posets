@@ -55,6 +55,22 @@ MatrixByChains:=function(chains)
 	return M;
 end;;
 
+CanonicalRightTransversal:= function(G,H)
+	return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
+end;;
+
+reduceConjClasses:=function(G,l)
+	local reducedList, add, a, b;
+	reducedList:=[];
+	for a in l do
+		if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
+			Add(reducedList,a);
+		fi;
+	od;
+	return reducedList;	
+end;;
+
+
 
 InstallMethod(PosetOfSubgroups,
 "for Group",
@@ -83,18 +99,7 @@ end);
 
 
 InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
-	local partialSubgroups, S, H, l, repElemAb, elemAb, g, i, normalizersElemAb, transversalsElemAb, numClasesConjugacion, CanonicalRightTransversal,reduceConjClasses;
-
-	reduceConjClasses:=function(G,l)
-		local reducedList, add, a, b;
-		reducedList:=[];
-		for a in l do
-			if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
-				Add(reducedList,a);
-			fi;
-		od;
-		return reducedList;	
-	end;;
+	local partialSubgroups, S, H, l, repElemAb, elemAb, g, i, normalizersElemAb, transversalsElemAb, numClasesConjugacion;
 
 	S:=SylowSubgroup(G,p);
 	if r<>[] then
@@ -109,10 +114,6 @@ InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
 	numClasesConjugacion:=Size(repElemAb);
 	normalizersElemAb:=List(repElemAb, H-> Normalizer(G,H));
 	
-	CanonicalRightTransversal:= function(G,H)
-		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
-	end;;
-	
 	transversalsElemAb:=List(normalizersElemAb, N-> CanonicalRightTransversal(G,N));
 	
 	elemAb:=[];
@@ -125,7 +126,6 @@ InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
 	od;
 	
 	return elemAb;
-	
 end);
 
 
@@ -147,19 +147,7 @@ end);
 
 InstallGlobalFunction(RadicalpSubgroups, function(G,p)
 	local BpP, BpG, H, i, g, numClasesConjugacion, normalizers, transversals,
-	CanonicalRightTransversal,reduceConjClasses,radicalSubgroupsConjClasses;
-
-	reduceConjClasses:=function(G,l)
-		local reducedList, add, a, b;
-		reducedList:=[];
-		for a in l do
-			if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
-				Add(reducedList,a);
-			fi;
-		od;
-		return reducedList;	
-	end;;
-
+	radicalSubgroupsConjClasses;
 
 	radicalSubgroupsConjClasses:=function(G,p)
 		local S, subgroups, l;
@@ -172,10 +160,6 @@ InstallGlobalFunction(RadicalpSubgroups, function(G,p)
 	
 	numClasesConjugacion:=Size(BpP);
 	normalizers:=List(BpP, H-> Normalizer(G,H));
-	
-	CanonicalRightTransversal:= function(G,H)
-		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
-	end;;
 	
 	transversals:=List(normalizers, N-> CanonicalRightTransversal(G,N));
 	BpG:=[];
@@ -249,7 +233,7 @@ InstallMethod(OrbitSubdivisionPosetOfRadicalpSubgroups,
 [IsGroup and IsFinite,IsInt],
 function(G,p)
 	local representantes_subgrupos_G,representantes_subgrupos_S,pPower,S,representantes_F,ordenes_F,elementsG,normalizers_F,cosets_F,
-		CanonicalRightTransversal,transversals_F,num_clases_conjugacion,
+		transversals_F,num_clases_conjugacion,
 		subgrupos_S,codigos_subgrupos,puntos_F,subgrupos_propios,
 		i,j,g,H,k,x,y,M,I,par,
 		N,T,a,b,add,
@@ -287,10 +271,6 @@ function(G,p)
 	elementsG:=Set(G);
 	
 	normalizers_F:=List(representantes_F, H-> Normalizer(G,H));
-
-	CanonicalRightTransversal:= function(G,H)
-		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
-	end;;
 
 	transversals_F:=List(normalizers_F, N-> CanonicalRightTransversal(G,N));
 
@@ -401,6 +381,7 @@ function(G,p)
 			fi;
 		od;
 	od;
+	
 	return PosetByOrderMatrix(M);
 end);
 
@@ -409,7 +390,7 @@ InstallMethod(OrbitSubdivisionPosetOfElementaryAbelianpSubgroups,
 [IsGroup and IsFinite,IsInt],
 function(G,p)
 	local representantes_subgrupos_G,representantes_subgrupos_S,pRank,S,representantes_F,rangos_F,elementsG,normalizers_F,cosets_F,
-			CanonicalRightTransversal,transversals_F,num_clases_conjugacion,
+			transversals_F,num_clases_conjugacion,
 			subgrupos_S,codigos_subgrupos,puntos_F,subgrupos_propios,
 			i,j,g,H,k,x,y,M,I,par,
 			N,T,a,b,add,
@@ -447,10 +428,6 @@ function(G,p)
 	elementsG:=Set(G);# ya está ordenado.
 	
 	normalizers_F:=List(representantes_F, H-> Normalizer(G,H));
-
-	CanonicalRightTransversal:= function(G,H)
-		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
-	end;;
 
 	transversals_F:=List(normalizers_F, N-> CanonicalRightTransversal(G,N));
 
@@ -571,7 +548,7 @@ InstallMethod(OrbitSubdivisionPosetOfpSubgroups,
 [IsGroup and IsFinite,IsInt],
 function(G,p)
 	local representantes_subgrupos_G,representantes_subgrupos_S,pPower,S,representantes_F,ordenes_F,elementsG,normalizers_F,cosets_F,
-		CanonicalRightTransversal,transversals_F,num_clases_conjugacion,
+		transversals_F,num_clases_conjugacion,
 		subgrupos_S,codigos_subgrupos,puntos_F,subgrupos_propios,
 		i,j,g,H,k,x,y,M,I,par,
 		N,T,a,b,add,
@@ -609,11 +586,7 @@ function(G,p)
 	elementsG:=Set(G);
 	
 	normalizers_F:=List(representantes_F, H-> Normalizer(G,H));
-
-	CanonicalRightTransversal:= function(G,H)
-		return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
-	end;;
-
+	
 	transversals_F:=List(normalizers_F, N-> CanonicalRightTransversal(G,N));
 
 	codigos_subgrupos:=List(subgrupos_S,x->-2);
