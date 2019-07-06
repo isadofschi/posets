@@ -1,5 +1,25 @@
 LoadPackage("SONATA");
 
+
+reduceConjClasses:=function(G,l)
+	local reducedList, add, a, b;
+	reducedList:=[];
+	for a in l do
+		if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
+			Add(reducedList,a);
+		fi;
+	od;
+	return reducedList;	
+end;;
+
+
+
+TransversalList:=function(G,normalizers)
+	local i, j;
+	return List([1..Size(normalizers)], i-> List(RightTransversal(G,normalizers[i]),j->CanonicalRightCosetElement(normalizers[i],j)));
+end;;
+
+
 PSubgroups:=function(G,p)
 	local H, S, g, i, j ,k, l, x, y, SpS, SpG, transversals, numConjugacyClasses, pPower, powers, ElementList, normalizers;
 	
@@ -58,19 +78,6 @@ end;;
 CanonicalRightTransversal:= function(G,H)
 	return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
 end;;
-
-reduceConjClasses:=function(G,l)
-	local reducedList, add, a, b;
-	reducedList:=[];
-	for a in l do
-		if ForAll(reducedList, b-> not IsConjugate(G,a,b)) then
-			Add(reducedList,a);
-		fi;
-	od;
-	return reducedList;	
-end;;
-
-
 
 InstallMethod(PosetOfSubgroups,
 "for Group",
