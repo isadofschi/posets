@@ -8,7 +8,7 @@
 ##
 
 #! @Chapter Posets
-
+#! Our main reference is <Cite Key="BarmakBook"/>.
 #! @Section The Poset type
 
 

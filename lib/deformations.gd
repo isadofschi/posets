@@ -1,5 +1,5 @@
 #! @Chapter More reductions
-
+#! The reference for this chapter is <Cite Key="FernandezThesis"/>.
 #! @Section Osaki reductions
 #!
 DeclareOperation( "IsDownOsakiReduction", [IsPoset,IsObject]);
