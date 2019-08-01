@@ -1,5 +1,6 @@
 LoadPackage( "AutoDoc" );
 AutoDoc( rec( scaffold := true,
-              autodoc := true ) );
+              autodoc  := rec( files := [ "doc/chapters.autodoc" ] )
+));
 QUIT;
 

@@ -1,3 +1,6 @@
+#! @Chapter Plotting
+
+#! @Section Hasse diagram
 #!
 DeclareGlobalFunction("DotCode");
 #!
