@@ -26,5 +26,6 @@ ReadPackage("Posets", "lib/properties.gd" );
 ReadPackage("Posets", "lib/colorings.gd" );
 ReadPackage("Posets", "lib/presentations.gd" );
 ReadPackage("Posets", "lib/fences.gd" );
+ReadPackage("Posets", "lib/plot.gd" );
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 
