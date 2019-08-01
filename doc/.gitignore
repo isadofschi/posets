@@ -1,4 +1,7 @@
 *.aux
+*.bbl
+*.blg
+*.brf
 *.lab
 *.log
 *.dvi
@@ -12,9 +15,10 @@
 *.pnr
 *.txt
 *.blg
+*.html
+*.css
+*.js
+*.xml
 *.toc
 *.brf
-_Chapter*.xml
-title.xml
-_AutoDocMainFile.xml
-AutoDoc.xml
+
