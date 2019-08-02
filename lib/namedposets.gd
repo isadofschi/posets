@@ -2,15 +2,15 @@
 #! @Section Examples of posets
 
 #! @Arguments
-#! @Returns the empty poset.
+#! @Description The empty poset.
 DeclareOperation("EmptyPoset",[]);
 
 #! @Arguments n
-#! @Returns the minimal finite model of the $n$-sphere $S^n$. 
+#! @Description The minimal finite model of the $n$-sphere $S^n$ <Cite Key="BarmakBook" Where="Section 3.2"/>. 
 DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 
 
 #! @Arguments 
-#! @Returns the Wallet <Cite Key="BarmakBook" Where="Example 4.2.1"/>. 
+#! @Description The wallet is a homotopically trivial poset on 11 points which is not contractible <Cite Key="BarmakBook" Where="Example 4.2.1"/>.
 DeclareOperation("TheWallet",[]);
 

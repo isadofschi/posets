@@ -1,5 +1,49 @@
 # Based on github.com/ximenafernandez/Finite-Spaces/Deformations.sage
 
+InstallMethod(IsDownQCReduction,
+"for Poset, element and element",
+[IsPoset,IsObject,IsObject],
+function(X,a,b)
+	if not (a in Set(X) and b in Set(X)) then
+		return Error("a and b must be elements of X");
+	fi;
+	 
+	return UpperCovers(X,a)=[] and
+		   UpperCovers(X,b)=[] and
+		   IsContractible(SubPoset(X, Union(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,b)))));
+end);
+
+InstallMethod(IsUpQCReduction,
+"for Poset, element and element",
+[IsPoset,IsObject,IsObject],
+function(X,a,b)
+	if not (a in Set(X) and b in Set(X)) then
+		return Error("a and b must be elements of X");
+	fi;
+	 
+	return LowerCovers(X,a)=[] and
+		   LowerCovers(X,b)=[] and
+		   IsContractible( SubPoset(X, Union(Set(ElementsAbove(X,a)),Set(ElementsAbove(X,b)))));
+end);
+
+InstallMethod(QCCore,
+"for Poset",
+[IsPoset],
+function(X)
+	local a,b;
+	if Size(MaximalElements(X))=1 then
+		return X;
+	fi;
+	for a in MaximalElements(X) do
+		for b in MaximalElements(X) do
+			if a <> b and IsDownQCReduction(X, a, b) then
+				return QCCore(QuotientPoset(X,[a,b]));
+			fi;
+		od;
+	od;
+	return X;
+end);
+
 # Osaki reductions:
 
 InstallMethod(IsDownOsakiReduction,
@@ -66,10 +110,6 @@ InstallMethod(UpOsakiCore,
 function(X)
 	return OppositePoset(DownOsakiCore(OppositePoset(X)));
 end);
-
-#Middle reductions:
-# See [Fernandez, Section 3.2.2]
-
 
 InstallMethod(IsMiddleReduction,
 "for Poset, point and point",
