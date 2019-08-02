@@ -12,10 +12,7 @@ function(n)
 	if n<-1 then
 		Error("n < -1");
 	fi;
-	if n=-1 then
-		return EmptyPoset();
-	fi;
-	return SuspensionPoset(MinimalFiniteModelSphere(n-1));
+	return Join(List([1..n+1], X-> PosetByFunction(["x","y"], {x,y}-> x=y)));
 end);
 
 InstallMethod(TheWallet,
