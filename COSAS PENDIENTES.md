@@ -1,7 +1,3 @@
-# Bugs
-
-* Grading puede dar fail si el poset no es homogeneo, incluso cuando admite un grading!
-
 # Mejorar los plots
 
 # Colorings
