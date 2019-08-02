@@ -1,5 +1,7 @@
 #! @Chapter More reductions
 #! The reference for this chapter is <Cite Key="FernandezThesis"/>.
+
+
 #! @Section Osaki reductions
 #!
 DeclareOperation( "IsDownOsakiReduction", [IsPoset,IsObject]);
@@ -15,7 +17,7 @@ DeclareOperation("DownOsakiCore",[IsPoset]);
 DeclareOperation("UpOsakiCore",[IsPoset]);
 
 #! @Section Middle reductions
-#! See [Fernandez,Section 3.2.2]
+#! See  <Cite Key="FernandezThesis" Where="Section 3.2.2"/>
 
 # Why not UpMiddleReduction and DownMiddleReduction ?
 #!

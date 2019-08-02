@@ -28,6 +28,6 @@ function(X,filename)
 	AppendTo(out,s);
 	Exec(Concatenation("dot ", tmp_name," -T",ext," > ",filename));
 	Exec(Concatenation("rm ", tmp_name));
-	Exec("xdg-open ",filename);
+	Exec(Concatenation("xdg-open ",filename, " > /dev/null 2>&1"));
 end);
 	
