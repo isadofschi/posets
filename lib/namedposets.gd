@@ -6,11 +6,11 @@
 DeclareOperation("EmptyPoset",[]);
 
 #! @Arguments n
-#! @Returns the minimal finite model of the n-sphere <M>S^n</M>. 
+#! @Returns the minimal finite model of the $n$-sphere $S^n$. 
 DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 
 
 #! @Arguments 
-#! @Returns the Wallet (see Barmak, example 4.2.1). 
+#! @Returns the Wallet <Cite Key="BarmakBook" Where="Example 4.2.1"/>. 
 DeclareOperation("TheWallet",[]);
 
