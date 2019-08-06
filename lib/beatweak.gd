@@ -40,6 +40,8 @@ DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]);
 #! @Chapter Homotopy theory
 
 #! @Section Beat points and homotopy type
+#! The reference for this section is <Cite Key="BarmakBook" Where="Section 1.3"/>. We recall here the some important facts and definitions.
+#! A point $x\in X$ is an <E>up beat point</E> if $\{y\,:\, y&gt; x\}$ has a minimum. A point $x\in X$ is a <E>down beat point</E> if $\{y\,:\, y&lt; x\}$ has a maximum.  A poset is <E>minimal</E> if it has no beat points. A <E>core</E> of a finite space X is a strong deformation retract which is a minimal finite space. The core of a poset is unique up to isomorphism. Two posets are homotopy equivalent if and only if their cores are isomorphic.
 
 #! @Arguments X,x
 DeclareOperation("IsBeatPoint",[IsPoset,IsObject]);
@@ -73,6 +75,9 @@ DeclareOperation("HomotopyEquivalence",[IsPoset,IsPoset]);
 ###################################################################################
 
 #! @Section Weak points and simple homotopy type
+#! The reference for this section is <Cite Key="BarmakBook" Where="Section 4.2"/>.
+#! A point $x\in X$ is an <E>up weak point</E> if $\{y\,:\, y&gt; x\}$ is contractible. A point $x\in X$ is a <E>down weak point</E> if $\{y\,:\, y&lt; x\}$ is contractible.
+
 
 #! @Arguments X,x
 DeclareOperation("IsWeakPoint",[IsPoset,IsObject]); 
@@ -93,9 +98,12 @@ DeclareAttribute("UpWeakPoints",IsPoset);
 DeclareAttribute("DownWeakPoints",IsPoset); 
 
 #! @Arguments X
+#! @Description A subposet of $X$ without weak points obtained from $X$ by removing weak points. Note that this space need not be unique up to isomorphism.
 DeclareOperation("WeakCore",[IsPoset]);
 
 #! @Arguments X
+#! @Arguments X
+#! @Description The same as <C>WeakCore</C> but with the minimum possible size. Again, this space need not be unique up to isomorphism.
 #! Not implemented!
 DeclareOperation("MinWeakCore",[IsPoset]); #to do
 
