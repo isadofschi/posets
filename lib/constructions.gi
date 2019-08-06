@@ -16,74 +16,6 @@ function(X)
 end);
 
 
-InstallMethod(SourceMap,
-"for Poset homomorphism",
-[IsPosetHomomorphism],
-function(f)
-	return f!.source;
-end);
-
-InstallMethod(TargetMap,
-"for Poset homomorphism",
-[IsPosetHomomorphism],
-function(f)
-	return f!.target;
-end);
-
-InstallMethod(UnderlyingMap,
-"for Poset homomorphism",
-[IsPosetHomomorphism],
-function(f)
-	return f!.f;
-end);
-
-InstallMethod(InverseImmutable,
-"for Poset homomorphism",
-[IsPosetHomomorphism],
-function(f)
-	local l,ims;
-	if Size(SourceMap(f))<>Size(SourceMap(f)) then
-		return fail;
-	fi;
-	l:=List(Set(SourceMap(f)),UnderlyingMap(f));
-	if Size(Set(l))<>Size(SourceMap(f)) then
-		return fail;
-	fi;
-	ims:=ShallowCopy(Set(SourceMap(f)));
-	SortParallel(l,ims);
-	return PosetHomomorphismByImages(TargetMap(f),SourceMap(f),ims);
-end);
-
-
-
-InstallMethod(ImageMap,
-"for Poset homomorphism",
-[IsPosetHomomorphism],
-function(f)
-	return SubPoset(TargetMap(f), Set(List(Set(f!.source),f!.f)) );
-end);
-
-InstallMethod(ImageMap,
-"for Poset homomorphism, element",
-[IsPosetHomomorphism,IsObject],
-function(f,x)
-	local X;
-	X:=Set(SourceMap(f));
-	if not x in X then
-		Error("x is not an element of the domain of f");
-	fi;
-	return f!.f(x);
-end);
-
-
-InstallMethod(\^,
-"for element, Poset homomorphism",
-[IsObject,IsPosetHomomorphism],
-function(x,f)
-	return ImageMap(f,x);
-end);
-
-
 InstallMethod(SubPoset,
 "for Poset, Set",
 [IsPoset, IsList],
@@ -430,14 +362,4 @@ InstallMethod(Automorphisms,
 function(X)
 	return Set(AutomorphismGroup(X));
 end);
-
-
-
-
-
-
-
-
-
-
 

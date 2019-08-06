@@ -10,6 +10,7 @@
 #R  Read the install files.
 ##
 ReadPackage( "posets", "lib/posets.gi" );
+ReadPackage( "posets", "lib/maps.gi" );
 ReadPackage( "posets", "lib/complexes.gi" );
 ReadPackage( "posets", "lib/constructions.gi" );
 ReadPackage( "posets", "lib/subgroups.gi" );

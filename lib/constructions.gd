@@ -9,43 +9,11 @@
 
 #! @Chapter Constructing new posets
 
-#! @Section Natural maps
-
-#! @Arguments X
-#! @Returns the natural maps of the poset X.
-#! @Description for example NaturalMaps of a product gives the projections.
-DeclareOperation("NaturalMaps",[IsPoset]);
-
-#! @Section Some methods for poset homomorphisms
-
-#! @Arguments f
-DeclareOperation("SourceMap",[IsPosetHomomorphism]);
-
-#! @Arguments f
-DeclareOperation("TargetMap",[IsPosetHomomorphism]);
-
-#! @Arguments f
-DeclareOperation("UnderlyingMap",[IsPosetHomomorphism]);
-
-#! @Arguments f
-DeclareAttribute("InverseImmutable",IsPosetHomomorphism);
-
-#! @Arguments f
-DeclareOperation("ImageMap",[IsPosetHomomorphism]);
-
-#! @Arguments f,x
-DeclareOperation("ImageMap",[IsPosetHomomorphism,IsObject]);
-
-#! @Arguments x,f
-DeclareOperation("\^",[IsObject,IsPosetHomomorphism]);
-
-
 #! @Section Categorical constructions
 # Documentar tambien DirectProduct. Documentar DirectProduct y Coproduct para morfismos
 
 #! @Arguments X, A
 DeclareOperation("SubPoset",[IsPoset,IsList]);
-
 
 DeclareOperation("CoproductOp",[IsList,IsPoset]);
 
@@ -88,9 +56,15 @@ DeclareOperation("HomPosets",[IsPoset,IsPoset]);
 DeclareAttribute("Endomorphisms",IsPoset);
 
 #! @Arguments X
-#! @Description The automorphism group $\Aut(X)$.
+#! @Description The automorphism group $\mathrm{Aut}(X)$.
 DeclareAttribute("AutomorphismGroup",IsPoset);
 
 #! @Arguments X
 DeclareAttribute("Automorphisms",IsPoset);
+
+#! @Section Natural maps
+#! @Arguments X
+#! @Returns the natural maps of the poset X.
+#! @Description for example NaturalMaps of a product gives the projections.
+DeclareOperation("NaturalMaps",[IsPoset]);
 

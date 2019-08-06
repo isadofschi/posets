@@ -1,6 +1,13 @@
 @Chapter Introduction
 
 @Chapter Posets
+@Section The Poset type
+@Section Examples of posets
+@Section Plotting posets
+@Section Homomorphisms
+@Section Constructing posets in different ways
+@Section Constructing poset homomorphisms in different ways
+
 
 @Chapter Classical stuff
 

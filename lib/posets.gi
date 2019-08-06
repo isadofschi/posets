@@ -80,7 +80,6 @@ InstallMethod(Iterator,
 X-> Iterator(Set(X))
 );
 
-
 InstallOtherMethod(\in, # InstallOtherMethod, is this related to issue #1649?
 "for element and Poset",
 [IsObject,IsPoset],
@@ -305,89 +304,6 @@ function(X,Y)
 	return fail;
 end);
 
-InstallOtherMethod(IdentityMap,
-"for Poset",
-[IsPoset],
-function(X)
-	return PosetHomomorphismByFunction(X,X, x->x);
-end);
-
-
-InstallMethod(CompositionPosetHomomorphisms,
-"for PosetHomomorphism and PosetHomomorphism",
-[IsPosetHomomorphism,IsPosetHomomorphism],
-function(g,f)
-	if SourceMap(g)<>TargetMap(f) then
-		return fail;
-	fi;
-	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> (g!.f)(f!.f(x)) );
-end);
-
-InstallMethod(\*,
-"for PosetHomomorphism and PosetHomomorphism",
-[IsPosetHomomorphism,IsPosetHomomorphism],
-function(g,f)
-	return CompositionPosetHomomorphisms(f,g);
-end);
-
-
-InstallMethod(\*,
-"for IsList and PosetHomomorphism",
-[IsList,IsPosetHomomorphism],
-function(l,g)
-	if ForAll(l, IsPosetHomomorphism) then
-		return List(l, f->f*g);
-	else
-		TryNextMethod();
-	fi;
-end);
-
-InstallMethod(\*,
-"for PosetHomomorphism and IsList",
-[IsPosetHomomorphism,IsList],
-function(f,l)
-	if ForAll(l, IsPosetHomomorphism) then
-		return List(l, g->f*g);
-	else
-		TryNextMethod();
-	fi;
-end);
-
-
-InstallMethod(\^,
-"for PosetHomomorphism and Integer",
-[IsPosetHomomorphism,IsInt],
-function(f,n)
-	local m,g,fn;
-	if n=1 then
-		return f;
-	fi;
-	if n=-1 then
-		return Inverse(f);
-	fi;
-	if SourceMap(f)=TargetMap(f) then
-		if n=0 then
-			return IdentityMap(SourceMap(f));
-		fi;
-		if n>0 then
-			m:=n;
-			g:=f;
-			fn:=f^0;
-			while m>0 do
-				if RemInt(m,2)=1 then
-					fn:=fn*g;
-				fi;
-				g:=g*g;
-				m:=QuoInt(m,2);
-			od;
-			return fn;
-		fi;
-		if n<0 and f^-1<> fail then
-			return (f^-1)^(-n);
-		fi;
-	fi;
-	return fail;
-end);
 
 
 ##################################################################################################
