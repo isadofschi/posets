@@ -8,13 +8,19 @@
 ##
 #! @Chapter Introduction
 
-#! Our main reference is <Cite Key="BarmakBook"/>.
+#! This &GAP; package is meant to be a toolbox to study finite posets (equivalently, $T_0$ finite topological spaces) from a topological viewpoint. Our main reference is <Cite Key="BarmakBook"/>.
+
+
+#############################################################################
+#############################################################################
+
 
 #! @Chapter Posets
 
 #! @Section The Poset type
 
 #! Every poset has a Set of points and an Ordering.
+
 DeclareCategory("IsPoset",IsObject);
 DeclareCategory("IsPosetHomomorphism",IsObject);
 
@@ -77,27 +83,36 @@ DeclareOperation("\in",[IsObject,IsPoset]);
 
 #! @Section Constructing posets in different ways
 
-#! @Arguments X,f
-DeclareOperation("PosetByFunctionNC",[IsList,IsFunction]); # no checks
 
 #! @Arguments X,f
+#! @Description <C>PosetByFunction</C> creates a poset with set of points <A>X</A> and ordering function <A>f</A>. Checks that <A>f</A> defines a reflexive, antisymmetric and transitive relation on <A>X</A>.
 DeclareOperation("PosetByFunction",[IsList,IsFunction]);
 
+#! @Arguments X,f
+#! @Description <C>PosetByFunctionNC</C> creates a poset with set of points <A>X</A> and ordering function <A>f</A> without any checks. 
+DeclareOperation("PosetByFunctionNC",[IsList,IsFunction]);
+
+
+
 #! @Arguments M
-#! @Description Returns the poset $X$ on $\{1,\ldots,n\}$ such that $i\geqslant j$ is given by $M_{i,j}$.
+#! @Description Returns the poset $X$ on $\{1,\ldots,n\}$ such that $i\succcurlyeq j$ is given by $M_{i,j}$.
 DeclareOperation("PosetByOrderMatrix",[IsList]); # names are numbers 1..n
 
 #! @Arguments X,M
-DeclareOperation("PosetByOrderMatrix",[IsList,IsList]); # we give a set of names
+#! @Description Returns the poset on <A>X</A> such that <C>X[i]>X[j]</C> is given by <C>M[i][j]</C>.
+DeclareOperation("PosetByOrderMatrix",[IsList,IsList]);
 
 #! @Arguments R
+#! @Description Creates a <C>Poset</C> poset from a partial order binary relation, see <Ref Oper="IsPartialOrderBinaryRelation" BookName="ref"/>.
 DeclareOperation("PosetByOrderRelation",[IsPartialOrderBinaryRelation]);
 
 #! @Arguments X
+#! @Description Not implemented.
 DeclareOperation("PosetByHasseDiagram",[IsHasseDiagram]); # to do
 
-#! @Arguments l
-DeclareOperation("PosetByCoveringRelations",[IsList, IsList]); # to do
+#! @Arguments X, rel
+#! @Description Creates the poset on <A>X</A> with covering relations given by <A>rel</A>. Each element of <A>rel</A> must be a pair <C>[x,y]</C> representing a covering relation $x\succ y$.
+DeclareOperation("PosetByCoveringRelations",[IsList, IsList]);
 
 
 #############################################################################
@@ -105,10 +120,12 @@ DeclareOperation("PosetByCoveringRelations",[IsList, IsList]); # to do
 #! @Section Constructing poset homomorphisms in different ways
 
 #! @Arguments X,Y,f
-DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
+#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A>.
+DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
 
 #! @Arguments X,Y,f
-DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
+#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A> without any checks.
+DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
 
 #! @Arguments X,Y,ys
 DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
@@ -117,7 +134,7 @@ DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
 DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
 
 #! @Arguments X,Y
-#! @Description returns an isomorphism between $X$ and $Y$ or fail if the posets are not isomorphic.
+#! @Description An isomorphism between $X$ and $Y$ or fail if the posets are not isomorphic.
 DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
 
 #############################################################################
@@ -125,12 +142,15 @@ DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
 #! @Section Other useful representations of the ordering
 
 #! @Arguments X
+#! @Description Turns a poset <A>X</A> into a <C>Relation</C> on <C>[1..n]</C>, see <Ref Oper="Relations" BookName="ref"/>.
 DeclareOperation("RelationByPoset",[IsPoset]);
 
 #! @Arguments X
+#! @Description The order matrix of <A>X</A>. After calling <C>OrderMatrix</C> comparing two elements of <C>X</C> becomes immediate.
 DeclareAttribute("OrderMatrix",IsPoset);
 
 #! @Arguments X
+#! @Description The list of covering relations of <A>X</A>.
 DeclareAttribute("CoveringRelations",IsPoset);
 
 #! @Arguments X
@@ -152,3 +172,4 @@ DeclareAttribute("MaximalElements",IsPoset);
 #! @Arguments X
 #! @Description The set of minimal points of $X$.
 DeclareAttribute("MinimalElements",IsPoset);
+

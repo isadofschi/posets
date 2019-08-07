@@ -1,4 +1,4 @@
-#! @Chapter More properties
+#! @Chapter Topology
 #! @Section Fixed Point Property
 
 
@@ -9,6 +9,9 @@ DeclareAttribute("FixedPointsPosetHomomorphism",IsPosetHomomorphism);
 #! @Arguments X
 #! @Description Returns true if every order preserving map $f\colon X \to X$ has a fixed point, false otherwise.
 DeclareProperty("HasFixedPointProperty",IsPoset);
+
+#! @Chapter Classical stuff
+#! @Section Grading and height
 
 #! @Arguments X
 #! @Description Returns a grading if the poset is graded and fail otherwise. The grading is chosen so that the minimum grade is 0.

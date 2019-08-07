@@ -7,5 +7,5 @@
 DeclareGlobalFunction("DotCode");
 
 #! @Arguments X, filename
-#! @Description This function computes the Hasse diagram of X using the command dot, which is displayed and stored at filename. The software graphviz is needed.
+#! @Description This function computes the Hasse diagram of X using the command dot, which is displayed and stored at filename. The software graphviz (<URL>https://www.graphviz.org</URL>) is needed.
 DeclareGlobalFunction("HasseDiagram");
