@@ -90,43 +90,29 @@ end;;
 
 
 get_isolate:=function(attaching, matching)
-	# isolate es el diccionario que dice por que lista de aristas se reemplaza cada arista.
+	# isolate gives the replacement for each matched 1-cell
 	local isolate,pair,c1,c2,att,orient,scell,cell,e,att_inv;
-	isolate := NewDictionary([], true); # ojo, matching puede ser vacio?
+	isolate := NewDictionary([], true);
 	for pair in matching do
-		c1:=pair[2]; c2:=pair[1]; # !!!!!!!!!!!!!!
-		if LookupDictionary(attaching,c2)<>fail then # c2 of dimension 2
-			att := []; # new attaching map of c2
-			orient := 1;
-			for scell in LookupDictionary(attaching,c2) do
-				cell:=scell[1];;
-				e:=scell[2];;
-				if cell <> c1 then
-					Add(att,[cell,-e]);
-				else
-					orient := e;
-					break;
-				fi;
-			od;
-			att := Reversed(att);;
-			for scell in Reversed(LookupDictionary(attaching,c2)) do
-				cell:=scell[1];
-				e:=scell[2];
-				if cell <> c1 then
-					Add(att,[cell,-e]);
-				else
-					break;
-				fi;
-			od;
-			if orient = -1 then
-				att := Reversed(List(att, x-> [x[1],-x[2]]));
+		c1:=pair[2]; c2:=pair[1];
+		w :=LookupDictionary(attaching,c2);;
+		if w<>fail then # dim(c2) = 2
+			pos := Position(List(w, x->x[1]), c1);
+			orient := w[pos][2];
+			# we solve for c1:
+			att := List(
+				Concatenation([(pos+1)..Length(w)],[(pos-1),(pos-2)..1]),
+				i -> [ w[i][1], -orient*w[i][2] ]
+			);
+			if orient=-1 then
+				att := Reversed(att);
 			fi;
-			Assert(0,Length(att)=Length(LookupDictionary(attaching,c2))-1);
-			AddDictionary(isolate,[c1,1],att);
+			Assert(0, Length(att)=Length(w)-1);
+			AddDictionary(isolate, [c1,1], att);
 			att_inv := Reversed(List(att, x-> [x[1],-x[2]]));
-			AddDictionary(isolate,[c1,-1],att_inv);
+			AddDictionary(isolate, [c1,-1], att_inv);
 		else
-			# si es una 1-celda y no es critica la "tachamos"
+			# if dim(c2)=1 and c2 is not critical it is the identity
 			AddDictionary(isolate, [c2,1], []); 
 			AddDictionary(isolate, [c2,-1], []);
 		fi;
