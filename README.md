@@ -16,6 +16,6 @@ Start GAP and type
 
 to load the package.
 
-For details on how to use the Itest package see the package
+For details on how to use the Posets package see the package
 documentation in the `doc` subdirectory (view its HTML version or 
 `manual.pdf`  via a PDF viewer).

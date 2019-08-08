@@ -2,31 +2,41 @@
 # based on github.com/ximenafernandez/Finite-Spaces/Presentations.sage
 
 
+
+
+
 InstallMethod(PosetFpGroup,
 "for FpGroup",
 [IsFpGroup],
 function(G)
-	local F,R,gens,pointsWedge,pointsDisks,pointsX,coveringRelationsX, g,r,i,ls,l,s,XP,grading;
+	local F,R,gens,pointsWedge,pointsDisks,pointsX,coveringRelationsX, g,r,i,ls,l,s,XP,grading,
+	BasePoint,CenterTwoCell,VertexOneCell,VertexBoundaryTwoCell;
+	
+	BasePoint := ["x",0];
+	CenterTwoCell := r -> ["r",r,0];
+	VertexOneCell := {g,i} -> ["x",g,i];
+	VertexBoundaryTwoCell := {r,i} -> ["r",r,i];
+
 	F:=FreeGroupOfFpGroup(G);
 	R:=RelatorsOfFpGroup(G);
 	gens:=GeneratorsOfGroup(F);	
-	pointsWedge:=Union([["x",0]],Concatenation(List([1..Size(gens)], i -> [["x",i,-1],["x",i,0],["x",i,1]] )));
-	pointsDisks:=Union(List([1..Size(R)], r-> List([0..4*Length(R[r])], i -> ["r",r,i]  ) ) );
+	pointsWedge:=Union([BasePoint],Concatenation(List([1..Size(gens)], g -> List([-1,0,1], t-> VertexOneCell(g,t) ))));
+	pointsDisks:=Union(List([1..Size(R)], r-> List([0..4*Length(R[r])], i -> VertexBoundaryTwoCell(r,i)   ) ) );
 	pointsX:=Union(pointsWedge,pointsDisks);
 	coveringRelationsX:=[];
 	# covering relations for wedge
 	for g in [1..Size(gens)] do
-		Add(coveringRelationsX, [["x",g,1],["x",g,0]]);
-		Add(coveringRelationsX, [["x",g,-1],["x",g,0]]);
-		Add(coveringRelationsX, [["x",g,1],["x",0]]);
-		Add(coveringRelationsX, [["x",g,-1],["x",0]]);
-	od;
+		Add(coveringRelationsX, [VertexOneCell(g, 1), VertexOneCell(g,0)]);
+		Add(coveringRelationsX, [VertexOneCell(g,-1), VertexOneCell(g,0)]);
+		Add(coveringRelationsX, [VertexOneCell(g, 1), BasePoint]);
+		Add(coveringRelationsX, [VertexOneCell(g,-1), BasePoint]);
+	od; 
 	# covering relations for disks
 	for r in [1..Size(R)] do
 		for i in 2*[1..2*Length(R[r])] do
-			Add(coveringRelationsX, [["r",r,i], ["r",r,i-1]]);
-			Add(coveringRelationsX, [["r",r,i], ["r",r,RemInt(i+1,4*Length(R[r]))]] );
-			Add(coveringRelationsX, [["r",r,i-1], ["r",r,0]] );
+			Add(coveringRelationsX, [VertexBoundaryTwoCell(r,i),VertexBoundaryTwoCell(r,i-1)]);
+			Add(coveringRelationsX, [VertexBoundaryTwoCell(r,i),VertexBoundaryTwoCell(r,RemInt(i+1,4*Length(R[r])))]);
+			Add(coveringRelationsX, [VertexBoundaryTwoCell(r,i-1), VertexBoundaryTwoCell(r,0)]);
 		od;
 	od;
 	# covering relations from the "attaching maps"
@@ -36,15 +46,15 @@ function(G)
 			l:=ls[i];
 			g:=AbsInt(l);
 			s:=SignInt(l);
-			Add(coveringRelationsX, [ ["r",r, 4*(i-1)+1], ["x",0]      ]);
-			Add(coveringRelationsX, [ ["r",r,4*(i-1)+2], ["x",g,s]  ]);
-			Add(coveringRelationsX, [ ["r",r,4*(i-1)+3], ["x",g,0]  ]);
-			Add(coveringRelationsX, [ ["r",r,4*(i-1)+4], ["x",g,-s] ]);
+			Add(coveringRelationsX, [ VertexBoundaryTwoCell(r,4*(i-1)+1), BasePoint  		  ]);
+			Add(coveringRelationsX, [ VertexBoundaryTwoCell(r,4*(i-1)+2), VertexOneCell(g,s)  ]);
+			Add(coveringRelationsX, [ VertexBoundaryTwoCell(r,4*(i-1)+3), VertexOneCell(g,0)  ]);
+			Add(coveringRelationsX, [ VertexBoundaryTwoCell(r,4*(i-1)+4), VertexOneCell(g,-s) ]);
 		od;
 	od;
 	XP:=PosetByCoveringRelations(pointsX,coveringRelationsX);
 	grading:=function(v)
-		if v=["x",0] then return 0; fi;
+		if v=BasePoint then return 0; fi;
 		if v[1]="x" and v[3]=0 then return 0; fi;
 		if v[1]="x" then return 1; fi;
 		if v[3]=0 then return 0; fi;
