@@ -1,0 +1,4 @@
+
+DeclareGlobalFunction("MorsePresentation");
+
+DeclareGlobalFunction("GreedyMaximalAcyclicMatching");
