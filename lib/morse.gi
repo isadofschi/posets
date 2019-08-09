@@ -1,78 +1,50 @@
 # Based on https://github.com/ximenafernandez/Finite-Spaces/blob/master/Morse.sage
 
-#Morse 
-
 OriginalAttaching:=function(G)
 	# Attaching maps for the barycentric subdivision
 	# of the presentation complex of an FpGroup G.
 	# The output is a diccionary mapping each 2-cell
 	# to an attaching map represented as a list of
 	# pairs [edge,sign].
-	local gens,rels, att,m,n,i,letters,r,j,l,e,
-	BasePoint,CenterTwoCell,VertexOneCell,VertexBoundaryTwoCell;
-
-	BasePoint := ["x",0]; # duplicated code! Not a good notation...
-	CenterTwoCell := r -> ["r",r,0];
-	VertexOneCell := {g,i} -> ["x",g,i];
-	VertexBoundaryTwoCell := {r,i} -> ["r",r,i];;
+	local gens,rels, att,m,n,i,letters_r,r,len_r,j,l,s,s1,t,
+	BasePoint,BarycenterOneCell,BarycenterTwoCell,OneCellGenerator,OneCellRelatorBasePoint,
+	OneCellRelatorGenerator,TwoCellRelator;
+	
+	BasePoint:=[0,"b"];
+	BarycenterOneCell:= i-> [1,"g",i];
+	BarycenterTwoCell:= j -> [1,"r",j];
+	OneCellGenerator := {i,s} -> [1,"gb",i,s]; # s is 1 or -1
+	OneCellRelatorBasePoint:= {j,t} -> [1,"rb",j,t];
+	OneCellRelatorGenerator:= {j,t} -> [1,"rg",j,t];
+	TwoCellRelator:={j,t,s}-> [2,"r",j,t,s]; # s is 1 or -1
 
 	gens:=GeneratorsOfGroup(FreeGroupOfFpGroup(G));
 	rels:=RelatorsOfFpGroup(G);
 	att := NewDictionary([],true);; #dictionary of attaching maps
-	rels:=List(rels, r -> List(LetterRepAssocWord(r), x -> [AbsInt(x),SignInt(x)]) );
 	m:=Length(rels);
 	n:=Length(gens);
-	for i in [1..m] do
-		letters := List([1..n],x->0);
-		r := rels[i];
-		for j in [1..Length(r)] do
-			l:= r[j][1];
-			e:= r[j][2];
-			letters[l]:=letters[l]+1;
-			if e=1 then
+	for j in [1..m] do
+		r := rels[j];
+		letters_r:=LetterRepAssocWord(r);
+		len_r:=Length(r);
+		for t in [1..Length(r)] do
+			i:= AbsInt(letters_r[t]);
+			s:= SignInt(letters_r[t]);
+			for s1 in [-1,1] do
 				AddDictionary(
 					att,
-					VertexBoundaryTwoCell(i,4*(j-1)+2),
+					TwoCellRelator(j,t,s1),
 					[
-						[VertexOneCell(l,1),1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+3), -1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+1),1]
+						[OneCellRelatorBasePoint(j,1+RemInt(t+(1-s1)/2-1,len_r)), 1],
+						[OneCellRelatorGenerator(j,t), 1],
+						[OneCellGenerator(i,s*s1),1]
 					]
 				);
-				AddDictionary(
-					att,
-					VertexBoundaryTwoCell(i,4*(j-1)+4),
-					[
-						[VertexOneCell(l,-1),1],
-						[VertexBoundaryTwoCell(i,RemInt(4*j+1,4*Length(r))), -1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+3), 1]
-					]
-				);
-			else
-				AddDictionary(
-					att,	
-					VertexBoundaryTwoCell(i,4*(j-1)+2),
-					[
-						[VertexOneCell(l,-1),-1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+3), -1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+1), 1]
-					]
-				);
-				AddDictionary(
-					att,
-					VertexBoundaryTwoCell(i,4*(j-1)+4),
-					[
-						[VertexOneCell(l,1),-1],
-						[VertexBoundaryTwoCell(i,RemInt(4*j+1,4*Length(r))),-1],
-						[VertexBoundaryTwoCell(i,4*(j-1)+3), 1]
-					]
-				);
-			fi;
+			od;
 		od;
 	od;
 	return att;
 end;;
-
 
 RewriteEdge := function(edge, replacements)
 	# Recusively rewrites an edge following the 
@@ -93,11 +65,10 @@ RewriteEdge := function(edge, replacements)
 	return new_attaching;
 end;;
 
-
 EdgeReplacementDictionary:=function(attaching, matching)
 	# Returns a dictionary mapping each 
 	# mapped 1-cell to its replacement.
-	local replacements,pair,c1,c2,att,orient,scell,cell,e,att_inv;
+	local replacements,pair,c1,c2,att,orient,pos,att_inv,w;
 	replacements := NewDictionary([], true);
 	for pair in matching do
 		c1:=pair[2]; c2:=pair[1];
@@ -114,7 +85,7 @@ EdgeReplacementDictionary:=function(attaching, matching)
 				Concatenation([(pos+1)..Length(w)],[(pos-1),(pos-2)..1]),
 				i -> [ w[i][1], -orient*w[i][2] ]
 			);
-			if orient=-1 then
+			if orient=1 then
 				att := Reversed(att);
 			fi;
 			Assert(0, Length(att)=Length(w)-1);
@@ -192,17 +163,10 @@ function(G,M)
 	return F/rels;
 end);
 
-
-##########################################################################################
-##########################################################################################
-##########################################################################################
-
-#Matchings
-
-#Greedy algorithm that ouputs a random maximal matching (maximal if height X = 2).
-
-GreedyAcyclicMatching:=function(X)
-	 #X the face poset of regular CW.
+InstallGlobalFunction(GreedyAcyclicMatching,
+function(X)
+	#Greedy algorithm that ouputs a random maximal matching (maximal if height X = 2).
+	#X the face poset of regular CW.
 	local n,edges,in_match,M,D,e;
 	n:=Size(X);
 	edges := List(CoveringRelations(X), e-> List(e,x->PositionSorted(Set(X),x)));
@@ -224,62 +188,25 @@ GreedyAcyclicMatching:=function(X)
 		fi;
 	od;
 	return List(M, e-> List(e,v->Set(X)[v]));
-end;
+end);
 
-GreedySpanningMatching:=function(X)
+InstallGlobalFunction(GreedySpanningMatching,
+function(X)
 	local M;
 	M:=[];
 	while Length(CriticalCellsByLevel(X, M)[1]) <> 1 do
 		M := GreedyAcyclicMatching(X);
 	od;
 	return M;
-end;
+end);
 
-#######################################
-#######################################
-#######################################
-
-# Mas cosas:
-
-#Incidence of critical cells
-
-def critical_points(X, M): #X the face poset of a regular CW, M an acyclic matching
-	L = X.list()
-	for e in M:
-		L.remove(e[0])
-		L.remove(e[1])
-	return L
 
 #Ouputs the reversed Hasse diagram of X according to M
-def reverse(X, M): #X the face poset of a regular CW, M an acyclic matching
-	edges = X.cover_relations()
-	for e in M:
-		print e
-		edges.remove(list(e))
-		edges.append([e[1], e[0]])
-	return DiGraph(edges)
+#def reverse(X, M): #X the face poset of a regular CW, M an acyclic matching
+#	edges = X.cover_relations()
+#	for e in M:
+#		print e
+#		edges.remove(list(e))
+#		edges.append([e[1], e[0]])
+#	return DiGraph(edges)
 
-#Ouputs the incidence of y in x in K_M
-def critical_incidence(gens, rels, M, x, y): #X the face poset of a regular CW (say K), M an acyclic matching, y of height i, x of height i. 
-	X = presentation_poset(gens,rels)
-	incidence = attaching(gens,rels)
-	D = reverse(X,M)
-	L = D.all_simple_paths(starting_vertices = [x], ending_vertices = [y])
-	inc = 0
-	for p in L: 
-		s = incidence(p[0], p[1])
-		for i in range(2, len(p), 2):
-			s = s * incidence(p[i], p[i-1]) * incidence(p[i], p[i])
-			inc = inc + s * (-1)^(len(p)/2 - 1)
-	return inc
-
-def critical_CW_incidence(gens, rels, M): # X the face poset of a regular CW, M an acyclic matching
-	X = presentation_poset(gens, rels)
-	C = CriticalCellsByLevel(X, M)
-	inc = {}
-	for i in range(len(C)-1):
-		if C[i] != [] and C[i] != []:
-			for y in C[i]:
-				for x in C[i]:
-					inc[(x, y)] = critical_incidence(gens, rels, M, x, y)
-	return inc

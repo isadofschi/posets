@@ -22,5 +22,7 @@ ReadPackage( "posets", "lib/presentations.gi" );
 ReadPackage( "posets", "lib/fences.gi" );
 ReadPackage( "posets", "lib/deformations.gi" );
 ReadPackage( "posets", "lib/plot.gi" );
+ReadPackage( "posets", "lib/morse.gi" );
+
 #E  read.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

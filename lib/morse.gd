@@ -1,4 +1,8 @@
-
+#!
 DeclareGlobalFunction("MorsePresentation");
 
-DeclareGlobalFunction("GreedyMaximalAcyclicMatching");
+DeclareGlobalFunction("GreedyAcyclicMatching");
+
+#!
+DeclareGlobalFunction("GreedySpanningMatching");
+

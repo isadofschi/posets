@@ -108,7 +108,7 @@ PackageDoc := rec(
 Dependencies := rec(
   GAP := "4.8.2",
 
-  NeededOtherPackages := [ ["HAP", ">=1.11.13"], ["SONATA", ">=2.8"], ["RDS",">=1.6"] ],
+  NeededOtherPackages := [ ["HAP", ">=1.11.13"], ["SONATA", ">=2.8"], ["RDS",">=1.6"], ["Digraphs",">=0.15.0"] ],
 
 
   SuggestedOtherPackages := [],
