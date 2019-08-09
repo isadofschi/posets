@@ -3,9 +3,15 @@
 #Morse 
 
 OriginalAttaching:=function(G)
+	# Attaching maps for the barycentric subdivision
+	# of the presentation complex of an FpGroup G.
+	# The output is a diccionary mapping each 2-cell
+	# to an attaching map represented as a list of
+	# pairs [edge,sign].
 	local gens,rels, att,m,n,i,letters,r,j,l,e,
 	BasePoint,CenterTwoCell,VertexOneCell,VertexBoundaryTwoCell;
-	BasePoint := ["x",0]; # duplicated code!
+
+	BasePoint := ["x",0]; # duplicated code! Not a good notation...
 	CenterTwoCell := r -> ["r",r,0];
 	VertexOneCell := {g,i} -> ["x",g,i];
 	VertexBoundaryTwoCell := {r,i} -> ["r",r,i];;
@@ -68,38 +74,42 @@ OriginalAttaching:=function(G)
 end;;
 
 
-write := function(edge, isolate)
-	# reescribe recursivamente una arista segun isolate
-	# isolate dice como se reemplaza cada arista por una lista de aristas.
-	local new_attaching, aux_write;
-	aux_write := function(edge,isolate)
+RewriteEdge := function(edge, replacements)
+	# Recusively rewrites an edge following the 
+	# rules given by replacements.
+	local new_attaching, aux_rewrite;
+	aux_rewrite := function(edge)
 		local e;
-		#Print("calling aux_write(",edge,",isolate)\n");
-		if LookupDictionary(isolate,edge)=fail then
+		if LookupDictionary(replacements,edge)=fail then
 			Add(new_attaching,edge);
 		else
-			for e in LookupDictionary(isolate,edge) do
-				aux_write(e, isolate);
+			for e in LookupDictionary(replacements,edge) do
+				aux_rewrite(e);
 			od;
 		fi;
 	end;;
 	new_attaching := [];;
-	aux_write(edge, isolate);
+	aux_rewrite(edge);
 	return new_attaching;
 end;;
 
 
-get_isolate:=function(attaching, matching)
-	# isolate gives the replacement for each matched 1-cell
-	local isolate,pair,c1,c2,att,orient,scell,cell,e,att_inv;
-	isolate := NewDictionary([], true);
+EdgeReplacementDictionary:=function(attaching, matching)
+	# Returns a dictionary mapping each 
+	# mapped 1-cell to its replacement.
+	local replacements,pair,c1,c2,att,orient,scell,cell,e,att_inv;
+	replacements := NewDictionary([], true);
 	for pair in matching do
 		c1:=pair[2]; c2:=pair[1];
 		w :=LookupDictionary(attaching,c2);;
-		if w<>fail then # dim(c2) = 2
+		if w=fail then
+			# dim(c2)=1 and c2 is not critical, thus the replacement is trivial:
+			AddDictionary(replacements, [c2,1], []); 
+			AddDictionary(replacements, [c2,-1], []);
+		else
+			# dim(c2)=2, we solve for c1:
 			pos := Position(List(w, x->x[1]), c1);
 			orient := w[pos][2];
-			# we solve for c1:
 			att := List(
 				Concatenation([(pos+1)..Length(w)],[(pos-1),(pos-2)..1]),
 				i -> [ w[i][1], -orient*w[i][2] ]
@@ -108,37 +118,32 @@ get_isolate:=function(attaching, matching)
 				att := Reversed(att);
 			fi;
 			Assert(0, Length(att)=Length(w)-1);
-			AddDictionary(isolate, [c1,1], att);
+			AddDictionary(replacements, [c1,1], att);
 			att_inv := Reversed(List(att, x-> [x[1],-x[2]]));
-			AddDictionary(isolate, [c1,-1], att_inv);
-		else
-			# if dim(c2)=1 and c2 is not critical it is the identity
-			AddDictionary(isolate, [c2,1], []); 
-			AddDictionary(isolate, [c2,-1], []);
+			AddDictionary(replacements, [c1,-1], att_inv);
 		fi;
   	od;
-	#for xx in (isolate!.entries) do Print(xx[1], " --> ", xx[2], "\n");od;
-	return isolate;
+	# for xx in (replacements!.entries) do Print(xx[1], " --> ", xx[2], "\n");od; # for debugging
+	return replacements;
 end;;
 
 
 attaching_Morse:=function(attaching, matching, critics_dim_2)
-	# funcion principal!!!
 	# Recibe:
 	# attaching - diccionario - el attaching original
 	# matching - lista - el matching dado como lista de pares de celdas
 	# critics_dim_2 - lista - las celdas criticas de dim 2
 	# Devuelve:	
 	# attaching nuevo - diccionario
-	local new_attaching,c,rel_c,isolate;
-	isolate:=get_isolate(attaching,matching);
-	# Usando isolate calculamos los attaching maps de las 2-celdas criticas:
-	new_attaching := NewDictionary([],true); # ojo, critics_dim_2 puede ser vacio?
+	local new_attaching,c,rel_c,replacements;
+	replacements:=EdgeReplacementDictionary(attaching,matching);
+	# Using replacements we compute the new attaching maps for the critical 2-cells:
+	new_attaching := NewDictionary([],true);
 	for c in critics_dim_2 do
 		rel_c:=Concatenation(
 					List(
 						LookupDictionary(attaching,c),
-						edge -> write(edge, isolate)
+						edge -> RewriteEdge(edge, replacements)
 					)
 				);
 		AddDictionary(new_attaching,c,rel_c);
@@ -147,10 +152,10 @@ attaching_Morse:=function(attaching, matching, critics_dim_2)
 end;;
 
 
-CriticalByLevel:=function(X, M)
-	# X a poset
+CriticalCellsByLevel:=function(X, M)
+	# X a poset (the face poset of a regular CW complex)
 	# M an (acyclic) matching
-	# devuelve la lista de celdas criticas agrupadas por altura.
+	# returns the critical cells grouped by height
 	local matched_cells,critical,x;
 	matched_cells := Union(M);
 	critical:=List([0..Height(X)], l->[]);
@@ -162,14 +167,13 @@ CriticalByLevel:=function(X, M)
 	return critical;
 end;;
 
-DeclareGlobalFunction("MorsePresentation");
-# Takes an FpGroup G and a matching M..
+# Takes an FpGroup G and a matching M
 InstallGlobalFunction(MorsePresentation,
 function(G,M)
 	local original_attaching,X,critical,morse_attaching,F,d,gens,i,rels,c,att_c,r;
 	original_attaching := OriginalAttaching(G);
 	X := PosetFpGroup(G);
-	critical := CriticalByLevel(X, M);
+	critical := CriticalCellsByLevel(X, M);
 	morse_attaching := attaching_Morse(original_attaching, M, critical[3]);
 	# los generadores de F son las 1-celdas criticas:
 	F:=FreeGroup(Length(critical[2]));
@@ -225,15 +229,11 @@ end;
 GreedySpanningMatching:=function(X)
 	local M;
 	M:=[];
-	while Length(CriticalByLevel(X, M)[1]) <> 1 do
+	while Length(CriticalCellsByLevel(X, M)[1]) <> 1 do
 		M := GreedyAcyclicMatching(X);
 	od;
 	return M;
 end;
-
-F:=FreeGroup("x","y");;AssignGeneratorVariables(F); G:=F/[x^3,y^3,Comm(x,y)];;
-M:=GreedySpanningMatching(PosetFpGroup(G));
-MorsePresentation(G,M);
 
 #######################################
 #######################################
@@ -273,9 +273,9 @@ def critical_incidence(gens, rels, M, x, y): #X the face poset of a regular CW (
 			inc = inc + s * (-1)^(len(p)/2 - 1)
 	return inc
 
-def critical_CW_incidence(gens, rels, M): #X the face poset of a regular CW, M an acyclic matching
+def critical_CW_incidence(gens, rels, M): # X the face poset of a regular CW, M an acyclic matching
 	X = presentation_poset(gens, rels)
-	C = CriticalByLevel(X, M)
+	C = CriticalCellsByLevel(X, M)
 	inc = {}
 	for i in range(len(C)-1):
 		if C[i] != [] and C[i] != []:
