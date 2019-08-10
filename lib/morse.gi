@@ -199,14 +199,3 @@ function(X)
 	od;
 	return M;
 end);
-
-
-#Ouputs the reversed Hasse diagram of X according to M
-#def reverse(X, M): #X the face poset of a regular CW, M an acyclic matching
-#	edges = X.cover_relations()
-#	for e in M:
-#		print e
-#		edges.remove(list(e))
-#		edges.append([e[1], e[0]])
-#	return DiGraph(edges)
-

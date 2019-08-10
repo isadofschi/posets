@@ -6,8 +6,8 @@ InstallMethod(PosetFpGroup,
 [IsFpGroup],
 function(G)
 	local F,rels,gens,n,m,
-	pointsX,coveringRelationsX,
-	i,j,r,letters_r,len_r,t,s,s1,XP,grading,
+	pointsX,coveringRelationsX,n_points,
+	i,j,k,r,letters_r,len_r,t,s,s1,XP,grading,e,M,
 	BasePoint,BarycenterOneCell,BarycenterTwoCell,OneCellGenerator,OneCellRelatorBasePoint,
 	OneCellRelatorGenerator,TwoCellRelator;
 	
@@ -63,7 +63,31 @@ function(G)
 	od;
 	#Print(pointsX);
 	#Print(coveringRelationsX);
-	XP:=PosetByCoveringRelations(pointsX,coveringRelationsX);
+
+
+	n_points:=Size(pointsX);
+	M:=	List([1..n_points], x-> List([1..n_points],ReturnFalse));
+	for i in [1..n_points] do
+		M[i][i]:=true;
+	od;
+	for e in coveringRelationsX do
+		M[PositionSorted(pointsX,e[1])][PositionSorted(pointsX,e[2])]:=true;
+	od;
+	for k in [1..n_points] do
+		if pointsX[k][1]=1 then # height 1
+			for i in [1..n_points] do
+				if i<>k and M[i][k] then
+					for j in [1..n_points] do
+						if j<>k and M[k][j] then
+							M[i][j]:=true;
+						fi;
+					od;
+				fi;
+			od;
+		fi;
+	od;
+	XP:=PosetByFunctionNC(pointsX,{x,y}-> M[PositionSorted(pointsX,x)][PositionSorted(pointsX,y)]);
+	#XP:=PosetByCoveringRelations(pointsX,coveringRelationsX);
 	SetGrading(XP,x->x[1]);
 	return XP;
 end);
