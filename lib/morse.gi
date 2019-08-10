@@ -82,7 +82,7 @@ EdgeReplacementDictionary:=function(attaching, matching)
 			pos := Position(List(w, x->x[1]), c1);
 			orient := w[pos][2];
 			att := List(
-				Concatenation([(pos+1)..Length(w)],[(pos-1),(pos-2)..1]),
+				Concatenation([(pos+1)..Length(w)],[1..(pos-1)]),
 				i -> [ w[i][1], -orient*w[i][2] ]
 			);
 			if orient=1 then
