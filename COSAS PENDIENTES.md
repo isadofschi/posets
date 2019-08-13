@@ -2,18 +2,18 @@
 
 # Colorings
 
-falta la parte de spanning collapsible subposets
+* falta la parte de spanning collapsible subposets
 
 # Homotopy 
 
-falta traducir MinWeakCore, IsCollapsible y QCCores
+* falta traducir MinWeakCore, IsCollapsible y QCCores
 
 # Morse
-Se puede generalizar más?
+* Se puede generalizar más?
 
 # Deformations
 
-falta la parte de random reductions
+* Falta la parte de random reductions
 
 # Funciones hechas por Kevin
 
@@ -33,8 +33,6 @@ falta la parte de random reductions
 # Más cosas del libro de Jonathan
 
 # Ejemplos de artículos (posiblemente como casos de prueba)
-
-# Pregunta: es razonable que las QC y QCop se llamen UpQC y DownQC? Lo mismo con las Middle y MiddleOp reductions.
 
 # Optimizar cosas
 

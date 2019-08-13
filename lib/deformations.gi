@@ -170,9 +170,9 @@ InstallMethod(IsDownEdgeReduction,
 [IsPoset,IsList],
 function(X,e)
 	return
-				(e[2]  in MaximalElements(X))
+				(e[1]  in MaximalElements(X))
 			and (e in CoveringRelations(X))
-			and IsContractible(RemoveCoveringRelation(ElementsBelow(X,e[2]),e));
+			and IsContractible(RemoveCoveringRelation(ElementsBelow(X,e[1]),e));
 end);
 
 InstallMethod(IsUpEdgeReduction,
@@ -180,9 +180,9 @@ InstallMethod(IsUpEdgeReduction,
 [IsPoset,IsList],
 function(X,e)
 	return
-				(e[1]  in MinimalElements(X))
+				(e[2]  in MinimalElements(X))
 			and (e in CoveringRelations(X))
-			and IsContractible(RemoveCoveringRelation(ElementsAbove(X,e[1]),e));
+			and IsContractible(RemoveCoveringRelation(ElementsAbove(X,e[2]),e));
 end);
 
 InstallMethod(IsEdgeReduction,
