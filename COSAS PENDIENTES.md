@@ -8,21 +8,24 @@ falta la parte de spanning collapsible subposets
 
 falta traducir MinWeakCore, IsCollapsible y QCCores
 
+# Morse
+Se puede generalizar más?
+
 # Deformations
 
 falta la parte de random reductions
-
-# Traducir https://github.com/ximenafernandez/Finite-Spaces/Morse.sage
 
 # Funciones hechas por Kevin
 
 * Más cosas de posets de subgrupos
 
-* Más cosas de fences?
+* Más cosas de fences? Por ejemplo contractibilidad en k pasos.
 
 # Homotopy Colimits de posets
 
 * Decidir como construir diagramas de posets.
+
+# MinimumList y MaximumList para posets
 
 # Más Funciones de posets (por ejemplo posets en n puntos)
 [http://doc.sagemath.org/html/en/reference/combinat/sage/combinat/posets/posets.html]

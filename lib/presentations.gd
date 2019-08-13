@@ -1,4 +1,4 @@
-#! @Chapter Constructing new posets
+#! @Chapter Posets and presentations
 #! @Section The poset associated to a group presentation
 
 #! @BeginGroup

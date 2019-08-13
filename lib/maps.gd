@@ -24,7 +24,7 @@ DeclareOperation("TargetMap",[IsPosetHomomorphism]);
 
 #! @Arguments f
 #! @Description A &GAP; function computing <C>f</C>.
-DeclareOperation("UnderlyingMap",[IsPosetHomomorphism]);
+DeclareOperation("UnderlyingFunction",[IsPosetHomomorphism]);
 
 #! @BeginGroup
 #! @Arguments f

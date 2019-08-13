@@ -11,8 +11,7 @@
 PosetFamily:=NewFamily("PosetFamily",IsPoset and IsMutable and IsCopyable);;
 PosetType:=NewType(PosetFamily,  IsPoset and IsAttributeStoringRep);;
 
-PosetHomomorphismFamily:=NewFamily("PosetHomomorphismFamily",IsPosetHomomorphism and IsMutable and IsCopyable );;
-PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism and IsAttributeStoringRep );;
+
 
 ################################################################################
 
@@ -30,23 +29,12 @@ function(X)
 end);
 
 
-InstallMethod(ViewObj,
-"for PosetHomomorphism",
-[IsPosetHomomorphism],
-function(X)
-	Print("<order preserving map>");
-end);
+
 
 InstallMethod(PrintObj,"for Poset",
 [IsPoset],
 function(X)
 	Print("<finite poset of size ", Size(X) ,">");
-end);
-
-InstallMethod(PrintObj,"for PosetHomomorphism",
-[IsPosetHomomorphism],
-function(X)
-	Print("<order preserving map>");
 end);
 
 
@@ -99,19 +87,7 @@ function(X1,X2)
 	return Set(X1)<Set(X2) or (Set(X1)=Set(X2) and OrderMatrix(X1)<OrderMatrix(X2));
 end);
 
-InstallMethod(\=,"for PosetHomomorphism and PosetHomomorphism",
-[IsPosetHomomorphism,IsPosetHomomorphism],
-function(f,g)
-	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingMap(f)) ] =  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingMap(g)) ];
-end);
 
-# the purpose of defining this is total order to consider Sets of poset homomorphisms
-# this order is not meaningful (it is not the same as the partial order f<g := (forall x) fx<gx )
-InstallMethod(\<,"for PosetHomomorphism and PosetHomomorphism",
-[IsPosetHomomorphism,IsPosetHomomorphism],
-function(f,g)
-	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingMap(f)) ] <  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingMap(g)) ];
-end);
 
 ################################################################################
 # Basic functions to build posets

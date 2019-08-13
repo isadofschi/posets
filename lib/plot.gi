@@ -2,7 +2,9 @@ InstallGlobalFunction(DotCode,
 function(X,params)
 	local n,M,s,rels,i,e,e1,
 	use_names,color_edges,direction_edges,
-	current_color,current_dir;
+	current_color,current_dir,escape_string;
+
+	escape_string := s -> ReplacedString(s,"\"","\\\"");
 
 	use_names:=LookupDictionary(params,"use_names");
 	if use_names=fail then use_names:=false; fi;
@@ -37,7 +39,7 @@ function(X,params)
 		else
 			e1:=List(e, x->PositionSorted(Set(X),x));
 		fi;
-		s:=Concatenation(s,"  \"",String(e1[1]),"\" -> \"",String(e1[2]),"\"\n");
+		s:=Concatenation(s,"  \"",escape_string(String(e1[1])),"\" -> \"",escape_string(String(e1[2])),"\"\n");
 	od;
 	s:=Concatenation(s,"}");
 	return s;

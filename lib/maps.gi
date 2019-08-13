@@ -1,3 +1,42 @@
+#############################################################################
+##
+#W  maps.gi             posets Package
+##
+##
+##  
+##  
+##
+
+
+PosetHomomorphismFamily:=NewFamily("PosetHomomorphismFamily",IsPosetHomomorphism and IsMutable and IsCopyable );;
+PosetHomomorphismType:=NewType(PosetHomomorphismFamily,  IsPosetHomomorphism and IsAttributeStoringRep );;
+
+InstallMethod(ViewObj,
+"for PosetHomomorphism",
+[IsPosetHomomorphism],
+function(X)
+	Print("<order preserving map>");
+end);
+
+InstallMethod(PrintObj,"for PosetHomomorphism",
+[IsPosetHomomorphism],
+function(X)
+	Print("<order preserving map>");
+end);
+
+InstallMethod(\=,"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(f,g)
+	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingFunction(f)) ] =  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingFunction(g)) ];
+end);
+
+# the purpose of defining this is total order to consider Sets of poset homomorphisms
+# this order is not meaningful (it is not the same as the partial order f<g := (forall x) fx<gx )
+InstallMethod(\<,"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(f,g)
+	return [SourceMap(f), TargetMap(f), List(Set(SourceMap(f)),UnderlyingFunction(f)) ] <  [SourceMap(g), TargetMap(g), List(Set(SourceMap(g)),UnderlyingFunction(g)) ];
+end);
 
 
 InstallMethod(SourceMap,
@@ -14,7 +53,7 @@ function(f)
 	return f!.target;
 end);
 
-InstallMethod(UnderlyingMap,
+InstallMethod(UnderlyingFunction,
 "for Poset homomorphism",
 [IsPosetHomomorphism],
 function(f)
@@ -29,7 +68,7 @@ function(f)
 	if Size(SourceMap(f))<>Size(SourceMap(f)) then
 		return fail;
 	fi;
-	l:=List(Set(SourceMap(f)),UnderlyingMap(f));
+	l:=List(Set(SourceMap(f)),UnderlyingFunction(f));
 	if Size(Set(l))<>Size(SourceMap(f)) then
 		return fail;
 	fi;

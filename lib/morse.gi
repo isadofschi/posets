@@ -138,7 +138,7 @@ CriticalCellsByLevel:=function(X, M)
 	return critical;
 end;;
 
-# Takes an FpGroup G and a matching M
+
 InstallGlobalFunction(MorsePresentation,
 function(G,M)
 	local original_attaching,X,critical,morse_attaching,F,d,gens,i,rels,c,att_c,r;
