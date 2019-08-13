@@ -318,4 +318,41 @@ function(X)
 	fi;
 
 end);
-	
+
+
+
+
+
+InstallMethod(MinWeakCore,
+"for Poset",
+[IsPoset],
+function(X) 
+	local visited, dfs;
+	dfs:= function(A)
+		local x,min_weak_core,S,Y;
+		min_weak_core:=ShallowCopy(A);
+		for x in WeakPoints(SubPoset(X,A)) do 
+			S:=Difference(A,[x]);
+			if not KnowsDictionary(visited,S) then
+				AddDictionary(visited,S);
+				Y := dfs(S); 
+				if Size(Y)<Size(min_weak_core) then
+					min_weak_core:=Y;
+				fi;
+			fi;
+		od;
+		return min_weak_core;
+	end;;
+	visited:= NewDictionary(Set(X),false); 
+	return SubPoset(X,dfs(Set(X)));
+end);
+
+
+
+InstallMethod(IsCollapsible,
+"for Poset",
+[IsPoset],
+function(X)
+	return Size(MinWeakCore(X))=1;
+end);
+

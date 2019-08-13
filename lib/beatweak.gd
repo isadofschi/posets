@@ -104,10 +104,8 @@ DeclareOperation("WeakCore",[IsPoset]);
 #! @Arguments X
 #! @Arguments X
 #! @Description The same as <C>WeakCore</C> but with the minimum possible size. Again, this space need not be unique up to isomorphism.
-#! Not implemented!
 DeclareOperation("MinWeakCore",[IsPoset]); #to do
 
 #! @Arguments X
-#! Not implemented!
 DeclareAttribute("IsCollapsible",IsPoset); #to do
 
