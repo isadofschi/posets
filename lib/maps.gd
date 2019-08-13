@@ -24,7 +24,7 @@ DeclareOperation("TargetMap",[IsPosetHomomorphism]);
 
 #! @Arguments f
 #! @Description A &GAP; function computing <C>f</C>.
-DeclareOperation("UnderlyingFunction",[IsPosetHomomorphism]);
+DeclareAttribute("UnderlyingFunction",IsPosetHomomorphism);
 
 #! @BeginGroup
 #! @Arguments f
@@ -46,7 +46,6 @@ DeclareOperation("ImageMap",[IsPosetHomomorphism,IsObject]);
 DeclareOperation("\^",[IsObject,IsPosetHomomorphism]);
 #! @EndGroup
 
-
 # Not documented!
 DeclareOperation("\*",[IsList,IsPosetHomomorphism]);
 DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
@@ -55,4 +54,28 @@ DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
 #! @Arguments f,n
 #! @Description Returns $f^n$. If $n=0$ returns the identity. It works for $n&lt;0$ if $f$ is an isomorphism.
 DeclareOperation("\^",[IsPosetHomomorphism,IsInt]);
+
+
+#############################################################################
+
+#! @Section Constructing poset homomorphisms in different ways
+
+#! @Arguments X,Y,f
+#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A>.
+DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
+
+#! @Arguments X,Y,f
+#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A> without any checks.
+DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
+
+#! @Arguments X,Y,ys
+DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
+
+#! @Arguments X,Y,f
+DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
+
+#! @Arguments X,Y
+#! @Description An isomorphism between $X$ and $Y$ or fail if the posets are not isomorphic.
+DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
+
 

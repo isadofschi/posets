@@ -111,12 +111,13 @@ function(X)
 	return OppositePoset(DownOsakiCore(OppositePoset(X)));
 end);
 
-InstallMethod(IsMiddleReduction,
+InstallMethod(IsDownMiddleReduction,
 "for Poset, point and point",
 [IsPoset,IsObject,IsObject],
 function(X, a, b)
 	return
-			(not a in MaximalElements(X))
+		Height(X)<=2
+		and (not a in MaximalElements(X))
 		and (not b in MaximalElements(X))
 		and (not a in MinimalElements(X))
 		and (not b in MinimalElements(X))
@@ -125,18 +126,18 @@ function(X, a, b)
  		and ForAll(Difference(Set(ElementsAbove(X,b)),Set(ElementsAbove(X,a))), x-> Size(Intersection(Set(ElementsBelow(X,a)),Set(ElementsBelow(X,x))))=1);
 end);
 
-InstallMethod(IsMiddleOppositeReduction,
+InstallMethod(IsUpMiddleReduction,
 "for Poset, point and point",
 [IsPoset,IsObject,IsObject],
 function(X, a, b)
-	return IsMiddleReduction(OppositePoset(X),a,b);
+	return IsDownMiddleReduction(OppositePoset(X),a,b);
 end);
 
 InstallMethod(MiddleReduction,
 "for Poset, point and point",
 [IsPoset,IsObject,IsObject],
 function(X, a, b)
-	if IsMiddleReduction(X,a,b) or IsMiddleOppositeReduction(X,a,b) then
+	if IsUpMiddleReduction(X,a,b) or IsDownMiddleReduction(X,a,b) then
 		return QuotientPoset(X,[a,b]);
 	else
 		return fail;
@@ -152,7 +153,7 @@ function(X)
 	for a in X do
 		for b in X do
 			if a<>b then
-				if IsMiddleReduction(X,a,b) or IsMiddleOppositeReduction(X,a,b) then
+				if IsUpMiddleReduction(X,a,b) or IsDownMiddleReduction(X,a,b) then
 					return MiddleReductionCore(QuotientPoset(X,[a,b]));
 				fi;
 			fi;

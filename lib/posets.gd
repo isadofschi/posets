@@ -114,29 +114,6 @@ DeclareOperation("PosetByHasseDiagram",[IsHasseDiagram]); # to do
 #! @Description Creates the poset on <A>X</A> with covering relations given by <A>rel</A>. Each element of <A>rel</A> must be a pair <C>[x,y]</C> representing a covering relation $x\succ y$.
 DeclareOperation("PosetByCoveringRelations",[IsList, IsList]);
 
-
-#############################################################################
-
-#! @Section Constructing poset homomorphisms in different ways
-
-#! @Arguments X,Y,f
-#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A>.
-DeclareOperation("PosetHomomorphismByFunction",[IsPoset,IsPoset,IsFunction]);
-
-#! @Arguments X,Y,f
-#! @Description Creates the order preserving map $f\colon X\to Y$ defined by the &GAP; function <A>f</A> without any checks.
-DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
-
-#! @Arguments X,Y,ys
-DeclareOperation("PosetHomomorphismByImages",[IsPoset,IsPoset,IsList]);
-
-#! @Arguments X,Y,f
-DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
-
-#! @Arguments X,Y
-#! @Description An isomorphism between $X$ and $Y$ or fail if the posets are not isomorphic.
-DeclareOperation("IsomorphismPosets",[IsPoset,IsPoset]);
-
 #############################################################################
 
 #! @Section Other useful representations of the ordering

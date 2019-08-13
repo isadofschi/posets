@@ -44,16 +44,13 @@ DeclareOperation("UpOsakiCore",[IsPoset]);
 # Why not UpMiddleReduction and DownMiddleReduction ?
 
 #!  @Arguments X,x,y
-DeclareOperation("IsMiddleReduction",[IsPoset,IsObject,IsObject]);
+DeclareOperation("IsDownMiddleReduction",[IsPoset,IsObject,IsObject]);
 
 #!  @Arguments X,x,y
-DeclareOperation("IsMiddleOppositeReduction",[IsPoset,IsObject,IsObject]);
-
-#!  @Arguments X,x,y
-DeclareOperation("MiddleReduction",[IsPoset,IsObject,IsObject]);
+DeclareOperation("IsUpMiddleReduction",[IsPoset,IsObject,IsObject]);
 
 #! @Arguments X,x,y
-DeclareOperation("MiddleOppositeReduction",[IsPoset,IsObject,IsObject]); 
+DeclareOperation("MiddleReduction",[IsPoset,IsObject,IsObject]); 
 
 #!  @Arguments X
 DeclareOperation("MiddleReductionCore",[IsPoset]);
