@@ -26,6 +26,13 @@ function(X,a,b)
 		   IsContractible( SubPoset(X, Union(Set(ElementsAbove(X,a)),Set(ElementsAbove(X,b)))));
 end);
 
+InstallMethod(IsQCReduction,
+"for Poset, element and element",
+[IsPoset,IsObject,IsObject],
+function(X,a,b)
+	return IsDownQCReduction(X,a,b) or IsUpQCReduction(X,a,b);
+end);;
+
 InstallMethod(QCCore,
 "for Poset",
 [IsPoset],
@@ -133,6 +140,13 @@ function(X, a, b)
 	return IsDownMiddleReduction(OppositePoset(X),a,b);
 end);
 
+InstallMethod(IsMiddleReduction,
+"for Poset, point and point",
+[IsPoset,IsObject,IsObject],
+function(X, a, b)
+	return IsUpMiddleReduction(X,a,b) or IsDownMiddleReduction(X,a,b);
+end);
+
 InstallMethod(MiddleReduction,
 "for Poset, point and point",
 [IsPoset,IsObject,IsObject],
@@ -170,7 +184,7 @@ InstallMethod(IsDownEdgeReduction,
 [IsPoset,IsList],
 function(X,e)
 	return
-				(e[1]  in MaximalElements(X))
+			(e[1]  in MaximalElements(X))
 			and (e in CoveringRelations(X))
 			and IsContractible(RemoveCoveringRelation(ElementsBelow(X,e[1]),e));
 end);
@@ -180,7 +194,7 @@ InstallMethod(IsUpEdgeReduction,
 [IsPoset,IsList],
 function(X,e)
 	return
-				(e[2]  in MinimalElements(X))
+			(e[2]  in MinimalElements(X))
 			and (e in CoveringRelations(X))
 			and IsContractible(RemoveCoveringRelation(ElementsAbove(X,e[2]),e));
 end);

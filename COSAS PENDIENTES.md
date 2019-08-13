@@ -1,12 +1,11 @@
+# Escribir una buena introduccion para la documentación.
+
 # Mejorar los plots
 
-# Colorings
-
-* falta la parte de spanning collapsible subposets
 
 # Homotopy 
 
-* falta traducir MinWeakCore, IsCollapsible y QCCores
+* falta traducir QCCores
 
 # Morse
 * Se puede generalizar más?
@@ -42,7 +41,7 @@
 
 * HomPosets
 
-* Optimizar todavía más AutomorphismGroup, IsomorphismPosets. Es conveniente usar el paquete GRAPE para esto? Calculando el diagrama de hasse y pensandolo como grafo dirigido.
+* Optimizar todavía más AutomorphismGroup, IsomorphismPosets. Es conveniente usar GRAPE o Digraphs para esto? Calculando el diagrama de hasse y pensandolo como grafo dirigido.
 
 * Algunas construcciones (por ejemplo cociente y producto) tienen nombres que permiten recuperar los nombres originales de los puntos.
 Esto hace que al iterar muchas veces las construcciones los nombres se vuelvan muy complejos, por ejemplo
@@ -65,4 +64,4 @@ El UpOsakiCore es un poset de un punto con un nombre muy complejo.
 Muchas cosas se pueden hacer directamente en preórdenes. Por ahí es conveniente hacer un tipo preorden y que poset sea subtipo de preorden. Hay que pensarlo pero parece tener sentido.
 
 
-# Armar bien la ayuda. Chequear que aparezcan los InstallOtherMethod que no se documentan automaticamente con #!.
+# Chequear que aparezcan los InstallOtherMethod que no se documentan automaticamente con #!.

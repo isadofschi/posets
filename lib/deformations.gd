@@ -10,6 +10,9 @@ DeclareOperation("IsDownQCReduction",[IsPoset,IsObject,IsObject]);
 #! @Arguments X,x,y
 DeclareOperation("IsUpQCReduction",[IsPoset,IsObject,IsObject]);
 
+#! @Arguments X,x,y
+DeclareOperation("IsQCReduction",[IsPoset,IsObject,IsObject]);
+
 #! @Arguments X
 DeclareOperation("QCCore",[IsPoset]);
 
@@ -48,6 +51,9 @@ DeclareOperation("IsDownMiddleReduction",[IsPoset,IsObject,IsObject]);
 
 #!  @Arguments X,x,y
 DeclareOperation("IsUpMiddleReduction",[IsPoset,IsObject,IsObject]);
+
+#! @Arguments X,x,y
+DeclareOperation("IsMiddleReduction",[IsPoset,IsObject,IsObject]); 
 
 #! @Arguments X,x,y
 DeclareOperation("MiddleReduction",[IsPoset,IsObject,IsObject]); 
