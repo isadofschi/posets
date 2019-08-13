@@ -4,7 +4,7 @@
 
 
 #! @Arguments X,x,y
-#! @Description A path from $x$ to $y$ in $X$ of the minimum possible length. Returns fail if $x$ and $y$ are not in the same connected component of $X$.
+#! @Description A path from $x$ to $y$ in $X$ of the minimum possible length. Returns <C>fail</C> if $x$ and $y$ are not in the same connected component of $X$.
 DeclareOperation("PathInPoset",[IsPoset,IsObject,IsObject]);
 
 #! @Arguments X
@@ -17,11 +17,11 @@ DeclareOperation("ConnectedComponents",[IsPoset]);
 
 # A shortest fence
 #! @Arguments f,g
-#! @Description Given $f,g\colon X\to Y$, if $f$ and $g$ are homotopic returns a fence (a path in $Y^X$) between $f$ and $g$ of the minimum possible length.
+#! @Description Given $f,g\colon X\to Y$, if $f$ and $g$ are homotopic returns a fence (a path in $Y^X$) between $f$ and $g$ of the minimum possible length. Otherwise returns <C>fail</C>.
 DeclareOperation("Fence",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
 #! @Arguments f,g
-#! @Description Given $f,g\colon X\to Y$, returns true if $f\simeq g$, false otherwise.
+#! @Description Given $f,g\colon X\to Y$, returns <C>true</C> if $f\simeq g$, <C>false</C> otherwise.
 DeclareOperation("AreHomotopic",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
 

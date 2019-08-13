@@ -35,13 +35,16 @@ expand:=function(X,A)
 	local e;
 	for e in  Difference(CoveringRelations(X),A) do
 		if IsCollapsible( PosetByCoveringRelations( Set(X), Concatenation(A,[e]) ) ) then
-			Add(A,e);
+			Add(A,e); # Is it okay to add these edges at once? Or shall we return A here?
 		fi;
 	od;
 	return A;
 end;
-#Random spanning collapsible			
-SpanningCollapsible:=function(X)
+
+InstallMethod(SpanningCollapsibleSubDiagram,
+"for Poset",
+[IsPoset],
+function(X)
 	local A,n;
 	A := Kruskal(X);
 	n:=-1;
@@ -50,7 +53,7 @@ SpanningCollapsible:=function(X)
 		A := expand(X,A);
 	od;
 	return A;
-end;
+end);
 
 
 InstallMethod(FundamentalGroupByColoring,
@@ -59,7 +62,7 @@ InstallMethod(FundamentalGroupByColoring,
 function(X,A)
 	local gens,F,rels,d,i,j,k,c1,chains_ij,maximal_chains,dfs_chains,x,to_covering_relations;
 
-	# que hay que testear que cumpla A?
+	# tests for A here?
 
 	gens := Difference(CoveringRelations(X),A);
 	F := FreeGroup(Size(gens));
@@ -120,8 +123,6 @@ InstallMethod(FundamentalGroupByColoring,
 "for Poset",
 [IsPoset],
 function(X)
-	# no sé como funciona lo de SpanningCollapsible (anda en altura arbitraria?)
-	# todavia no implementamos IsCollapsible
-	# pongo Kruskal en vez de SpanningCollapsible por ahora
 	return FundamentalGroupByColoring(X,Kruskal(X));
 end);
+
