@@ -55,7 +55,7 @@ function(X)
 	for i in s do
 		e:=E[i];
 		if IsEdgeReduction(X, e) then
-			Print("# Edge reduction: ", e);
+			Print("# Edge reduction: ", e,"\n");
 			return RemoveCoveringRelation(X, e);
 		fi;
 	od;
@@ -66,30 +66,63 @@ end);
 
 InstallGlobalFunction(RandomOsakiReduction,
 function(X)
-	local s
-
+	local n,dir,S,is,ws,els,d,i,x;
+	n:=Size(X);
+	dir:=Shuffle([1,2]);
+	S:=Shuffle([1..n]);
+	is:=[IsUpOsakiReduction,IsDownOsakiReduction];
+	ws:=["Up","Down"];
+	els:=[ElementsAbove,ElementsBelow];
+	for d in dir do
+		for i in S do
+			x:=Set(X)[i];
+			if is[d](X,x) then
+				Print("# ", ws[d], " Osaki reduction: ", x, "\n");
+				return QuotientPoset(X, Set(els[d](X,x)));
+			fi;
+		od;
+	od; 
+	Print("# No Osaki reduction.\n");
+	return X;
 end);
 
 
-InstallGlobalFunction(RandomCore,
+InstallGlobalFunction(RandomReductionCore,
 function(X)
-
-def random_core(X):
-	if len(X.list()) == 1:
-		print 'The poset 3-deforms to a point'
-		return X
-	counter = range(7)
-	shuffle(counter)
-	for i in range(7):
-		Y = random_reduction(X, counter[i])
-		if X != Y:
-			return random_core(Y)
-	return X
+	local Y;
+	if Size(X)=1 then
+		Print("# The poset has size 1.\n");
+		return X;
+	fi;
+	Y:=RandomReduction(X);
+	if Y=X then
+		return X;
+	else
+		return RandomReductionCore(Y);
+	fi;
 end);
 
 InstallGlobalFunction(RandomReduction,
 function(X)
+	local available_reductions,i,Y;
+	if Size(X)=1 then
+		Print("# The poset has size 1.\n");
+		return X;
+	fi;
+	available_reductions:=[
+		RandomWeakPointReduction,
+		RandomQCReduction,
+		RandomMiddleReduction,
+		RandomEdgeReduction,
+		RandomOsakiReduction,
+	];
+	for i in Shuffle([1..Length(available_reductions)]) do
+		Y := available_reductions[i](X);
+		if Y <> X then
+			return Y;
+		fi;
+	od;
+	Print("# No more reductions.\n");
+	return X;
 end);
-
-
 

@@ -79,12 +79,3 @@ DeclareOperation("EdgeReduction",[IsPoset,IsList]);
 #!  @Arguments X
 DeclareOperation("EdgeReductionCore",[IsPoset]);
 
-#! @Section Random reductions
-#! Not implemented yet:
-
-#! @Arguments X
-DeclareOperation("RandomReductionCore",[IsPoset]);
-
-#! @Arguments X,n
-DeclareOperation("RandomReduction",[IsPoset,IsInt]);
-

@@ -21,6 +21,7 @@ ReadPackage( "posets", "lib/colorings.gi" );
 ReadPackage( "posets", "lib/presentations.gi" );
 ReadPackage( "posets", "lib/fences.gi" );
 ReadPackage( "posets", "lib/deformations.gi" );
+ReadPackage( "posets", "lib/random_deformations.gi" );
 ReadPackage( "posets", "lib/plot.gi" );
 ReadPackage( "posets", "lib/morse.gi" );
 
