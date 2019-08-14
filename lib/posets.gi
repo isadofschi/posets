@@ -313,3 +313,29 @@ function(X)
 	return Filtered(Set(X), x-> LowerCovers(X,x)=[] ); # this is efficient if we already computed the lower covers, not in general!
 end);
 
+
+
+InstallMethod(MaximumPoset,
+"for Poset",
+[IsPoset],
+function(X)
+	if Length(MaximalElements(X))=1 then
+		return MaximalElements(X)[1];
+	else
+		return fail;
+	fi;
+end);
+
+
+
+InstallMethod(MinimumPoset,
+"for Poset",
+[IsPoset],
+function(X)
+	if Length(MinimalElements(X))=1 then
+		return MinimalElements(X)[1];
+	else
+		return fail;
+	fi;
+end);
+

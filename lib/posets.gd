@@ -150,3 +150,11 @@ DeclareAttribute("MaximalElements",IsPoset);
 #! @Description The set of minimal points of $X$.
 DeclareAttribute("MinimalElements",IsPoset);
 
+#! @Arguments X
+DeclareAttribute("MaximumPoset",IsPoset);
+
+#! @Arguments X
+DeclareAttribute("MinimumPoset",IsPoset);
+
+
+
