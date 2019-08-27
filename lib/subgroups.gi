@@ -103,6 +103,10 @@ function(G,p)
 	return SpG;
 end);
 
+InstallMethod(BrownPoset,
+"for Group, Integer",
+[IsGroup and IsFinite,IsInt],
+PosetOfpSubgroups);
 
 
 InstallGlobalFunction(ElementaryAbelianpSubgroups, function(G,p,r...)
@@ -149,6 +153,11 @@ function(G,p)
 	SetGrading(ApG,H-> Log(Order(H),p)-1); # Ap(G) is a graded poset
 	return ApG;
 end);
+
+InstallMethod(QuillenPoset,
+"for Group, Integer",
+[IsGroup and IsFinite,IsInt],
+PosetOfElementaryAbelianpSubgroups);
 
 
 
