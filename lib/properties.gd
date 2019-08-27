@@ -18,10 +18,14 @@ DeclareProperty("HasFixedPointProperty",IsPoset);
 DeclareAttribute("Grading",IsPoset);
 
 #! @Arguments X,x
-#! @Description the Height of a point in a poset.
+#! @Description The Height of a point in a poset.
 DeclareOperation("Height",[IsPoset,IsObject]);
 
 #! @Arguments X
-#! @Description the height of a poset.
+#! @Description The height of a poset.
 DeclareAttribute("Height",IsPoset);
+
+#! @Arguments X
+#! @Description The list of chains of <A>X</A>. Each chain is represented as a list of points, ordered according to the order on <A>X</A>, the first element being the maximum of the chain.
+DeclareOperation("ChainsPoset",[IsPoset]);
 

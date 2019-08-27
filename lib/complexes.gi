@@ -11,38 +11,12 @@ function(K)
 	return PosetByFunctionNC(simplicesK, IsSubset);
 end);
 
+
 InstallMethod(OrderComplex,
 "for Poset",
 [IsPoset],
 function(X)
-	local n,i,j,chains,position,chain;
-	# we could use the hasse diagram to construct K(X) using only the maximal chains
-
-	n:=Size(X);
-	# this part could be a separate function computing the representation of the poset given by the U^_x s
-	X!.UHats:=List([1..n],x->[]);
-	for i in [1..n] do
-		for j in [1..n] do
-			if i<>j and Ordering(X)(Set(X)[i],Set(X)[j]) then
-				Add(X!.UHats[i],j);
-			fi;
-		od;
-	od;
-
-	chains:=[];
-	for i in [1..n] do
-		Add(chains,[Set(X)[i]]);
-	od;
-	position:=1;
-	while position <= Length(chains) do
-		chain:=chains[position];
-		i:=PositionSorted(Set(X),chain[Length(chain)]);
-		for j in X!.UHats[i] do
-			Add(chains, Concatenation(chain,[Set(X)[j]]) );
-		od;
-		position:=position+1;
-	od;
-	return SimplicialComplex(chains);
+	return SimplicialComplex(ChainsPoset(X));
 end);
 
 
