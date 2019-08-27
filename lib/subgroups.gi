@@ -196,42 +196,22 @@ function(G,p)
 	return PosetByFunctionNC(Bp,IsSubgroup);
 end);
 
-InstallMethod(RobinsonFacePosetOfpSubgroups,
+InstallMethod(BoucPoset,
 "for Group, Integer",
-[IsGroup and IsFinite,IsInt],
-function(G,p)
-	local i, ii, j, jj, x, SpGInformation, SpG, ElementList, chains, t, pPower, partialChain, lastPoint, properSubgroupsList, properSubgroups, newPoint, firstPoint;
-	
-	SpGInformation:=PSubgroups(G,p);
-	SpG:=SpGInformation[2];
-	ElementList:=SpGInformation[3];
-	pPower:=SpGInformation[6];
-	
-	chains:=List(SpG, x->[[LogInt(Size(x),p), Position(ElementList[LogInt(Size(x),p)],x)]]);
-	
-	properSubgroupsList:=List([1..pPower], i->List([1..Size(ElementList[i])], j->Filtered(Subgroups(ElementList[i][j]), x-> Size(x) > 1 and Size(x) < Size(ElementList[i][j]) )));
-	
-	t:=1;
-	while t <= Size(chains) do
-		partialChain:=chains[t];
-		lastPoint:=partialChain[Size(partialChain)];
-		i:=lastPoint[1];j:=lastPoint[2];
-		properSubgroups:=properSubgroupsList[i][j];
-		for newPoint in properSubgroups do
-			ii:=LogInt(Size(newPoint),p);
-			jj:=Position(ElementList[ii],newPoint);
-			firstPoint:=ElementList[partialChain[1][1]][partialChain[1][2]];
-			if IsNormal(firstPoint, newPoint) then
-				Add(chains, Concatenation(partialChain,[[ii,jj]]));
-			fi;
-		od;
-		t:=t+1;
-	od;
-	
-	return PosetByOrderMatrix(MatrixByChains(chains));
-	
-end);
+[IsGroup and IsFinite, IsInt],
+PosetOfRadicalpSubgroups
+);
 
+InstallMethod(RobinsonPoset,
+"for Group, Integer",
+[IsGroup and IsFinite, IsInt],
+function(G,p)
+	local SpG,chains;
+	# possible optimization: we could compute only the required chains instead of filtering
+	SpG:=PosetOfpSubgroups(G,p);
+	chains:=ChainsPoset(SpG);
+	return PosetByFunctionNC(Filtered(chains, c -> ForAll(c, H-> IsNormal(c[1],H))),IsSubset);
+end);
 
 
 
