@@ -128,6 +128,13 @@ function(M)
 	return PosetByOrderMatrix([],M);
 end);
 
+InstallMethod(PosetByOrderMatrixNC,
+"for List",
+[IsList],
+function(M)
+	return PosetByOrderMatrix([],M);
+end);
+
 InstallMethod(PosetByOrderMatrix,
 "for List, List",
 [IsList,IsList],
@@ -168,6 +175,25 @@ function(names,M)
 
 	poset!.orderMatrix:=M;
 
+	return poset;
+
+end);
+
+InstallMethod(PosetByOrderMatrixNC,
+"for List, List",
+[IsList,IsList],
+function(names,M)
+	local poset,n,sigma,ordering;
+	n:=Length(M);
+	sigma:=[1..n];
+	if names=[] then
+		names:=[1..n];
+	fi;
+	SortParallel(names,sigma);
+	M:=M{sigma}{sigma};
+	ordering:=function(x,y) return M[PositionSorted(names,x)][PositionSorted(names,y)]; end;
+	poset:=PosetByFunctionNC(names,ordering);
+	poset!.orderMatrix:=M;
 	return poset;
 
 end);

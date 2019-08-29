@@ -290,7 +290,7 @@ function(X,A)
 			fi;
 		od;
 	od;
-	XmodA:=PosetByOrderMatrix(names_quotient,M_quotient);
+	XmodA:=PosetByOrderMatrixNC(names_quotient,M_quotient);
 	XmodA!.naturalMaps:=[ PosetHomomorphismByFunction(X,XmodA,q) ];
 	return XmodA;
 end);

@@ -93,14 +93,17 @@ DeclareOperation("PosetByFunction",[IsList,IsFunction]);
 DeclareOperation("PosetByFunctionNC",[IsList,IsFunction]);
 
 
-
 #! @Arguments M
 #! @Description Returns the poset $X$ on $\{1,\ldots,n\}$ such that $i\succcurlyeq j$ is given by $M_{i,j}$.
 DeclareOperation("PosetByOrderMatrix",[IsList]); # names are numbers 1..n
-
 #! @Arguments X,M
 #! @Description Returns the poset on <A>X</A> such that <C>X[i]>X[j]</C> is given by <C>M[i][j]</C>.
 DeclareOperation("PosetByOrderMatrix",[IsList,IsList]);
+#! @Arguments M
+DeclareOperation("PosetByOrderMatrixNC",[IsList]); # names are numbers 1..n
+#! @Arguments X,M
+DeclareOperation("PosetByOrderMatrixNC",[IsList,IsList]);
+
 
 #! @Arguments R
 #! @Description Creates a <C>Poset</C> poset from a partial order binary relation, see <Ref Oper="IsPartialOrderBinaryRelation" BookName="ref"/>.
