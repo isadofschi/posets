@@ -63,7 +63,7 @@ DeclareAttribute("BeatPoints",IsPoset);
 
 #! @Arguments X
 #! @Description The core of $X$. The natural maps are the inclusion $i\colon \mathrm{core}(X) \to X$ and the retraction $r\colon X \to \mathrm{core}(X)$.
-DeclareOperation("Core",[IsPoset]);
+DeclareAttribute("Core",IsPoset);
 
 #! @Arguments X
 DeclareAttribute("IsContractible",IsPoset);

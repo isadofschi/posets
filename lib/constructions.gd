@@ -10,7 +10,7 @@
 #! @Chapter Constructing new posets
 
 #! @Section Categorical constructions
-# Documentar tambien DirectProduct. Documentar DirectProduct y Coproduct para morfismos
+# DirectProduct. DirectProduct and Coproduct for maps
 
 #! @Arguments X, A
 DeclareOperation("SubPoset",[IsPoset,IsList]);

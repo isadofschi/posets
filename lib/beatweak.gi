@@ -2,48 +2,56 @@ InstallMethod(ElementsBelow,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Ux;
+	local i;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Ux:=Filtered(Set(X),y->Ordering(X)(x,y));
-	return SubPoset(X,Ux);
+	if not "ListElementsBelow" in NamesOfComponents(X) then
+		X!.ListElementsBelow:= List(Set(X), ReturnFalse);
+	fi;
+	i:=PositionSorted(Set(X),x);
+	if X!.ListElementsBelow[i]=false then
+		X!.ListElementsBelow[i]:=SubPoset(X,Filtered(Set(X),y->Ordering(X)(x,y)));
+	fi;
+	return X!.ListElementsBelow[i];
 end);
 
 InstallMethod(ElementsStrictlyBelow,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Uxhat;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Uxhat:=Filtered(Set(X),y->Ordering(X)(x,y) and x<>y);
-	return SubPoset(X,Uxhat);
+	return RemovePoint(ElementsBelow(X,x),x);
 end);
 
 InstallMethod(ElementsAbove,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Fx;
+	local i;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Fx:=Filtered(Set(X),y->Ordering(X)(y,x));
-	return SubPoset(X,Fx);
+	if not "ListElementsAbove" in NamesOfComponents(X) then
+		X!.ListElementsAbove:= List(Set(X), ReturnFalse);
+	fi;
+	i:=PositionSorted(Set(X),x);
+	if X!.ListElementsAbove[i]=false then
+		X!.ListElementsAbove[i]:=SubPoset(X,Filtered(Set(X),y->Ordering(X)(y,x)));
+	fi;
+	return X!.ListElementsAbove[i];
 end);
 
 InstallMethod(ElementsStrictlyAbove,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Fxhat;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Fxhat:=Filtered(Set(X),y->Ordering(X)(y,x) and x<>y);
-	return SubPoset(X,Fxhat);
+	return RemovePoint(ElementsAbove(X,x),x);
 end);
 
 
@@ -51,24 +59,24 @@ InstallMethod(ElementsComparable,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Fx;
+	local Cx;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Fx:=Filtered(Set(X),y->Ordering(X)(x,y) or Ordering(X)(y,x));
-	return SubPoset(X,Fx);
+	Cx:=Filtered(Set(X),y->Ordering(X)(x,y) or Ordering(X)(y,x));
+	return SubPoset(X,Cx);
 end);
 
 InstallMethod(ElementsStrictlyComparable,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
-	local Fxhat;
+	local Cxhat;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	Fxhat:=Filtered(Set(X),y->(Ordering(X)(x,y) or Ordering(X)(y,x)) and x<>y);
-	return SubPoset(X,Fxhat);
+	Cxhat:=Filtered(Set(X),y->(Ordering(X)(x,y) or Ordering(X)(y,x)) and x<>y);
+	return SubPoset(X,Cxhat);
 end);
 
 #############################################################################
@@ -91,7 +99,7 @@ function(X,e)
 	local X_e;
 	if e in CoveringRelations(X) then
 		X_e:=PosetByCoveringRelations(Set(X),Difference(CoveringRelations(X),[e]));
-		X_e!.naturalMaps:=[ PosetHomomorphismByFunction(X_e,X,x->x) ];
+		X_e!.naturalMaps:=[ PosetHomomorphismByFunctionNC(X_e,X,x->x) ];
 		return X_e;
 	else
 		return fail;
@@ -104,20 +112,32 @@ InstallMethod(IsUpBeatPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
+	local a;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	return Size(UpperCovers(X,x))=1;
+	if HasCoveringRelations(X) then
+		return Size(UpperCovers(X,x))=1;
+	else
+		a:=Size(ElementsAbove(X,x));
+		return ForAny(Set(ElementsAbove(X,x)), y-> Size(ElementsAbove(X,y))=a-1);
+	fi;
 end);
 
 InstallMethod(IsDownBeatPoint,
 "for Poset, element",
 [IsPoset, IsObject],
 function(X,x)
+	local a;
 	if not x in Set(X) then
 		Error("x must be an element of X");
 	fi;
-	return Size(LowerCovers(X,x))=1;
+	if HasCoveringRelations(X) then
+		return Size(LowerCovers(X,x))=1;
+	else
+		a:=Size(ElementsBelow(X,x));
+		return ForAny(Set(ElementsBelow(X,x)), y-> Size(ElementsBelow(X,y))=a-1);
+	fi;
 end);
 
 InstallMethod(IsBeatPoint,
