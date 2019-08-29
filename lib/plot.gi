@@ -1,6 +1,6 @@
 InstallGlobalFunction(DotCode,
 function(X,params)
-	local n,M,s,rels,i,e,e1,
+	local n,M,s,rels,i,e,e1,x,
 	use_names,color_edges,direction_edges,
 	current_color,current_dir,escape_string;
 
@@ -40,6 +40,14 @@ function(X,params)
 			e1:=List(e, x->PositionSorted(Set(X),x));
 		fi;
 		s:=Concatenation(s,"  \"",escape_string(String(e1[1])),"\" -> \"",escape_string(String(e1[2])),"\"\n");
+	od;
+	# vertices:
+	for x in Set(X) do
+		if use_names then
+			s:=Concatenation(s,escape_string(String(x)),"\n");
+		else
+			s:=Concatenation(s,String(PositionSorted(Set(X),x)),"\n");
+		fi;
 	od;
 	s:=Concatenation(s,"}");
 	return s;
