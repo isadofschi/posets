@@ -29,8 +29,7 @@ function(X,A)
 	fi;
 	numbers:=List(A,x->PositionSorted(Set(X),x));
 	Y:=PosetByFunctionNC(A,Ordering(X));
-	#Y!.orderMatrix:=OrderMatrix(X){numbers}{numbers};
-	incl:=PosetHomomorphismByImages(Y,X,A);
+	incl:=PosetHomomorphismByFunctionNC(Y,X,y->y);
 	Y!.naturalMaps:=[incl];
 	return Y;
 end);

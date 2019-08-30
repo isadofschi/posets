@@ -110,7 +110,7 @@ InstallOtherMethod(IdentityMap,
 "for Poset",
 [IsPoset],
 function(X)
-	return PosetHomomorphismByFunction(X,X, x->x);
+	return PosetHomomorphismByFunctionNC(X,X, x->x);
 end);
 
 
@@ -121,7 +121,7 @@ function(g,f)
 	if SourceMap(g)<>TargetMap(f) then
 		return fail;
 	fi;
-	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> (g!.f)(f!.f(x)) );
+	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> UnderlyingFunction(g)(UnderlyingFunction(f)(x)) );
 end);
 
 InstallMethod(\*,
