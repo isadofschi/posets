@@ -8,7 +8,9 @@ function(K)
 	local n,simplicesK;
 	n:=Dimension(K);
 	simplicesK:=Set(Concatenation(List([0..n], d->List([1..(K!.nrSimplices(d))], j-> K!.simplices(d,j)))));
-	return PosetByFunctionNC(simplicesK, IsSubset);
+	XK:=PosetByFunctionNC(simplicesK, IsSubset);
+	SetGrading(XK, s->Size(s)-1);
+	return XK; 
 end);
 
 
