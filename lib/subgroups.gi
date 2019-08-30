@@ -157,7 +157,8 @@ end);
 InstallMethod(QuillenPoset,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
-PosetOfElementaryAbelianpSubgroups);
+PosetOfElementaryAbelianpSubgroups
+);
 
 
 
@@ -215,11 +216,13 @@ InstallMethod(RobinsonPoset,
 "for Group, Integer",
 [IsGroup and IsFinite, IsInt],
 function(G,p)
-	local SpG,chains;
+	local RpG,SpG,chains;
 	# possible optimization: we could compute only the required chains instead of filtering
 	SpG:=PosetOfpSubgroups(G,p);
 	chains:=ChainsPoset(SpG);
-	return PosetByFunctionNC(Filtered(chains, c -> ForAll(c, H-> IsNormal(c[1],H))),IsSubset);
+	RpG:=PosetByFunctionNC(Filtered(chains, c -> ForAll(c, H-> IsNormal(c[1],H))),IsSubset);
+	SetGrading(RpG,c->Size(c)-1);
+	return RpG;
 end);
 
 
