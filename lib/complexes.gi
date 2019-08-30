@@ -5,7 +5,7 @@ InstallMethod(FacePoset,
 "for SimplicialComplex",
 [IsHapSimplicialComplex],
 function(K)
-	local n,simplicesK;
+	local n,simplicesK,XK;
 	n:=Dimension(K);
 	simplicesK:=Set(Concatenation(List([0..n], d->List([1..(K!.nrSimplices(d))], j-> K!.simplices(d,j)))));
 	XK:=PosetByFunctionNC(simplicesK, IsSubset);
