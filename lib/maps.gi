@@ -114,6 +114,14 @@ function(X)
 end);
 
 
+
+InstallMethod(CompositionPosetHomomorphismsNC,
+"for PosetHomomorphism and PosetHomomorphism",
+[IsPosetHomomorphism,IsPosetHomomorphism],
+function(g,f)
+	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> UnderlyingFunction(g)(UnderlyingFunction(f)(x)));
+end);
+
 InstallMethod(CompositionPosetHomomorphisms,
 "for PosetHomomorphism and PosetHomomorphism",
 [IsPosetHomomorphism,IsPosetHomomorphism],
@@ -121,7 +129,7 @@ function(g,f)
 	if SourceMap(g)<>TargetMap(f) then
 		return fail;
 	fi;
-	return PosetHomomorphismByFunctionNC(SourceMap(f),TargetMap(g), x-> UnderlyingFunction(g)(UnderlyingFunction(f)(x)) );
+	return CompositionPosetHomomorphismsNC(g,f);
 end);
 
 InstallMethod(\*,

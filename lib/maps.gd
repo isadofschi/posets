@@ -11,6 +11,8 @@ DeclareAttribute("IdentityMap",IsPoset);
 #! @Description The composition $f\circ g$.
 DeclareOperation("CompositionPosetHomomorphisms",[IsPosetHomomorphism,IsPosetHomomorphism]);
 #!
+DeclareOperation("CompositionPosetHomomorphismsNC",[IsPosetHomomorphism,IsPosetHomomorphism]);
+#!
 DeclareOperation("\*",[IsPosetHomomorphism,IsPosetHomomorphism]);
 #! @EndGroup
 

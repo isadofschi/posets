@@ -66,5 +66,5 @@ DeclareAttribute("Automorphisms",IsPoset);
 #! @Arguments X
 #! @Returns the natural maps of the poset X.
 #! @Description for example NaturalMaps of a product gives the projections.
-DeclareOperation("NaturalMaps",[IsPoset]);
+DeclareAttribute("NaturalMaps",IsPoset);
 
