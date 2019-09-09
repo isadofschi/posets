@@ -216,7 +216,7 @@ InstallMethod(RobinsonPoset,
 "for Group, Integer",
 [IsGroup and IsFinite, IsInt],
 function(G,p)
-	local RpG,SpG,chains,points,f,code,coded;
+	local RpG,SpG,chains,points,f,code,coded,ord_by_index;
 	# Possible optimization: we could compute only the required chains instead of filtering.
 	SpG:=PosetOfpSubgroups(G,p);
 	chains:=ChainsPoset(SpG);
