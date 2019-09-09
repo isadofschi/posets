@@ -130,6 +130,9 @@ DeclareOperation("RelationByPoset",[IsPoset]);
 DeclareAttribute("OrderMatrix",IsPoset);
 
 #! @Arguments X
+DeclareAttribute("OrderingByIndex",IsPoset);
+
+#! @Arguments X
 #! @Description The list of covering relations of <A>X</A>.
 DeclareAttribute("CoveringRelations",IsPoset);
 

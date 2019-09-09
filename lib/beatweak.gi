@@ -248,6 +248,80 @@ end);
 
 
 
+
+InstallMethod(CoreParallel,
+"for Poset",
+[IsPoset],
+function(X)
+	local
+		X1, changes, direction,
+		UpOrDownBeatPoints, ElementsAboveOrBelow, UpperOrLowerCovers,
+		covering_element, covering_elements, n_jobs, s_ady,
+		beat_points,remaining_points,ordering,
+		x, y, a, p, i, j,
+		dfs, _r, r, ady_in,
+		inclusion_core_X, retraction_X_core;
+
+	X1:=StructuralCopy(X);
+	_r:=List([1..Size(X)], x -> -1 );
+	ady_in:=List([1..Size(X)],x->[]);
+	changes:=true;
+	while changes do
+		changes:=false;
+		for direction in ["up","down"] do
+			if direction="up" then
+				ordering:=Ordering(X);
+			else
+				ordering:={x,y}->Ordering(X)(y,x);
+			fi;
+			
+			covering_element:=function(i)
+				local j;
+				for j in [1..Size(X1)] do
+					if ordering(Set(X1)[j],Set(X1)[i]) and Size(s_ady[i])=Size(s_ady[j])+1 then
+						return [i,j];
+					fi;
+				od;
+				return false;
+			end;;
+			n_jobs:=NumberThreads()-1; 
+			s_ady := ParListByFork(Set(X1),x->Number(Set(X1),y->ordering(y,x)), rec(NumberJobs:=n_jobs));
+			covering_elements := ParListByFork([1..Size(X1)], covering_element,rec(NumberJobs:=n_jobs));
+			beat_points:=Filtered(covering_elements,x->x<>false);
+			remaining_points:=List( Filtered([1..Size(X1)], i->covering_elements[i] = false), i->Set(X1)[i]);
+ 
+			if Size(beat_points)>0 then
+				changes:=true;
+				for p in beat_points do
+					i:=p[1];j:=p[2];
+					Add(ady_in[PositionSorted(Set(X),Set(X1)[j])], PositionSorted(Set(X),Set(X1)[i]));
+				od;
+				X1:=PosetByFunctionNC(remaining_points,Ordering(X));
+			fi;
+		od;
+	od;
+	dfs:=function(i)
+		local j;
+		for j in ady_in[i] do
+			_r[j]:=_r[i];
+			dfs(j);
+		od;
+	end;
+	for x in Set(X1) do
+		i:=PositionSorted(Set(X),x);
+		_r[i]:=i;
+		dfs(i);
+	od;
+	r:=function(i)
+		return Set(X)[_r[PositionSorted(Set(X),x)]];
+	end;
+	inclusion_core_X := PosetHomomorphismByFunctionNC(X1,X,x->x);
+	retraction_X_core:= PosetHomomorphismByFunctionNC(X,X1,r);
+	SetNaturalMaps(X1, [ inclusion_core_X,retraction_X_core]);
+	SetCore(X,X1);
+	return X1;
+end);
+
 InstallMethod(IsContractible,
 "for Poset",
 [IsPoset],

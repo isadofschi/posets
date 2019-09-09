@@ -30,5 +30,6 @@ ReadPackage("Posets", "lib/presentations.gd" );
 ReadPackage("Posets", "lib/fences.gd" );
 ReadPackage("Posets", "lib/plot.gd" );
 ReadPackage("Posets", "lib/morse.gd" );
+ReadPackage("Posets", "lib/utils.gd" );
 #E  init.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 

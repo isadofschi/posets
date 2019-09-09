@@ -26,6 +26,6 @@ DeclareOperation("Height",[IsPoset,IsObject]);
 DeclareAttribute("Height",IsPoset);
 
 #! @Arguments X
-#! @Description The list of chains of <A>X</A>. Each chain is represented as a list of points, ordered according to the order on <A>X</A>, the first element being the maximum of the chain.
+#! @Description The (not necessarily ordered) list of chains of <A>X</A>. Each chain is represented as a list of points, ordered according to the order on <A>X</A>, the first element being the maximum of the chain.
 DeclareOperation("ChainsPoset",[IsPoset]);
 

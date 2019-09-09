@@ -1,0 +1,5 @@
+
+DeclareGlobalFunction("NumberCPUs");
+
+DeclareGlobalFunction("NumberThreads");
+

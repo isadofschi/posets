@@ -269,6 +269,22 @@ function(X)
 	
 end);
 
+
+InstallMethod(OrderingByIndex,
+"for Poset",
+[IsPoset],
+function(X)
+	local o;
+	o:=function(i,j)
+		if HasOrderMatrix(X) then
+			return OrderMatrix(X)[i][j];
+		fi;
+		return Ordering(X)(Set(X)[i],Set(X)[j]);
+	end;;
+	return o;
+end);
+
+
 InstallMethod(UpperCovers,
 "for Poset",
 [IsPoset],

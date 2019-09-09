@@ -24,6 +24,6 @@ ReadPackage( "posets", "lib/deformations.gi" );
 ReadPackage( "posets", "lib/random_deformations.gi" );
 ReadPackage( "posets", "lib/plot.gi" );
 ReadPackage( "posets", "lib/morse.gi" );
-
+ReadPackage( "posets", "lib/utils.gi" );
 #E  read.g . . . . . . . . . . . . . . . . . . . . . . . . . . . .  ends here
 
