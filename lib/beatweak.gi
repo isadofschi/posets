@@ -254,11 +254,11 @@ InstallMethod(CoreParallel,
 [IsPoset],
 function(X)
 	local
-		X1, o_ind, o,
+		o_ind, o,
 		changes, direction,
 		UpOrDownBeatPoints, ElementsAboveOrBelow, UpperOrLowerCovers,
 		covering_element, covering_elements, n_jobs, s_ady,
-		beat_pairs,remaining_points,
+		remaining_points, beat_pairs, new_remaining_points,
 		x, y, a, p, i, j,
 		dfs, _r, r, ady_in,
 		core,inclusion_core_X, retraction_X_core;
@@ -269,7 +269,7 @@ function(X)
 		o_ind:=OrderingByIndex(X);
 	fi;
 
-	X1:=PosetByFunctionNC([1..Size(X)], o_ind);
+	remaining_points:=[1..Size(X)];
 	
 	_r:=List([1..Size(X)], i -> -1 );
 	ady_in:=List([1..Size(X)], i -> []);
@@ -283,19 +283,19 @@ function(X)
 				o:= {i,j} -> o_ind(j,i);
 			fi;
 			n_jobs:=NumberThreads()-1;
-			s_ady := ParListByFork(Set(X1), i->Number(Set(X1), j->o(j,i)), rec(NumberJobs:=n_jobs));
+			s_ady := ParListByFork(remaining_points, i->Number(remaining_points, j->o(j,i)), rec(NumberJobs:=n_jobs));
 			covering_element:=function(i)
 				local j;
-				for j in X1 do
-					if o(j,i) and Size(s_ady[PositionSorted(Set(X1),i)]) = Size(s_ady[PositionSorted(Set(X1),j)]) + 1 then
+				for j in remaining_points do
+					if o(j,i) and Size(s_ady[PositionSorted(remaining_points,i)]) = Size(s_ady[PositionSorted(remaining_points,j)]) + 1 then
 						return [i,j];
 					fi;
 				od;
 				return false;
 			end;;
-			covering_elements := ParListByFork(Set(X1), covering_element,rec(NumberJobs:=n_jobs));
-			beat_pairs:=Filtered(covering_elements,x->x<>false);
-			remaining_points:=List( Filtered([1..Size(X1)], i->covering_elements[i] = false), i->Set(X1)[i]);
+			covering_elements := ParListByFork(remaining_points, covering_element, rec(NumberJobs:=n_jobs));
+			beat_pairs:=Filtered(covering_elements, x -> x<>false);
+			new_remaining_points:=List( Filtered([1..Size(remaining_points)], i->covering_elements[i] = false), i->remaining_points[i]);
  
 			if Size(beat_pairs)>0 then
 				changes:=true;
@@ -303,7 +303,8 @@ function(X)
 					i:=p[1];j:=p[2];
 					Add(ady_in[j],i);
 				od;
-				X1:=PosetByFunctionNC(remaining_points,o_ind);
+				remaining_points:=new_remaining_points;
+				Print("# Remaining points: ",Size(remaining_points));
 			fi;
 		od;
 	od;
@@ -314,7 +315,7 @@ function(X)
 			dfs(j);
 		od;
 	end;
-	for i in Set(X1) do
+	for i in remaining_points do
 		_r[i]:=i;
 		dfs(i);
 	od;
@@ -322,7 +323,7 @@ function(X)
 		return Set(X)[_r[PositionSorted(Set(X),x)]];
 	end;
 	
-	core:=PosetByFunctionNC( List(Set(X1), i-> Set(X)[i]), Ordering(X) );
+	core:=PosetByFunctionNC( List(remaining_points, i-> Set(X)[i]), Ordering(X) );
 	inclusion_core_X := PosetHomomorphismByFunctionNC(core,X,x->x);
 	retraction_X_core:= PosetHomomorphismByFunctionNC(X,core,r);
 	SetNaturalMaps(core, [ inclusion_core_X,retraction_X_core]);

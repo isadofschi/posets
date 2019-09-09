@@ -216,7 +216,8 @@ InstallMethod(RobinsonPoset,
 "for Group, Integer",
 [IsGroup and IsFinite, IsInt],
 function(G,p)
-	local RpG,SpG,chains,points,f,code,coded,ord_by_index;
+	local RpG,SpG,chains,points,f,#code,
+		coded,ord_by_index;
 	# Possible optimization: we could compute only the required chains instead of filtering.
 	SpG:=PosetOfpSubgroups(G,p);
 	chains:=ChainsPoset(SpG);
@@ -226,7 +227,7 @@ function(G,p)
 	# We could use this trick for any subposet of K(X).
 	f := c -> Set(List(c, H-> PositionSorted(Set(SpG),H)));;
 	coded := List(points,f);
-	code:= c -> coded[PositionSorted(points,c)];
+	#code:= c -> coded[PositionSorted(points,c)];
 	ord_by_index:={i,j}->IsSubset(coded[i],coded[j]);
 	RpG:=PosetByFunctionNC(points, IsSubset);	
 	#RpG:=PosetByFunctionNC(points, {x,y}-> IsSubset(code(x),code(y))); # is this faster?
