@@ -304,7 +304,7 @@ function(X)
 					Add(ady_in[j],i);
 				od;
 				remaining_points:=new_remaining_points;
-				Print("# Remaining points: ",Size(remaining_points));
+				Print("# Remaining points: ",Size(remaining_points),"\n");
 			fi;
 		od;
 	od;
