@@ -4,6 +4,7 @@
 ### Package under development
 
 * Website: https://github.com/isadofschi/posets
+* Documentation: http://mate.dm.uba.ar/~isadofschi/posets
 * Repository: https://github.com/isadofschi/posets
 
 Posets and finite spaces
