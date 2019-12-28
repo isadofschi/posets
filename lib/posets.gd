@@ -292,31 +292,26 @@ DeclareOperation("UpperCovers",[IsPoset,IsObject]);
 #! @Arguments X
 #! @Description Returns the function on <A>X</A> such that its value on an element <A>x</A> in <A>X</A> is the list of the lower covers of <A>x</A>. Recall that given a finite poset $X$ and an element $x\in X$, its lower covers are the elements $y\in X$ such that $x > y$ and there is no $z\in X$ such that $x > z > y$.
 #! @BeginExampleSession
-#! gap> S1:=MinimalFiniteModelSphere(2);
-#! <finite poset of size 6>
-#! gap> Set(S1);
-#! [ [ 1, "x" ], [ 1, "y" ], [ 2, "x" ], [ 2, "y" ], [ 3, "x" ], [ 3, "y" ] ]
+#! gap> S1:=PosetByCoveringRelations([1,2,3,4], [[3,1],[3,2],[4,1],[4,2]]);
+#! <finite poset of size 4>
 #! gap> CoveringRelations(S1);
-#! [ [ [ 2, "x" ], [ 1, "x" ] ], [ [ 2, "x" ], [ 1, "y" ] ], [ [ 2, "y" ], [ 1, "x" ] ], [ [ 2, "y" ], [ 1, "y" ] ],
-#!   [ [ 3, "x" ], [ 2, "x" ] ], [ [ 3, "x" ], [ 2, "y" ] ], [ [ 3, "y" ], [ 2, "x" ] ], [ [ 3, "y" ], [ 2, "y" ] ] ]
-#! gap> fun:=LowerCovers(S1);
+#! [ [ 3, 1 ], [ 3, 2 ], [ 4, 1 ], [ 4, 2 ] ]
+#! gap> g:=LowerCovers(S1);
 #! function( x ) ... end
-#! gap> fun([2,"x"]);
-#! [ [ 1, "x" ], [ 1, "y" ] ]
-#! gap> fun([3,"y"]);
-#! [ [ 2, "x" ], [ 2, "y" ] ]
+#! gap> g(2);
+#! [  ]
+#! gap> g(4);
+#! [ 1, 2 ]
 #! @EndExampleSession
 DeclareAttribute("LowerCovers",IsPoset);
 
 #! @Arguments X,x
 #! @Description Returns the lower covers of the element <A>x</A> in the poset <A>X</A>.
 #! @BeginExampleSession
-#! gap> S1:=MinimalFiniteModelSphere(2);
-#! <finite poset of size 6>
-#! gap> Set(S1);
-#! [ [ 1, "x" ], [ 1, "y" ], [ 2, "x" ], [ 2, "y" ], [ 3, "x" ], [ 3, "y" ] ]
-#! gap> LowerCovers(S1,[2,"y"]);
-#! [ [ 1, "x" ], [ 1, "y" ] ]
+#! gap> S1:=PosetByCoveringRelations([1,2,3,4], [[3,1],[3,2],[4,1],[4,2]]);
+#! <finite poset of size 4>
+#! gap> LowerCovers(S1,4);
+#! [ 1, 2 ]
 #! @EndExampleSession
 DeclareOperation("LowerCovers",[IsPoset,IsObject]);
 
