@@ -213,7 +213,7 @@ function(f)
 	Zf:=PosetByFunctionNC(namesZf,ordering);
 	Zf!.naturalMaps:= [ PosetHomomorphismByImages(X,Zf,List(Set(X), x->[1,x])), # i 
 						PosetHomomorphismByImages(Y,Zf,List(Set(Y), y->[1,y])), # j
-						PosetHomomorphismByImages(Zf,Y,Concatenation(f!.images,Set(Y))) # r
+						PosetHomomorphismByImages(Zf,Y,Concatenation(List(Set(X), x->x^f),Set(Y))) # r
 					  ];
 	return Zf;
 end);
@@ -255,14 +255,14 @@ InstallMethod(QuotientPoset,
 function(X,A)
 	local M,X_minus_A,names_quotient,q,n,m,M_quotient,i,j,xi,xj,index_qxi,index_qxj,XmodA,UA,FA;
 	if not IsSet(A) then
-		Print("A must be a set.");
+		Print("A must be a set.\n");
 		return fail;
 	fi;
 	M:=OrderMatrix(X);
 	UA:=Union(List(A, x->Set(ElementsBelow(X,x))));
 	FA:=Union(List(A, x->Set(ElementsAbove(X,x))));
 	if not A = Intersection( UA,FA ) then
-		Print("A is not convex.");
+		Print("A is not convex.\n");
 		return fail;
 	fi;
 	X_minus_A:=Difference(Set(X),A);
