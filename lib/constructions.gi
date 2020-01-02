@@ -142,7 +142,7 @@ InstallOtherMethod(JoinOp,
 function(Xs,X)
 	local m,list_names_original,list_names_join,joinXs,ordering;
 	if not ForAll(Xs, X->IsPoset(X) ) then
-		Error("arguments must be posets");
+		Error("Arguments must be posets.\n");
 	fi;
 	m:=Length(Xs);
 
@@ -254,15 +254,21 @@ InstallMethod(QuotientPoset,
 [IsPoset,IsList],
 function(X,A)
 	local M,X_minus_A,names_quotient,q,n,m,M_quotient,i,j,xi,xj,index_qxi,index_qxj,XmodA,UA,FA;
-	if not IsSet(A) then
-		Print("A must be a set.\n");
+	# Codigo viejo de Ivan
+	#if not IsSet(A) then
+	#	Print("The subposet A must be a set.\n");
+	#	return fail;
+	#fi;
+	# Reemplazo con mi código para que anden los ejemplos, después vemos
+	if not IsList(A) or not IsSubset(Set(X), Set(A)) then
+		Print("The second parameter must be a list of elements of the first parameter.\n");
 		return fail;
 	fi;
 	M:=OrderMatrix(X);
 	UA:=Union(List(A, x->Set(ElementsBelow(X,x))));
 	FA:=Union(List(A, x->Set(ElementsAbove(X,x))));
 	if not A = Intersection( UA,FA ) then
-		Print("A is not convex.\n");
+		Print("The second parameter must be convex.\n");
 		return fail;
 	fi;
 	X_minus_A:=Difference(Set(X),A);
@@ -300,7 +306,7 @@ InstallMethod(WedgePosets,
 function(l)
 	local coprod_Xi,basepoints,wedge_Xi,q;
 	if not ForAll(l, t-> Size(t)=2 and IsPoset(t[1]) and t[2] in Set(t[1]) ) then
-		Print("invalid arguments");
+		Print("Invalid arguments.\n");
 		return fail;
 	fi;
 	coprod_Xi:=Coproduct(List(l, t->t[1]));
