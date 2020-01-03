@@ -26,6 +26,6 @@ DeclareGlobalFunction("PlotHasseDiagram");
 #! gap> P:=PosetFpGroup(G);
 #! <finite poset of size 50>
 #! gap> M:=GreedySpanningMatching(P);;
-#! gap> PlotMatching(P,M,"matching.pdf");
+#! gap> PlotMorseMatching(P,M,"matching.pdf");
 #! @EndExampleSession
 DeclareGlobalFunction("PlotMorseMatching");

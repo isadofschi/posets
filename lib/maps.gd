@@ -108,13 +108,17 @@ DeclareAttribute("UnderlyingFunction",IsPosetHomomorphism);
 #! @Arguments f
 #! @Description The inverse of the isomorphism f.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);
 #! <finite poset of size 4>
-#! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);
+#! <finite poset of size 4>
+#! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);
 #! <order preserving map>
-#! gap> inv:=Inverse(f);
+#! gap> inv1:=Inverse(h);
 #! <order preserving map>
-#! gap> inv = f;
+#! gap> inv2:=InverseImmutable(h);
+#! <order preserving map>
+#! gap> inv1 = inv2;
 #! true
 #! @EndExampleSession
 DeclareAttribute("Inverse",IsPosetHomomorphism);
@@ -125,9 +129,9 @@ DeclareAttribute("InverseImmutable",IsPosetHomomorphism);
 #! @Arguments f
 #! @Description The image $f(X)$ of a map $f\colon X\to Y$, given as a subposet of $Y$.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);
 #! <finite poset of size 4>
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);
 #! <finite poset of size 4>
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);
 #! <order preserving map>
@@ -142,9 +146,9 @@ DeclareOperation("ImageMap",[IsPosetHomomorphism]);
 #! @Description The image $f(x)$ of an element $x\in X$ by the map $f\colon X \to Y$.
 #! @Arguments f,x
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);
 #! <finite poset of size 4>
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);
 #! <finite poset of size 4>
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);
 #! <order preserving map>
@@ -157,9 +161,9 @@ DeclareOperation("ImageMap",[IsPosetHomomorphism,IsObject]);
 #! @Arguments x,f
 #! @Description The image $f(x)$ of an element $x\in X$ by the map $f\colon X \to Y$.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);
 #! <finite poset of size 4>
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);
 #! <finite poset of size 4>
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);
 #! <order preserving map>
@@ -175,8 +179,8 @@ DeclareOperation("\^",[IsObject,IsPosetHomomorphism]);
 #! @Arguments L, f
 #! @Description Given a list $L$ of poset homomorphisms, it return the list of the compositions $f\circ g$ for $g\in L$.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);;
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);;
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);;
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> [h,f] * f;
@@ -188,8 +192,8 @@ DeclareOperation("\*",[IsList,IsPosetHomomorphism]);
 #! @Arguments f, L
 #! @Description Given a list $L$ of poset homomorphisms, it return the list of the compositions $g\circ f$ for $g\in L$.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);;
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);;
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);;
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> f *[h,f];
@@ -201,8 +205,8 @@ DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
 #! @Arguments f,n
 #! @Description Returns $f^n$. If $n=0$ returns the identity. It works for $n&lt;0$ if $f$ is an isomorphism.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);;
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);;
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);;
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> gap> f^2;
@@ -230,8 +234,8 @@ DeclareOperation("PosetHomomorphismByFunctionNC",[IsPoset,IsPoset,IsFunction]);
 #! @Arguments X,Y,ys
 #! @Description Creates the order preserving map $f\colon X\to Y$ defined by $f(x) = ys[i]$ if <A>i = PositionSorted(Set(X),x)</A>.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);;
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5], [7,6], [8,5], [8,6]]);;
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> List(Set(A), x->x^h);
 #! [ 5, 6, 7, 8 ]
@@ -244,7 +248,7 @@ DeclareOperation("PosetHomomorphismByMapping",[IsPoset,IsPoset,IsMapping]);
 #! @Arguments X,Y
 #! @Description An isomorphism between $X$ and $Y$ or fail if the posets are not isomorphic.
 #! @BeginExampleSession
-#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2], [4,1],[4,2]]);;
+#! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
 #! gap> IsomorphismPosets(A,MinimalFiniteModelSphere(1));
 #! <order preserving map>
 #! gap> IsomorphismPosets(A,EmptyPoset());

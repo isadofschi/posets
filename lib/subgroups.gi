@@ -238,7 +238,7 @@ end);
 
 
 
-InstallMethod(OrbitSubdivisionPosetOfRadicalpSubgroups,
+InstallMethod(OrbitSubdivisionBoucPoset,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
 function(G,p)
@@ -395,7 +395,7 @@ function(G,p)
 	return PosetByOrderMatrix(M);
 end);
 
-InstallMethod(OrbitSubdivisionPosetOfElementaryAbelianpSubgroups,
+InstallMethod(OrbitSubdivisionQuillenPoset,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
 function(G,p)
@@ -553,7 +553,7 @@ function(G,p)
 end);
 
 
-InstallMethod(OrbitSubdivisionPosetOfpSubgroups,
+InstallMethod(OrbitSubdivisionBrownPoset,
 "for Group, Integer",
 [IsGroup and IsFinite,IsInt],
 function(G,p)

@@ -1,0 +1,104 @@
+1) Implementar la función PosetByHasseDiagram, documentación, ejemplos y tests;
+
+2) Ejemplo y test para Iterator;
+
+3) Agregar ejemplo de DotCode
+
+4) Si pones Ordering(P) evaluado en cosas que no estan en elposet, devuelve true a veces: chequear que las cosas esten en el poset
+Aclararlo? Si x no esta en P devolver error: x is not an element of P.
+En TheWallet tira falso Ordering(W)(0,2) y verdadero Ordering(W)(0,0)
+
+5) CoreParallel: aclaré que sólo funciona en linux.
+
+----------------------------------------
+
+Comentarios para complexes.gd
+
+6) DeclareOperation("BarycentricSubdivision",[IsHapSimplicialMap]); tira fail.
+Cuando se arregle, agregar ejemplo en test38 o test39.
+
+7) DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]); tira error. De hecho tira error si llamo a Homology(F,n) :: ChainMap, Int que es de HAP.
+Cuando se arregle, agregar ejemplo en test39.
+
+----------------------------------------
+
+Comentarios para constructions.gd
+
+8) Corregir mensajes de error en quotient y que A sea set. Deberia chequear que sea un sublist de los elementos de X nada mas (cualquier cosa modificar test42 y documentación de QuotientPoset)
+
+9) Ver si se puede currificar IsTotalOrdering para mandarle un poset en vez de una relación
+
+10) WedgePosets agregar natural maps de inclusiones. No me gustan los nombres que tiene, se entiende muy poco. Ver test43 cualquier cosa.
+
+11) No esta implementado DirectProduct de posets?
+
+----------------------------------------
+
+Comentarios para deformations.gd (Hacer, cosas de Xime)
+
+----------------------------------------
+
+Comentarios para fences.gd
+
+12) PathInPoset requiere calcular OrderMatrix
+
+----------------------------------------
+
+Comentarios para maps.gd
+
+13) Corregido InverseImmutable.
+
+14) Faltan ejemplos y tests para PosetHomomorphismByFunction, PosetHomomorphismByFunctionNC, PosetHomomorphismByMapping. test46
+
+----------------------------------------
+
+Comentarios para morse.gd (Hacer, no sé bien cómo funcionan)
+
+----------------------------------------
+
+Comentarios para namedPosets.gd (listo)
+
+15) Agrego el modelo finito del plano proyectivo de Jony Example 7.1.1 (creo que ottina probo que era el minimal).
+
+----------------------------------------
+
+Comentarios para plot.gd
+
+16) Hacer test y ejemplo para DeclareGlobalFunction("DotCode"); Agregar ploteos de ejemplo?
+
+----------------------------------------
+
+Comentarios para posets.gd (comentarios al principio)
+
+----------------------------------------
+
+Comentarios para presentations.gd (listo)
+
+----------------------------------------
+
+Comentarios para properties.gd (listo)
+
+17) HasFixedPointProperty tarda mucho en posets de mas de 10 puntos, se puede hacer algo mas inteligente?
+
+----------------------------------------
+
+Comentarios para random_deformations.gd
+
+18) En el test, como te dice el que sacas, puede tirar error. Truco: poner el proyectivo o algun modelo de las esferas que nunca tienen reducciones y devuelve siempre lo mismo. Test51
+
+19) Ejemplos y tests para RandomReductionCore, RandomReduction: Ojo con los nombres de las cosas.
+
+----------------------------------------
+
+Comentarios para subgroups.gd (listo)
+
+20) Acorté los nombres de las OrbitSubdivision...
+
+----------------------------------------
+
+
+
+
+
+
+

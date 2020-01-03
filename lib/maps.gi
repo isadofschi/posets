@@ -65,7 +65,7 @@ InstallMethod(InverseImmutable,
 [IsPosetHomomorphism],
 function(f)
 	local l,ims;
-	if Size(SourceMap(f))<>Size(SourceMap(f)) then
+	if Size(SourceMap(f))<>Size(TargetMap(f)) then
 		return fail;
 	fi;
 	l:=List(Set(SourceMap(f)),UnderlyingFunction(f));

@@ -30,7 +30,7 @@
 
 * PosetFromCoveringRelations: hacer Floyd-Warshall a mano
 
-* FixedPointProperty
+* FixedPointProperty: los homotopicamente triviales la cumplen siempre, pero con el metodo actual TheWallet se tilda, optimizar?
 
 * HomPosets
 
