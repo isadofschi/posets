@@ -61,6 +61,7 @@ DeclareOperation("Fence",[IsPosetHomomorphism,IsPosetHomomorphism]);
 
 #! @Arguments f,g
 #! @Description Given $f,g\colon X\to Y$, returns <C>true</C> if $f\simeq g$, <C>false</C> otherwise.
+#! @BeginExampleSession
 #! gap> S1:=MinimalFiniteModelSphere(1);;
 #! gap> point:=Set(S1)[1];;
 #! gap> f:=PosetHomomorphismByImages(S1, S1, List(Set(S1),x->point));

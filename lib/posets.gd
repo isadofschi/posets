@@ -6,6 +6,7 @@
 ##  
 ##  
 ##
+
 #! @Chapter Introduction
 
 #! This &GAP; package is meant to be a toolbox to study finite posets (equivalently, $T_0$ finite topological spaces) from a topological viewpoint. Our main reference is <Cite Key="BarmakBook"/>.

@@ -1,7 +1,8 @@
 #! @Chapter Posets
+
 #! @Section Examples of posets
 
-#! @Arguments
+#! @Arguments 
 #! @Description The empty poset.
 #! @BeginExampleSession
 #! gap> P:=EmptyPoset();
@@ -33,7 +34,7 @@ DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 DeclareOperation("TheWallet",[]);
 
 #! @Arguments 
-#! @Description A finite model of the projective plane $\RR P^2$ <Cite Key="BarmakBook" Where="Example 7.1.1"/>.
+#! @Description A finite model of the projective plane $\mathbb{R}P^2$ <Cite Key="BarmakBook" Where="Example 7.1.1"/>.
 #! @BeginExampleSession
 #! gap> RP2:=FiniteModelProjectivePlane();
 #! <finite poset of size 13>
@@ -46,3 +47,5 @@ DeclareOperation("TheWallet",[]);
 #! [ [ 0 ], [ 2 ], [  ] ]
 #! @EndExampleSession
 DeclareOperation("FiniteModelProjectivePlane",[]);
+
+

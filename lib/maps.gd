@@ -209,7 +209,7 @@ DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
 #! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);;
 #! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
-#! gap> gap> f^2;
+#! gap> f^2;
 #! <order preserving map>
 #! gap> f^-2 = IdentityMap(A);
 #! true

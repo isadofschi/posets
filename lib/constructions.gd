@@ -103,7 +103,7 @@ DeclareOperation("SuspensionPoset",[IsPoset]);
 DeclareOperation("OppositePoset",[IsPoset]);
 
 #! @Arguments f
-#! @Description The mapping cylinder of an order preserving map $f:X\to Y$ is the poset $Zf$ whose underlying set is the disjoint union of $X$ and $Y$. The order in $Zf$ is given as following: it keeps the same order in $X$ and in $Y$, and if $x\in X$ and $y\in Y$, then $x < y$ if $f(x)\leq y$. This method also computes the following natural maps: the inclusions of $X$ and $Y$ in $Zf$, and the retraction of $Zf$ onto $Y$.
+#! @Description The mapping cylinder of an order preserving map $f:X\to Y$ is the poset $Zf$ whose underlying set is the disjoint union of $X$ and $Y$. The order in $Zf$ is given as following: it keeps the same order in $X$ and in $Y$, and if $x\in X$ and $y\in Y$, then $x &lt; y$ if $f(x)\leq y$. This method also computes the following natural maps: the inclusions of $X$ and $Y$ in $Zf$, and the retraction of $Zf$ onto $Y$.
 #! @BeginExampleSession
 #! gap> A:=PosetByCoveringRelations([1,2,3,4], [[3,1],[3,2], [4,1],[4,2]]);
 #! <finite poset of size 4>
@@ -119,7 +119,7 @@ DeclareOperation("OppositePoset",[IsPoset]);
 DeclareOperation("MappingCylinderPosetHomomorphism",[IsPosetHomomorphism]);
 
 #! @Arguments X,A
-#! @Description Returns the quotient set $X/A$ with the induced order. The subset $A$ must be convex: if $x < z < y$ with $x,y\in A$, then $z\in A$. See <Cite Key="BarmakBook" Where="Section 2.7"/> for further details.
+#! @Description Returns the quotient set $X/A$ with the induced order. The subset $A$ must be convex: if $x &lt; z &lt; y$ with $x,y\in A$, then $z\in A$. See <Cite Key="BarmakBook" Where="Section 2.7"/> for further details.
 #! @BeginExampleSession
 #! gap> A:=PosetByCoveringRelations([1,2,3,4], [[4,3],[4,2],[3,1],[2,1]]);
 #! <finite poset of size 4>
