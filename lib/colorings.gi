@@ -1,8 +1,8 @@
 # fundamental group by coloring (without spanning collapsible)
 
-Kruskal:=function(X)
+Kruskal:=function(X, shuffle)
 	# spanning forest
-	local C,find,union,T,e;
+	local C,find,union,T,e,l;
 
 	C := [1..Size(X)];
 	find:=function(u)
@@ -19,8 +19,13 @@ Kruskal:=function(X)
 	end;
 
 	T := [];
+	l := CoveringRelations(X);
+	# we can optionally shuffle the covering relations if we want a random spanning tree
+	if shuffle then
+		l := Shuffle(ShallowCopy(l));
+	fi;
 
-	for e in CoveringRelations(X) do # podemos permutar las coveringrelations si queremos un random spanning tree
+	for e in l do 
 		if find(PositionSorted(Set(X),e[1])) <> find(PositionSorted(Set(X),e[2])) then
 			Add(T,e);
 			union(PositionSorted(Set(X),e[1]), PositionSorted(Set(X),e[2]));
@@ -31,29 +36,54 @@ Kruskal:=function(X)
 end;
 
 
+InstallMethod(SpanningForest,
+"for Poset",
+[IsPoset],
+function(X)
+	return Kruskal(X, false);
+end);
+
+
+InstallMethod(RandomSpanningForest,
+"for Poset",
+[IsPoset],
+function(X)
+	return Kruskal(X, true);
+end);
+
+
 expand:=function(X,A)
 	local e;
 	for e in  Difference(CoveringRelations(X),A) do
-		if IsCollapsible( PosetByCoveringRelations( Set(X), Concatenation(A,[e]) ) ) then
+		if IsCollapsible(PosetByCoveringRelations( Set(X), Concatenation(A,[e]) ) ) then
 			Add(A,e); # Is it okay to add these edges at once? Or shall we return A here?
 		fi;
 	od;
 	return A;
 end;
 
-InstallMethod(SpanningCollapsibleSubDiagram,
-"for Poset",
-[IsPoset],
-function(X)
+spanning_collapsible:=function(X,shuffle)
 	local A,n;
-	A := Kruskal(X);
+	A := Kruskal(X, shuffle);
 	n:=-1;
 	while Size(A)>n do
 		n := Size(A);
 		A := expand(X,A);
 	od;
 	return A;
-end);
+end;
+
+InstallMethod(SpanningCollapsible,
+"for Poset",
+[IsPoset],
+X->spanning_collapsible(X,false)
+);
+
+InstallMethod(RandomSpanningCollapsible,
+"for Poset",
+[IsPoset],
+X->spanning_collapsible(X,true)
+);
 
 
 InstallMethod(FundamentalGroupByColoring,
@@ -123,6 +153,6 @@ InstallMethod(FundamentalGroupByColoring,
 "for Poset",
 [IsPoset],
 function(X)
-	return FundamentalGroupByColoring(X,Kruskal(X));
+	return FundamentalGroupByColoring(X,Kruskal(X, false));
 end);
 
