@@ -26,14 +26,14 @@ InstallMethod(FacePoset,
 "for SimplicialMap",
 [IsHapSimplicialMap],
 function(f)
-	return PosetHomomorphismByFunction(FacePoset(f!.source),FacePoset(f!.target),sigma -> List(sigma, f!.mapping) );
+	return PosetHomomorphismByFunction(FacePoset(f!.source),FacePoset(f!.target),sigma -> f!.mapping(sigma) );
 end);
 
 InstallMethod(OrderComplex,
 "for PosetHomomorphism",
 [IsPosetHomomorphism],
 function(f)
-	return SimplicialMap(OrderComplex(f!.source),OrderComplex(f!.target), f!.f );
+	return SimplicialMap(OrderComplex(SourceMap(f)),OrderComplex(TargetMap(f)), UnderlyingFunction(f));
 end);
 
 ################################################################################

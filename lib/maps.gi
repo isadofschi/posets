@@ -83,7 +83,7 @@ InstallMethod(ImageMap,
 "for Poset homomorphism",
 [IsPosetHomomorphism],
 function(f)
-	return SubPoset(TargetMap(f), Set(List(Set(f!.source),f!.f)) );
+	return SubPoset(TargetMap(f), Set(List(Set(SourceMap(f)),  UnderlyingFunction(f))) );
 end);
 
 InstallMethod(ImageMap,
@@ -95,7 +95,7 @@ function(f,x)
 	if not x in X then
 		Error("x is not an element of the domain of f");
 	fi;
-	return f!.f(x);
+	return UnderlyingFunction(f)(x);
 end);
 
 
