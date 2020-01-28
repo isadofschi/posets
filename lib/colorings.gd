@@ -3,8 +3,7 @@
 #! @Section Colorings
 
 #! Colorings were introduced by Barmak and Minian in <Cite Key="BarmakMinianColorings"/>. Given $X$ a poset and $A$ an (appropriate) coloring of the Hasse diagram of $X$, they propose a technique to compute a presentation of the fundamental group of $X$ (see Theorem 4.4).
-#!A subdiagram $A$ of the Hasse diagram of $X$ (also called $\textit{coloring}$) is a 
-has to satisfy some technical conditions. For instance, $A$ can be a simple-connected diagram containing all the vertices of $X$. 
+#!A subdiagram $A$ of the Hasse diagram of $X$ (also called $\textit{coloring}$) is a has to satisfy some technical conditions. For instance, $A$ can be a simple-connected diagram containing all the vertices of $X$. 
 
 #!Using colorings are the edges which are not in $A$, and the relators are given by the $\textit{digons}$. A  digon  in  a  poset $X$ is  a  subdiagram  which  is  the  union  of  two  different $\textit{monotonic}$ (or directed) edge-paths from a point $x$ to a point $y$ of $X$. 
   

@@ -9,6 +9,7 @@ DeclareGlobalFunction("MorsePresentation");
 
 DeclareGlobalFunction("GreedyAcyclicMatching");
 
-#!
+#! @Arguments X
+#! @Description Tries to find a spanning matching for the poset <A>X</A>.
 DeclareGlobalFunction("GreedySpanningMatching");
 
