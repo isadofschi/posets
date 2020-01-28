@@ -1,3 +1,5 @@
+# Example: The Akbulut-Kirby presentation  for n = 2.
+# (page 142 in the thesis of Ximena Fernandez)
 gap> F:=FreeGroup("x","y");;
 gap> AssignGeneratorVariables(F);
 #I  Assigned the global variables [ x, y ]
