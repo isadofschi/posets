@@ -1,6 +1,6 @@
 #! @Chapter Posets and presentations
 
-#! @Section Discrete Morse theory
+#! @Section Discrete Morse theory for presentations
 
 # Takes an FpGroup G and a matching M
 #! @Arguments G,M
