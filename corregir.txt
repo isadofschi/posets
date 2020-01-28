@@ -14,8 +14,7 @@ En TheWallet tira falso Ordering(W)(0,2) y verdadero Ordering(W)(0,0)
 
 Comentarios para complexes.gd
 
-6) DeclareOperation("BarycentricSubdivision",[IsHapSimplicialMap]); tira fail.
-Cuando se arregle, agregar ejemplo en test38 o test39.
+6) Agregar ejemplo de Barycentric subdivision en test38 o test39.
 
 7) DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]); tira error. De hecho tira error si llamo a Homology(F,n) :: ChainMap, Int que es de HAP.
 Cuando se arregle, agregar ejemplo en test39.
