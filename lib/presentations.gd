@@ -1,12 +1,15 @@
 #! @Chapter Posets and presentations
+#! The reference for this chapter is <Cite Key="FernandezThesis"/>.
+
 #! @Section The poset associated to a group presentation
 
 #! @BeginGroup
 
-#! @Description Returns the poset associated to a <C>FpGroup</C> or group presentation (see <Cite Key="FernandezThesis" Where="Definition 6.1.1"/>).
+#! @Description Returns the poset associated to a <C>FpGroup</C> or group presentation. It is defined as  the face poset of the baricentric subdivision of the standard complex associated to a finite group presentation.
+#! For more details on this construction, see <Cite Key="FernandezThesis" Where="Definition 6.1.1"/>.
 
 #! @Arguments G
-#! @Description For a finitely presented group $G$, it returns a finite poset of height 2 whose fundamental group is $G$.
+#! @Description For a finitely presented group <A>G</A>, it returns a finite poset of height 2 whose fundamental group is $G$.
 #! @BeginExampleSession
 #! gap> F:=FreeGroup("x");;
 #! gap> AssignGeneratorVariables(F);;
