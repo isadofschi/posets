@@ -48,7 +48,7 @@ DeclareOperation("FacePoset",[IsHapSimplicialComplex]);
 DeclareOperation("OrderComplex",[IsPoset]);
 
 #! @Arguments f
-#! @Description The map $\mathcal{X}(<A>f</A>)$ induced by the simplicial map <A>f</A> in the face posets.
+#! @Description The map $\mathcal{X}(f)$ induced by the simplicial map <A>f</A> in the face posets.
 #! @BeginExampleSession
 #! gap> G:=SmallGroup(72,40);
 #! <pc group of size 72 with 5 generators>
@@ -70,7 +70,7 @@ DeclareOperation("OrderComplex",[IsPoset]);
 DeclareOperation("FacePoset",[IsHapSimplicialMap]);
 
 #! @Arguments f
-#! @Description The map $\mathcal{K}(<A>f</A>)$ induced by the poset map <A>f</A> in the order complexes.
+#! @Description The map $\mathcal{K}(f)$ induced by the poset map <A>f</A> in the order complexes.
 #! @BeginExampleSession
 #! gap> G:=SmallGroup(72,40);
 #! <pc group of size 72 with 5 generators>
@@ -95,7 +95,7 @@ DeclareOperation("OrderComplex",[IsPosetHomomorphism]);
 #######################################################
 
 #! @Arguments X
-#! @Description The barycentric subdvidision of the poset <A>X</A>, which is the poset $\mathcal{X}(\mathcal{K}(<A>X</A>))$.
+#! @Description The barycentric subdvidision of the poset <A>X</A>, which is the poset $\mathcal{X}(\mathcal{K}(X))$.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -107,7 +107,7 @@ DeclareOperation("OrderComplex",[IsPosetHomomorphism]);
 DeclareOperation("BarycentricSubdivision",[IsPoset]);
 
 #! @Arguments K
-#! @Description The barycentric subdvidision of the simplicial complex <A>K</A>, which is the simplicial complex $\mathcal{K}(\mathcal{X}(<A>K</A>))$.
+#! @Description The barycentric subdvidision of the simplicial complex <A>K</A>, which is the simplicial complex $\mathcal{K}(\mathcal{X}(K))$.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -154,7 +154,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 
 
 #! @Arguments X
-#! @Description Computes the homology $H_*(<A>X</A>)$ of the poset <A>X</A> viewed as a topological space.
+#! @Description Computes the homology $H_*(X)$ of the poset <A>X</A> viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -166,7 +166,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 DeclareOperation("PosetHomology",[IsPoset]);
 
 #! @Arguments X,n
-#! @Description Computes the homology group $H_{<A>n</A>}(<A>X</A>)$ of the poset <A>X</A>  viewed as a topological space.
+#! @Description Computes the homology group $H_{n}(X)$ of the poset <A>X</A>  viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -180,7 +180,7 @@ DeclareOperation("PosetHomology",[IsPoset]);
 DeclareOperation("PosetHomology",[IsPoset,IsInt]);
 
 #! @Arguments f,n
-#! @Description The induced map $H_{<A>n</A>}(<A>f</A>)$ between the homology groups of degree <A>n</A> by the poset map <A>f</A>.
+#! @Description The induced map $H_{n}(f)$ between the homology groups of degree <A>n</A> by the poset map <A>f</A>.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
