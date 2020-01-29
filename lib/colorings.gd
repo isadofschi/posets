@@ -15,6 +15,8 @@
 #! @BeginGroup
 #! @Description Computes a presentation of the fundamental group of a connected poset <A>X</A>. If specified, <A>A</A> must be a simply-connected subdiagram of <A>X</A>. When <A>A</A> is not specified, a spanning tree in <A> X </A> is chosen arbitrarily. Returns an FpGroup isomorphic to $\pi_1(X)$.
 
+#! This method is implemented according to the optimized Definition 6.2.1 of <Cite Key="FernandezThesis"/>, to also apply this algorithm to the Andrews-Curtis Conjecture.
+
 #! @BeginExampleSession
 #! gap> W:=TheWallet();;
 #! gap> FundamentalGroupByColoring(W);

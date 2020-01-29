@@ -166,7 +166,7 @@ function(X,A)
 		for j in [1..Size(MinimalElements(X))] do
 			chains_ij:=maximal_chains[i][j];
 			if Size(chains_ij)>1 then
-				c1:=Product(List(chains_ij[1], d)); #acá en realidad habría que elegir como preferred chain una cadena que no tuviera todos unos
+				c1:=Product(List(chains_ij[1], d)); #acá en realidad hay que elegir como preferred chain una cadena que no tuviera todos unos
 				for k in [2..Size(chains_ij)] do
 					Add(rels, Product(List(chains_ij[k], d))*c1^-1);
 				od;

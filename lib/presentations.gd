@@ -1,7 +1,11 @@
+
+
 #! @Chapter Posets and presentations
+
 #! The reference for this chapter is <Cite Key="FernandezThesis"/>.
 
 #! @Section The poset associated to a group presentation
+
 
 #! @BeginGroup
 
@@ -9,7 +13,7 @@
 #! For more details on this construction, see <Cite Key="FernandezThesis" Where="Definition 6.1.1"/>.
 
 #! @Arguments G
-#! @Description For a finitely presented group <A>G</A>, it returns a finite poset of height 2 whose fundamental group is $G$.
+#! @Description For a finitely presented group <A>G</A>, it returns a finite poset of height 2 whose fundamental group is isomorphic to <A>G</A>.
 #! @BeginExampleSession
 #! gap> F:=FreeGroup("x");;
 #! gap> AssignGeneratorVariables(F);;
