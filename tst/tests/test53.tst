@@ -24,7 +24,7 @@ gap> A:= [ [ [ 2, "r", 1, 3, 1 ], [ 1, "rg", 1, 3 ] ], [ [ 1, "rg", 1, 1 ], [ 0,
 >  [ [ 2, "r", 2, 3, 1 ], [ 1, "gb", 1, 1 ] ], [ [ 1, "rb", 2, 3 ], [ 0, "r", 2 ] ], [ [ 2, "r", 2, 1, -1 ], [ 1, "gb", 1, -1 ] ], 
 >  [ [ 1, "rg", 2, 1 ], [ 0, "r", 2 ] ], [ [ 2, "r", 2, 6, -1 ], [ 1, "rb", 2, 1 ] ], [ [ 2, "r", 1, 4, 1 ], [ 1, "gb", 2, -1 ] ], 
 >  [ [ 2, "r", 2, 4, 1 ], [ 1, "rb", 2, 4 ] ], [ [ 2, "r", 2, 5, 1 ], [ 1, "rb", 2, 5 ] ], [ [ 2, "r", 1, 5, 1 ], [ 1, "rb", 1, 5 ] ],
->  [ [ 2, "r", 2, 6, 1 ], [ 1, "rg", 2, 6 ] ] ];; # a spanning tree found using RandomSpanningForest
+>  [ [ 2, "r", 2, 6, 1 ], [ 1, "rg", 2, 6 ] ] ];; # a spanning tree found using RandomSpanningTreeHasseDiagram
 gap> SimplifiedFpGroup(FundamentalGroupByColoring(P,A));
 <fp group on the generators [  ]>
 gap> while true do

@@ -36,7 +36,7 @@ Kruskal:=function(X, shuffle)
 end;
 
 
-InstallMethod(SpanningForest,
+InstallMethod(SpanningForestHasseDiagram,
 "for Poset",
 [IsPoset],
 function(X)
@@ -44,12 +44,40 @@ function(X)
 end);
 
 
-InstallMethod(RandomSpanningForest,
+InstallMethod(RandomSpanningForestHasseDiagram,
 "for Poset",
 [IsPoset],
 function(X)
 	return Kruskal(X, true);
 end);
+
+InstallMethod(SpanningTreeHasseDiagram,
+"for Poset",
+[IsPoset],
+function(X)
+	local A;
+	A:=Kruskal(X,false);
+	if Size(X)-Size(A)=1 then
+		return A;
+	else
+		return fail;
+	fi;
+end);
+
+
+InstallMethod(RandomSpanningTreeHasseDiagram,
+"for Poset",
+[IsPoset],
+function(X)
+	local A;
+	A:=Kruskal(X,true);
+	if Size(X)-Size(A)=1 then
+		return A;
+	else
+		return fail;
+	fi;
+end);
+
 
 
 expand:=function(X,A)
@@ -73,13 +101,13 @@ spanning_collapsible:=function(X,shuffle)
 	return A;
 end;
 
-InstallMethod(SpanningCollapsible,
+InstallMethod(SpanningCollapsibleSubdiagram,
 "for Poset",
 [IsPoset],
 X->spanning_collapsible(X,false)
 );
 
-InstallMethod(RandomSpanningCollapsible,
+InstallMethod(RandomSpanningCollapsibleSubdiagram,
 "for Poset",
 [IsPoset],
 X->spanning_collapsible(X,true)
