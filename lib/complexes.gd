@@ -1,13 +1,20 @@
 #! @Chapter Topology
 
+
+#! A poset can be viewed as a finite $T_0$-topological space whose open sets are the downsets. 
+#! The topological aspects of posets can be found in <Cite Key="BarmakBook" Where="Section 1.1"/>
+
 #! @Section Face poset and order complex
 #! Given a finite poset $X$, its order complex $\mathcal{K}(X)$ is the simplicial complex whose vertices are the elements of $X$ and whose simplices are the nonempty totally ordered subsets of $X$.
 #! If $K$ is a finite simplicial complex, then its face poset $\mathcal{X}(K)$ is the finite poset whose elements are the simplices of $K$ and the order given by inclusion.
 
+#! Moreover, $X$ (viewed as a finite topological space) and $\mathcal{K}(X)$ are weak equivalent. Similarly, $K$ and $\mathcal{X}(K)$ are weak equivalent.
+
+
 #######################################################
 
 #! @Arguments K
-#! @Description Returns the face poset of the simplicial complex $K$.
+#! @Description Returns the face poset of the simplicial complex <A>K</A>$.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3,4], [[2,1], [3,1], [4,2], [4,3]]);
 #! <finite poset of size 4>
@@ -22,7 +29,7 @@
 DeclareOperation("FacePoset",[IsHapSimplicialComplex]);
 
 #! @Arguments X
-#! @Description Returns the order complex of the finite poset $X$.
+#! @Description Returns the order complex of the finite poset <A>X</A>$.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3,4], [[2,1], [3,1], [4,2], [4,3]]);
 #! <finite poset of size 4>
@@ -41,7 +48,7 @@ DeclareOperation("FacePoset",[IsHapSimplicialComplex]);
 DeclareOperation("OrderComplex",[IsPoset]);
 
 #! @Arguments f
-#! @Description The map $\mathcal{X}(f)$ induced by the simplicial map $f$ in the face posets.
+#! @Description The map $\mathcal{X}(<A>f</A>)$ induced by the simplicial map <A>f</A> in the face posets.
 #! @BeginExampleSession
 #! gap> G:=SmallGroup(72,40);
 #! <pc group of size 72 with 5 generators>
@@ -63,7 +70,7 @@ DeclareOperation("OrderComplex",[IsPoset]);
 DeclareOperation("FacePoset",[IsHapSimplicialMap]);
 
 #! @Arguments f
-#! @Description The map $\mathcal{K}(f)$ induced by the poset map $f$ in the order complexes.
+#! @Description The map $\mathcal{K}(<A>f</A>)$ induced by the poset map <A>f</A> in the order complexes.
 #! @BeginExampleSession
 #! gap> G:=SmallGroup(72,40);
 #! <pc group of size 72 with 5 generators>
@@ -88,7 +95,7 @@ DeclareOperation("OrderComplex",[IsPosetHomomorphism]);
 #######################################################
 
 #! @Arguments X
-#! @Description The barycentric subdvidision of the poset $X$, which is the poset $\mathcal{X}(\mathcal{K}(X))$.
+#! @Description The barycentric subdvidision of the poset <A>X</A>, which is the poset $\mathcal{X}(\mathcal{K}(<A>X</A>))$.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -100,7 +107,7 @@ DeclareOperation("OrderComplex",[IsPosetHomomorphism]);
 DeclareOperation("BarycentricSubdivision",[IsPoset]);
 
 #! @Arguments K
-#! @Description The barycentric subdvidision of the simplicial complex $K$, which is the simplicial complex $\mathcal{K}(\mathcal{X}(K))$.
+#! @Description The barycentric subdvidision of the simplicial complex <A>K</A>, which is the simplicial complex $\mathcal{K}(\mathcal{X}(<A>K</A>))$.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -139,12 +146,15 @@ DeclareOperation("BarycentricSubdivision",[IsHapSimplicialMap]);
 #! @EndExampleSession
 DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 
+
+
 #######################################################
 
-#! @Section Homology
+#! @Section Topological invariants
+
 
 #! @Arguments X
-#! @Description The homology $H_*(X)$.
+#! @Description Computes the homology $H_*(<A>X<\A>)$ of the poset <A>X<\A> viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -156,7 +166,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 DeclareOperation("PosetHomology",[IsPoset]);
 
 #! @Arguments X,n
-#! @Description The homology group $H_n(X)$.
+#! @Description Computes the homology group $H_{<A>n<\A>}(<A>X<\A>)$ of the poset <A>X<\A>  viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -170,17 +180,15 @@ DeclareOperation("PosetHomology",[IsPoset]);
 DeclareOperation("PosetHomology",[IsPoset,IsInt]);
 
 #! @Arguments f,n
-#! @Description The induced map $H_n(f)$ between the homology groups of grade $n$ by the poset map $f$.
+#! @Description The induced map $H_{<A>n<\A>}(<A>f<\A>)$ between the homology groups of degree <A>n<\A> by the poset map <A>f<\A>.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
 
-#######################################################
 
-#! @Section More invariants
 
 #! @Arguments X
-#! @Description Computes the Euler Characteristic of the poset.
+#! @Description Computes the Euler Characteristic of the poset <A>X<\A> viewed as a topological space.
 #! @BeginExampleSession
 #! gap> EulerCharacteristic(MinimalFiniteModelSphere(3));
 #! 0
@@ -192,7 +200,7 @@ DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
 DeclareAttribute("EulerCharacteristic",IsPoset);
 
 #! @Arguments X
-#! @Description Computes the fundamental group of the poset, which is the fundamental group of its order complex.
+#! @Description Computes the fundamental group of the poset <A>X<\A> as is the fundamental group of its order complex.
 #! @BeginExampleSession
 #! gap> FundamentalGroup(TheWallet());
 #! <fp group on the generators [  ]>

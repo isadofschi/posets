@@ -6,6 +6,12 @@
 
 * falta traducir QCCores
 
+#Colorings para grupo fundamental
+
+* reescribir FundamentalGroupByColoring para que sea de verdad la presentación del paper de Joni & Gabriel
+
+* agregar verificacion del coloring, porque si no es simplemente conexo y contiene todos los vértices, NO necesariamente es una presentación del grupo fundamental del poset.
+
 # Morse
 * Se puede generalizar más?
 

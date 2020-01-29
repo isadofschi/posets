@@ -92,7 +92,7 @@ DeclareOperation("Iterator",[IsPoset]);
 DeclareOperation("\in",[IsObject,IsPoset]);
 #############################################################################
 
-#! @Section Constructing posets in different ways
+#! @Section Construction of posets
 
 
 #! @Arguments X,f
@@ -200,7 +200,7 @@ DeclareOperation("PosetByCoveringRelations",[IsList, IsList]);
 
 #############################################################################
 
-#! @Section Other useful representations of the ordering
+#! @Section Representations of the ordering
 
 #! @Arguments X
 #! @Description Turns a poset <A>X</A> into a <C>Relation</C> on <C>[1..n]</C>, see <Ref Oper="Relations" BookName="ref"/>.

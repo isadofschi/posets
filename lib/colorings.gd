@@ -7,7 +7,7 @@
 
 #! Using colorings, they give a presentation of the fundamental group of $X$ whose generators are the edges which are not in $A$ and the relators are given by the $\textit{digons}$. A  digon  in  a  poset $X$ is  a  subdiagram  which  is  the  union  of  two  different $\textit{monotonic}$ (or directed) edge-paths from a point $x$ to a point $y$ of $X$. 
   
-#! In the presentation of the group it suffices to consider only the relations given by digons obtained as the union of edge-paths between minimal and maximal points. Moreover, for every pair of extremal points in $X$, we only consider digons composed by a preferred edge-path not completely encluded in $A$ and the rest of edge-paths.
+# In the presentation of the group it suffices to consider only the relations given by digons obtained as the union of edge-paths between minimal and maximal points. Moreover, for every pair of extremal points in $X$, we only consider digons composed by a preferred edge-path not completely encluded in $A$ and the rest of edge-paths.
 
 
 #! This  method  can  be  applied  to  compute  the  fundamental  group  of  any  regular finite CW-complex by means of its face poset.
