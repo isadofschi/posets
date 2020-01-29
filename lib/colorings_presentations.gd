@@ -1,6 +1,6 @@
 #! @Chapter Posets and presentations
 
-#! The reference for this chapter is <Cite Key="FernandezThesis"/>.
+
 
 #! @Section Colorings for presentations
 

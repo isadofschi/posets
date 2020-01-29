@@ -1,4 +1,6 @@
 #! @Chapter Posets and presentations
+#! The reference for this chapter is <Cite Key="FernandezThesis"/>.
+
 #! @Section The poset associated to a group presentation
 
 #! @BeginGroup
