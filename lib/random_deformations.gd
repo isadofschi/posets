@@ -53,8 +53,8 @@ DeclareGlobalFunction("RandomQCReduction");
 DeclareGlobalFunction("RandomMiddleReduction");
 
 #! @Arguments X
-#! @BeginExampleSession
 #! @Description Performs a random edge-reduction, if there is any. Recall that if $e = (x\prec y)$ is an edge in the Hasse diagram of $X$, with $y$ a maximal element, and if $U_b - e$ (the poset obtained from $U_b$ by removing the covering relation $e$) is contractible, then there is an edge-reduction from $X$ to $X-e$. See <Cite Key="FernandezThesis" Where="Definition 3.2.10"/>.
+#! @BeginExampleSession
 #! gap> RandomEdgeReduction(TheWallet());
 #! # Edge reduction: [ 7, 11 ]
 #! <finite poset of size 11>
