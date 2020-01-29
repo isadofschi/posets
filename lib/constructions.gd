@@ -4,7 +4,7 @@
 # DirectProduct. DirectProduct and Coproduct for maps.
 
 #! @Arguments X, A
-#! @Description The subposet of <A>X<\A> whose underlying set is the list <A>A<\A> of elements of <A>X<\A>.
+#! @Description The subposet of <A>X</A> whose underlying set is the list <A>A</A> of elements of <A>X</A>.
 #! @BeginExampleSession
 #! gap> A:=PosetByCoveringRelations([1,2,3,4], [[3,1],[3,2], [4,1],[4,2]]);
 #! <finite poset of size 4>
@@ -61,7 +61,7 @@ DeclareGlobalFunction("Join");
 
 
 #! @Arguments X
-#! @Description Returns the join of <A>X<\A> with the singleton poset. Equivalently, it adds a maximum to <A>X<\A>.
+#! @Description Returns the join of <A>X</A> with the singleton poset. Equivalently, it adds a maximum to <A>X</A>.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -75,7 +75,7 @@ DeclareGlobalFunction("Join");
 DeclareOperation("ConePoset",[IsPoset]);
 
 #! @Arguments X
-#! @Description The suspension of the poset <A>X<\A>. It is the poset obtained by the join of <A>X<\A> with the discrete poset on two elements.
+#! @Description The suspension of the poset <A>X</A>. It is the poset obtained by the join of <A>X</A> with the discrete poset on two elements.
 #! @BeginExampleSession
 #! gap> P:=EmptyPoset();
 #! <finite poset of size 0>
@@ -91,7 +91,7 @@ DeclareOperation("ConePoset",[IsPoset]);
 DeclareOperation("SuspensionPoset",[IsPoset]);
 
 #! @Arguments X
-#! @Description The oppositve poset of <A>X<\A>.
+#! @Description The oppositve poset of <A>X</A>.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3], [[3,1], [3,2]]);
 #! <finite poset of size 3>
@@ -157,7 +157,7 @@ DeclareOperation("QuotientPoset",[IsPoset,IsList]);
 DeclareOperation("WedgePosets",[IsList]);
 
 #! @Arguments X,Y
-#! @Description The poset <A>X<\A>^<A>Y<\A>. Recall that this poset consists of the order preserving maps $f:X\to Y$ with $f\leq g$ if $f(x)\leq g(x)$ for all $x\in X$.
+#! @Description The poset <A>X</A>^<A>Y</A>. Recall that this poset consists of the order preserving maps $f:X\to Y$ with $f\leq g$ if $f(x)\leq g(x)$ for all $x\in X$.
 #! @BeginExampleSession
 #! gap> S1:=MinimalFiniteModelSphere(1);
 #! <finite poset of size 4>
@@ -171,7 +171,7 @@ DeclareOperation("WedgePosets",[IsList]);
 DeclareOperation("HomPosets",[IsPoset,IsPoset]);
 
 #! @Arguments X
-#! @Description The endomorphism poset of the poset <A>X<\A>. Equivalently, the poset <A>X<\A>^{<A>X<\A>}.
+#! @Description The endomorphism poset of the poset <A>X</A>. Equivalently, the poset <A>X</A>^{<A>X</A>}.
 #! @BeginExampleSession
 #! gap> S1:=MinimalFiniteModelSphere(1);
 #! <finite poset of size 4>
