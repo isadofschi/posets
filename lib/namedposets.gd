@@ -33,6 +33,10 @@ DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 #! @EndExampleSession
 DeclareOperation("TheWallet",[]);
 
+#! @Arguments
+#! @Description The Triangle is a poset on 19 points, see <Cite Key="FernandezThesis" Where="Example 2.2.7"/>.
+DeclareOperation("TheTriangle",[]);
+
 #! @Arguments 
 #! @Description A finite model of the projective plane $\mathbb{R}P^2$ <Cite Key="BarmakBook" Where="Example 7.1.1"/>.
 #! @BeginExampleSession

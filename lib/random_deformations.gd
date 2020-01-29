@@ -79,14 +79,36 @@ DeclareGlobalFunction("RandomOsakiReduction");
 #! @Arguments X
 #! @Description Performs the random reductions described above until reaching a poset with no more reductions. It also shows the list of performed reductions.
 #! @BeginExampleSession
-#! gap> RandomReductionCore(TheWallet());;
-#! # Middle reduction: 5 6
-#! # Weak point reduction: [ 1, 9 ]
-#! # Up Osaki reduction: [ 1, 10 ]
+#! gap> T:=TheTriangle();
+#! <finite poset of size 19>
+#! gap> WeakCore(T);
+#! <finite poset of size 19>
+#! gap> RandomReductionCore(T);
+#! # No middle reduction.
+#! # No weak points.
+#! # No Osaki reduction.
 #! # No edge reduction.
-#! # No QC reductions.
-#! # Weak point reduction: [ 1, [ 1, 11 ] ]
+#! # QC reduction: 16 17
+#! # Middle reduction: 5 11
+#! # QC reduction: 13 14
+#! # QC reduction: 13 16
+#! # Edge reduction: [ 8, 2 ]
+#! # Middle reduction: 4 10
+#! # Down Osaki reduction: 7
+#! # Up Osaki reduction: 5
+#! # Weak point reduction: 8
+#! # QC reduction: 7 11
+#! # Middle reduction: 4 7
+#! # Middle reduction: 6 9
+#! # Edge reduction: [ 3, 1 ]
+#! # Weak point reduction: 5
+#! # Up Osaki reduction: 5
+#! # Weak point reduction: 4
+#! # Down Osaki reduction: 3
+#! # Weak point reduction: 1
+#! # Up Osaki reduction: 2
 #! # The poset has size 1.
+#! <finite poset of size 1>
 #! @EndExampleSession
 DeclareGlobalFunction("RandomReductionCore");
 

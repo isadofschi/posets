@@ -119,7 +119,13 @@ end);
 
 InstallGlobalFunction(RandomReductionCore,
 function(X)
-	local Y;
+	local Y,ForgetNames;
+	ForgetNames:=function(P)
+		local nP;
+		nP:=PosetByFunctionNC([1..Size(P)], {i,j}->Ordering(P)(Set(P)[i],Set(P)[j]));
+		OrderMatrix(nP);
+		return nP;
+	end;
 	
 	if not IsPoset(X) then
 		Print("The argument must be a poset.\n");
@@ -134,6 +140,7 @@ function(X)
 	if Y=X then
 		return X;
 	else
+		Y:=ForgetNames(Y);
 		return RandomReductionCore(Y);
 	fi;
 end);
