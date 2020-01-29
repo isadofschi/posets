@@ -472,6 +472,10 @@ InstallMethod(IsCollapsible,
 "for Poset",
 [IsPoset],
 function(X)
-	return Size(MinWeakCore(X))=1;
+	if Size(Core(X)) = 1 then
+		return true;
+	else;
+		return Size(MinWeakCore(X))=1;
+	fi;
 end);
 

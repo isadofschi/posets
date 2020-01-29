@@ -3,7 +3,7 @@
 
 
 #! @Arguments f
-#! @Description Returns the subposet of fixed points of $f$. We only check names of points, Source(f) is not neccesarily equal to Target(f).
+#! @Description Returns the subposet of fixed points of <A>f</A>. We only check names of points, Source(f) is not neccesarily equal to Target(f).
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1..5], [[5,3],[5,2],[4,3],[4,2],[3,1],[2,1]]);
 #! <finite poset of size 5>
@@ -21,7 +21,7 @@
 DeclareAttribute("FixedPointsPosetHomomorphism",IsPosetHomomorphism);
 
 #! @Arguments X
-#! @Description Returns true if every order preserving map $f\colon X \to X$ has a fixed point, false otherwise.
+#! @Description Returns <C>true</C> if every order preserving map $f\colon X \to X$ has a fixed point, <C>false</C> otherwise.
 #! @BeginExampleSession
 #! gap> HasFixedPointProperty(MinimalFiniteModelSphere(1));
 #! false
@@ -32,7 +32,7 @@ DeclareProperty("HasFixedPointProperty",IsPoset);
 #! @Section Grading and height
 
 #! @Arguments X
-#! @Description Returns a grading if the poset is graded and fail otherwise. The grading is chosen so that the minimum grade is 0.
+#! @Description Returns a grading if the poset <A>X</A> is graded and <C>fail</C> otherwise. The grading is chosen so that the minimum grade is 0.
 #! @BeginExampleSession
 #! gap> S1:=MinimalFiniteModelSphere(1);
 #! <finite poset of size 4>
