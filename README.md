@@ -9,7 +9,7 @@
 
 Posets and finite spaces
 
-
+![](./doc/images/wallet.png)
 
 Start GAP and type
 
