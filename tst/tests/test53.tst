@@ -28,7 +28,7 @@ gap> A:= [ [ [ 2, "r", 1, 3, 1 ], [ 1, "rg", 1, 3 ] ], [ [ 1, "rg", 1, 1 ], [ 0,
 gap> SimplifiedFpGroup(FundamentalGroupByColoring(P,A));
 <fp group on the generators [  ]>
 gap> while true do
->  A:=RandomSpanningForest(P);
+>  A:=RandomSpanningTreeHasseDiagram(P);
 >    if GeneratorsOfGroup(SimplifiedFpGroup(FundamentalGroupByColoring(P,A)))=[] then
 >      Print("OK");
 >      break;
