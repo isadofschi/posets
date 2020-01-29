@@ -19,6 +19,8 @@ DeclareGlobalFunction("PlotHasseDiagram");
 
 #! @Arguments X,M filename
 #! @Description This function plots a Morse matching using the command dot. The matched edges are reversed and colored red. The plot is displayed and stored at filename. The software graphviz (<URL>https://www.graphviz.org</URL>) is needed.
+#! <Alt Only="HTML">&lt;img src="images/matching.png" align="center" width="1000" alt="A matching."/></Alt>
+
 #! @BeginExampleSession
 #! gap> F:=FreeGroup("x","y");;
 #! gap> AssignGeneratorVariables(F);;

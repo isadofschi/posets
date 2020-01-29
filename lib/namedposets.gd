@@ -23,6 +23,9 @@ DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 
 #! @Arguments 
 #! @Description The wallet is a homotopically trivial poset on 11 points which is not contractible <Cite Key="BarmakBook" Where="Example 4.2.1"/>.
+
+#! <Alt Only="HTML">&lt;img src="images/wallet.png" align="center" alt="The Wallet."/></Alt>
+
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -35,10 +38,13 @@ DeclareOperation("TheWallet",[]);
 
 #! @Arguments
 #! @Description The Triangle is a poset on 19 points, see <Cite Key="FernandezThesis" Where="Example 2.2.7"/>.
+
+#! <Alt Only="HTML">&lt;img src="images/triangle.png" align="center" alt="The Triangle."/></Alt>
 DeclareOperation("TheTriangle",[]);
 
 #! @Arguments 
 #! @Description A finite model of the projective plane $\mathbb{R}P^2$ <Cite Key="BarmakBook" Where="Example 7.1.1"/>.
+#! <Alt Only="HTML">&lt;img src="images/RP2.png" align="center" alt="Finite model of the projective plane."/></Alt>
 #! @BeginExampleSession
 #! gap> RP2:=FiniteModelProjectivePlane();
 #! <finite poset of size 13>
