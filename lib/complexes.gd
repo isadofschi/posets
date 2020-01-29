@@ -154,7 +154,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 
 
 #! @Arguments X
-#! @Description Computes the homology $H_*(<A>X</A>)$ of the poset <A>X<\A> viewed as a topological space.
+#! @Description Computes the homology $H_*(<A>X</A>)$ of the poset <A>X</A> viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -166,7 +166,7 @@ DeclareOperation("BarycentricSubdivision",[IsPosetHomomorphism]);
 DeclareOperation("PosetHomology",[IsPoset]);
 
 #! @Arguments X,n
-#! @Description Computes the homology group $H_{<A>n<\A>}(<A>X</A>)$ of the poset <A>X<\A>  viewed as a topological space.
+#! @Description Computes the homology group $H_{<A>n</A>}(<A>X</A>)$ of the poset <A>X</A>  viewed as a topological space.
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -180,7 +180,7 @@ DeclareOperation("PosetHomology",[IsPoset]);
 DeclareOperation("PosetHomology",[IsPoset,IsInt]);
 
 #! @Arguments f,n
-#! @Description The induced map $H_{<A>n<\A>}(<A>f</A>)$ between the homology groups of degree <A>n<\A> by the poset map <A>f<\A>.
+#! @Description The induced map $H_{<A>n</A>}(<A>f</A>)$ between the homology groups of degree <A>n</A> by the poset map <A>f</A>.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
@@ -188,7 +188,7 @@ DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
 
 
 #! @Arguments X
-#! @Description Computes the Euler Characteristic of the poset <A>X<\A> viewed as a topological space.
+#! @Description Computes the Euler Characteristic of the poset <A>X</A> viewed as a topological space.
 #! @BeginExampleSession
 #! gap> EulerCharacteristic(MinimalFiniteModelSphere(3));
 #! 0
