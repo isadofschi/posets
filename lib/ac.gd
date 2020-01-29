@@ -1,4 +1,4 @@
-#! @Chapter Andrews-Curtis
+#! @Chapter The Andrews-Curtis conjecture
 
 #! @Section Potential Counterexamples
 
