@@ -14,7 +14,7 @@
 #######################################################
 
 #! @Arguments K
-#! @Description Returns the face poset of the simplicial complex <A>K</A>$.
+#! @Description Returns the face poset of the simplicial complex <A>K</A>.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3,4], [[2,1], [3,1], [4,2], [4,3]]);
 #! <finite poset of size 4>
@@ -29,7 +29,7 @@
 DeclareOperation("FacePoset",[IsHapSimplicialComplex]);
 
 #! @Arguments X
-#! @Description Returns the order complex of the finite poset <A>X</A>$.
+#! @Description Returns the order complex of the finite poset <A>X</A>.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3,4], [[2,1], [3,1], [4,2], [4,3]]);
 #! <finite poset of size 4>
