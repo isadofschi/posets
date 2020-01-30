@@ -6,6 +6,7 @@ function(X,params)
 
 	escape_string := s -> ReplacedString(s,"\"","\\\"");
 
+	# Default values for optional parameters:
 	use_names:=LookupDictionary(params,"use_names");
 	if use_names=fail then use_names:=false; fi;
 
@@ -15,6 +16,7 @@ function(X,params)
 	direction_edges:=LookupDictionary(params,"direction_edges");
 	if direction_edges=fail then direction_edges:= x-> "forward"; fi;
 
+	# Now we produce the Dot code:
 	n:=Size(X);
 	M:=OrderMatrix(X);
 	rels := CoveringRelations(X);

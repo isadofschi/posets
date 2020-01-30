@@ -201,18 +201,18 @@ DeclareOperation("\*",[IsList,IsPosetHomomorphism]);
 #! @EndExampleSession
 DeclareOperation("\*",[IsPosetHomomorphism,IsList]);
 
-#! @Label f^n
+#! @Label $f^n$
 #! @Arguments f,n
-#! @Description Returns $f^n$. If $n=0$ returns the identity. It works for $n&lt;0$ if $f$ is an isomorphism.
+#! @Description Returns $f^n$. If $n=0$ returns the identity. If $f$ is an isomorphism $f^{-1}$ is its inverse.
 #! @BeginExampleSession
 #! gap> A:=PosetByCoveringRelations([1..4], [[3,1],[3,2],[4,1],[4,2]]);;
-#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
 #! gap> f:=PosetHomomorphismByImages(A,A, [2,1,4,3]);;
-#! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> f^2;
 #! <order preserving map>
 #! gap> f^-2 = IdentityMap(A);
 #! true
+#! gap> B:=PosetByCoveringRelations([5..8], [[7,5],[7,6],[8,5],[8,6]]);;
+#! gap> h:=PosetHomomorphismByImages(A,B,[5,6,7,8]);;
 #! gap> h^2;
 #! fail
 #! @EndExampleSession

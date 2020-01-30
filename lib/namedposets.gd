@@ -22,10 +22,15 @@ DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 
 
 #! @Arguments 
-#! @Description The wallet is a homotopically trivial poset on 11 points which is not contractible <Cite Key="BarmakBook" Where="Example 4.2.1"/>.
-
-#! <Alt Only="HTML">&lt;img src="images/wallet.png" align="center" alt="The Wallet."/></Alt>
-
+#! @Description The Wallet is a homotopically trivial poset on $11$ points which is not contractible <Cite Key="BarmakBook" Where="Example 4.2.1"/>.
+#! <Alt Only="HTML">&lt;br/> &lt;img src="images/wallet.png" align="center" alt="The Wallet."/></Alt>
+#! @BeginLatexOnly
+#! \begin{figure}[H]
+#! \centering
+#! \includegraphics[scale=0.4]{images/wallet.png}
+#! \caption{The wallet.}
+#! \end{figure}
+#! @EndLatexOnly
 #! @BeginExampleSession
 #! gap> W:=TheWallet();
 #! <finite poset of size 11>
@@ -34,17 +39,33 @@ DeclareOperation("MinimalFiniteModelSphere",[IsInt]);
 #! gap> PosetHomology(W);
 #! [ [ 0 ], [  ], [  ] ]
 #! @EndExampleSession
-DeclareOperation("TheWallet",[]);
+DeclareOperation("TheWallet", []);
 
-#! @Arguments
+
+#! @Arguments 
 #! @Description The Triangle is a poset on 19 points, see <Cite Key="FernandezThesis" Where="Example 2.2.7"/>.
+#! <Alt Only="HTML">&lt;br/> &lt;img src="images/triangle.png" align="center" alt="The Triangle."/></Alt>
+#! @BeginLatexOnly
+#! \begin{figure}[H]
+#! \centering
+#! \includegraphics[scale=0.4]{images/triangle.png}
+#! \caption{The Triangle.}
+#! \end{figure}
+#! @EndLatexOnly
+#!
+DeclareOperation("TheTriangle", []);
 
-#! <Alt Only="HTML">&lt;img src="images/triangle.png" align="center" alt="The Triangle."/></Alt>
-DeclareOperation("TheTriangle",[]);
 
 #! @Arguments 
 #! @Description A finite model of the projective plane $\mathbb{R}P^2$ <Cite Key="BarmakBook" Where="Example 7.1.1"/>.
-#! <Alt Only="HTML">&lt;img src="images/RP2.png" align="center" alt="Finite model of the projective plane."/></Alt>
+#! <Alt Only="HTML">&lt;br/> &lt;img src="images/RP2.png" align="center" alt="Finite model of the projective plane."/></Alt>
+#! @BeginLatexOnly
+#! \begin{figure}[H]
+#! \centering
+#! \includegraphics[scale=0.4]{images/RP2.png}
+#! \caption{A finite model of $\mathbb{R}P^2$.}
+#! \end{figure}
+#! @EndLatexOnly
 #! @BeginExampleSession
 #! gap> RP2:=FiniteModelProjectivePlane();
 #! <finite poset of size 13>
@@ -57,5 +78,4 @@ DeclareOperation("TheTriangle",[]);
 #! [ [ 0 ], [ 2 ], [  ] ]
 #! @EndExampleSession
 DeclareOperation("FiniteModelProjectivePlane",[]);
-
 
