@@ -1,3 +1,4 @@
+# 178512 ms (4280 ms GC) and 6.50GB allocated for test18.tst
 gap> S2:=MinimalFiniteModelSphere(2);
 <finite poset of size 6>
 gap> AutomorphismGroup(S2);

@@ -2,7 +2,7 @@
 
 
 
-#! @Section Colorings for presentations
+#! @Section Colorings and presentations
 
 #! Colorings can be applied to obtain isomorphic presentations to a given finite group presentation. Moreover, under some hypothesis on the coloring, the resulting presentation is in the same AC-class of the given one. 
 # Given finite group presentation $\mathcal{P}$, consider the associated poset $X_{\mathcal{P}}$.

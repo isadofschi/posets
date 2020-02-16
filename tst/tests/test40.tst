@@ -12,7 +12,7 @@ gap> Coproduct(A,B,C);
 <finite poset of size 17>
 gap> J:=Join(A,B,C);
 <finite poset of size 17>
-gap> a:=Set(J)[1];; b:=J[6];;
+gap> a:=Set(J)[1];; b:=Set(J)[6];;
 gap> Ordering(J)(b,a);
 true
 gap> W:=TheWallet();

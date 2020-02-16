@@ -182,6 +182,12 @@ DeclareOperation("PosetHomology",[IsPoset,IsInt]);
 #! @Arguments f,n
 #! @Description The induced map $H_{n}(f)$ between the homology groups of degree <A>n</A> by the poset map <A>f</A>.
 #! @BeginExampleSession
+#! gap> S2:=MinimalFiniteModelSphere(2);
+#! <finite poset of size 6>
+#! gap> id_S2:=IdentityMap(S2);
+#! <order preserving map>
+#! gap> PosetHomology(id_S2,2);
+#! [ g1 ] -> [ g1 ]
 #! @EndExampleSession
 DeclareOperation("PosetHomology",[IsPosetHomomorphism,IsInt]);
 

@@ -237,7 +237,7 @@ function(X)
 		_r[i]:=i;
 		dfs(i);
 	od;
-	r:=function(i)
+	r:=function(x)
 		return Set(X)[_r[PositionSorted(Set(X),x)]];
 	end;
 	inclusion_core_X := PosetHomomorphismByFunctionNC(X1,X,x->x);
