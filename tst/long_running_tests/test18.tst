@@ -5,6 +5,7 @@ gap> AutomorphismGroup(S2);
 C2 x C2 x C2
 gap> HomS2S2:=HomPosets(S2,S2);
 <finite poset of size 446>
+gap> OrderMatrix(HomS2S2);;
 gap> CoreHomS2S2:=Core(HomS2S2);
 <finite poset of size 14>
 gap> OrderMatrix(CoreHomS2S2);
