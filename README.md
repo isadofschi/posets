@@ -1,7 +1,11 @@
+[![Build Status](https://travis-ci.org/isadofschi/posets.svg?branch=master)](https://travis-ci.org/isadofschi/posets)
+[![Code Coverage](https://codecov.io/github/isadofschi/posets/coverage.svg?branch=master&token=)](https://codecov.io/gh/isadofschi/posets)
 
 # The Posets package
 
 ### Package under development
+
+
 
 * Website: https://github.com/isadofschi/posets
 * Documentation: http://mate.dm.uba.ar/~isadofschi/posets
