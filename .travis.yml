@@ -2,7 +2,7 @@ dist: xenial
 language: c
 env:
   global:
-    - GAP_PKGS_TO_BUILD="nq hap sonata rds digraphs orb io genss semigroups"
+    - GAP_PKGS_TO_BUILD="nq hap sonata rds digraphs orb io genss semigroups grape"
 
 addons:
   apt_packages:
@@ -15,7 +15,6 @@ matrix:
     - env: GAPBRANCH=master
     - env: GAPBRANCH=stable-4.11
     - env: GAPBRANCH=stable-4.10
-    - env: GAPBRANCH=stable-4.9
 
 branches:
   only:
