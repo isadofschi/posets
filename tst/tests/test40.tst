@@ -2,9 +2,9 @@ gap> A:=PosetByCoveringRelations([1,2,3,4], [[3,1],[3,2], [4,1],[4,2]]);
 <finite poset of size 4>
 gap> B:=PosetByCoveringRelations([1,2],[]);
 <finite poset of size 2>
-gap> SubPoset(A,[1,2]);
+gap> S:=SubPoset(A,[1,2]);
 <finite poset of size 2>
-gap> CoveringRelations(last);
+gap> CoveringRelations(S);
 [  ]
 gap> C:=TheWallet();
 <finite poset of size 11>

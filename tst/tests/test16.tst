@@ -16,8 +16,7 @@ gap> Fence(c1,c2);
 [ <order preserving map>, <order preserving map>, <order preserving map> ]
 gap> Z1:=HomPosets(S1,S1);
 <finite poset of size 36>
-gap> R:=TransitiveClosureBinaryRelation(SymmetricClosureBinaryRelation(RelationByPoset(Z1)));
-<equivalence relation on <object> >
+gap> R:=TransitiveClosureBinaryRelation(SymmetricClosureBinaryRelation(RelationByPoset(Z1)));;
 gap> EquivalenceClasses(R);
 [ {1}, {11}, {12}, {17}, {18} ]
 gap> PosetHomology(Z1,0);

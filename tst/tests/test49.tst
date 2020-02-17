@@ -8,8 +8,8 @@ gap> X2:=PosetPresentation(P);
 <finite poset of size 13>
 gap> X1 = X2;
 true
-gap> FundamentalGroup(X1);
+gap> pi:=FundamentalGroup(X1);
 #I  there are 1 generator and 1 relator of total length 2
 <fp group on the generators [ f1 ]>
-gap> Size(last);
+gap> Size(pi);
 2

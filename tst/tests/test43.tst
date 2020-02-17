@@ -10,7 +10,7 @@ gap> IsContractible(W);
 true
 gap> NaturalMaps(W);
 [ <order preserving map> ]
-gap> f:=last[1];
+gap> f:=NaturalMaps(W)[1];
 <order preserving map>
 gap> TargetMap(f) = W;
 true

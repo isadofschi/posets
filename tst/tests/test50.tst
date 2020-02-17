@@ -2,14 +2,14 @@ gap> P:=PosetByCoveringRelations([1..5], [[5,3],[5,2],[4,3],[4,2],[3,1],[2,1]]);
 <finite poset of size 5>
 gap> A:=SubPoset(P,[1,2,3]);
 <finite poset of size 3>
-gap> NaturalMaps(A);
-[ <order preserving map> ]
-gap> inc:=last[1];
+gap> Length(NaturalMaps(A))=1;
+true
+gap> inc:= NaturalMaps(A)[1];
 <order preserving map>
 gap> FixedPointsPosetHomomorphism(inc);
 <finite poset of size 3>
-gap> Set(last);
-[ 1, 2, 3 ]
+gap> Set(FixedPointsPosetHomomorphism(inc))=[1,2,3];
+true
 gap> HasFixedPointProperty(MinimalFiniteModelSphere(1));
 false
 gap> S1:=MinimalFiniteModelSphere(1);

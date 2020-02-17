@@ -1,8 +1,7 @@
 gap> W:=TheWallet();
 <finite poset of size 11>
-gap> RelationByPoset(W);
-<general mapping: <object> -> <object> >
-gap> IsPartialOrderBinaryRelation(last);
+gap> R:=RelationByPoset(W);;
+gap> IsPartialOrderBinaryRelation(R);
 true
 gap> OrderMatrix(W);
 [ [ true, false, false, false, true, true, false, false, true, true, false ],

@@ -18,10 +18,10 @@ gap> ElementaryAbelianpSubgroups(AlternatingGroup(5),2,1);
 [ Group([ (1,3)(2,4) ]), Group([ (1,4)(2,3) ]), Group([ (1,2)(3,4) ]), Group([ (1,2)(3,5) ]), Group([ (1,5)(2,3) ]),
   Group([ (1,3)(2,5) ]), Group([ (2,5)(3,4) ]), Group([ (2,3)(4,5) ]), Group([ (2,4)(3,5) ]), Group([ (1,3)(4,5) ]),
   Group([ (1,5)(3,4) ]), Group([ (1,4)(3,5) ]), Group([ (1,4)(2,5) ]), Group([ (1,5)(2,4) ]), Group([ (1,2)(4,5) ]) ]
-gap> RadicalpSubgroups(AlternatingGroup(5),2);
+gap> rad_sub := RadicalpSubgroups(AlternatingGroup(5),2);
 [ Group([ (1,3)(2,4), (1,2)(3,4) ]), Group([ (1,5)(2,3), (1,2)(3,5) ]), Group([ (2,4)(3,5), (2,3)(4,5) ]),
   Group([ (1,5)(3,4), (1,3)(4,5) ]), Group([ (1,4)(2,5), (1,2)(4,5) ]) ]
-gap> List(last,Size);
+gap> List(rad_sub,Size);
 [ 4, 4, 4, 4, 4 ]
 gap> BpG:=BoucPoset(AlternatingGroup(6),2);
 <finite poset of size 75>

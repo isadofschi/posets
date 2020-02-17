@@ -8,17 +8,17 @@ gap> Set(ElementsBelow(P,3));
 [ 1, 2, 3 ]
 gap> Set(ElementsStrictlyAbove(P,1));
 [ 3 ]
-gap> ElementsStrictlyBelow(P,3);
+gap> Q:=ElementsStrictlyBelow(P,3);
 <finite poset of size 2>
-gap> Set(last);
+gap> Set(Q);
 [ 1, 2 ]
-gap> ElementsComparable(P,2);
+gap> Q:=ElementsComparable(P,2);
 <finite poset of size 2>
-gap> Set(last);
+gap> Set(Q);
 [ 2, 3 ]
-gap> ElementsStrictlyComparable(P,3);
+gap> Q:=ElementsStrictlyComparable(P,3);
 <finite poset of size 2>
-gap> Set(last);
+gap> Set(Q);
 [ 1, 2 ]
 gap> Q:=RemovePoint(P,3);
 <finite poset of size 2>

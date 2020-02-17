@@ -8,11 +8,11 @@ gap> B:=PosetByCoveringRelations([1,2],[]);
 <finite poset of size 2>
 gap> PathInPoset(B,1,2);
 fail
-gap> ConnectedComponents(B);
+gap> cc:=ConnectedComponents(B);
 [ <finite poset of size 1>, <finite poset of size 1> ]
-gap> 1 in last[1];
+gap> 1 in cc[1];
 true
-gap> 2 in last2[2];
+gap> 2 in cc[2];
 true
 gap> S1:=MinimalFiniteModelSphere(1);;
 gap> point:=Set(S1)[1];;

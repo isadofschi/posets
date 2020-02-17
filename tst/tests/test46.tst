@@ -48,7 +48,7 @@ gap> Inverse(h);
 <order preserving map>
 gap> ImageMap(h);
 <finite poset of size 4>
-gap> last = B;
+gap> ImageMap(h) = B;
 true
 gap> ImageMap(h,1);
 5
