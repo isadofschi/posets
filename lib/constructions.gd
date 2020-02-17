@@ -137,21 +137,13 @@ DeclareOperation("MappingCylinderPosetHomomorphism",[IsPosetHomomorphism]);
 DeclareOperation("QuotientPoset",[IsPoset,IsList]);
 
 #! @Arguments [X_1,x_1], [X_2,x_2],...
-#! @Description Given a list of pairs $[X_i,x_i]$ where $X_i$ is a poset and $x_i\in X_i$, it returns the wedge of these posets on the given points. It also constructs the natural quotient map from the coproduct of the posets onto the wedge.
+#! @Description Given a list of pairs $[X_i,x_i]$ where $X_i$ is a poset and $x_i\in X_i$, it returns the wedge of these posets on the given points. The $i$-th natural map is the inclusion $X_i\hookrightarrow \vee X_i$.
 #! @BeginExampleSession
 #! gap> A:=PosetByCoveringRelations([1,2,3,4], [[4,3],[4,2],[3,1],[2,1]]);
 #! <finite poset of size 4>
 #! gap> W:=WedgePosets([[A,4], [A,1]]);
 #! <finite poset of size 7>
 #! gap> IsContractible(W);
-#! true
-#! gap> NaturalMaps(W);
-#! [ <order preserving map> ]
-#! gap> q:=last[1];
-#! <order preserving map>
-#! gap> TargetMap(q) = W;
-#! true
-#! gap> SourceMap(q) = Coproduct(A,A);
 #! true
 #! @EndExampleSession
 DeclareOperation("WedgePosets",[IsList]);

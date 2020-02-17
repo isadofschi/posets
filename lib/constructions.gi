@@ -312,7 +312,7 @@ function(l)
 	coprod_Xi:=Coproduct(List(l, t->t[1]));
 	basepoints:=List( [1..Size(l)], i-> ImageMap(NaturalMaps(coprod_Xi)[i], l[i][2]) );
 	wedge_Xi:=QuotientPoset(coprod_Xi, basepoints);
-	q:=NaturalMaps(wedge_Xi)[1];
+	q:=(wedge_Xi!.naturalMaps)[1];
 	wedge_Xi!.naturalMaps:=List( NaturalMaps(coprod_Xi), i-> CompositionPosetHomomorphisms(q,i));
 	return wedge_Xi;
 end);
