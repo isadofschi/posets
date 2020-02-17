@@ -8,7 +8,7 @@
 ##
 
 
-PosetFamily:=NewFamily("PosetFamily",IsPoset and IsMutable and IsCopyable);;
+PosetFamily:=NewFamily("PosetFamily",IsPoset and IsCopyable);;
 PosetType:=NewType(PosetFamily,  IsPoset and IsAttributeStoringRep);;
 
 
