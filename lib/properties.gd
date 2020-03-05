@@ -82,3 +82,9 @@ DeclareAttribute("Height",IsPoset);
 #!   [ 4, 2, 1 ], [ 5, 2, 1 ], [ 5, 3, 1 ], [ 5, 4, 1 ], [ 5, 4, 2 ], [ 5, 4, 2, 1 ] ]
 #! @EndExampleSession
 DeclareOperation("ChainsPoset",[IsPoset]);
+
+DeclareAttribute("MobiusMatrix",IsPoset);
+
+#! @Arguments X
+#! @Description The Mobius function $\mu$ of $X$.
+DeclareAttribute("MobiusFunction",IsPoset);

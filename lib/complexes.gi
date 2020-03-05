@@ -18,6 +18,9 @@ InstallMethod(OrderComplex,
 "for Poset",
 [IsPoset],
 function(X)
+	if Size(X)=0 then
+		return SimplicialComplex([[]]);
+	fi;
 	return SimplicialComplex(ChainsPoset(X));
 end);
 

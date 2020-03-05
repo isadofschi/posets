@@ -128,3 +128,52 @@ function(X)
 	return chains;
 end);
 
+
+InstallMethod(MobiusMatrix,
+"for Poset",
+[IsPoset],
+function(X)
+	local M,n,mu,i,j;
+	OrderMatrix(X);
+	n:=Size(X);
+	M:=List([1..n], x->List([1..n],y->fail));
+	mu:=function(i,j)
+		local k,t,x,y,z;
+		if M[i][j]=fail then
+			if i=j then
+				M[i][j]:=1; # x=y
+			else
+				x:=Set(X)[i];
+				y:=Set(X)[j];
+				if Ordering(X)(x,y) then # x>y (recall that Ordering(X) is >= )
+					M[i][j]:=0; 
+				else
+					# x<y
+					t:=0;
+					for k in [1..n] do
+						z:=Set(X)[k];
+						if (k<>j) and (Ordering(X)(z,x)) and (Ordering(X)(y,z)) then
+							t:=t-mu(i,k);
+						fi;
+					od;
+					M[i][j]:=t;
+				fi;
+			fi;
+		fi;
+		return M[i][j];
+	end;;
+	for i in [1..n] do
+		for j in [1..n] do
+			mu(i,j);
+		od;
+	od;
+	return M;
+end);
+
+InstallMethod(MobiusFunction,
+"for Poset",
+[IsPoset],
+function(X)
+	MobiusMatrix(X);
+	return {x,y}-> MobiusMatrix(X)[PositionSorted(Set(X),x)][PositionSorted(Set(X),y)];
+end);
