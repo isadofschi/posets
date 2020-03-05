@@ -138,21 +138,21 @@ function(X)
 	n:=Size(X);
 	M:=List([1..n], x->List([1..n],y->fail));
 	mu:=function(i,j)
-		local k,t,x,y,z;
+		local k,t;#,x,y,z;
 		if M[i][j]=fail then
 			if i=j then
 				M[i][j]:=1; # x=y
 			else
-				x:=Set(X)[i];
-				y:=Set(X)[j];
-				if Ordering(X)(x,y) then # x>y (recall that Ordering(X) is >= )
+				#x:=Set(X)[i];
+				#y:=Set(X)[j];
+				if OrderMatrix(X)[i][j] then # x>y (recall that Ordering(X) is >= )
 					M[i][j]:=0; 
 				else
 					# x<y
 					t:=0;
-					for k in [1..n] do
-						z:=Set(X)[k];
-						if (k<>j) and (Ordering(X)(z,x)) and (Ordering(X)(y,z)) then
+					for k in Intersection(IndicesElementsAbove(X)[i],IndicesElementsBelow(X)[j]) do
+						#z:=Set(X)[k];
+						if (k<>j) then
 							t:=t-mu(i,k);
 						fi;
 					od;

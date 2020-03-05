@@ -163,9 +163,12 @@ InstallMethod(ConePoset,
 "for Poset",
 [IsPoset],
 function(X)
-	local x;
+	local x,CX;
 	x:=PosetByFunctionNC( ["x"], \= ); # poset of size 1
-	return Join([X,x]);
+	CX:=Join([X,x]);
+	SetMaximumPoset(CX,Set(CX)[Size(CX)]);
+	if HasMinimumPoset(X) then SetMinimumPoset(CX,[1,MinimumPoset(X)]); fi;
+	return CX;
 end);
 
 InstallMethod(SuspensionPoset,
@@ -182,7 +185,11 @@ InstallMethod(OppositePoset,
 "for Poset",
 [IsPoset],
 function(X)
-	return PosetByFunctionNC(Set(X), function(x1,x2) return Ordering(X)(x2,x1); end);
+	local Xop;
+	Xop:=PosetByFunctionNC(Set(X), function(x1,x2) return Ordering(X)(x2,x1); end);
+	if HasMaximumPoset(X) then SetMinimumPoset(Xop,MaximumPoset(X)); fi;
+	if HasMinimumPoset(X) then SetMaximumPoset(Xop,MinimumPoset(X)); fi;
+	return Xop;
 end);
 
 
@@ -234,7 +241,7 @@ function(X,Y)
 		fi;
 	od;
 	ordering:=function(f1,f2)
-		return ForAll(Set(X),x-> Ordering(Y)(f1!.f(x),f2!.f(x)));
+		return ForAll(Set(X),x-> Ordering(Y)(UnderlyingFunction(f1)(x),UnderlyingFunction(f2)(x)));
 	end;
 	P:=PosetByFunctionNC(Set(homXY),ordering);
 	P!.naturalMaps:=[PosetHomomorphismByFunction(Y,P, y->PosetHomomorphismByFunction(X,Y, x->y ) )];

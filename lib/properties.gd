@@ -83,6 +83,7 @@ DeclareAttribute("Height",IsPoset);
 #! @EndExampleSession
 DeclareOperation("ChainsPoset",[IsPoset]);
 
+#!
 DeclareAttribute("MobiusMatrix",IsPoset);
 
 #! @Arguments X

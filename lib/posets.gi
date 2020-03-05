@@ -381,3 +381,25 @@ function(X)
 	fi;
 end);
 
+
+
+InstallMethod(IndicesElementsAbove,
+"for Poset",
+[IsPoset],
+function(X)
+	local n,l;
+	n:=Size(X);
+	l:=List([1..n], i-> Filtered([1..n], j-> OrderMatrix(X)[j][i] ));
+	return l;
+end);
+
+
+InstallMethod(IndicesElementsBelow,
+"for Poset",
+[IsPoset],
+function(X)
+	local n,l;
+	n:=Size(X);
+	l:=List([1..n], i-> Filtered([1..n], j-> OrderMatrix(X)[i][j] ));
+	return l;
+end);

@@ -113,7 +113,11 @@ InstallOtherMethod(EulerCharacteristic,
 "for Poset",
 [IsPoset],
 function(X)
-	return EulerCharacteristic(OrderComplex(X));
+	local n,X1;
+	#return EulerCharacteristic(OrderComplex(X));
+	n:=Size(X);
+	X1:=ConePoset(OppositePoset(ConePoset(X)));
+	return 1+MobiusFunction(X1)(MinimumPoset(X1),MaximumPoset(X1));
 end);
 
 InstallMethod(FundamentalGroup,

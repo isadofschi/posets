@@ -387,5 +387,9 @@ DeclareAttribute("MaximumPoset",IsPoset);
 #! @EndExampleSession
 DeclareAttribute("MinimumPoset",IsPoset);
 
+#!
+DeclareAttribute("IndicesElementsAbove",IsPoset);
+#!
+DeclareAttribute("IndicesElementsBelow",IsPoset);
 
 
