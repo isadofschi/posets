@@ -113,11 +113,40 @@ InstallOtherMethod(EulerCharacteristic,
 "for Poset",
 [IsPoset],
 function(X)
-	local n,X1;
 	#return EulerCharacteristic(OrderComplex(X));
+	#local n,X1;
+	#n:=Size(X);
+	#X1:=ConePoset(OppositePoset(ConePoset(X)));
+	#return 1+MobiusFunction(X1)(MinimumPoset(X1),MaximumPoset(X1));
+	local d,n,i,number_chains,h,chi,k;
+	IndicesElementsBelow(X);
+	d:=NewDictionary([],true);
 	n:=Size(X);
-	X1:=ConePoset(OppositePoset(ConePoset(X)));
-	return 1+MobiusFunction(X1)(MinimumPoset(X1),MaximumPoset(X1));
+	for i in [1..n] do
+		AddDictionary(d,[i,0],1); # There is only one 0-chain with maximum Set(X)[i]
+	od;
+	number_chains:=function(i,l)
+		# returns the number of l-dimensional chains of X with maximum Set(X)[i]
+		local t,j;
+		if LookupDictionary(d,[i,l])=fail then
+			t:=0;
+			for j in IndicesElementsBelow(X)[i] do
+				if j<>i then
+					t:=t+number_chains(j,l-1);	
+				fi;
+			od;
+			AddDictionary(d,[i,l],t);
+		fi;
+		return LookupDictionary(d,[i,l]);
+	end;;
+	h:=Height(X);
+	chi:=0;
+	for i in [1..n] do
+		for k in [0..Height(X,Set(X)[i])] do
+			chi:=chi+(-1)^k*number_chains(i,k);
+		od;
+	od;
+	return chi;
 end);
 
 InstallMethod(FundamentalGroup,

@@ -711,6 +711,62 @@ function(G,p)
 end);
 
 
+InstallMethod(EulerCharacteristicQuillenPoset,
+"for Group and prime number",
+[IsGroup, IsInt],
+function(G,p)
+	local S, subgroups_of_S, nontrivial_subgroups_of_S_up_to_conjugacy,
+		cs, H, elementary_abelian_subgroups_of_S_up_to_conjugacy,
+		classes_elem_abel, d, i, number_chains, chi, max_h, k;
+	if not (IsPrime(p) and RemInt(Order(G),p)=0) then
+		Print("# Error, p must be a prime number dividing the order of G\n");
+		return fail;
+	fi;
+	S :=SylowSubgroup(G,p);
+	subgroups_of_S:=Subgroups(S);
+	nontrivial_subgroups_of_S_up_to_conjugacy:=[];
+	cs:=[];
+	for H in subgroups_of_S do
+		if Order(H)>1 then
+			if not (H^G in cs) then
+				Add(cs,H^G);
+				Add(nontrivial_subgroups_of_S_up_to_conjugacy,H);
+			fi;
+		fi;
+	od;
+	elementary_abelian_subgroups_of_S_up_to_conjugacy:=Filtered(nontrivial_subgroups_of_S_up_to_conjugacy,IsElementaryAbelian);
+	classes_elem_abel := List(elementary_abelian_subgroups_of_S_up_to_conjugacy, H->H^G);
+	d:=NewDictionary([],true);
+	for i in [1..Length(elementary_abelian_subgroups_of_S_up_to_conjugacy)] do
+		AddDictionary(d,[i,0],1); # one 0-chain (length 1)
+	od;
+	number_chains:=function(i,l)
+		local t, H, K, subs;
+		if LookupDictionary(d,[i,l])=fail then
+			t:=0;
+			H:=elementary_abelian_subgroups_of_S_up_to_conjugacy[i];
+			subs:=Subgroups(H);
+			for K in subs do
+				if Order(K)<>Order(H) and Order(K)<>1 then
+					t:=t+number_chains(Position(classes_elem_abel,K^G),l-1);	
+				fi;
+			od;
+			AddDictionary(d,[i,l],t);
+		fi;
+		return LookupDictionary(d,[i,l]);
+	end;;
+	chi:=0;
+	for i in [1..Length(elementary_abelian_subgroups_of_S_up_to_conjugacy)] do
+		H:=elementary_abelian_subgroups_of_S_up_to_conjugacy[i];
+		max_h:=Length(Factors(Order(H)))-1;
+		for k in [0..max_h] do
+			chi:=chi+(-1)^k*Size(H^G)*number_chains(i,k);
+		od;
+	od;
+	return chi;
+end);
+
+
 InstallMethod(PosetOfSubspaces,
 "for finite vector space",
 [IsVectorSpace and IsFinite],

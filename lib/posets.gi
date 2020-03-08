@@ -346,16 +346,12 @@ function(X)
 	return Filtered(Set(X), x-> UpperCovers(X,x)=[] ); # this is efficient if we already computed the upper covers, not in general!
 end);
 
-
-
 InstallMethod(MinimalElements,
 "for Poset",
 [IsPoset],
 function(X)
 	return Filtered(Set(X), x-> LowerCovers(X,x)=[] ); # this is efficient if we already computed the lower covers, not in general!
 end);
-
-
 
 InstallMethod(MaximumPoset,
 "for Poset",
@@ -368,8 +364,6 @@ function(X)
 	fi;
 end);
 
-
-
 InstallMethod(MinimumPoset,
 "for Poset",
 [IsPoset],
@@ -381,18 +375,15 @@ function(X)
 	fi;
 end);
 
-
-
 InstallMethod(IndicesElementsAbove,
 "for Poset",
 [IsPoset],
 function(X)
 	local n,l;
 	n:=Size(X);
-	l:=List([1..n], i-> Filtered([1..n], j-> OrderMatrix(X)[j][i] ));
+	l:=List([1..n], i-> Filtered([1..n], j-> Ordering(X)(Set(X)[j],Set(X)[i])));
 	return l;
 end);
-
 
 InstallMethod(IndicesElementsBelow,
 "for Poset",
@@ -400,6 +391,52 @@ InstallMethod(IndicesElementsBelow,
 function(X)
 	local n,l;
 	n:=Size(X);
-	l:=List([1..n], i-> Filtered([1..n], j-> OrderMatrix(X)[i][j] ));
+	l:=List([1..n], i-> Filtered([1..n], j-> Ordering(X)(Set(X)[i],Set(X)[j])));
 	return l;
+end);
+
+InstallMethod(SavePosetAsListsOfElementsBelow,
+"for Poset and filename",
+[IsPoset,IsString],
+function(X,filename)
+	local l,f,i,j;
+	l:=IndicesElementsBelow(X);
+	f := IO_File(filename,"w");
+	IO_Write(f, Size(X));
+	IO_Write(f, "\n");
+	for i in [1..Size(X)] do
+		IO_Write(f,Length(l[i]));
+		IO_Write(f,"\n");
+		for j in l[i] do
+			IO_Write(f, j);
+			IO_Write(f, " ");
+		od;
+		IO_Write(f, "\n");
+	od;
+	IO_Flush(f);
+	IO_Close(f);
+end);
+
+InstallMethod(SavePosetAsOrderMatrix,
+"for Poset and filename",
+[IsPoset,IsString],
+function(X,filename)
+	local M,f,i,j;
+	M:=OrderMatrix(X);
+	f := IO_File(filename,"w");
+	IO_Write(f, Size(X));
+	IO_Write(f, "\n");
+	for i in [1..Size(X)] do
+		for j in [1..Size(X)] do
+			if M[i][j] then
+				IO_Write(f, 1);
+			else
+				IO_Write(f, 0);
+			fi;
+			IO_Write(f, " ");
+		od;
+		IO_Write(f, "\n");
+	od;
+	IO_Flush(f);
+	IO_Close(f);
 end);

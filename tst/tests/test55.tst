@@ -14,6 +14,8 @@ gap> mu:=MobiusFunction(P);
 function( x, y ) ... end
 gap> mu(Group([Identity(G)]),G);
 -27
+gap> MobiusMatrix(P)=TransposedMat(Inverse(List(OrderMatrix(P),x->List(x, function(n) if n then return 1; fi; return 0;end))));
+true
 gap> MobiusMatrix(P);
 [ [ 1, -1, -1, 3, 3, 3, -1, 3, 3, -27, 3, 3, -1, -1, -1, 3, 3, 3, -1, -1, -1, 
       -1, 3, 3, 3, -1, -1, -1 ], 
@@ -91,4 +93,23 @@ gap> ForAll([1..NrSmallGroups(1)], i-> check_G(SmallGroup(1,i)));
 false
 gap> ForAll([1..NrSmallGroups(3)], i-> check_G(SmallGroup(3,i)));
 true
+gap> EulerCharacteristic(MinimalFiniteModelSphere(4));
+2
+gap> EulerCharacteristic(MinimalFiniteModelSphere(3));
+0
+gap> EulerCharacteristic(MinimalFiniteModelSphere(11));
+0
+gap> EulerCharacteristic(MinimalFiniteModelSphere(12));
+2
+gap> EulerCharacteristic(QuillenPoset(SymmetricGroup(6),2))= EulerCharacteristicQuillenPoset(SymmetricGroup(6),2);
+true
+gap> EulerCharacteristic(QuillenPoset(SymmetricGroup(4),2))= EulerCharacteristicQuillenPoset(SymmetricGroup(4),2);
+true
+gap> EulerCharacteristic(QuillenPoset(SymmetricGroup(5),2))= EulerCharacteristicQuillenPoset(SymmetricGroup(5),2);
+true
+gap> EulerCharacteristic(QuillenPoset(SymmetricGroup(7),2))= EulerCharacteristicQuillenPoset(SymmetricGroup(7),2);
+true
+gap> EulerCharacteristicQuillenPoset(SymmetricGroup(6),12);
+# Error, p must be a prime number dividing the order of G
+fail
 

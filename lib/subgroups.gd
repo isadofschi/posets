@@ -133,6 +133,10 @@ DeclareOperation("OrbitSubdivisionQuillenPoset", [IsGroup and IsFinite,IsInt]);
 DeclareOperation("OrbitSubdivisionBrownPoset", [IsGroup and IsFinite,IsInt]);
 
 
+#! @Arguments G,p
+#! @Description Returns the Euler characteristic of $\mathcal{A}_p(G)$ without computing the poset. This may be useful when the poset is too big.
+DeclareOperation("EulerCharacteristicQuillenPoset",[IsGroup,IsInt]);
+
 #! @Section Poset of subspaces of a vector space
 
 #! @Arguments V

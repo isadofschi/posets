@@ -392,4 +392,10 @@ DeclareAttribute("IndicesElementsAbove",IsPoset);
 #!
 DeclareAttribute("IndicesElementsBelow",IsPoset);
 
+#! @Section Saving posets
+#!
+DeclareOperation("SavePosetAsListsOfElementsBelow",[IsPoset,IsString]);
+#!
+DeclareOperation("SavePosetAsOrderMatrix",[IsPoset,IsString]);
+
 

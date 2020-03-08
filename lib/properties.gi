@@ -143,20 +143,18 @@ function(X)
 			if i=j then
 				M[i][j]:=1; # x=y
 			else
-				#x:=Set(X)[i];
-				#y:=Set(X)[j];
-				if OrderMatrix(X)[i][j] then # x>y (recall that Ordering(X) is >= )
-					M[i][j]:=0; 
-				else
-					# x<y
+				#x:=Set(X)[i]; y:=Set(X)[j];
+				if OrderMatrix(X)[j][i] then # y>x (recall that Ordering(X) is >= )
 					t:=0;
-					for k in Intersection(IndicesElementsAbove(X)[i],IndicesElementsBelow(X)[j]) do
+					for k in IndicesElementsAbove(X)[i] do
 						#z:=Set(X)[k];
-						if (k<>j) then
+						if OrderMatrix(X)[j][k] and (k<>j) then
 							t:=t-mu(i,k);
 						fi;
 					od;
 					M[i][j]:=t;
+				else # if we are here either x>y or (x and y are not comparable)
+					M[i][j]:=0; 
 				fi;
 			fi;
 		fi;
