@@ -14,8 +14,8 @@ PackageName := "Posets",
 Subtitle := "Posets and finite spaces.",
 
 
-Version := "1.0.1",
-Date := "10/04/2019",
+Version := "1.0.2",
+Date := "25/05/2020",
 
 PackageWWWHome :=
   Concatenation( "https://github.com/isadofschi/", LowercaseString( ~.PackageName ) ),
