@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/isadofschi/posets.svg?branch=master)](https://travis-ci.org/isadofschi/posets)
 [![Code Coverage](https://codecov.io/github/isadofschi/posets/coverage.svg?branch=master&token=)](https://codecov.io/gh/isadofschi/posets)
+[![DOI](https://zenodo.org/badge/181187603.svg)](https://zenodo.org/badge/latestdoi/181187603)
+
 
 # The Posets package
 
