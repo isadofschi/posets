@@ -1,3 +1,4 @@
+SetInfoLevel(InfoPackageLoading,4);
 LoadPackage( "posets" );
 
 TestDirectory( DirectoriesPackageLibrary("posets","tst/tests"),
