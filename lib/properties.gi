@@ -125,7 +125,7 @@ function(X)
 		od;
 		position:=position+1;
 	od;
-	return chains;
+	return Set(chains);
 end);
 
 
