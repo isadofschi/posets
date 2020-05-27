@@ -2,7 +2,7 @@ dist: xenial
 language: c
 env:
   global:
-    - GAP_PKGS_TO_BUILD="nq hap sonata rds digraphs orb io profiling genss semigroups grape"
+    - GAP_PKGS_TO_BUILD="nq hap sonata rds datastructures digraphs orb io profiling genss semigroups grape"
 
 addons:
   apt_packages:
