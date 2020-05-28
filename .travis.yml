@@ -19,6 +19,7 @@ matrix:
 branches:
   only:
     - master
+    - develop
 
 before_script:
   - git clone https://github.com/gap-system/pkg-ci-scripts.git scripts
