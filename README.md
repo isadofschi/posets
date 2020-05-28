@@ -1,13 +1,8 @@
-[![Build Status](https://travis-ci.org/isadofschi/posets.svg?branch=master)](https://travis-ci.org/isadofschi/posets)
-[![Code Coverage](https://codecov.io/github/isadofschi/posets/coverage.svg?branch=master&token=)](https://codecov.io/gh/isadofschi/posets)
-[![DOI](https://zenodo.org/badge/181187603.svg)](https://zenodo.org/badge/latestdoi/181187603)
+[![Build Status](https://travis-ci.org/isadofschi/posets.svg?branch=develop)](https://travis-ci.org/isadofschi/posets) [![Code Coverage](https://codecov.io/github/isadofschi/posets/coverage.svg?branch=develop&token=)](https://codecov.io/gh/isadofschi/posets) [![DOI](https://zenodo.org/badge/181187603.svg)](https://zenodo.org/badge/latestdoi/181187603)
+
 
 
 # The Posets package
-
-### Package under development
-
-
 
 * Website: https://github.com/isadofschi/posets
 * Documentation: http://mate.dm.uba.ar/~isadofschi/posets
@@ -16,6 +11,12 @@
 Posets and finite spaces
 
 ![](./doc/images/wallet.png)
+
+## Authors:
+* Ximena L. Fernández
+* Kevin I. Piterman
+* Iván Sadofschi Costa
+
 
 Start GAP and type
 
