@@ -14,7 +14,7 @@ PackageName := "Posets",
 Subtitle := "Posets and finite spaces.",
 
 
-Version := "1.0.2",
+Version := "1.0.3",
 Date := "25/05/2020",
 
 PackageWWWHome :=
