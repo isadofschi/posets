@@ -95,9 +95,9 @@ DeclareOperation("SuspensionPoset",[IsPoset]);
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1,2,3], [[3,1], [3,2]]);
 #! <finite poset of size 3>
-#! gap> Pop:=OppositePoset(P);
+#! gap> Popposite:=OppositePoset(P);
 #! <finite poset of size 3>
-#! gap> IsomorphismPosets(P,Pop);
+#! gap> IsomorphismPosets(P,Popposite);
 #! fail
 #! @EndExampleSession
 DeclareOperation("OppositePoset",[IsPoset]);

@@ -73,13 +73,14 @@ DeclareOperation("Height",[IsPoset,IsObject]);
 DeclareAttribute("Height",IsPoset);
 
 #! @Arguments X
-#! @Description The (not necessarily ordered) list of chains of <A>X</A>. Each chain is represented as a list of points, ordered according to the order on <A>X</A>, the first element being the maximum of the chain.
+#! @Description The set of chains of <A>X</A>. Each chain is represented as a list of points, ordered according to the order on <A>X</A>, the first element being the maximum of the chain.
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1..5],[[5,4],[5,3],[4,2],[3,1],[2,1]]);
 #! <finite poset of size 5>
 #! gap> ChainsPoset(P);
-#! [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 4, 2 ], [ 5, 1 ], [ 5, 2 ], [ 5, 3 ], [ 5, 4 ],
-#!   [ 4, 2, 1 ], [ 5, 2, 1 ], [ 5, 3, 1 ], [ 5, 4, 1 ], [ 5, 4, 2 ], [ 5, 4, 2, 1 ] ]
+#! [ [ 1 ], [ 2 ], [ 2, 1 ], [ 3 ], [ 3, 1 ], [ 4 ], [ 4, 1 ], [ 4, 2 ], 
+#!   [ 4, 2, 1 ], [ 5 ], [ 5, 1 ], [ 5, 2 ], [ 5, 2, 1 ], [ 5, 3 ], [ 5, 3, 1 ], 
+#!   [ 5, 4 ], [ 5, 4, 1 ], [ 5, 4, 2 ], [ 5, 4, 2, 1 ] ]
 #! @EndExampleSession
 DeclareOperation("ChainsPoset",[IsPoset]);
 
