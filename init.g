@@ -18,6 +18,7 @@
 ReadPackage( "Posets", "lib/posets.gd" );
 ReadPackage( "Posets", "lib/maps.gd" );
 ReadPackage( "Posets", "lib/complexes.gd" );
+ReadPackage( "Posets", "lib/fundamental.gd" );
 ReadPackage( "Posets", "lib/constructions.gd" );
 ReadPackage( "Posets", "lib/subgroups.gd" );
 ReadPackage( "Posets", "lib/namedposets.gd" );
