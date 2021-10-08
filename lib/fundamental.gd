@@ -10,4 +10,5 @@ DeclareGlobalFunction("EdgePathGroup");
 DeclareGlobalFunction("SizeThreeCliques");
 
 # (vertices,edges) must be a simple graph
+# returns fail if the graph is not connected
 DeclareGlobalFunction("FundamentalGroupOfCliqueComplex");

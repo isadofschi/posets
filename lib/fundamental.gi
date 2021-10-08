@@ -43,6 +43,9 @@ function(vertices,edges,twoSimplices)
 	vertices:=Set(vertices);
 	edges:=Set(List(edges, e-> Set(e)));
 	T:=SpanningTreeOfGraph(vertices,edges);
+	if T=fail then
+		return fail;
+	fi;
 	F:=FreeGroup(Size(edges));
 	gens:=GeneratorsOfGroup(F);
 	rels:=[];
