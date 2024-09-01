@@ -47,7 +47,7 @@ OriginalAttaching:=function(G)
 end;;
 
 RewriteEdge := function(edge, replacements)
-	# Recusively rewrites an edge following the 
+	# Recursively rewrites an edge following the 
 	# rules given by replacements.
 	local new_attaching, aux_rewrite;
 	aux_rewrite := function(edge)
@@ -165,7 +165,7 @@ end);
 
 InstallGlobalFunction(GreedyAcyclicMatching,
 function(X)
-	#Greedy algorithm that ouputs a random maximal matching (maximal if height X = 2).
+	#Greedy algorithm that outputs a random maximal matching (maximal if height X = 2).
 	#X the face poset of regular CW.
 	local n,edges,in_match,M,D,e;
 	n:=Size(X);

@@ -3,7 +3,7 @@
 
 
 #! @Arguments f
-#! @Description Returns the subposet of fixed points of <A>f</A>. We only check names of points, Source(f) is not neccesarily equal to Target(f).
+#! @Description Returns the subposet of fixed points of <A>f</A>. We only check names of points, Source(f) is not neccessarily equal to Target(f).
 #! @BeginExampleSession
 #! gap> P:=PosetByCoveringRelations([1..5], [[5,3],[5,2],[4,3],[4,2],[3,1],[2,1]]);
 #! <finite poset of size 5>
