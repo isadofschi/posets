@@ -102,7 +102,7 @@ DeclareOperation("RemoveCoveringRelation",[IsPoset,IsList]);
 #! @Section Beat points and homotopy type
 #! The main reference for this section is <Cite Key="BarmakBook" Where="Section 1.3"/>. We recall here some important facts and definitions.
 #! We consider finite posets as finite topological spaces via the intrinsic topology where the open sets are the downsets. This topology is also known as the Alexandroff topology.
-#! A point $x\in X$ is an <E>up beat point</E> if $\{y\,:\, y&gt; x\}$ has a minimum. A point $x\in X$ is a <E>down beat point</E> if $\{y\,:\, y&lt; x\}$ has a maximum. A point $x\in X$ is a <E>beat point</E> if it is either an up or a down beat point. A poset is <E>minimal</E> if it has no beat points. A <E>core</E> of a finite poset X is a strong deformation retract which is a minimal poset. The core of a poset is unique up to isomorphism. Moreover, any core of a poset can be reached by exctracting beat points. Two posets are homotopy equivalent if and only if their cores are isomorphic. A poset is contractible if its has only one point.
+#! A point $x\in X$ is an <E>up beat point</E> if $\{y\,:\, y&gt; x\}$ has a minimum. A point $x\in X$ is a <E>down beat point</E> if $\{y\,:\, y&lt; x\}$ has a maximum. A point $x\in X$ is a <E>beat point</E> if it is either an up or a down beat point. A poset is <E>minimal</E> if it has no beat points. A <E>core</E> of a finite poset X is a strong deformation retract which is a minimal poset. The core of a poset is unique up to isomorphism. Moreover, any core of a poset can be reached by extracting beat points. Two posets are homotopy equivalent if and only if their cores are isomorphic. A poset is contractible if its has only one point.
 #! This method of removing beat points to describe the homotopy type of finite posets with the Alexandroff topology was developed by R.E. Stong.
 
 #! @Arguments X,x
@@ -231,7 +231,7 @@ DeclareOperation("HomotopyEquivalence",[IsPoset,IsPoset]);
 
 #! @Section Weak points and simple homotopy type
 #! The reference for this section is <Cite Key="BarmakBook" Where="Section 4.2"/>. As before, we consider finite posets with the Alexandroff topology.
-#! A point $x\in X$ is an <E>up weak point</E> if $\{y\,:\, y&gt; x\}$ is contractible. A point $x\in X$ is a <E>down weak point</E> if $\{y\,:\, y&lt; x\}$ is contractible. A point $x\in X$ is a <E>weak point</E> if it is either an up or a down weak point. A weak core for $X$ is a subposet of $X$ without weak poitns and obtained from $X$ by removing weak points. The poset $X$ is collapsible if it admits a weak core with only one point. The weak cores of a finite poset do not need to be unique up to isomorphism.
+#! A point $x\in X$ is an <E>up weak point</E> if $\{y\,:\, y&gt; x\}$ is contractible. A point $x\in X$ is a <E>down weak point</E> if $\{y\,:\, y&lt; x\}$ is contractible. A point $x\in X$ is a <E>weak point</E> if it is either an up or a down weak point. A weak core for $X$ is a subposet of $X$ without weak points and obtained from $X$ by removing weak points. The poset $X$ is collapsible if it admits a weak core with only one point. The weak cores of a finite poset do not need to be unique up to isomorphism.
 
 #! @Arguments X,x
 #! @Description Checks if $x$ is a weak point of $X$.
