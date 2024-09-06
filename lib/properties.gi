@@ -11,8 +11,6 @@ function(f)
 	return SubPoset(X,Fixf);
 end);
 
-
-
 InstallMethod(HasFixedPointProperty,
 "for Poset",
 [IsPoset],
@@ -174,4 +172,12 @@ InstallMethod(MobiusFunction,
 function(X)
 	MobiusMatrix(X);
 	return {x,y}-> MobiusMatrix(X)[PositionSorted(Set(X),x)][PositionSorted(Set(X),y)];
+end);
+
+InstallMethod(Magnitude,
+"for Poset",
+[IsPoset],
+function(X)
+        mu := MobiusMatrix(X);
+        return Sum(List(Sum(List(mu))));
 end);
