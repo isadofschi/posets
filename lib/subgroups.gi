@@ -79,6 +79,10 @@ CanonicalRightTransversal:= function(G,H)
 	return List(RightTransversal(G,H),i->CanonicalRightCosetElement(H,i));
 end;;
 
+IsSubgroup2:=function(G,H)
+	return Order(G) >= Order(H) and IsSubset(G,H);
+end;
+
 InstallMethod(PosetOfSubgroups,
 "for Group",
 [IsGroup and IsFinite],
@@ -86,7 +90,7 @@ function(G)
 	# the ordering is >=
 	local S;
 	S:=Subgroups(G);
-	return PosetByFunctionNC(S,IsSubgroup);
+	return PosetByFunctionNC(S,IsSubgroup2);
 end);
 
 InstallMethod(PosetOfpSubgroups,
@@ -98,7 +102,7 @@ function(G,p)
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	SpG:=PosetByFunctionNC(Filtered(Subgroups(G), H-> IsPGroup(H) and RemInt(Order(H),p)=0), IsSubgroup);
+	SpG:=PosetByFunctionNC(Filtered(Subgroups(G), H-> IsPGroup(H) and RemInt(Order(H),p)=0), IsSubgroup2);
 	SetGrading(SpG,H-> Log(Order(H),p)-1); # Sp(G) is a graded poset
 	return SpG;
 end);
@@ -149,7 +153,7 @@ function(G,p)
 	if not IsPrime(p) then
 		Error("p must be prime");
 	fi;
-	ApG:=PosetByFunctionNC(ElementaryAbelianpSubgroups(G,p) , IsSubgroup);
+	ApG:=PosetByFunctionNC(ElementaryAbelianpSubgroups(G,p) , IsSubgroup2);
 	SetGrading(ApG,H-> Log(Order(H),p)-1); # Ap(G) is a graded poset
 	return ApG;
 end);
@@ -203,7 +207,7 @@ function(G,p)
 	fi;
 	Bp:=RadicalpSubgroups(G,p);	
 	#Bp:=Filtered(S, H-> IsPGroup(H) and RemInt(Order(H),p)=0 and Order(H)=Order(PCore(Normalizer(G,H),p)) );
-	return PosetByFunctionNC(Bp,IsSubgroup);
+	return PosetByFunctionNC(Bp,IsSubgroup2);
 end);
 
 InstallMethod(BoucPoset,
@@ -731,7 +735,7 @@ function(G,p)
 			fi;
 		fi;
 	od;
-	chi:=0;
+	chi:=-1;
 	for conj_H in conj_classes do
 		n:=Length(Factors(Order(Representative(conj_H))));
 		chi:=chi-(-1)^n*Size(conj_H)*p^(n*(n-1)/2);
